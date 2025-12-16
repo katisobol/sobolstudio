@@ -81,9 +81,9 @@ p{
     bottom: 0;
     width: 50%; /* Занимает половину ширины кнопки */
     background-color: var(--SoftBlack);
-    border-top: 2px solid white;
-    border-left: 2px solid white;
-    border-bottom: 2px solid white;
+    border-top: 1.5px solid white;
+    border-left: 1.5px solid white;
+    border-bottom: 1.5px solid white;
     transition: all 0.25s ease;
     z-index: -1;
 }
