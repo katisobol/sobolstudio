@@ -1,7 +1,7 @@
 
 @font-face {
     font-family: "AvantGarde";
-    src: url("https://fontsforyou.com/fonts/a/Avantgarde.ttf");
+    src: url("../AvantGardeCTT.ttf");
 }
 
 :root {
@@ -44,7 +44,8 @@ img {
     }
 }
 
-h1 {
+h1, h2 {
+    font-family: AvantGarde, Raleway;
     font-weight: bold;
     font-size: 50pt;
     line-height: 1;
