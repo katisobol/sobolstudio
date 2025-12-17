@@ -1,0 +1,40 @@
+button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    padding: 0 4em;
+    position: relative;
+    transition: 0.15s ease;
+    overflow: hidden;
+    width: max-content;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    color: var(--CosmicLatte);
+    font-family: inherit;
+    font-size: inherit;
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    background-color: var(--SoftBlack);
+    border-top: 1.5px solid white; border-left: 1.5px solid white; border-bottom: 1.5px solid white;
+    transition: all 0.25s ease;
+    z-index: -1;
+}
+
+button:hover {
+    background-color: transparent;
+}
+
+button:hover::before {
+    left: 50%;
+    background-color: var(--DeepBlue);
+    border-color: transparent;
+}

@@ -1,0 +1,12 @@
+#hero {
+    display: none;
+}
+
+#philosophy h2 {
+    grid-column: 1 / -1;
+}
+
+#philosophy p {
+    grid-column: 2 / 5;
+    text-indent: 12px;
+}
