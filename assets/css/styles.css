@@ -1,14 +1,13 @@
 @import url(https://csstools.github.io/normalize.css/11.0.0/normalize.css);
-@import url(../css/b);
-@import url(../css/mobile.css);
+@import url(../css/buttons.css);
 
 @font-face {
     font-family: "AvantGarde";
-    src: url("../assets/fonts/URWGothic-Book.ttf");
+    src: url("../fonts/URWGothic-Book.ttf");
 }
 @font-face {
     font-family: "Santello";
-    src: url("../assets/fonts/SANTELLO.ttf");
+    src: url("../fonts/SANTELLO.ttf");
 }
 
 :root {
@@ -20,7 +19,9 @@
 body {
     background: var(--SoftBlack);
     color: var(--CosmicLatte);
-    font-family: Raleway, Helvetica, sans-serif;
+    font-family: Santello, Raleway;
+    font-size: 15pt;
+    line-height: 1.5;
     caret-color: transparent;
     margin: 0;
     padding: 0;
@@ -39,11 +40,11 @@ section {
 /* Типографика */
 h1,
 h2 {
-    grid-column: 1 / 5;
-    font-family: AvantGarde, Raleway, sans-serif;
+    grid-column: 1 / -1;
+    font-family: AvantGarde, Raleway;
     font-weight: bold;
     font-size: 50pt;
-    line-height: 1;
+    line-height: 1.1;
     margin: 0;
 }
 
@@ -52,23 +53,21 @@ h3 {
 }
 
 p {
-    font-family: Santello, Raleway;
-    font-size: 15pt;
-    line-height: 1.35;
     text-indent: -25px;
 }
 
 @media screen and (max-width: 720px) {
-    * {
-        grid-column: 1 / -1;
-    }
+
     body {
-        grid-template-columns: repeat(1, 1fr); /* На мобильных — одна колонка */
+        grid-template-columns: 1fr; /* На мобильных — одна колонка */
+        gap: 0;
+        padding: 75px 2em;
     }
     section {
         padding: 75px 2em;
     }
-    #philosophy p {
-        grid-column: 1 / -1;
+
+    section * {
+        grid-column: 1 / 3;
     }
 }
