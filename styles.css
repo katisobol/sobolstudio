@@ -61,6 +61,10 @@ p{
     padding: 200px 200px;
 }
 
+#hero {
+    display: none;
+}
+
 .btn {
     display: inline-flex; /* Используем inline-flex, чтобы кнопка не растягивалась на всю ширину */
     align-items: center;
