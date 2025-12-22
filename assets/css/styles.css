@@ -14,6 +14,7 @@
     --SoftBlack: #101010; /* Задний план */
     --DeepBlue: #1b355b; /* Цвет кнопки при наведении */
     --CosmicLatte: #fff8e7; /* Цвет текста */
+    --BrightBlue: #0C4FAD; /* Цвет ссылки */
 }
 
 *,
@@ -22,6 +23,12 @@
     box-sizing: border-box; /* Все элементы учитывают паддинги и бордеры в своей ширине */
 }
 
+/* Ручное управление блоками */
+.hid {
+    display: none;
+}
+
+/* Глобальная стилизация */
 body {
     background: var(--SoftBlack);
     color: var(--CosmicLatte);
@@ -48,6 +55,7 @@ section > h1,
 section > h2,
 section > h3,
 section > p,
+section > small,
 section > button,
 section > div,
 .layout > h1,
@@ -56,6 +64,7 @@ section > div,
 .layout > p,
 .layout > button,
 .layout > div,
+.layout > small,
 .block {
     grid-column: 1 / -1;
     display: block;
@@ -66,13 +75,38 @@ h1,
 h2 {
     font-family: AvantGarde, Raleway;
     font-weight: bold;
-    font-size: 3rem;
     line-height: 1.1;
     letter-spacing: 0.02rem;
     margin: 0;
 }
+h3,
+h4,
+h5,
+h6 {
+    grid-column: 1 / -1;
+    display: block;
+    margin: 0.25rem 0 0.5rem 0;
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 2rem 0 0.5rem 0;
+}
+
+h2 {
+    font-size: 2rem;
+    margin: 1rem 0 0.25rem 0;
+}
+
 h3 {
     font-size: 1.5rem;
+    margin: 0.5rem 0 0.25rem 0;
+}
+
+p {
+    font-size: 1rem;
+    max-width: 600px;
+    margin: 0.25rem 0 1rem 0;
 }
 
 @media screen and (max-width: 720px) {

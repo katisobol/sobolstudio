@@ -1,8 +1,12 @@
-button {
+button,
+.btn {
+    font-family: Santello, Raleway;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     height: 50px;
+    line-height: 50px;
+    margin: 1rem 0;
     padding: 0 4em;
     position: relative;
     transition: 0.15s ease;
@@ -12,11 +16,11 @@ button {
     background: transparent;
     border: none;
     color: var(--CosmicLatte);
-    font-family: inherit;
-    font-size: inherit;
+    text-decoration: none;
 }
 
-button::before {
+button::before,
+.btn::before {
     content: "";
     position: absolute;
     left: 0;
@@ -24,17 +28,59 @@ button::before {
     bottom: 0;
     width: 50%;
     background-color: var(--SoftBlack);
-    border-top: 1.5px solid white; border-left: 1.5px solid white; border-bottom: 1.5px solid white;
+    border-top: 1.5px solid white;
+    border-left: 1.5px solid white;
+    border-bottom: 1.5px solid white;
     transition: all 0.25s ease;
     z-index: -1;
 }
 
-button:hover {
+button:hover,
+.btn:hover {
     background-color: transparent;
 }
 
-button:hover::before {
+button:hover::before,
+.btn:hover::before {
     left: 50%;
     background-color: var(--DeepBlue);
     border-color: transparent;
+}
+
+.social {
+    font-size: 0.75rem;
+    color: var(--CosmicLatte);
+    padding: 0.35rem;
+    margin: 0 0.5rem;
+    height: 2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: var(--CosmicLatte);
+    transition: all 0.15s ease;
+}
+
+.social img {
+    height: 100%;
+    z-index: 1;
+}
+
+.social:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 2rem;
+    background-color: var(--DeepBlue);
+    transition: all 0.15s ease;
+}
+
+.social:hover::before {
+    content: "";
+    width: 100%;
+    background-color: var(--BrightBlue);
 }
