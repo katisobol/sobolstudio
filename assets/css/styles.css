@@ -1,5 +1,5 @@
 @import url(https://csstools.github.io/normalize.css/11.0.0/normalize.css);
-@import url(../css/buttons.css);
+@import url(buttons.css);
 
 @font-face {
     font-family: "AvantGarde";
@@ -15,6 +15,7 @@
     --DeepBlue: #1b355b; /* Цвет кнопки при наведении */
     --CosmicLatte: #fff8e7; /* Цвет текста */
     --BrightBlue: #0C4FAD; /* Цвет ссылки */
+    --Golden: #D2A33C; /* Я просто оставлю это здесь */
 }
 
 *,
@@ -50,7 +51,8 @@ section,
     max-width: 1400px; /* Избегаем проблем ширины для широкого экрана */
     margin: 0 auto; /* Избегаем проблем ширины для широкого экрана */
 }
-/* Растягиваем блочные элементы на все колонки */
+
+/* Растягиваем блочные элементы по умолчанию на все колонки */
 section > h1,
 section > h2,
 section > h3,
