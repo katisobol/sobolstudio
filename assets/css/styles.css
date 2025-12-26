@@ -26,7 +26,9 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box; /* Все элементы учитывают паддинги и бордеры в своей ширине */
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center;
 }
 
 /* Глобальная стилизация */
