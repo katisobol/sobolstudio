@@ -1,5 +1,6 @@
 @import url(https://csstools.github.io/normalize.css/11.0.0/normalize.css);
 @import url(buttons.css);
+@import url(layout.css);
 
 @font-face {
     font-family: "AvantGarde";
@@ -9,24 +10,23 @@
     font-family: "Santello";
     src: url("../fonts/SANTELLO.ttf");
 }
+@font-face {
+    font-family: "Unovis100";
+    src: url("../fonts/UNOVIS100.otf");
+}
 
 :root {
-    --SoftBlack: #101010; /* Задний план */
+    --SoftBlack: #141414; /* Задний план */
     --DeepBlue: #1b355b; /* Цвет кнопки при наведении */
     --CosmicLatte: #fff8e7; /* Цвет текста */
-    --BrightBlue: #0C4FAD; /* Цвет ссылки */
-    --Golden: #D2A33C; /* Я просто оставлю это здесь */
+    --BrightBlue: #1a58ae; /* Цвет ссылки */
+    --Golden: #d2a33c; /* Я просто оставлю это здесь */
 }
 
 *,
 *::before,
 *::after {
     box-sizing: border-box; /* Все элементы учитывают паддинги и бордеры в своей ширине */
-}
-
-/* Ручное управление блоками */
-.hid {
-    display: none;
 }
 
 /* Глобальная стилизация */
@@ -40,18 +40,19 @@ body {
     padding: 0;
     min-height: 100vh;
 }
-
+section {
+    padding: 100px 200px;
+}
 section,
 .layout {
+    position: relative;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    column-gap: 50px;
-    row-gap: 0.5em;
-    padding: 150px 200px;
+    grid-auto-flow: column;
+    gap: 0.5em 50px;
     max-width: 1400px; /* Избегаем проблем ширины для широкого экрана */
     margin: 0 auto; /* Избегаем проблем ширины для широкого экрана */
 }
-
 /* Растягиваем блочные элементы по умолчанию на все колонки */
 section > h1,
 section > h2,
@@ -101,7 +102,7 @@ h2 {
 }
 
 h3 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     margin: 0.5rem 0 0.25rem 0;
 }
 
@@ -111,12 +112,30 @@ p {
     margin: 0.25rem 0 1rem 0;
 }
 
+/* назначай этот стиль лого для сохранения пропорций */
+.logo {
+    aspect-ratio: 1/1;
+    height: auto;
+}
+
+/* моя фирменная текстовая врезка */
+@media screen and (min-width: 721px) {
+    .side {
+        font-family: Santello, Raleway;
+        font-size: 0.75rem;
+        position: absolute;
+        right: -200px;
+        bottom: 200px;
+        rotate: -90deg;
+        color: silver;
+    }
+}
+
 @media screen and (max-width: 720px) {
     section {
         display: block;
         padding: 1.5em;
     }
-
     h1,
     h2 {
         font-size: 2rem;

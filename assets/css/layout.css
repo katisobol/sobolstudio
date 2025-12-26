@@ -1,1 +1,22 @@
+/* Цветовые темы */
+
+.white {
+    background-color: var(--CosmicLatte);
+    color: var(--DeepBlue);
+}
+.white h1,
+.white h2{
+    color: var(--SoftBlack);
+}
+
+.blueprint {
+	background-image: linear-gradient(#0B3C61 1.5px, transparent 1.5px), linear-gradient(to right, #0B3C61 1.5px, transparent 1.5px);
+	background-size: 35px 35px;
+    background-color: var(--DeepBlue);
+    color: silver;
+}
+.blueprint h1, .blueprint h2, .blueprint h3, .blueprint h4 {
+    color: white;
+}
+
 /* Проектирование повторяющихся лейаутов */

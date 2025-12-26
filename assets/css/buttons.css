@@ -17,6 +17,7 @@ button,
     border: none;
     color: var(--CosmicLatte);
     text-decoration: none;
+    z-index: 2
 }
 
 button::before,
@@ -50,9 +51,10 @@ button:hover::before,
 .social {
     font-size: 0.75rem;
     color: var(--CosmicLatte);
-    padding: 0.35rem;
+    padding: 0.2rem;
     margin: 0 0.5rem;
     height: 2rem;
+    width: 2rem;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -61,6 +63,8 @@ button:hover::before,
     cursor: pointer;
     background-color: var(--CosmicLatte);
     transition: all 0.15s ease;
+    border-bottom: solid var(--BrightBlue) 2.5px;
+    border-left: solid var(--BrightBlue) 2.5px;
 }
 
 .social img {
