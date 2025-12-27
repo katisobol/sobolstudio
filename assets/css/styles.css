@@ -121,7 +121,7 @@ p {
 }
 
 /* моя фирменная текстовая врезка */
-@media screen and (min-width: 721px) {
+@media screen and (min-width: 851px) {
     .side {
         font-family: Santello, Raleway;
         font-size: 0.75rem;
@@ -141,7 +141,7 @@ p {
 }
 
 /* Мобильный лейаут */
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 850px) {
     section {
         display: block;
         padding: 1.5em;

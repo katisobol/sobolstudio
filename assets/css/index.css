@@ -24,7 +24,7 @@
 }
 nav a {
     display: block;
-    color: slategray;
+    color: var(--DarkBlue);
     text-decoration: none;
     margin: 0.5rem 0 0;
 }
@@ -34,7 +34,7 @@ nav a {
     background-color: var(--SoftBlack);
     box-shadow: 0 1000px 0 1000px var(--SoftBlack);
     color: var(--CosmicLatte);
-    z-index: 2
+    z-index: 2;
 }
 #hero div a {
     display: block;
@@ -47,7 +47,6 @@ nav a {
 }
 
 /* 2. Value-секция */
-
 
 /* 4. philosophy-секция */
 #philosophy h3 {
