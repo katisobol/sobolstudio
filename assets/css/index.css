@@ -4,6 +4,7 @@
     overflow: hidden;
     grid-auto-flow: row;
     color: var(--SoftBlack);
+    max-width: 1920px;
 }
 #hero h1 {
     margin: 3rem 0 2.5rem;
@@ -39,7 +40,7 @@ nav a {
     display: block;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 840px) {
     h1 {
         margin: 5rem 0;
     }
