@@ -42,6 +42,13 @@ body {
     padding: 0;
     min-height: 100vh;
 }
+
+*,
+*:hover {
+    transition: 150ms;
+}
+
+/* Лейаут */
 section {
     padding: 100px 200px;
 }
@@ -55,7 +62,8 @@ section,
     max-width: 1400px; /* Избегаем проблем ширины для широкого экрана */
     margin: 0 auto; /* Избегаем проблем ширины для широкого экрана */
 }
-/* Растягиваем блочные элементы по умолчанию на все колонки */
+
+/* Лейаут: растягиваем блочные элементы по умолчанию на все колонки */
 section > h1,
 section > h2,
 section > h3,
@@ -114,20 +122,44 @@ p {
     margin: 0.25rem 0 1rem 0;
 }
 
+/* Семантически правильное меню сайта */
+nav {
+    grid-auto-flow: row;
+}
+nav a {
+    display: block;
+    color: var(--DarkBlue);
+    text-decoration: none;
+}
+nav a:hover {
+    color: var(--BrightBlue);
+}
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    list-style-type: none;
+    margin: 0.5rem 0 0;
+}
+
 /* назначай этот стиль лого для сохранения пропорций */
 .logo {
     aspect-ratio: 1/1;
     height: auto;
 }
 
-/* моя фирменная текстовая врезка */
-@media screen and (min-width: 851px) {
+/*текстовая врезка с названием секции */
+@media screen and (min-width: 801px) {
     .side {
+        font-weight: normal;
+        width: 0;
+        white-space: nowrap;
         font-family: Santello, Raleway;
         font-size: 0.75rem;
         position: absolute;
-        right: -200px;
-        bottom: 200px;
+        right: -100px;
+        bottom: 100px;
         rotate: -90deg;
         color: silver;
     }
@@ -141,7 +173,7 @@ p {
 }
 
 /* Мобильный лейаут */
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 800px) {
     section {
         display: block;
         padding: 1.5em;

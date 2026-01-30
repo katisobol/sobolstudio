@@ -6,7 +6,7 @@ button,
     justify-content: center;
     height: 50px;
     line-height: 50px;
-    margin: 1rem 0;
+    margin: 1.5rem 0;
     padding: 0 4em;
     position: relative;
     transition: 0.15s ease;
@@ -16,8 +16,9 @@ button,
     background: transparent;
     border: none;
     color: var(--CosmicLatte);
+    background-color: var(--SoftBlack);
     text-decoration: none;
-    z-index: 2
+    z-index: 2;
 }
 
 button::before,
@@ -34,11 +35,6 @@ button::before,
     border-bottom: 1.5px solid white;
     transition: all 0.25s ease;
     z-index: -1;
-}
-
-button:hover,
-.btn:hover {
-    background-color: transparent;
 }
 
 button:hover::before,

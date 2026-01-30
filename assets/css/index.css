@@ -14,20 +14,14 @@
     content: url(../img/content/hero.svg);
     position: absolute;
     left: 0;
-    width: 10vw;
+    width: 100vw;
     z-index: -1;
 }
 
 #hero nav {
     grid-column: 3 / -1;
-    grid-auto-flow: row;
 }
-nav a {
-    display: block;
-    color: var(--DarkBlue);
-    text-decoration: none;
-    margin: 0.5rem 0 0;
-}
+
 #hero div {
     padding-top: 1.5rem;
     grid-column: 3 / -1;
@@ -38,6 +32,39 @@ nav a {
 }
 #hero div a {
     display: block;
+}
+
+#value h2 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+#value .wrap {
+    grid-column-start: 2;
+}
+
+#value ul {
+    grid-column: 2 / -1;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    border-top: solid 1.5px slategray;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    gap: 2.5em;
+}
+
+#value li {
+    list-style-type: none;
+    width: 1fr;
+}
+
+#value h4 {
+    color: slategray;
+    height: 10em;
+    display: flex;
+    align-items: flex-end;
 }
 
 @media screen and (max-width: 840px) {
