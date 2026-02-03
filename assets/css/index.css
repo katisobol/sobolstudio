@@ -34,17 +34,24 @@
     display: block;
 }
 
-#value h2 {
-    margin: 0;
-    font-size: 2.5rem;
+#value p {
+    grid-column-start: 2;
 }
 
-#value .wrap {
+#value span {
+    color: slategray;
+    grid-column: 2 / -1;
+}
+
+#value h2 {
+    font-size: 2.5rem;
+    text-indent: -12vw;
     grid-column-start: 2;
 }
 
 #value ul {
     grid-column: 2 / -1;
+    grid-template-columns: 3 / -1;
     display: flex;
     flex-direction: row;
     margin: 0;
@@ -52,12 +59,11 @@
     border-top: solid 1.5px slategray;
     margin-top: 2rem;
     padding-top: 2rem;
-    gap: 2.5em;
+    gap: 75px;
 }
 
 #value li {
     list-style-type: none;
-    width: 1fr;
 }
 
 #value h4 {
@@ -67,9 +73,15 @@
     align-items: flex-end;
 }
 
-@media screen and (max-width: 840px) {
+@media screen and (max-width: 800px) {
     h1 {
         margin: 5rem 0;
+    }
+    #value ul {
+        gap: 1em;
+    }
+    #value h2 {
+        text-indent: 0;
     }
 }
 
