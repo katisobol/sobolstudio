@@ -1,0 +1,47 @@
+.portfolio {
+    gap: 1.5vw;
+}
+.portfolio span {
+    color: white;
+    background-color: red;
+}
+
+.portfolio a {
+    background: navy;
+    grid-column: span 1;
+    overflow: clip;
+    aspect-ratio: 9 / 16;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    justify-content:end;
+    align-items:center;
+    text-shadow:
+        0 0 1em black,
+        0 0 0.35em black,
+        0 0 0.5px black;
+}
+
+.portfolio a::before {
+    content: "1";
+    position: relative;
+    background: red;
+    height: 50vh;
+    width: 100px;
+    color: white;
+    text-decoration: none;
+    display: none;
+}
+
+.portfolio a p {
+    rotate: -90deg;
+    top: 80px;
+}
+
+
+@media screen and (max-width: 800px) {
+    .portfolio a {
+        display: inline-block;
+        width: 20vw;
+    }
+}

@@ -59,8 +59,8 @@ button:hover::before,
     cursor: pointer;
     background-color: var(--CosmicLatte);
     transition: all 0.15s ease;
-    border-bottom: solid var(--BrightBlue) 2.5px;
-    border-left: solid var(--BrightBlue) 2.5px;
+    border-bottom: solid var(--BrightBlue) 1.5px;
+    border-left: solid var(--BrightBlue) 1.5px;
 }
 
 .social img {
