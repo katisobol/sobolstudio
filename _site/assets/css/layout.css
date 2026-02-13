@@ -1,0 +1,32 @@
+/* Цветовые темы */
+
+.white {
+    background-color: var(--CosmicLatte);
+    color: var(--DeepBlue);
+}
+.white h1,
+.white h2 {
+    color: var(--SoftBlack);
+}
+
+.blueprint {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1.5px, transparent 1.5px),
+        linear-gradient(to right, rgba(255, 255, 255, 0.05) 1.5px, transparent 1.5px);
+    background-size: 35px 35px;
+    background-color: var(--DeepBlue);
+    color: silver;
+}
+.blueprint h1,
+.blueprint h2,
+.blueprint h3,
+.blueprint h4 {
+    color: white;
+}
+
+.crosses {
+	background: radial-gradient(circle, transparent 20%, var(--SoftBlack) 20%, var(--SoftBlack) 80%, transparent 80%, transparent) 0% 0% / 50px 50px, radial-gradient(circle, transparent 20%, var(--SoftBlack) 20%, var(--SoftBlack) 80%, transparent 80%, transparent) 25px 25px / 50px 50px, linear-gradient(#5D5D5D 2px, transparent 2px) 0 -1px / 25px 25px, linear-gradient(90deg, #5D5D5D 2px, var(--SoftBlack) 2px) -1px 0 / 25px 25px var(--SoftBlack);
+	background-size: 50px 50px, 50px 50px, 25px 25px, 25px 25px;
+	background-color: var(--SoftBlack);
+}
+
+/* Проектирование повторяющихся лейаутов */
