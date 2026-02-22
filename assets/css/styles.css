@@ -1,6 +1,7 @@
 @import url(https://csstools.github.io/normalize.css/11.0.0/normalize.css);
 @import url(buttons.css);
 @import url(layout.css);
+@import url(portfolio.css);
 
 @font-face {
     font-family: "AvantGarde";
@@ -21,6 +22,10 @@
     --CosmicLatte: #fff8e7; /* Цвет текста */
     --BrightBlue: #1a58ae; /* Цвет ссылки */
     --Golden: #d2a33c; /* Я просто оставлю это здесь */
+
+    --pagemargin: 20vw;
+    --marginmobile: 1.5em;
+    --sectiongap: 10vw;
 }
 
 *,
@@ -50,10 +55,23 @@ body {
 }
 
 /* Лейаут */
-section {
-    padding: 100px 200px;
-}
 section,
+header,
+footer,
+main {
+    padding: var(--sectiongap) var(--pagemargin);
+}
+header {
+    padding-bottom: 0 !important;
+}
+footer {
+    padding-top: 0 !important;
+}
+
+section,
+main,
+header,
+footer,
 .layout {
     position: relative;
     display: grid;
@@ -73,6 +91,7 @@ small,
 button,
 div,
 img,
+article,
 .block {
     grid-column: 1 / -1;
     display: block;
@@ -154,31 +173,28 @@ nav ul li {
 /*текстовая врезка с названием секции */
 @media screen and (min-width: 801px) {
     .side {
+        position: absolute;
+        right: -100px;
+        bottom: var(--sectiongap);
         font-weight: normal;
         width: 0;
+        height: 0;
         white-space: nowrap;
         font-family: Santello, Raleway;
         font-size: 0.75rem;
-        position: absolute;
-        right: -100px;
-        bottom: 100px;
         rotate: -90deg;
         color: silver;
     }
 }
 
-/* Делаю финт ушами над широкоформатом */
-@media screen and (min-width: 1400px) {
-    p {
-        grid-column-start: 3;
-    }
-}
-
 /* Мобильный лейаут */
-@media screen and (max-width: 800px) {
-    section {
+@media screen and (max-width: 1000px) {
+    section,
+    header,
+    footer,
+    main {
         display: block;
-        padding: 1.5em;
+        padding: var(--marginmobile);
     }
     h1,
     h2 {

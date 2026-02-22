@@ -11,18 +11,20 @@ date_format: "%-d.%m.%Y"
 collections:
   portfolio:
     output: true
-    permalink: /portfolio/:path/   # будет URL вида /portfolio/ib-security/
+    permalink: /portfolio/:path/ # будет URL вида /portfolio/ib-security/
   posts:
-    output: true                  # это встроенная коллекция, можно оставить как есть
+    output: true # это встроенная коллекция, можно оставить как есть
   products:
-    output: true                  # на будущее
+    output: true # на будущее
 
 defaults:
   - scope:
       path: ""
       type: "portfolio"
     values:
-      layout: "portfolio"         # все файлы портфолио используют этот шаблон
+      layout: "portfolio-case"
+      extra_css:
+        - /assets/css/portfolio-case.css # все файлы портфолио используют этот шаблон
   - scope:
       path: ""
       type: "posts"

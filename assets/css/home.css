@@ -27,6 +27,7 @@
     left: 0;
     width: 100vw;
     bottom: 326px;
+    display: none;
 }
 
 #hero nav {
@@ -50,7 +51,7 @@
     margin: 1em 0 0;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
     h1 {
         margin: 5rem 0;
     }
@@ -86,25 +87,25 @@
     overflow: visible;
 }
 #value p:nth-child(1)::before {
-    left: 200px;
-    top: 100px;
+    left: var(--pagemargin);
+    top: var(--sectiongap);
     rotate: 180deg;
 }
 #value p:nth-child(1)::after {
-    right: 200px;
-    top: 100px;
+    right: var(--pagemargin);
+    top: var(--sectiongap);
     rotate: -90deg;
 }
 #value ul::before {
-    left: 200px;
-    bottom: 100px;
+    left: var(--pagemargin);
+    bottom: var(--sectiongap);
     rotate: 90deg;
 }
 #value ul::after {
-    right: 200px;
-    bottom: 100px;
+    right: var(--pagemargin);
+    bottom: var(--sectiongap);
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
     #value p:nth-child(1)::before,
     #value p:nth-child(1)::after,
     #value ul::before,
@@ -177,7 +178,7 @@ h2::before {
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
     #value ul {
         gap: 1em;
     }

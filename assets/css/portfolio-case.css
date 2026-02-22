@@ -1,0 +1,42 @@
+section{
+    padding-top: 0;
+}
+
+@media screen and (min-width: 1000px) {
+    h1 {
+        position: relative;
+        left: calc(0vw - var(--pagemargin));
+        width: 100vw;
+        max-width: none;
+        padding: 10px var(--pagemargin) var(--pagemargin);
+        margin: 0;
+        background-color: var(--BrightBlue);
+        text-shadow: var(--textShadow);
+    }
+}
+
+#gallery {
+    position: relative;
+    left: calc(0vw - var(--pagemargin));
+    width: 100vw;
+    max-width: none;
+    white-space: nowrap;
+    overflow-x: scroll;
+}
+@media screen and (max-width: 1000px) {
+    #gallery {
+        left: calc(0vw - var(--marginmobile));
+    }
+}
+
+#gallery img {
+    max-width: 95%;
+    display: inline-block;
+}
+
+/* Делаю финт ушами над широкоформатом */
+@media screen and (min-width: 1400px) {
+    p {
+        grid-column-start: 3;
+    }
+}
