@@ -3,7 +3,7 @@ title: Как выйти из стерильности ИБ-дизайна
 date: 2026-02-12
 description: Сайт ИБ
 thumbnail: /assets/img/portfolio/ib-security/thumbnail.jpg   # маленькое превью для карточки
-keyvisual: /assets/img/portfolio/ib-security/keyvisual.png   # главное изображение на странице кейса (может совпадать с одним из фреймов)
+cover: /assets/img/portfolio/ib-security/thumbnail.jpg   # обложка под h1
 images:
   - /assets/img/portfolio/ib-security/frame1.png
   - /assets/img/portfolio/ib-security/frame2.png

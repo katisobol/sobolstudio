@@ -1,42 +1,35 @@
-section{
+main {
     padding-top: 0;
 }
 
-@media screen and (min-width: 1000px) {
-    h1 {
-        position: relative;
-        left: calc(0vw - var(--pagemargin));
-        width: 100vw;
-        max-width: none;
-        padding: 10px var(--pagemargin) var(--pagemargin);
-        margin: 0;
-        background-color: var(--BrightBlue);
-        text-shadow: var(--textShadow);
-    }
+.cover {
+    position: relative;
+    left: calc(0px - var(--padding));
+    width: 100vw;
+    max-width: none;
+    padding: var(--sectiongap) var(--padding) calc(var(--sectiongap) * 0.75);
+    margin: 0 0 2rem;
+    background: var(--BrightBlue);
+    background-position: center;
+    background-size: cover;
+    text-shadow: var(--textShadow);
 }
 
 #gallery {
     position: relative;
-    left: calc(0vw - var(--pagemargin));
+    left: calc(0vw - var(--padding));
+    max-width: unset;
     width: 100vw;
-    max-width: none;
     white-space: nowrap;
     overflow-x: scroll;
-}
-@media screen and (max-width: 1000px) {
-    #gallery {
-        left: calc(0vw - var(--marginmobile));
-    }
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin-top: 2rem;
 }
 
 #gallery img {
     max-width: 95%;
+    max-height: 75vh;
     display: inline-block;
-}
-
-/* Делаю финт ушами над широкоформатом */
-@media screen and (min-width: 1400px) {
-    p {
-        grid-column-start: 3;
-    }
 }

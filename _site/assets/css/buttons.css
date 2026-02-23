@@ -1,3 +1,16 @@
+/* Стандартная кнопка с логотипом */
+.logo {
+    aspect-ratio: 1/1;
+    height: auto;
+    width: 24px;
+}
+@media screen and (max-width: 768px) {
+    .logo {
+        width: 50px;
+    }
+}
+
+
 button,
 .btn {
     font-family: Santello, Raleway;

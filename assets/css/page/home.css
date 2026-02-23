@@ -1,13 +1,13 @@
 /* 1. hero-секция */
 #hero {
-    background-image: url(../img/content/hero1.png);
-    overflow: hidden;
-    grid-auto-flow: row;
+    background-image: url(../../img/page/home/hero1.png);
     color: var(--SoftBlack);
-    max-width: 1920px;
+    display: block;
+    padding: var(--sectiongap) 0 0;
 }
+
 #hero h1 {
-    margin: 3rem 0 2.5rem;
+    margin: calc(var(--sectiongap) / 2) var(--padding);
     z-index: 2;
 }
 
@@ -29,35 +29,54 @@
     bottom: 326px;
     display: none;
 }
-
-#hero nav {
-    grid-column: 3 / -1;
-}
-
+#hero nav,
 #hero div {
-    padding-top: 1.5rem;
-    grid-column: 3 / -1;
-    background-color: var(--SoftBlack);
-    box-shadow: 0 1000px 0 1000px var(--SoftBlack);
-    color: var(--CosmicLatte);
-    z-index: 2;
+    margin: 0 var(--padding);
+    display: grid;
+    grid-template-columns: var(--grid);
+    column-gap: 75px;
 }
 
-#hero div a {
-    display: block;
+#hero nav *,
+#hero div * {
+    grid-column: 3 / -1;
 }
 
 #hero ul {
     margin: 1em 0 0;
 }
 
-@media screen and (max-width: 1000px) {
-    h1 {
-        margin: 5rem 0;
-    }
-    #hero::before {
-        bottom: 45%;
-    }
+#hero div {
+    color: var(--CosmicLatte);
+    background: var(--SoftBlack);
+    margin: 0;
+    padding: 2em var(--padding) var(--sectiongap);
+    row-gap: 1em;
+}
+
+#hero a {
+    margin: 0;
+}
+
+/* Семантически правильное меню сайта */
+nav {
+    grid-auto-flow: row;
+}
+nav a {
+    display: block;
+    color: var(--DarkBlue);
+    text-decoration: none;
+}
+nav a:hover {
+    color: var(--BrightBlue);
+}
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    list-style-type: none;
+    margin: 0.5rem 0 0;
 }
 
 /* 2. Value-секция */
@@ -66,20 +85,23 @@
     content: "";
     position: absolute;
     top: 0;
-    left: calc((100vw - 400px) / 5 + 200px);
-    width: 100%;
+    left: var(--padding);
+    width: calc(100vw - var(--padding));
     height: 55%;
-    background: url(../img/patterns/crossesBlk.svg);
+    background: url(../../img/patterns/crossesBlk.svg);
     background-repeat: repeat;
-    opacity: 0.35;
+    opacity: 0.65;
     z-index: -1;
 }
 /* украшаю направляющими. Как же проклято выглядят стили, ё-моё */
+#value {
+    position: relative;
+}
 #value p:nth-child(1)::before,
 #value p:nth-child(1)::after,
 #value ul::before,
 #value ul::after {
-    content: url(../img/patterns/guides.svg);
+    content: url(../../img/patterns/guides.svg);
     position: absolute;
     opacity: 0.35;
     width: 0;
@@ -195,4 +217,13 @@ h2::before {
 
 #philosophy p {
     grid-column: 2 / -1;
+}
+
+#CTA {
+    position: relative;
+}
+@media handheld, (max-width: 768px) {
+    #CTA h2 {
+        display: none;
+    }
 }
