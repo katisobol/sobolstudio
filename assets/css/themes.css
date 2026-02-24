@@ -6,6 +6,19 @@
     --Golden: #d2a33c; /* Я просто оставлю это здесь */
 }
 
+/* тенюшки под текст */
+:root {
+    --textShadow: 0 0 1em black, 0 0 0.35em black, 0 0 0.5px black;
+}
+
+/* Цвета по умолчанию */
+
+body {
+    background: var(--SoftBlack);
+    color: var(--CosmicLatte);
+    caret-color: transparent;
+}
+
 /* Цветовые темы */
 
 .white {

@@ -3,13 +3,32 @@
     aspect-ratio: 1/1;
     height: auto;
     width: 24px;
+    background: url(/assets/img/logo/Kc_logo_full_logo_raster_dk.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position:center;
+    border: none;
 }
+
 @media screen and (max-width: 768px) {
     .logo {
         width: 50px;
     }
 }
 
+a {
+    text-decoration: none;
+    color: cornflowerblue;
+}
+a:hover {
+    text-decoration: underline;
+}
+a:active {
+	color: white;
+}
+a:visited{
+    color: #c686aa;
+}
 
 button,
 .btn {
@@ -28,9 +47,9 @@ button,
     cursor: pointer;
     background: transparent;
     border: none;
-    color: var(--CosmicLatte);
+    color: var(--CosmicLatte) !important;
     background-color: var(--SoftBlack);
-    text-decoration: none;
+    text-decoration: none !important;
     z-index: 2;
 }
 

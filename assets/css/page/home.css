@@ -1,14 +1,46 @@
 /* 1. hero-секция */
 #hero {
-    background-image: url(../../img/page/home/hero1.png);
+    background-image: url(../../img/page/home/hero1.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: top;
+    background-attachment: fixed;
+    background-color: black;
     color: var(--SoftBlack);
     display: block;
     padding: var(--sectiongap) 0 0;
 }
 
+
+#hero h1,
+#hero nav a {
+    text-shadow:
+        0 0 100px cornflowerblue,
+        0 0 65px var(--CosmicLatte),
+        0 0 10px tan,
+        0 0 1.5px gold,
+        0 0 0.5px white;
+}
+
 #hero h1 {
     margin: calc(var(--sectiongap) / 2) var(--padding);
     z-index: 2;
+}
+@media (max-width: 768px) {
+    #hero h1 {
+        text-align: center;
+    }
+    #hero {
+        background-position-y: 15%;
+    }
+    #hero nav a{
+        text-shadow: unset;
+        color: cornflowerblue;
+    }
+    #hero nav a:visited{
+        text-shadow: unset;
+        color: var(--BrightBlue);
+    }
 }
 
 #hero::before {
@@ -51,11 +83,21 @@
     background: var(--SoftBlack);
     margin: 0;
     padding: 2em var(--padding) var(--sectiongap);
-    row-gap: 1em;
+    row-gap: 0.5em;
 }
 
 #hero a {
     margin: 0;
+}
+
+@media (min-width: 769px){
+    #hero .logo {
+        background: url(/assets/img/logo/Kc_logo_full_logo_raster_lght.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+        border: none;
+    }
 }
 
 /* Семантически правильное меню сайта */
@@ -64,12 +106,16 @@ nav {
 }
 nav a {
     display: block;
-    color: var(--DarkBlue);
+    color: var(--DeepBlue);
     text-decoration: none;
 }
 nav a:hover {
     color: var(--BrightBlue);
 }
+#hero a:visited {
+    color: var(--DeepBlue);
+}
+
 nav ul {
     margin: 0;
     padding: 0;
@@ -80,25 +126,14 @@ nav ul li {
 }
 
 /* 2. Value-секция */
-/* рисую крестики*/
-#value::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: var(--padding);
-    width: calc(100vw - var(--padding));
-    height: 55%;
-    background: url(../../img/patterns/crossesBlk.svg);
-    background-repeat: repeat;
-    opacity: 0.65;
-    z-index: -1;
-}
-/* украшаю направляющими. Как же проклято выглядят стили, ё-моё */
+
 #value {
-    position: relative;
+    padding-top: 0;
 }
-#value p:nth-child(1)::before,
-#value p:nth-child(1)::after,
+
+/* украшаю направляющими. Как же проклято выглядят стили, ё-моё */
+#value::before,
+#value::after,
 #value ul::before,
 #value ul::after {
     content: url(../../img/patterns/guides.svg);
@@ -107,36 +142,37 @@ nav ul li {
     width: 0;
     height: 0;
     overflow: visible;
+    grid-column: 1 / -1;
 }
-#value p:nth-child(1)::before {
-    left: var(--pagemargin);
+#value::before {
+    left: 0;
     top: var(--sectiongap);
     rotate: 180deg;
 }
-#value p:nth-child(1)::after {
-    right: var(--pagemargin);
+#value::after {
+    right: 0;
     top: var(--sectiongap);
     rotate: -90deg;
 }
 #value ul::before {
-    left: var(--pagemargin);
+    left: 0;
     bottom: var(--sectiongap);
     rotate: 90deg;
 }
 #value ul::after {
-    right: var(--pagemargin);
+    right: 0;
     bottom: var(--sectiongap);
 }
-@media screen and (max-width: 1000px) {
-    #value p:nth-child(1)::before,
-    #value p:nth-child(1)::after,
+@media screen and (max-width: 768px) {
+    #value::before,
+    #value::after,
     #value ul::before,
     #value ul::after {
         display: none;
     }
 }
 
-/* ЦИИИФЕРКИ */
+/* ЦИИИФЕРКИ
 h2::before {
     content: "02";
     position: absolute;
@@ -145,8 +181,29 @@ h2::before {
     height: 0;
     display: none;
 }
+*/
 
-#value p {
+/* рисую крестики*/
+#value .crosses {
+    position: relative;
+    padding: var(--sectiongap) 0 calc(var(--sectiongap) / 2);
+    background: none;
+    background-repeat: repeat;
+    z-index: -1;
+}
+#value .crosses::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: calc(100% + var(--padding));
+    height: 100%;
+    background: url(../../img/patterns/crossesBlk.svg);
+    z-index: -1;
+    opacity: 0.65;
+}
+
+.layout p {
     grid-column-start: 2;
 }
 
@@ -170,7 +227,6 @@ h2::before {
     margin: 0;
     padding: 0;
     border-top: solid 1.5px slategray;
-    margin-top: 2rem;
     padding-top: 2rem;
     gap: 75px;
 }

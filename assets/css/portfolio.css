@@ -11,9 +11,15 @@ main a {
     grid-column: span 1;
     overflow: hidden;
     aspect-ratio: 9 / 16;
-    color: white;
+    color: ver(--CosmicLatte);
     text-decoration: none;
     padding: 0;
+}
+main a:visited{
+    color: unset;
+}
+main a:hover{
+    text-decoration: none;
 }
 
 main a p {

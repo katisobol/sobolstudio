@@ -1,8 +1,8 @@
 @import url(https://csstools.github.io/normalize.css/11.0.0/normalize.css);
-@import url(buttons.css);
 @import url(layout.css);
 @import url(themes.css);
 @import url(typo.css);
+@import url(ui.css);
 
 @font-face {
     font-family: "AvantGarde";
@@ -17,30 +17,6 @@
     src: url("../fonts/UNOVIS100.otf");
 }
 
-:root {
-    --pagemargin: 20vw;
-    --marginmobile: 1.5em;
-    --sectiongap: 10vw;
-    --textShadow: 0 0 1em black, 0 0 0.35em black, 0 0 0.5px black;
-}
-
-/* настройка полей страницы */
-
-:root {
-    --padding: 20vw;
-}
-
-@media (min-width: 1800px) {
-    :root {
-        --padding: calc(50vw - 700px);
-    }
-}
-
-@media handheld, (max-width: 768px) {
-    :root {
-        --padding: 1.5rem;
-    }
-}
 
 /* технические палатки */
 *,
@@ -59,11 +35,8 @@ body {
 
 /* Глобальная стилизация */
 body {
-    background: var(--SoftBlack);
-    color: var(--CosmicLatte);
     font-family: Santello, Raleway;
     line-height: 1.5;
-    caret-color: transparent;
 }
 
 *,

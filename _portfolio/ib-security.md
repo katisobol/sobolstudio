@@ -1,6 +1,6 @@
 ---
-title: Как выйти из стерильности ИБ-дизайна
-date: 2026-02-12
+title: Не прячьтесь за флэтом&#58; ребрендинг кибербезопасности
+date: 2026-02-10
 description: Сайт ИБ
 thumbnail: /assets/img/portfolio/ib-security/thumbnail.jpg   # маленькое превью для карточки
 cover: /assets/img/portfolio/ib-security/thumbnail.jpg   # обложка под h1
@@ -8,7 +8,7 @@ images:
   - /assets/img/portfolio/ib-security/frame1.png
   - /assets/img/portfolio/ib-security/frame2.png
   - /assets/img/portfolio/ib-security/frame3.png
-excerpt: "Кейс для стартапа в сфере информационной безопасности — дизайн, который говорит о защите без крика"
+excerpt: "Избавилась от «корпоративной стерильности» в ИБ‑продукте. От безликого шаблона к уникальному голосу"
 size: 1
 ---
 

@@ -1,10 +1,38 @@
-:root{
+/* настройка горизонтальных полей страницы */
+:root {
+    --padding: 20vw;
+}
+
+@media (min-width: 1800px) {
+    :root {
+        --padding: calc(50vw - 700px);
+    }
+}
+
+@media handheld, (max-width: 768px) {
+    :root {
+        --padding: 1.5rem;
+    }
+}
+
+/* Основная переменная расстояний между секциями*/
+:root {
+    --sectiongap: 7.5vw;
+}
+@media (min-width: 2500px) {
+    :root {
+        --sectiongap: clamp(120vw, 10vw, 200px);
+    }
+}
+
+:root {
     --grid: repeat(5, 1fr);
 }
 @media (max-width: 768px) {
     :root {
         --grid: unset;
-    }}
+    }
+}
 
 /* Лейаут */
 section,

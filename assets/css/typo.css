@@ -1,3 +1,9 @@
+
+body {
+    font-family: Santello, Raleway;
+    line-height: 1.5;
+}
+
 /* Типографика */
 h1,
 h2 {
@@ -36,9 +42,7 @@ p {
     max-width: 600px;
     margin: 0.25rem 0 1rem 0;
 }
-a {
-    color: cornflowerblue;
-}
+
 
 /* Мобильный лейаут */
 @media screen and (max-width: 1000px) {

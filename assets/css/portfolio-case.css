@@ -1,5 +1,32 @@
+header{
+    position: absolute;
+    z-index: 2;
+    background: transparent;
+}
+
+@media screen and (min-width: 768px){
+    header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    padding: calc(var(--sectiongap) + 0.25rem) 2rem 0 0;
+    width: var(--padding);
+}
+}
+
+@media handheld, (max-width: 768px){
+    header {
+        padding: 1.5rem 0 0 1.5rem;
+    }
+    h1 {
+        padding-top: 100px ! important;
+    }
+}
+
 main {
     padding-top: 0;
+    position: relative;
 }
 
 .cover {
@@ -26,6 +53,7 @@ main {
     align-items: center;
     gap: 1em;
     margin-top: 2rem;
+    scroll-behavior: smooth;
 }
 
 #gallery img {
