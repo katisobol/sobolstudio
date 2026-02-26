@@ -92,7 +92,7 @@
 
 @media (min-width: 769px){
     #hero .logo {
-        background: url(https://katisobol.github.io/sobolstudio/assets/img/logo/Kc_logo_full_logo_raster_lght.png);
+        background: url(../../img/logo/Kc_logo_full_logo_raster_lght.png);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
