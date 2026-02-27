@@ -20,6 +20,10 @@
     </head>
     <body>
         {% include header.html %}
-        <main>{{ content }}</main>
+        <main
+                {% if page.class %}
+            class="{{ page.class }}"
+                {% endif %}
+              >{{ content }}</main>
     </body>
 </html>

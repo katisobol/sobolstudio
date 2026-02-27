@@ -1,0 +1,63 @@
+header{
+    position: absolute;
+    z-index: 2;
+    background: transparent;
+}
+
+@media screen and (min-width: 768px){
+    header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    padding: calc(var(--sectiongap) + 0.25rem) 2rem 0 0;
+    width: var(--padding);
+}
+}
+
+@media handheld, (max-width: 768px){
+    header {
+        padding: 1.5rem 0 0 1.5rem;
+    }
+    h1 {
+        padding-top: 100px ! important;
+    }
+}
+
+main {
+    padding-top: 0;
+    position: relative;
+}
+
+.cover {
+    position: relative;
+    left: calc(0px - var(--padding));
+    width: 100vw;
+    max-width: none;
+    padding: var(--sectiongap) var(--padding) calc(var(--sectiongap) * 0.75);
+    margin: 0 0 2rem;
+    background: var(--BrightBlue);
+    background-position: center;
+    background-size: cover;
+    text-shadow: var(--textShadow);
+}
+
+#gallery {
+    position: relative;
+    left: calc(0vw - var(--padding));
+    max-width: unset;
+    width: 100vw;
+    white-space: nowrap;
+    overflow-x: scroll;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin-top: 2rem;
+    scroll-behavior: smooth;
+}
+
+#gallery img {
+    max-width: 95%;
+    max-height: 75vh;
+    display: inline-block;
+}

@@ -1,13 +1,11 @@
 ---
 layout: default
 title: Портфолио
-extra_css:
-  - /assets/css/portfolio.css
+class: portfolio
 ---
-
 <h1 class="side">Портфолио</h1>
 {% for case in site.portfolio reversed %}
-<a
+  <a class="card"
   href="{{ case.url | relative_url }}"
   {% if case.size %}
    class="size{{ case.size }}"
@@ -17,10 +15,20 @@ extra_css:
     url("{{ case.thumbnail | relative_url }}") center/cover;'
   {% endif %}
   >
-  <p>{{ case.description }}</p>
+    <div class="cover"
+  {% if case.thumbnail %}
+  style='background:
+    url("{{ case.thumbnail | relative_url }}") center/cover;'
+  {% endif %}>
 
   {% if case.keyvisual %}
   <img src="{{ case.keyvisual | relative_url }}" alt="{{ case.title }}">
+  {% endif %}      <p>{{ case.description }}</p></div>
+
+  <p class="cardname">{{ case.description }}</p>
+
+  {% if case.keyvisual %}
+  <img class="keyvisual" src="{{ case.keyvisual | relative_url }}" alt="{{ case.title }}">
   {% endif %}
 </a>
 {% endfor %}
