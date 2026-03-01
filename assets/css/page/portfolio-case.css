@@ -1,26 +1,54 @@
-header{
+header {
+    display: inline-flex;
     position: absolute;
     z-index: 2;
     background: transparent;
 }
 
-@media screen and (min-width: 768px){
-    header {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-end;
-    padding: calc(var(--sectiongap) + 0.25rem) 2rem 0 0;
-    width: var(--padding);
+header nav ul li {
+    white-space: nowrap;
 }
+header nav ul li::after {
+    content: "/";
+    padding-right: 0;
+}
+header nav ul li:nth-child(1) {
+    display: inline;
+}
+header nav ul li:nth-child(1) a::before {
+    content: "Портфолио";
 }
 
-@media handheld, (max-width: 768px){
+header nav ul li a:link,
+header nav ul li a:visited {
+    color: silver;
+    text-shadow: var(--textShadow);
+}
+
+@media screen and (min-width: 768px) {
+    header {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        padding: calc(var(--sectiongap) + 1rem) 2rem 0 0;
+        width: var(--padding);
+    }
+    header nav {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    header nav ul li::before {
+        padding-left: 0;
+    }
+}
+
+@media handheld, (max-width: 768px) {
     header {
         padding: 1.5rem 0 0 1.5rem;
     }
     h1 {
-        padding-top: 100px ! important;
+        padding-top: 100px !important;
     }
 }
 
@@ -29,7 +57,7 @@ main {
     position: relative;
 }
 
-.cover {
+main .cover {
     position: relative;
     left: calc(0px - var(--padding));
     width: 100vw;

@@ -24,7 +24,7 @@ defaults:
     values:
       layout: "portfolio-case"
       extra_css:
-        - /assets/css/portfolio-case.css # все файлы портфолио используют этот шаблон
+        - /assets/css/page/portfolio-case.css # все файлы портфолио используют этот шаблон
   - scope:
       path: ""
       type: "posts"

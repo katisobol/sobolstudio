@@ -25,6 +25,7 @@
     }
 }
 
+/* Сетка исчезает на узкой странице */
 :root {
     --grid: repeat(5, 1fr);
 }
@@ -34,11 +35,24 @@
     }
 }
 
+/* Расстояние между колонками */
+:root {
+    --columngap: 75px;
+}
+@media (max-width:1200px){
+:root {
+    --columngap: 1rem;
+}
+}
+
+
+
 /* Лейаут */
 section,
 header,
 footer,
-main {
+main,
+.layout {
     padding: var(--sectiongap) var(--padding);
     position: relative;
 }
@@ -55,25 +69,17 @@ footer,
     display: grid;
     grid-template-columns: var(--grid);
     grid-auto-flow: row;
-    gap: 0.5em 75px;
+    gap: 0.5rem 75px;
+}
+
+@media (max-width: 1024px) {
+    .layout {
+        column-gap: 1.5rem;
+    }
 }
 
 /* Лейаут: растягиваем блочные элементы по умолчанию на все колонки */
-h1,
-h2,
-h3,
-p,
-small,
-button,
-div,
-img,
-article,
-.block {
-    grid-column: 1 / -1;
-    display: block;
-    max-width: 100%;
-}
-a {
+:is(section, footer, .layout) > :is(h1, h2, h3, h4, h5, h6, p, small, a, button, div, img, article, .block) {
     grid-column: 1 / -1;
 }
 
@@ -88,7 +94,6 @@ a {
         height: 0;
         white-space: nowrap;
         font-family: Santello, Raleway;
-        font-size: 0.75rem;
         rotate: -90deg;
         color: silver;
         z-index: 2;

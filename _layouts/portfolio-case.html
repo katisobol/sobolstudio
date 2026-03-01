@@ -2,7 +2,7 @@
 layout: default
 ---
 
-
+<main>
   <h1
       {% if page.cover %}
       class="cover" style="background: url({{ page.cover | relative_url }})"
@@ -22,3 +22,7 @@ layout: default
   {% endfor %}
 </div>
 {% endif %}
+</main>
+<aside class="layout portfolio">
+  {% include portfolio.html %}
+</aside>

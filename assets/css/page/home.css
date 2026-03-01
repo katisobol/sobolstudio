@@ -1,10 +1,6 @@
-@import url(../portfolio.css);
-
 /* 1. hero-секция */
 #hero {
     background-image: url(../../img/page/home/hero1.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
     background-position-y: top;
     background-attachment: fixed;
     background-color: black;
@@ -49,7 +45,7 @@
     content: "Превращаю ценности в продающий триггер";
     font-family: Unovis100;
     font-size: 13vw;
-    line-height: 0.5em;
+    line-height: 0.5rem;
     color: grey;
     text-shadow:
         1.5px 1.5px 0 silver,
@@ -68,7 +64,6 @@
     margin: 0 var(--padding);
     display: grid;
     grid-template-columns: var(--grid);
-    column-gap: 75px;
 }
 
 #hero nav *,
@@ -77,19 +72,14 @@
 }
 
 #hero ul {
-    margin: 1em 0 0;
+    margin: 1rem 0 0;
 }
 
 #hero div {
     color: var(--CosmicLatte);
     background: var(--SoftBlack);
     margin: 0;
-    padding: 2em var(--padding) var(--sectiongap);
-    row-gap: 0.5em;
-}
-
-#hero a {
-    margin: 0;
+    padding: 2rem var(--padding) var(--sectiongap);
 }
 
 @media (min-width: 769px) {
@@ -205,13 +195,18 @@ h2::before {
 }
 
 .layout p {
-    grid-column-start: 2;
+    grid-column-start: 2 !important;
+}
+
+#value strong {
+    font-weight: normal;
+    color: slategray;
 }
 
 #value h3 {
     color: slategray;
     grid-column-start: 2;
-    margin: 0 0 0.5em;
+    margin: 0 0 0.5rem;
 }
 
 #value h2 {
@@ -229,7 +224,7 @@ h2::before {
     padding: 0 0 1.5rem;
     border-top: solid 1.5px slategray;
     padding-top: 2rem;
-    gap: 75px;
+    gap: var(--columngap);
 }
 
 #value li {
@@ -241,7 +236,7 @@ h2::before {
     margin-bottom: 0;
 }
 
-#value h4 {
+#value h3 {
     color: slategray;
     display: flex;
     align-items: flex-end;
@@ -249,20 +244,16 @@ h2::before {
     margin-top: 0;
 }
 
-@media screen and (max-width: 1024px) {
+@media (max-width: 1024px) {
     #value ul {
         grid-column-start: 1;
-        gap: 1.5em;
     }
     #value h2 {
         font-size: 2.5rem;
     }
 }
 
-@media screen and (max-width: 1000px) {
-    #value ul {
-        gap: 1em;
-    }
+@media (max-width: 1000px) {
     #value h2 {
         text-indent: 0;
     }
@@ -293,9 +284,8 @@ h2::before {
 }
 
 #portfolio .description small {
-    margin-right: calc(1rem + 2vw);
+    padding-right: calc(1rem + 2vw);
 }
-
 @media (min-width: 1024px) {
     #portfolio .description small::before {
         content: "Дизайн должен передавать конкретное качество или ценность";
@@ -305,8 +295,12 @@ h2::before {
 #portfolio .btn {
     position: absolute;
     bottom: 0;
+    left: 0;
     margin: 0;
     width: 100%;
+}
+#portfolio .btn {
+    padding: unset;
 }
 
 /* скрытая philosophy-секция; снесу её когда-нибудь */

@@ -1,0 +1,37 @@
+<!-- Скрипт добавляет карточки -->
+{% for case in site.portfolio reversed %}
+<!-- Скрипт увеличит карточку если добавить в кейс переменную size -->
+  <a class="card
+            {% if case.size %}
+            size{{ case.size }}
+            {% endif %}
+            "
+  href="{{ case.url | relative_url }}"
+
+
+  {% if case.thumbnail %}
+  style='background:
+    url("{{ case.thumbnail | relative_url }}") center/cover;'
+  {% endif %}
+  >
+<!-- Всплывающее окно при наведении курсора -->
+    <div class="cover"
+  {% if case.thumbnail %}
+  style='background: url(
+                   {{ case.thumbnail | relative_url }}
+                         ) center/cover;'
+  {% endif %}>
+
+<!-- Добавляет кейвижуал во всплывашку -->
+  {% if case.keyvisual %}
+  <img src="{{ case.keyvisual | relative_url }}" alt="{{ case.title }}">
+  {% endif %}      <p>{{ case.description }}</p></div>
+
+<!-- Контент внутри карточки: название, кейвижуал -->
+  <p class="cardname">{{ case.description }}</p>
+  {% if case.keyvisual %}
+  <img class="keyvisual" src="{{ case.keyvisual | relative_url }}" alt="{{ case.title }}">
+  {% endif %}
+
+</a>
+{% endfor %}

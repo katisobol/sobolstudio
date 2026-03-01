@@ -1,12 +1,13 @@
 /* Стандартная кнопка с логотипом */
 .logo {
+    display: inline-block;
     aspect-ratio: 1/1;
     height: auto;
     width: 24px;
     background-image: url(../img/logo/Kc_logo_full_logo_raster_dk.png);
     background-size: contain;
     background-repeat: no-repeat;
-    background-position:center;
+    background-position: center;
     border: none;
 }
 
@@ -16,22 +17,24 @@
     }
 }
 
-a {
+a:link {
     text-decoration: none;
     color: cornflowerblue;
 }
-a:hover {
+a:hover,
+a:focus {
     text-decoration: underline;
 }
 a:active {
-	color: white;
+    color: var(--CosmicLatte);
 }
-a:visited{
-    color: #c686aa;
+a:visited {
+    color: #a88ab8;
 }
 
 button,
-.btn {
+.btn,
+.btn:visited {
     font-family: Santello, Raleway;
     display: inline-flex;
     align-items: center;
@@ -53,8 +56,7 @@ button,
     z-index: 2;
 }
 
-button::before,
-.btn::before {
+:is(button, .btn)::before {
     content: "";
     position: absolute;
     left: 0;
@@ -69,14 +71,14 @@ button::before,
     z-index: -1;
 }
 
-button:hover::before,
-.btn:hover::before {
+:is(button, .btn):hover::before {
     left: 50%;
     background-color: var(--DeepBlue);
     border-color: transparent;
 }
 
-.social {
+.social,
+.social:visited {
     font-size: 0.75rem;
     color: var(--CosmicLatte);
     padding: 0.2rem;
@@ -91,8 +93,9 @@ button:hover::before,
     cursor: pointer;
     background-color: var(--CosmicLatte);
     transition: all 0.15s ease;
-    border-bottom: solid var(--BrightBlue) 1.5px;
-    border-left: solid var(--BrightBlue) 1.5px;
+    border-left: solid var(--BrightBlue) 2.5px;
+    border-top: solid var(--BrightBlue) 2.5px;
+    border-bottom: solid var(--BrightBlue) 2.5px;
 }
 
 .social img {

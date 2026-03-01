@@ -1,13 +1,11 @@
-#portfolio,
-.portfolio {
+#portfolio, #portfolio {
     display: grid;
     grid-template-columns: repeat(5, 20%);
     gap: 1.5vw;
     grid-auto-flow: dense;
 }
 
-#portfolio .card,
-.portfolio .card {
+:is(.portfolio, #portfolio) .card {
     position: relative;
     background-color: var(--DeepBlue);
     grid-column: span 1;
@@ -16,17 +14,14 @@
     text-decoration: none;
     padding: 0;
 }
-#portfolio .card:visited,
-.portfolio .card:visited {
+:is(.portfolio, #portfolio) .card:visited {
     color: unset;
 }
-#portfolio .card:hover,
-.portfolio .card:hover {
+:is(.portfolio, #portfolio) .card:hover {
     text-decoration: none;
 }
 
-#portfolio .card .cardname,
-.portfolio .card .cardname {
+:is(.portfolio, #portfolio) .card .cardname {
     transform-origin: bottom right;
     right: 1em;
     top: 0;
@@ -40,8 +35,7 @@
         0 0 0.5px black;
 }
 
-#portfolio .card .keyvisual,
-.portfolio .card .keyvisual {
+:is(.portfolio, #portfolio) .card .keyvisual {
     position: absolute;
     top: 0;
     width: 100%;
@@ -51,10 +45,14 @@
 
 @media screen and (max-width: 768px) {
     #portfolio .card,
-    .portfolio .card {
+    :is(.portfolio, #portfolio) .card {
         display: inline-block;
         width: 20vw;
     }
+}
+
+.card {
+    position: relative;
 }
 
 .card .cover {
