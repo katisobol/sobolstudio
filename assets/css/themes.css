@@ -58,14 +58,15 @@ body {
 
 .glass-morphism {
     background: rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.18);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(10px) saturate(180%);
     -webkit-backdrop-filter: blur(10px) saturate(180%);
 }
 
-/* ! применяет режим наложения ! */
+
+/* ! ПРИМЕНЯЕТ режим наложения ! */
+
 .shadowhuge {
     color: grey;
     text-shadow:
@@ -74,4 +75,14 @@ body {
         0 0.5px 1.5px #826a56,
         0.5px 0 1.5px rgba(34, 66, 120, 0.65);
     mix-blend-mode: hard-light;
+}
+
+.outline{
+    color: grey;
+    text-shadow:
+        1.5px 1.5px 0 silver,
+        -1.5px -1.5px 0 silver,
+        -1.5px 1.5px 0 silver,
+        1.5px -1.5px 0 silver;
+    mix-blend-mode: overlay;
 }

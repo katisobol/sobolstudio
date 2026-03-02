@@ -1,12 +1,53 @@
 /* 1. hero-секция */
 #hero {
-    background-image: url(../../img/page/home/hero1.jpg);
+    background-image: url(../../img/page/home/hero3.png);
     background-position-y: top;
     background-attachment: fixed;
     background-color: black;
     color: var(--SoftBlack);
-    display: block;
     padding: var(--sectiongap) 0 0;
+    display: block;
+}
+
+#hero div.layout:first-child {
+    padding: 0 var(--padding);
+}
+
+#hero nav {
+    padding: 1rem;
+    grid-column: 3 / -1;
+    background-color: rgba(255, 255, 255, 0.35);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+@media (max-width: 768px) {
+}
+
+/* Семантически правильное меню сайта */
+#hero nav ul {
+    margin: 0;
+    padding: 0;
+}
+#hero nav ul li {
+    list-style-type: none;
+    margin: 0.5rem 0 0;
+}
+#hero nav a {
+    display: block;
+    color: var(--DeepBlue);
+    text-decoration: none;
+}
+#hero nav a:link,
+#hero nav a:visited {
+    color: var(--DeepBlue);
+}
+#hero nav a:hover {
+    color: var(--BrightBlue);
 }
 
 #hero h1,
@@ -16,105 +57,57 @@
         0 0 65px var(--CosmicLatte),
         0 0 10px tan,
         0 0 1.5px gold,
-        0 0 0.5px white,
-        inset 0 0 0.5px black;
+        0 0 0.5px white;
 }
 
 #hero h1 {
-    margin: calc(var(--sectiongap) / 2) var(--padding);
+    margin: calc(var(--sectiongap) / 2) 2rem;
     z-index: 2;
 }
 @media (max-width: 768px) {
     #hero h1 {
         text-align: center;
     }
-    #hero {
-        background-position-y: 15%;
-    }
-    #hero nav a {
-        text-shadow: unset;
-        color: cornflowerblue;
-    }
-    #hero nav a:visited {
-        text-shadow: unset;
-        color: var(--BrightBlue);
-    }
 }
 
-#hero::before {
-    content: "Превращаю ценности в продающий триггер";
-    font-family: Unovis100;
-    font-size: 13vw;
-    line-height: 0.5rem;
-    color: grey;
-    text-shadow:
-        1.5px 1.5px 0 silver,
-        -1.5px -1.5px 0 silver,
-        -1.5px 1.5px 0 silver,
-        1.5px -1.5px 0 silver;
-    mix-blend-mode: overlay;
+#hero .outline {
     position: absolute;
-    left: 0;
-    width: 100vw;
-    bottom: 326px;
-    display: none;
+    font-family: Unovis100;
+    font-size: 10vw;
+    line-height: 4.5vw;
+    padding-top: 0.65rem;
 }
-#hero nav,
-#hero div {
-    margin: 0 var(--padding);
-    display: grid;
-    grid-template-columns: var(--grid);
-}
+@media (max-width: 768px){
+    #hero .outline {
+    font-size: 9vw;
+    }}
 
-#hero nav *,
-#hero div * {
+#hero .layout *,
+#hero .layout p {
     grid-column: 3 / -1;
 }
 
-#hero ul {
-    margin: 1rem 0 0;
-}
-
-#hero div {
+#hero div.layout:last-child {
+    display: grid;
+    grid-template-columns: var(--grid);
     color: var(--CosmicLatte);
     background: var(--SoftBlack);
-    margin: 0;
     padding: 2rem var(--padding) var(--sectiongap);
 }
 
-@media (min-width: 769px) {
-    #hero .logo {
-        background: url(../../img/logo/Kc_logo_full_logo_raster_lght.png);
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
-        border: none;
-    }
+#hero div.layout:last-child div {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
-
-/* Семантически правильное меню сайта */
-nav {
-    grid-auto-flow: row;
-}
-nav a {
-    display: block;
-    color: var(--DeepBlue);
-    text-decoration: none;
-}
-nav a:hover {
-    color: var(--BrightBlue);
-}
-#hero a:visited {
-    color: var(--DeepBlue);
-}
-
-nav ul {
-    margin: 0;
-    padding: 0;
-}
-nav ul li {
-    list-style-type: none;
-    margin: 0.5rem 0 0;
+#hero div.layout:last-child span {
+    position: absolute;
+    bottom: 0;
+    left: -3rem;
+    rotate: -90deg;
+    transform-origin: left;
+    color: slategray;
 }
 
 /* 2. Value-секция */
@@ -194,7 +187,7 @@ h2::before {
     z-index: -2;
 }
 
-.layout p {
+#value .layout p {
     grid-column-start: 2 !important;
 }
 
@@ -266,7 +259,7 @@ h2::before {
     grid-column: 5;
     grid-row: 2;
     aspect-ratio: 3 / 4;
-    height: 100%;
+    padding-right: calc(1rem + 2vw);
 }
 
 #portfolio h2 {
@@ -283,9 +276,6 @@ h2::before {
     z-index: 3;
 }
 
-#portfolio .description small {
-    padding-right: calc(1rem + 2vw);
-}
 @media (min-width: 1024px) {
     #portfolio .description small::before {
         content: "Дизайн должен передавать конкретное качество или ценность";
