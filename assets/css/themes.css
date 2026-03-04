@@ -19,31 +19,6 @@ body {
     caret-color: transparent;
 }
 
-/* Цветовые темы */
-
-.white {
-    background-color: var(--CosmicLatte);
-    color: var(--DeepBlue);
-}
-.white h1,
-.white h2 {
-    color: var(--SoftBlack);
-}
-
-.blueprint {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1.5px, transparent 1.5px),
-        linear-gradient(to right, rgba(255, 255, 255, 0.05) 1.5px, transparent 1.5px);
-    background-size: 35px 35px;
-    background-color: var(--DeepBlue);
-    color: silver;
-}
-.blueprint h1,
-.blueprint h2,
-.blueprint h3,
-.blueprint h4 {
-    color: white;
-}
-
 .crosses::after {
     content: "";
     position: absolute;
@@ -56,6 +31,7 @@ body {
     opacity: 0.65;
 }
 
+.glass-morphism-card,
 .glass-morphism {
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.18);
@@ -64,6 +40,12 @@ body {
     -webkit-backdrop-filter: blur(10px) saturate(180%);
 }
 
+.glass-morphism-card {
+    position: relative;
+    left: -1.5rem;
+    padding-left: 1.5rem;
+    width: calc(100% + 1.5rem);
+}
 
 /* ! ПРИМЕНЯЕТ режим наложения ! */
 
@@ -87,4 +69,59 @@ body {
         1.5px -1.5px 0 silver;
     mix-blend-mode: overlay;
     z-index: -0.5;
+}
+
+/* БЕЛАЯ ТЕМА */
+
+.white {
+    background-color: var(--CosmicLatte);
+    color: var(--SoftBlack);
+}
+
+.white
+    :is(
+        input[type="button"],
+        input[type="submit"],
+        input[type="reset"],
+        button,
+        .btn,
+        .btn:link,
+        .btn:visited
+    ) {
+    color: var(--SoftBlack);
+}
+.white
+    :is(
+        input[type="button"],
+        input[type="submit"],
+        input[type="reset"],
+        button,
+        .btn,
+        .btn:link,
+        .btn:visited
+    )::before {
+    border-color: var(--SoftBlack);
+}
+
+.white :is(button, .btn, input, button):hover::before,
+.white :is(button, .btn):active::before {
+    background-color: var(--BrightBlue);
+    border-color: transparent;
+
+}
+
+/* СИНЯЯ ТЕМА тип чертеж окда */
+
+.blueprint {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1.5px, transparent 1.5px),
+        linear-gradient(to right, rgba(255, 255, 255, 0.05) 1.5px, transparent 1.5px);
+    background-size: 35px 35px;
+    background-color: var(--DeepBlue);
+    color: silver;
+}
+.blueprint h1,
+.blueprint h2,
+.blueprint h3,
+.blueprint h4 {
+    color: white;
 }

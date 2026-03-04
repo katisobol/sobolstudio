@@ -1,0 +1,553 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <title>Соболь Екатерина. Лаборатория визуальной коммуникации</title>
+        <link rel="icon" type="image/x-icon" href="https://katisobol.github.io/sobolstudio/Kc_logo_full.svg" />
+        <link rel="stylesheet" href="assets/css/styles.css" />
+        <link rel="stylesheet" href="assets/css/page/home.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet" />
+    </head>
+    <body class="white">
+        <h1>Полный справочник UI-элементов в HTML</h1>
+        <p class="note">
+            Эта страница содержит <strong>все возможные</strong> типовые элементы интерфейса: заголовки всех уровней в
+            разных комбинациях, текстовые блоки, списки, таблицы, формы с состояниями, кнопки, переключатели и многое
+            другое. Вы можете использовать этот файл как основу для написания универсальных CSS-стилей.
+        </p>
+
+        <!-- ==================== ЗАГОЛОВКИ И АБЗАЦЫ ==================== -->
+<section>
+    <h1>Комбинации заголовков и абзацев</h1>
+    <p>Здесь представлены все возможные сочетания h1–h6 с p, включая вложенные структуры. Тексты наполнены рассуждениями о семантической вёрстке, стилизации, дизайне интерфейсов и лучших практиках.</p>
+
+    <!-- Комбинация 1: h1 + p + h2 + p + h3 + p + h4 + p + h5 + p + h6 + p -->
+    <article>
+        <p>Использование правильных HTML-элементов не только помогает поисковым системам понимать структуру страницы, но и делает контент доступным для людей с ограниченными возможностями, использующих скринридеры. Семантика — это первый шаг к качественному веб-дизайну.</p>
+        <h1>1 уровень заголовка</h1>
+        <p>Использование правильных HTML-элементов не только помогает поисковым системам понимать структуру страницы, но и делает контент доступным для людей с ограниченными возможностями, использующих скринридеры.</p>
+        <p>Семантика — это первый шаг к качественному веб-дизайну.</p>
+
+        <h2>Заголовки h1–h6: строим информационную иерархию</h2>
+        <p>Заголовки должны отражать логическую структуру документа: h1 — главная тема, h2 — разделы, h3 — подразделы и так далее. Нельзя пропускать уровни или использовать их только ради визуального эффекта — для этого существуют CSS.</p>
+
+        <h3>Параграфы и текстовые блоки: носители основного контента</h3>
+        <p>Тег p предназначен для абзацев текста. Он создаёт естественные промежутки между блоками и облегчает чтение.</p>
+        <p>Важно не злоупотреблять переносом строки (br) вместо параграфов, чтобы сохранить семантику.</p>
+
+        <h4>Списки: упорядочиваем информацию</h4>
+        <p>Маркированные (ul), нумерованные (ol) и списки определений (dl) помогают структурировать перечни, инструкции или глоссарии. Правильный выбор типа списка улучшает восприятие контента.</p>
+
+        <h5>Цитаты и ссылки на источники</h5>
+        <p>Для длинных цитат используйте blockquote, для коротких — q. Внутри можно указывать cite и добавлять ссылки на первоисточник.</p>
+        <p>Это повышает доверие к информации и её юридическую чистоту.</p>
+
+        <h6>Мелкие детали: время, выделения, определения</h6>
+        <p>Элементы вроде time, mark, dfn, abbr добавляют контенту точность и семантическую выразительность. Они помогают машинам и людям лучше понимать контекст.</p>
+    </article>
+
+    <!-- Комбинация 2: h1 + h2 + p + h2 + h3 + p + h3 + h4 + p + h4 + h5 + p + h5 + h6 + p + h6 + p -->
+    <article>
+        <h1>2 уровня заголовка</h1>
+        <h2>Визуальная иерархия и её влияние на пользовательский опыт</h2>
+        <p>Заголовки, размер шрифта, контраст и расположение элементов направляют взгляд пользователя. Хорошо продуманная иерархия уменьшает когнитивную нагрузку и помогает быстрее находить нужное.</p>
+
+        <h2>Цвет и контраст: не только эстетика, но и доступность</h2>
+        <h3>Типографика в вебе: выбор шрифтов и управление ритмом</h3>
+        <p>Шрифты должны быть читаемыми на любых устройствах. Используйте системные шрифты или хорошо подобранные веб-шрифты, учитывайте интерлиньяж, трекинг и длину строки. Это база комфортного чтения.</p>
+
+        <h3>Адаптивность и отзывчивость: дизайн для всех экранов</h3>
+        <h4>Сетки: основа модульной вёрстки</h4>
+        <p>CSS Grid и Flexbox позволяют создавать сложные макеты, которые подстраиваются под размер экрана. Сетки упрощают разработку и делают дизайн предсказуемым.</p>
+
+        <h4>Отзывчивые изображения и медиа-запросы</h4>
+        <h5>Микро-взаимодействия: детали, оживляющие интерфейс</h5>
+        <p>Анимации при наведении, плавные переходы, состояния кнопок — всё это делает интерфейс отзывчивым и понятным. Однако важно не переусердствовать, чтобы не отвлекать пользователя.</p>
+
+        <h5>Анимации и производительность</h5>
+        <h6>Доступность: веб для всех</h6>
+        <p>Семантическая разметка, правильные контрасты, альтернативный текст для изображений и управление с клавиатуры — основа инклюзивного дизайна.</p>
+
+        <h6>ARIA-атрибуты: когда HTML недостаточно</h6>
+        <p>ARIA помогает улучшить доступность сложных компонентов (табов, модальных окон), но лучше сначала использовать нативные HTML-элементы. ARIA — это дополнительный слой, а не замена семантике.</p>
+    </article>
+
+    <!-- Комбинация 3: сложная многоуровневая -->
+    <article>
+        <h1>3 уровня заголовка: CSS-методологии</h1>
+        <h2>БЭМ, SMACSS, OOCSS: зачем нужны подходы к именованию классов</h2>
+        <h3>БЭМ: блок, элемент, модификатор</h3>
+        <p>БЭМ помогает создавать независимые компоненты, которые легко поддерживать и переиспользовать. Классы становятся понятными, а специфичность — низкой.</p>
+
+        <h2>Каскадность и специфичность: как не запутаться в стилях</h2>
+        <h3>Вес селекторов и правило !important</h3>
+        <h4>Сброс и нормализация стилей</h4>
+        <p>Normalize.css или сбросы (reset) приводят браузерные стили к единому базовому виду, что упрощает кросс-браузерную разработку.</p>
+
+        <h3>Переменные в CSS: настраиваемые свойства</h3>
+        <h4>Темы оформления и динамическое изменение</h4>
+        <h5>Подходы к адаптивной типографике</h5>
+        <p>Использование относительных единиц (rem, em, vw) и clamp() позволяет тексту масштабироваться гармонично на разных экранах.</p>
+
+        <h4>CSS-фреймворки и их влияние на семантику</h4>
+        <h5>Утилитарные классы (Tailwind) против семантических</h5>
+        <h6>Компромиссы между скоростью разработки и чистотой кода</h6>
+        <p>Утилитарные классы ускоряют вёрстку, но могут загромождать HTML. Важно найти баланс, удобный для команды и проекта.</p>
+
+        <h5>Препроцессоры: SASS, LESS, PostCSS</h5>
+        <h6>Организация кода с помощью partials и миксинов</h6>
+        <p>Препроцессоры облегчают поддержку крупных проектов, позволяя разбивать стили на модули и использовать переменные.</p>
+
+        <h6>Будущее CSS: новые возможности (container queries, :has)</h6>
+        <p>Современные спецификации CSS дают больше контроля над стилями в зависимости от размера контейнера или наличия определённых элементов.</p>
+    </article>
+
+    <!-- Перемешанные заголовки (произвольная комбинация) -->
+    <article>
+        <h1>Перемешанные заголовки (произвольный порядок)</h1>
+        <h2>Псевдоклассы и псевдоэлементы: :hover, :focus, :active, :visited</h2>
+        <h3>Стилизация состояний интерактивных элементов</h3>
+        <p>Управление внешним видом элементов в разных состояниях улучшает пользовательский опыт и даёт обратную связь.</p>
+
+        <h2>Современные подходы к анимации</h2>
+        <h3>Плавные появления и исчезновения</h3>
+        <p>Анимации должны быть ненавязчивыми и соответствовать фирменному стилю. Важно помнить о предпочтениях пользователей (prefers-reduced-motion).</p>
+
+        <h5>Микро-анимации для иконок и кнопок</h5>
+        <h6>Использование transform и filter</h6>
+        <p>Эти свойства позволяют создавать интересные эффекты без потери производительности.</p>
+
+        <h2>Дизайн-системы и компонентный подход</h2>
+        <h3>Создание библиотеки переиспользуемых UI-компонентов</h3>
+        <p>Единые стили для кнопок, карточек, форм ускоряют разработку и поддерживают визуальную целостность проекта.</p>
+    </article>
+</section>
+
+
+    <!-- ============================================================ -->
+    <!-- 2. СЕМАНТИЧЕСКИЕ ТЕГИ И СТРУКТУРНЫЕ ЭЛЕМЕНТЫ                 -->
+    <!-- ============================================================ -->
+    <header>
+        <h1>Семантическая разметка: header, nav, main, article, section, aside, footer и др.</h1>
+        <nav>
+            <ul>
+                <li><a href="#section1">Ссылка на раздел 1</a></li>
+                <li><a href="#section2">Ссылка на раздел 2</a></li>
+                <li><a href="#nowhere">Ссылка никуда</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="section1">
+            <h2>Секция с article и aside</h2>
+            <article>
+                <h3>Статья внутри секции</h3>
+                <p>Текст статьи. Здесь может быть <mark>выделенный фрагмент</mark>.</p>
+                <aside>
+                    <h4>Боковая сноска (aside)</h4>
+                    <p>Дополнительная информация, связанная с основным контентом.</p>
+                </aside>
+            </article>
+        </section>
+
+        <section id="section2">
+            <h2>Раздел с цитатами и определениями</h2>
+            <blockquote cite="https://example.com">
+                <p>Это длинная цитата из какого-то источника. Обычно оформляется с отступом.</p>
+                <footer>— Имя автора, <cite>Название произведения</cite></footer>
+            </blockquote>
+
+            <p>Краткая цитата: <q>Быть или не быть</q>.</p>
+
+            <p>Термин <dfn><abbr title="Cascading Style Sheets">CSS</abbr></dfn> — это язык описания внешнего вида документа.</p>
+
+            <address>
+                Контактная информация: <a href="mailto:info@example.com">info@example.com</a>
+            </address>
+        </section>
+
+        <!-- Figure и Figcaption -->
+        <figure>
+            <img src="https://via.placeholder.com/400x200" alt="Пример изображения">
+            <figcaption>Подпись к изображению (figcaption)</figcaption>
+        </figure>
+
+        <!-- Временные метки -->
+        <p>Опубликовано <time datetime="2025-03-03">3 марта 2025</time>.</p>
+
+        <!-- Код и предварительное форматирование -->
+        <pre>
+            <code>
+                &lt;!-- Пример кода внутри pre и code --&gt;
+                function hello() {
+                    console.log("Hello, world!");
+                }
+            </code>
+        </pre>
+
+        <p>Комбинации клавиш: <kbd>Ctrl</kbd> + <kbd>C</kbd> для копирования.</p>
+        <p>Переменная <var>count</var> увеличивается на 1.</p>
+        <p>Пример вывода программы: <samp>Error: file not found</samp>.</p>
+
+        <!-- Details / Summary -->
+        <details>
+            <summary>Спойлер: нажми, чтобы развернуть</summary>
+            <p>Скрытый контент внутри details.</p>
+        </details>
+    </main>
+
+    <footer>
+        <p>Подвал страницы (footer) с копирайтом и <a href="#">ссылкой наверх</a>.</p>
+    </footer>
+
+    <hr>
+
+    <!-- ============================================================ -->
+    <!-- 3. СПИСКИ (ul, ol, dl)                                       -->
+    <!-- ============================================================ -->
+    <section>
+        <h2>Списки</h2>
+
+        <h3>Неупорядоченный список (ul)</h3>
+        <ul>
+            <li>Элемент списка 1</li>
+            <li>Элемент списка 2
+                <ul>
+                    <li>Вложенный элемент 2.1</li>
+                    <li>Вложенный элемент 2.2</li>
+                </ul>
+            </li>
+            <li>Элемент списка 3</li>
+        </ul>
+
+        <h3>Упорядоченный список (ol)</h3>
+        <ol>
+            <li>Первый пункт</li>
+            <li>Второй пункт
+                <ol type="a">
+                    <li>Подпункт a</li>
+                    <li>Подпункт b</li>
+                </ol>
+            </li>
+            <li>Третий пункт</li>
+        </ol>
+
+        <h3>Список определений (dl)</h3>
+        <dl>
+            <dt>HTML</dt>
+            <dd>Язык гипертекстовой разметки.</dd>
+            <dt>CSS</dt>
+            <dd>Каскадные таблицы стилей.</dd>
+            <dt>JavaScript</dt>
+            <dd>Язык программирования для интерактивности.</dd>
+        </dl>
+    </section>
+
+    <hr>
+
+    <!-- ============================================================ -->
+    <!-- 4. ТАБЛИЦЫ                                                   -->
+    <!-- ============================================================ -->
+    <section>
+        <h2>Таблицы</h2>
+        <table>
+            <caption>Пример таблицы с объединением ячеек</caption>
+            <thead>
+                <tr>
+                    <th>Заголовок 1</th>
+                    <th>Заголовок 2</th>
+                    <th>Заголовок 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="2">Ячейка 1 (rowspan)</td>
+                    <td>Ячейка 2</td>
+                    <td>Ячейка 3</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Ячейка 4 (colspan)</td>
+                </tr>
+                <tr>
+                    <td>Ячейка 5</td>
+                    <td>Ячейка 6</td>
+                    <td>Ячейка 7</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Итог 1</td>
+                    <td>Итог 2</td>
+                    <td>Итог 3</td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+
+    <hr>
+
+    <!-- ============================================================ -->
+    <!-- 5. ФОРМЫ, ПОЛЯ ВВОДА, ПЕРЕКЛЮЧАТЕЛИ                          -->
+    <!-- ============================================================ -->
+    <section>
+        <h2>Формы и элементы управления</h2>
+
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Текстовые поля (input types)</legend>
+
+                <p><label>Текст (text): <input type="text" name="text" placeholder="Обычный текст"></label></p>
+                <p><label>Email: <input type="email" name="email" placeholder="name@example.com" required></label></p>
+                <p><label>Пароль: <input type="password" name="password" placeholder="******"></label></p>
+                <p><label>Число (number): <input type="number" name="number" min="0" max="10" step="1" value="5"></label></p>
+                <p><label>Телефон (tel): <input type="tel" name="phone" placeholder="+7 (999) 123-45-67"></label></p>
+                <p><label>URL: <input type="url" name="url" placeholder="https://example.com"></label></p>
+                <p><label>Поиск (search): <input type="search" name="search" placeholder="Поиск..."></label></p>
+                <p><label>Дата (date): <input type="date" name="date"></label></p>
+                <p><label>Время (time): <input type="time" name="time"></label></p>
+                <p><label>Дата и время (datetime-local): <input type="datetime-local" name="datetime"></label></p>
+                <p><label>Месяц (month): <input type="month" name="month"></label></p>
+                <p><label>Неделя (week): <input type="week" name="week"></label></p>
+                <p><label>Цвет (color): <input type="color" name="color" value="#ff0000"></label></p>
+                <p><label>Диапазон (range): <input type="range" name="range" min="0" max="100" value="50"></label></p>
+                <p><label>Файл (file): <input type="file" name="file" multiple></label></p>
+                <p><label>Скрытое поле (hidden): <input type="hidden" name="hidden" value="скрытое значение"></label> (не видно)</p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Текстовая область (textarea)</legend>
+                <p><label>Комментарий: <textarea name="comment" rows="4" cols="50" placeholder="Введите текст..."></textarea></label></p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Выпадающие списки (select)</legend>
+                <p><label>Выберите один вариант:
+                    <select name="simple">
+                        <option value="1">Вариант 1</option>
+                        <option value="2" selected>Вариант 2 (selected)</option>
+                        <option value="3">Вариант 3</option>
+                    </select>
+                </label></p>
+
+                <p><label>Группированный список:
+                    <select name="grouped">
+                        <optgroup label="Группа A">
+                            <option value="a1">A1</option>
+                            <option value="a2">A2</option>
+                        </optgroup>
+                        <optgroup label="Группа B">
+                            <option value="b1">B1</option>
+                            <option value="b2" disabled>B2 (disabled)</option>
+                        </optgroup>
+                    </select>
+                </label></p>
+
+                <p><label>Множественный выбор (multiple):
+                    <select name="multi" multiple size="3">
+                        <option value="m1">Множественный 1</option>
+                        <option value="m2" selected>Множественный 2 (selected)</option>
+                        <option value="m3">Множественный 3</option>
+                        <option value="m4">Множественный 4</option>
+                    </select>
+                </label></p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Переключатели (radio) и флажки (checkbox) с различными состояниями</legend>
+
+                <h3>Radio-кнопки</h3>
+                <p><label><input type="radio" name="radio1" value="1"> Обычный (не выбран)</label></p>
+                <p><label><input type="radio" name="radio1" value="2" checked> Выбран по умолчанию (checked)</label></p>
+                <p><label><input type="radio" name="radio1" value="3" disabled> Отключён (disabled)</label></p>
+                <p><label><input type="radio" name="radio1" value="4" disabled checked> Отключён + выбран (disabled checked)</label></p>
+
+                <h3>Checkbox</h3>
+                <p><label><input type="checkbox" name="cb1" value="1"> Обычный (не отмечен)</label></p>
+                <p><label><input type="checkbox" name="cb2" value="2" checked> Отмечен (checked)</label></p>
+                <p><label><input type="checkbox" name="cb3" value="3" disabled> Отключён (disabled)</label></p>
+                <p><label><input type="checkbox" name="cb4" value="4" disabled checked> Отключён + отмечен (disabled checked)</label></p>
+                <p><label><input type="checkbox" name="cb5" value="5" required> Обязательный (required)</label></p>
+                <!-- indeterminate нельзя задать в HTML, но для полноты можно пометить классом или атрибутом -->
+                <p><label><input type="checkbox" name="cb6" value="6" indeterminate> Индетерминантный (только через JS, здесь для примера атрибут нестандартный, но в CSS :indeterminate сработает, если добавить скрипт) — оставлен без скрипта</label></p>
+
+                <h3>Radio с разными именами — отдельные группы</h3>
+                <p><label><input type="radio" name="radioA" value="a"> Группа A, вариант 1</label></p>
+                <p><label><input type="radio" name="radioA" value="b" checked> Группа A, вариант 2 (checked)</label></p>
+                <p><label><input type="radio" name="radioB" value="c"> Группа B, вариант 1</label></p>
+                <p><label><input type="radio" name="radioB" value="d"> Группа B, вариант 2</label></p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Дополнительные состояния полей (псевдоклассы)</legend>
+                <p><label>Поле только для чтения (readonly): <input type="text" name="readonly" value="Нельзя изменить" readonly></label></p>
+                <p><label>Обязательное поле (required): <input type="text" name="required" required placeholder="Заполните"></label></p>
+                <p><label>Необязательное поле (обычное): <input type="text" name="optional" placeholder="Не обязательно"></label></p>
+                <p><label>Поле с placeholder (псевдокласс :placeholder-shown): <input type="text" name="placeholder" placeholder="Введите что-нибудь"></label></p>
+                <p><label>Поле с валидацией (pattern): <input type="text" name="pattern" pattern="[A-Za-z]+" placeholder="Только буквы"></label></p>
+                <p><label>Поле с ограничениями (min/max): <input type="number" name="limited" min="1" max="5" value="3"></label></p>
+                <p><label>Отключённое поле (disabled): <input type="text" name="disabled" value="Отключено" disabled></label></p>
+                <p><label>Поле с автозаполнением (autofocus) — при загрузке получит фокус: <input type="text" name="autofocus" autofocus placeholder="autofocus"></label></p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Прогресс и метр</legend>
+                <p>Прогресс (progress): <progress value="70" max="100">70%</progress></p>
+                <p>Метр (meter): <meter value="0.6" min="0" max="1" low="0.3" high="0.8" optimum="0.5">60%</meter></p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Кнопки</legend>
+                <p>
+                    <button type="button">Кнопка button</button>
+                    <button type="submit">Кнопка submit</button>
+                    <button type="reset">Кнопка reset</button>
+                </p>
+                <p>
+                    <input type="button" value="input type=button">
+                    <input type="submit" value="input type=submit">
+                    <input type="reset" value="input type=reset">
+                </p>
+                <p>
+                </p>
+                <p>
+                    <button type="button" disabled>Кнопка disabled</button>
+                    <input type="button" value="Disabled input" disabled>
+                </p>
+                <p>
+                    <!-- Кнопки с разными атрибутами для псевдоклассов :active, :focus можно проверить интерактивно -->
+                    <button type="button" autofocus>Кнопка с autofocus</button>
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Прогресс и метр</legend>
+                <p>Прогресс (progress): <progress value="70" max="100">70%</progress></p>
+                <p>Метр (meter): <meter value="0.6" min="0" max="1" low="0.3" high="0.8" optimum="0.5">60%</meter></p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Кнопки (все с классом .btn)</legend>
+                <p>
+                    <button type="button" class="btn">Кнопка button</button>
+                    <button type="submit" class="btn">Кнопка submit</button>
+                    <button type="reset" class="btn">Кнопка reset</button>
+                </p>
+                <p>
+                    <input type="button" class="btn" value="input type=button">
+                    <input type="submit" class="btn" value="input type=submit">
+                    <input type="reset" class="btn" value="input type=reset">
+                </p>
+                <p>
+                    <a href="#" class="btn">Ссылка как кнопка (a.btn)</a>
+                </p>
+                <p>
+                    <button type="button" class="btn" disabled>Кнопка disabled</button>
+                    <input type="button" class="btn" value="Disabled input" disabled>
+                </p>
+                <p>
+                    <!-- Кнопки с разными атрибутами для псевдоклассов :active, :focus можно проверить интерактивно -->
+                    <button type="button" class="btn" autofocus>Кнопка с autofocus</button>
+                </p>
+            </fieldset>
+
+            <!-- datalist -->
+            <fieldset>
+                <legend>Datalist (подсказки при вводе)</legend>
+                <label>Введите ваш город:
+                    <input type="text" name="city" list="cities">
+                    <datalist id="cities">
+                        <option value="Москва">
+                        <option value="Санкт-Петербург">
+                        <option value="Казань">
+                        <option value="Новосибирск">
+                    </datalist>
+                </label>
+            </fieldset>
+
+            <!-- output -->
+            <fieldset>
+                <legend>Output (результат вычисления)</legend>
+                <form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+                    <input type="range" id="a" name="a" value="50"> +
+                    <input type="number" id="b" name="b" value="10"> =
+                    <output name="result" for="a b">60</output>
+                </form>
+            </fieldset>
+        </form>
+    </section>
+
+    <hr>
+
+    <!-- ============================================================ -->
+    <!-- 6. ССЫЛКИ С КЛАССОМ .SOCIAL                                  -->
+    <!-- ============================================================ -->
+    <section>
+        <h2>Социальные ссылки (класс .social)</h2>
+        <p>
+            <a href="#" class="social facebook">Facebook</a>
+            <a href="#" class="social telegram">Telegram</a>
+            <a href="#" class="social twitter">Twitter</a>
+            <a href="#" class="social instagram">Instagram</a>
+            <a href="#" class="social linkedin">LinkedIn</a>
+            <a href="#" class="social youtube">YouTube</a>
+            <a href="#" class="social github">GitHub</a>
+        </p>
+        <p>Также можно комбинировать с другими классами: <a href="#" class="social btn">Социальная кнопка</a></p>
+    </section>
+
+    <hr>
+
+    <!-- ============================================================ -->
+    <!-- 7. РАЗНЫЕ СОСТОЯНИЯ ССЫЛОК (ДЛЯ ПСЕВДОКЛАССОВ)              -->
+    <!-- ============================================================ -->
+    <section>
+        <h2>Ссылки с различными состояниями</h2>
+        <ul>
+            <li><a href="#">Обычная ссылка (не посещённая)</a></li>
+            <li><a href="https://example.com" target="_blank">Ссылка на example.com (вероятно, не посещена)</a></li>
+            <li><a href="#section1">Якорная ссылка (при клике :target сработает на section1)</a></li>
+            <li><a href="#nowhere" target="_blank">Ссылка в никуда (для :link)</a></li>
+            <!-- Для :visited нужно, чтобы ссылка вела на реально посещённый ресурс, но это невозможно гарантировать -->
+        </ul>
+    </section>
+
+    <hr>
+
+    <!-- ============================================================ -->
+    <!-- 8. ПРОЧИЕ ЭЛЕМЕНТЫ (ВСЁ ОСТАЛЬНОЕ)                          -->
+    <!-- ============================================================ -->
+    <section>
+        <h2>Разное</h2>
+
+        <h3>Выделение текста</h3>
+        <p><b>Жирный (b)</b>, <strong>сильный (strong)</strong>, <i>курсив (i)</i>, <em>выделенный (em)</em>, <mark>маркированный (mark)</mark>, <small>мелкий (small)</small>, <del>удалённый (del)</del>, <ins>вставленный (ins)</ins>, <u>подчёркнутый (u)</u>, <s>зачёркнутый (s)</s>, <sub>нижний индекс (sub)</sub>, <sup>верхний индекс (sup)</sup>.</p>
+
+        <h3>Элементы, чувствительные к :empty</h3>
+        <p></p> <!-- пустой параграф для :empty -->
+        <div class="empty"></div>
+
+        <h3>Элемент с атрибутом hidden</h3>
+        <p hidden>Этот параграф скрыт (hidden).</p>
+
+        <h3>Элемент для :target (с якорем)</h3>
+        <p id="target-example">Этот элемент будет целевым при переходе по #target-example.</p>
+
+        <h3>Элементы с role и aria (для accessibility)</h3>
+        <div role="button" tabindex="0" class="btn">div с ролью кнопки</div>
+        <div role="alert" aria-live="assertive">Важное сообщение (alert)</div>
+    </section>
+
+    <hr>
+
+    <!-- ============================================================ -->
+    <!-- 9. ФИНАЛЬНЫЙ КОММЕНТАРИЙ                                     -->
+    <!-- ============================================================ -->
+    <footer>
+        <p>Этот HTML-документ содержит все основные UI-элементы, семантические теги, заголовки во всех комбинациях, формы с различными состояниями, кнопки с классом .btn, социальные ссылки с классом .social и многое другое. Никакие стили не применены — вы можете подключать свои CSS и настраивать оформление для любых элементов, используя представленную разметку как полигон.</p>
+    </footer>
+    </body>
+</html>

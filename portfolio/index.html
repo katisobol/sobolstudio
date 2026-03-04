@@ -3,7 +3,21 @@ layout: default
 title: Портфолио
 extra_css: assets/css/page/portfolio-list.css
 ---
-<main id="portfolio">
-<h1 class="side">Портфолио</h1>
-  {% include portfolio.html %}
+<main>
+  <section id="about">
+    <p>Инженерия восприятия</p>
+    <p>Перевожу ценности в визуальный язык</p>
+    <p>Соболь Екатерина</p>
+    <p>более 5 лет в графическом дизайне</p>
+    <p>сотрудничество с компаниями из сфер образования, Y, добывающей промышленности</p>
+    <ul>
+      <li>Системный ценностно-ориентированный подход: <small>дизайн-решения обоснованы</small></li>
+      <li>Знаю весь процесс препресса <small>вплоть до спуска полос</small></li>
+      <li>Фронтэнд и UX/UI: <small><a href="https://github.com/katisobol/sobolstudio/">написала</a> этот сайт на&nbsp;<a href="https://jekyllrb.com/">CMS&nbsp;Jekyll</a></small></li>
+    </ul>
+  </section>
+  <section id="portfolio">
+    <h1 class="side">Портфолио</h1>
+    {% include portfolio.html %}
+  </section>
 </main>

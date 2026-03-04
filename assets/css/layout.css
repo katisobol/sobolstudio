@@ -9,7 +9,7 @@
     }
 }
 
-@media handheld, (max-width: 768px) {
+@media handheld, (max-width: 769px) {
     :root {
         --padding: 1.5rem;
     }
@@ -29,7 +29,7 @@
 :root {
     --grid: repeat(5, 1fr);
 }
-@media (max-width: 768px) {
+@media (max-width: 769px) {
     :root {
         --grid: unset;
     }
@@ -39,7 +39,7 @@
 :root {
     --columngap: 75px;
 }
-@media (max-width:1200px){
+@media (max-width: 1200px){
 :root {
     --columngap: 1rem;
 }
@@ -47,20 +47,26 @@
 
 
 
-/* Лейаут */
-section,
-header,
-footer,
-main,
-.layout {
+/* Размещает поля */
+body > :is(main, section, header, footer, article, aside, nav, blockquote, figure, details, pre, table, fieldset, form, address, dl) {
     padding: var(--sectiongap) var(--padding);
     position: relative;
 }
+body > :is(p, h1, h2, h3, h4, h5, h6, ul, ol, blockquote, pre, table, dl, hr, address, details, figure, figcaption) {
+    margin-left: var(--padding);
+    margin-right: var(--padding);
+}
+
+* > article{
+    padding: calc(var(--sectiongap) / 2) 0;
+}
+
+
 header {
-    padding-bottom: 24px !important;
+    padding-bottom: 1rem !important;
 }
 footer {
-    padding-top: 24px !important;
+    padding-top: 1rem !important;
 }
 
 section,
@@ -69,31 +75,48 @@ footer,
     display: grid;
     grid-template-columns: var(--grid);
     grid-auto-flow: row;
-    gap: 0.5rem 75px;
+    gap: 0 75px;
 }
 
 @media (max-width: 1024px) {
+    section,
+    footer,
     .layout {
         column-gap: 1.5rem;
     }
 }
 
-/* Лейаут: растягиваем блочные элементы по умолчанию на все колонки */
-:is(section, footer, .layout) > :is(h1, h2, h3, h4, h5, h6, p, small, a, button, div, img, article, .block) {
+/* Лейаут: растягиваем элементы по умолчанию на все колонки */
+/* Лейаут: растягиваем элементы по умолчанию на все колонки */
+:is(section, footer, .layout) > :is(
+    /* Заголовки и текст */
+    h1, h2, h3, h4, h5, h6, p, small, a, button, .btn,
+    /* Структурные блоки */
+    div, nav, img, article, ul, ol, li, .block,
+    /* Семантические добавки */
+    header, aside, main, address, blockquote, pre, hr,
+    figure, figcaption, details, summary, fieldset, legend,
+    form, label, table, caption, thead, tbody, tfoot, tr, th, td,
+    dl, dt, dd,
+    /* Медиа и встраиваемое */
+    video, audio, iframe, embed, object, picture, source,
+    /* Технические */
+    section, footer
+) {
     grid-column: 1 / -1;
 }
 
 /*текстовая врезка с названием секции */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
     .side {
         position: absolute;
         right: calc(var(--padding) / -2 + 1rem);
         bottom: var(--sectiongap);
+        font-family: Santello, Raleway;
         font-weight: normal;
         width: 0;
         height: 0;
         white-space: nowrap;
-        font-family: Santello, Raleway;
         rotate: -90deg;
         color: silver;
         z-index: 2;

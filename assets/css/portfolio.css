@@ -1,16 +1,25 @@
-#portfolio, #portfolio {
+#portfolio,
+#portfolio {
     display: grid;
-    grid-template-columns: repeat(5, 20%);
+    grid-template-columns: var(--grid);
     gap: 1.5vw;
     grid-auto-flow: dense;
+}
+@media (max-width: 768px) {
+    #portfolio,
+    #portfolio {
+        display: block;
+    }
 }
 
 :is(.portfolio, #portfolio) .card {
     position: relative;
     background-color: var(--DeepBlue);
+    background-position: center !important;
+    background-size: cover !important;
     grid-column: span 1;
     aspect-ratio: 3 / 4;
-    color: ver(--CosmicLatte);
+    color: var(--CosmicLatte);
     text-decoration: none;
     padding: 0;
 }
@@ -21,7 +30,8 @@
     text-decoration: none;
 }
 
-:is(.portfolio, #portfolio) .card .cardname {
+:is(.portfolio, #portfolio) .card > p {
+    position: absolute;
     transform-origin: bottom right;
     right: 1em;
     top: 0;
@@ -35,6 +45,21 @@
         0 0 0.5px black;
 }
 
+:is(.portfolio, #portfolio) .card.blank::after {
+    content: url(../../assets/img/logo/Kc_logo_full_logo_raster_dk.png);
+    filter: drop-shadow(0 0 1.5px rgba(0, 0, 0, 0.65));
+    color: white;
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    left: 0.75rem;
+    bottom: 0.75rem;
+}
+
+:is(.portfolio, #portfolio) .card.blank.behance::after {
+    content: url(../../assets/img/logo/behance-square.svg);
+}
+
 :is(.portfolio, #portfolio) .card .keyvisual {
     position: absolute;
     top: 0;
@@ -43,19 +68,21 @@
     object-fit: contain;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 769px) {
     #portfolio .card,
     :is(.portfolio, #portfolio) .card {
         display: inline-block;
-        width: 20vw;
+        width: calc(150px + 10%);
+        aspect-ratio: 4 / 3;
     }
 }
 
 .card {
     position: relative;
+    background-size: cover;
 }
 
-.card .cover {
+.card > .cover {
     position: absolute;
     left: -50%;
     color: white;
@@ -71,11 +98,11 @@
     box-shadow: var(--textshadow);
 }
 
-.card:hover .cover {
+.card:hover > .cover {
     height: 150%;
 }
 
-.cover p {
+.cover > p {
     margin: 0 0.5em 0.5em;
     text-align: end;
     font-family: AvantGarde;
@@ -83,11 +110,11 @@
     height: 0;
 }
 
-.cover:hover p {
+.cover:hover > p {
     height: auto;
 }
 
-.cover img {
+.cover > img {
     position: absolute;
     width: 120%;
     max-width: unset;

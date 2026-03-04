@@ -16,7 +16,7 @@
 #hero nav {
     padding: 1rem;
     grid-column: 3 / -1;
-    background-color: rgba(255, 255, 255, 0.35);
+    background-color: rgba(255, 255, 255, 0.15);
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -26,10 +26,34 @@
     z-index: 2;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 769px) {
+    #hero nav {
+        max-width: max-content;
+        padding: 35px 5rem 1rem 35px;
+        background-color: rgba(255, 255, 255, 0.25);
+    }
+    #hero nav ul li {
+        margin-top: 0 !important;
+    }
+    #hero nav ul li a {
+        display: inline-flex;
+        align-items: center;
+        min-height: 50px;
+    }
 }
 
-/* Семантически правильное меню сайта */
+@media (min-width: 769px) {
+    #hero nav {
+        position: relative;
+        left: -3rem;
+        padding-left: 3rem;
+        width: calc(100% + 3rem);
+    }
+}
+
+
+
+/* Меню главной страницы */
 #hero nav ul {
     margin: 0;
     padding: 0;
@@ -38,14 +62,11 @@
     list-style-type: none;
     margin: 0.5rem 0 0;
 }
-#hero .logo{
+#hero .logo {
     background-image: url(../../img/logo/Kc_logo_full_logo_raster_lght.png);
+    filter: drop-shadow(0 0 1.5px cornflowerblue);
 }
-#hero nav a {
-    display: block;
-    color: var(--DeepBlue);
-    text-decoration: none;
-}
+#hero nav a,
 #hero nav a:link,
 #hero nav a:visited {
     color: var(--DeepBlue);
@@ -57,20 +78,24 @@
 #hero h1,
 #hero nav a {
     text-shadow:
-        0 0 100px cornflowerblue,
-        0 0 65px var(--CosmicLatte),
-        0 0 10px tan,
-        0 0 1.5px gold,
-        0 0 0.5px white;
+        0 0 10px cornflowerblue,
+        0 0 1.5px var(--CosmicLatte),
+        0 0 0.5px yellow;
 }
 
 #hero h1 {
     margin: calc(var(--sectiongap) / 2) 2rem;
     z-index: 2;
 }
-@media (max-width: 768px) {
+@media (max-width: 769px) {
     #hero h1 {
         text-align: center;
+        text-shadow:
+        0 0 100px cornflowerblue,
+        0 0 65px var(--CosmicLatte),
+        0 0 10px tan,
+        0 0 1.5px gold,
+        0 0 0.5px white;
     }
 }
 
@@ -80,10 +105,11 @@
     font-size: 10vw;
     line-height: 4.5vw;
 }
-@media (max-width: 768px){
+@media (max-width: 769px) {
     #hero .outline {
-    font-size: 9vw;
-    }}
+        font-size: 9vw;
+    }
+}
 
 #hero .layout *,
 #hero .layout p {
@@ -151,7 +177,7 @@
     right: 0;
     bottom: var(--sectiongap);
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 769px) {
     #value::before,
     #value::after,
     #value ul::before,
@@ -159,7 +185,6 @@
         display: none;
     }
 }
-
 
 /* ЦИИИФЕРКИ
 h2::before {
@@ -305,7 +330,7 @@ h2::before {
 #CTA {
     position: relative;
 }
-@media handheld, (max-width: 768px) {
+@media handheld, (max-width: 769px) {
     #CTA h2 {
         display: none;
     }
