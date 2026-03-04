@@ -1,0 +1,91 @@
+header {
+    display: inline-flex;
+    position: absolute;
+    z-index: 2;
+    background: transparent;
+}
+
+header nav ul li {
+    white-space: nowrap;
+}
+header nav ul li::after {
+    content: "/";
+    padding-right: 0;
+}
+header nav ul li:nth-child(1) {
+    display: inline;
+}
+header nav ul li:nth-child(1) a::before {
+    content: "Портфолио";
+}
+
+header nav ul li a:link,
+header nav ul li a:visited {
+    color: silver;
+    text-shadow: var(--textShadow);
+}
+
+@media screen and (min-width: 769px) {
+    header {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        padding: calc(var(--sectiongap) + 1rem) 2rem 0 0;
+        width: var(--padding);
+    }
+    header nav {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    header nav ul li::before {
+        padding-left: 0;
+    }
+}
+
+@media handheld, (max-width: 769px) {
+    header {
+        padding: 1.5rem 0 0 1.5rem;
+    }
+    h1 {
+        padding-top: 100px !important;
+    }
+}
+
+main.padding {
+    padding-top: 0;
+    position: relative;
+}
+
+main.padding .cover {
+    position: relative;
+    left: calc(0px - var(--padding));
+    width: 100vw;
+    max-width: none;
+    padding: var(--sectiongap) var(--padding) calc(var(--sectiongap) * 0.75);
+    margin: 0 0 2rem;
+    background: var(--BrightBlue);
+    background-position: center;
+    background-size: cover;
+    text-shadow: var(--textShadow);
+}
+
+#gallery {
+    position: relative;
+    left: calc(0vw - var(--padding));
+    max-width: unset;
+    width: 100vw;
+    white-space: nowrap;
+    overflow-x: scroll;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin-top: 2rem;
+    scroll-behavior: smooth;
+}
+
+#gallery img {
+    max-width: 95%;
+    max-height: 75vh;
+    display: inline-block;
+}

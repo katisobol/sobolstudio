@@ -1,0 +1,129 @@
+/* Стандартная кнопка с логотипом */
+.logo {
+    display: inline-block;
+    aspect-ratio: 1/1;
+    height: auto;
+    width: 24px;
+    background-image: url(../img/logo/Kc_logo_full_logo_raster_dk.png);
+    filter: drop-shadow(0 0 1.5px rgba(0, 0, 0, 0.65));
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+}
+
+@media screen and (max-width: 769px) {
+    .logo {
+        width: 50px;
+    }
+}
+
+a:link {
+    text-decoration: none;
+    color: cornflowerblue;
+}
+a:hover,
+a:focus {
+    text-decoration: underline;
+}
+a:active {
+    color: var(--CosmicLatte);
+}
+a:visited {
+    color: #a88ab8;
+}
+
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+.btn,
+.btn:link,
+.btn:visited,
+.btn:hover {
+    font-family: Santello, Raleway;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    margin: 1.5rem 0;
+    padding: 0 4em;
+    position: relative;
+    transition: 0.15s ease;
+    overflow: hidden;
+    width: max-content;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    text-decoration: none;
+    z-index: 2;
+    color: var(--CosmicLatte);
+}
+
+
+:is(input[type="button"], input[type="submit"], input[type="reset"], button, .btn, .btn:link, .btn:visited)::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    background-color: transparent;
+    border: 1.5px solid transparent;
+    border-right: none;
+    border-color: var(--CosmicLatte);
+    color: var(--CosmicLatte);
+    transition: all 0.25s ease;
+    z-index: -1;
+}
+
+:is(button, .btn, input, button):hover::before,
+:is(button, .btn):active::before {
+    left: 50%;
+    background-color: var(--DeepBlue);
+    border-color: transparent;
+}
+
+.social,
+.social:link,
+.social:visited {
+    font-size: 0.75rem;
+    color: var(--CosmicLatte);
+    padding: 0.2rem;
+    margin: 0 0.5rem;
+    height: 2rem;
+    width: 2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: var(--CosmicLatte);
+    transition: all 0.15s ease;
+    border-left: solid var(--BrightBlue) 2.5px;
+    border-top: solid var(--BrightBlue) 2.5px;
+    border-bottom: solid var(--BrightBlue) 2.5px;
+}
+
+.social img {
+    height: 100%;
+    z-index: 1;
+}
+
+.social:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 2rem;
+    background-color: var(--DeepBlue);
+    transition: all 0.15s ease;
+}
+
+.social:hover::before {
+    content: "";
+    width: 100%;
+    background-color: var(--BrightBlue);
+}

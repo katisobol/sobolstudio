@@ -1,0 +1,135 @@
+/* Глобальные правила */
+
+body {
+    font-family: Santello, Raleway;
+    line-height: 1.5;
+}
+
+h1, .h1,
+h2, .h2 {
+    font-family: AvantGarde, Raleway;
+    font-weight: bold;
+    line-height: 1.1;
+    letter-spacing: 0.03rem;
+    margin: 0;
+    max-width: 1200px;
+}
+h5, .h5,
+h6, .h6 {
+    font-family: AvantGarde, Raleway;
+    letter-spacing: 0.03rem;
+}
+p, .p,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+    max-width: 600px;
+    margin: 0;
+}
+
+/* h1,  .h1 и его оведение около других элементов */
+h1, .h1 {
+    font-size: 3rem;
+}
+* + :is(h1, .h1) {
+    margin-top: 3rem;
+}
+
+
+/*h2,  .h2 и его друзья */
+h2, .h2 {
+    font-size: 2rem;
+}
+* + :is(h2, .h2) {
+    margin-top: 2rem;
+}
+:is(h1, .h1) + :is(h2, .h2) {
+    margin-top: 1rem;
+}
+
+
+/* h3,  .h3, пока не решила, что я с этим делаю */
+h3, .h3 {
+    font-size: 1.25rem;
+}
+* + :is(h3, .h3) {
+    margin-top: 1.25rem;
+}
+:is(h2, .h2) + :is(h3, .h3) {
+    margin-top: 0.75rem;
+}
+
+
+/* h4 я уже использую для подписи блоков */
+h4, .h4 {
+    font-size: 1rem;
+}
+* + :is(h4, .h4) {
+    margin-top: 1rem;
+}
+:is(h3, .h3) + :is(h4, .h4) {
+    margin-top: 0.5rem;
+}
+
+
+/* малые заголовки */
+h5, .h5,
+h6, .h6 {
+    font-size: 0.75rem;
+}
+* + :is(
+h5, .h5,
+h6, .h6
+){
+    margin-top: 0.5rem;
+}
+:is(
+h4, .h4,
+h5, .h5
+) + :is(
+h5, .h5,
+h6, .h6
+){
+    margin-top: 0.25rem;
+}
+
+
+/* его величество абзац */
+p, .p {
+    font-size: 1rem;
+}
+:is(h1, .h1) + :is(p, .p) {
+    margin-top: 1rem;
+}
+:is(h2, .h2) + :is(p, .p) {
+    margin-top: 0.75rem;
+}
+:is(h3, .h3) + :is(p, .p) {
+    margin-top: 0.5rem;
+}
+:is(
+h4, .h4,
+h5, .h5,
+h6, .h6,
+p, .p
+) + :is(p, .p) {
+    margin-top: 0.5rem;
+}
+
+
+/* Текст на правом поле */
+.side {
+    font-size: 0.75rem;
+}
+
+/* Мобильный лейаут */
+@media (max-width: 769px) {
+    h1, .h1{
+        font-size: 2rem;
+    }
+
+    h2, .h2 {
+        font-size: 1.5rem;
+    }
+}
