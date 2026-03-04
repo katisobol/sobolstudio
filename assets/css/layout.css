@@ -61,6 +61,10 @@ body > :is(p, h1, h2, h3, h4, h5, h6, ul, ol, blockquote, pre, table, dl, hr, ad
     padding: calc(var(--sectiongap) / 2) 0;
 }
 
+:not(body) > section + :is(section, article, aside) {
+    margin-top: var(--sectiongap);
+}
+
 
 header {
     padding-bottom: 1rem !important;
@@ -88,7 +92,6 @@ body > aside,
     }
 }
 
-/* Лейаут: растягиваем элементы по умолчанию на все колонки */
 /* Лейаут: растягиваем элементы по умолчанию на все колонки */
 :is(section, footer, .layout) > :is(
     /* Заголовки и текст */

@@ -57,7 +57,6 @@ body {
         0 0.5px 1.5px #826a56,
         0.5px 0 1.5px rgba(34, 66, 120, 0.65);
     mix-blend-mode: hard-light;
-    z-index: -0.5;
 }
 
 .outline {
@@ -107,7 +106,6 @@ body {
 .white :is(button, .btn):active::before {
     background-color: var(--BrightBlue);
     border-color: transparent;
-
 }
 
 /* СИНЯЯ ТЕМА тип чертеж окда */

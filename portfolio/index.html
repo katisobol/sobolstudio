@@ -4,6 +4,13 @@ title: Портфолио
 extra_css: assets/css/page/portfolio-list.css
 ---
 <main>
+  <section id="portfolio">
+    <h1 class="side">Портфолио</h1>
+    {% include portfolio.html %}
+  </section>
+
+
+
   <section id="about">
     <p>Инженерия восприятия</p>
     <p>Перевожу ценности в визуальный язык</p>
@@ -16,8 +23,67 @@ extra_css: assets/css/page/portfolio-list.css
       <li>Фронтэнд и UX/UI: <small><a href="https://github.com/katisobol/sobolstudio/">написала</a> этот сайт на&nbsp;<a href="https://jekyllrb.com/">CMS&nbsp;Jekyll</a></small></li>
     </ul>
   </section>
-  <section id="portfolio">
-    <h1 class="side">Портфолио</h1>
-    {% include portfolio.html %}
+
+
+
+  <section id="experience"><h2>Опыт, образование</h2></section>
+
+
+
+  <section id="skills">
+    <h2>Навыки</h2>
+    <ul>
+
+      <li>
+        <h3>Adobe Photoshop</h3>
+        <p>Всё что связано с растровой графикой. Ретушь фото, предпечатная подготовка фото,</p>
+      </li>
+      <li>
+        <h3>Adobe Illustrator</h3>
+        <p>Всё что связано с Безье графикой.</p>
+        <p>Мелкая полиграфия. Визитки, листовки,</p>
+      </li>
+      <li>
+        <h3>Adobe InDesign</h3>
+        <p>Многостраничные издания</p>
+      </li>
+      <li>
+        <h3>Figma</h3>
+        <p>Прототипирование</p>
+        <p>Соцсети.</p>
+      </li>
+
+      <li>
+        <details>
+          <summary><h3>Phoenix Code Studio / Webflow</h3></summary>
+          <h4>Фронтэнд</h4>
+          <p>Предпочитаю кодить (вы находитесь здесь, да). Но ноукодом я также владею</p>
+        </details>
+      </li>
+
+      <li>
+        <details>
+          <summary><h3>ChatGPT / Grok / MistralAI</h3></summary>
+          <h4>Генерация контента, написание кода, брейншторм идей</h4>
+        </details>
+      </li>
+
+      <li>
+        <details>
+          <summary><h3>Adobe Premier</h3></summary>
+          <h4>Монтаж</h4>
+        </details>
+      </li>
+
+      <li>
+        <details>
+          <summary><h3>Moho Pro</h3></summary>
+          <h4>Анимация</h4>
+        </details>
+      </li>
+
+    </ul>
+
   </section>
+
 </main>

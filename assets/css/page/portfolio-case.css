@@ -1,32 +1,32 @@
-header {
+body > header {
     display: inline-flex;
     position: absolute;
-    z-index: 2;
     background: transparent;
+    z-index: 2;
 }
 
-header nav ul li {
+body > header nav ul li {
     white-space: nowrap;
 }
-header nav ul li::after {
+body > header nav ul li::after {
     content: "/";
     padding-right: 0;
 }
-header nav ul li:nth-child(1) {
+body > header nav ul li:nth-child(1) {
     display: inline;
 }
-header nav ul li:nth-child(1) a::before {
+body > header nav ul li:nth-child(1) a::before {
     content: "Портфолио";
 }
 
-header nav ul li a:link,
-header nav ul li a:visited {
+body > header nav ul li a:link,
+body > header nav ul li a:visited {
     color: silver;
     text-shadow: var(--textShadow);
 }
 
 @media screen and (min-width: 769px) {
-    header {
+    body > header {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
@@ -34,22 +34,30 @@ header nav ul li a:visited {
         padding: calc(var(--sectiongap) + 1rem) 2rem 0 0;
         width: var(--padding);
     }
-    header nav {
+    body > header nav {
         flex-direction: column;
         align-items: flex-end;
     }
-    header nav ul li::before {
+    body > header nav ul li::before {
         padding-left: 0;
     }
 }
 
 @media handheld, (max-width: 769px) {
-    header {
+    body > header {
         padding: 1.5rem 0 0 1.5rem;
     }
     h1 {
         padding-top: 100px !important;
     }
+}
+
+main > time.side {
+    color: var(--CosmicLatte);
+    right: calc(var(--padding) / 2);
+    top: calc(var(--sectiongap) + 30px);
+    width: 60px;
+    text-shadow: var(--textShadow);
 }
 
 main.padding {

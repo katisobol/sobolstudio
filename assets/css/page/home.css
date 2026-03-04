@@ -279,7 +279,7 @@ h2::before {
 
 /* секция портфолио */
 
-#portfolio .description {
+#portfolio .card.description {
     position: relative;
     grid-column: 5;
     grid-row: 1;
@@ -291,7 +291,7 @@ h2::before {
     rotate: -90deg;
     position: absolute;
     right: calc(1rem + 2vw);
-    font-size: calc(1rem + 2vw);
+    font-size: calc(0.35rem + 2.3vw);
     bottom: 0;
     width: 0;
     height: 0;
@@ -331,7 +331,7 @@ h2::before {
 #CTA {
     position: relative;
 }
-@media handheld, (max-width: 769px) {
+@media (max-width: 769px) {
     #CTA h2 {
         display: none;
     }

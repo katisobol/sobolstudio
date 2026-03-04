@@ -10,7 +10,7 @@ layout: default
       class="cover" style="background: url({{ page.thumbnail | relative_url }})"
       {% endif %}
       >{{ page.title }}</h1>
-  <p class="side" style="color: slategray">{{ page.date | date: "%d.%m.%Y" }}</p>
+  <time class="side" datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%d.%m.%Y" }}</time>
 
   {{ content }}
 
