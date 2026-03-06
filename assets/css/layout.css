@@ -21,7 +21,7 @@
 }
 @media (min-width: 2500px) {
     :root {
-        --sectiongap: clamp(120vw, 10vw, 200px);
+        --sectiongap: clamp(120vw, 10vh, 200px);
     }
 }
 

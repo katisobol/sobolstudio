@@ -15,15 +15,15 @@ h2, .h2 {
     max-width: 1200px;
 }
 h5, .h5,
-h6, .h6 {
-    font-family: AvantGarde, Raleway;
-    letter-spacing: 0.03rem;
+h6, .h6, small, .small {
+    font-family: Santello, Raleway;
 }
 p, .p,
 h3, .h3,
 h4, .h4,
 h5, .h5,
-h6, .h6 {
+h6, .h6,
+small, .small {
     max-width: 600px;
     margin: 0;
 }
@@ -75,12 +75,12 @@ h4, .h4 {
 
 /* малые заголовки */
 h5, .h5,
-h6, .h6 {
+h6, .h6, small, .small {
     font-size: 0.75rem;
 }
 * + :is(
 h5, .h5,
-h6, .h6
+h6, .h6, small, .small
 ){
     margin-top: 0.5rem;
 }
@@ -89,7 +89,7 @@ h4, .h4,
 h5, .h5
 ) + :is(
 h5, .h5,
-h6, .h6
+h6, .h6, small, .small
 ){
     margin-top: 0.25rem;
 }
@@ -112,6 +112,7 @@ p, .p {
 h4, .h4,
 h5, .h5,
 h6, .h6,
+small, .small,
 p, .p
 ) + :is(p, .p) {
     margin-top: 0.5rem;

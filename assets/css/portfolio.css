@@ -38,10 +38,7 @@
     white-space: nowrap;
     margin: 0;
     text-align: right;
-    text-shadow:
-        0 0 1em black,
-        0 0 0.35em black,
-        0 0 0.5px black;
+    text-shadow: var(--textShadow);
 }
 
 :is(.portfolio, #portfolio) .card.blank::after {
@@ -92,7 +89,7 @@
     width: 200%;
     height: 0;
     max-width: unset;
-    transition: all 0.45s ease;
+    transition: all 250ms ease;
     background-color: grey;
     box-shadow:
         35px 50px 50px #826a56,

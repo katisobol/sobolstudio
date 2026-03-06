@@ -9,11 +9,13 @@
     display: block;
 }
 
+/* Меню главной страницы */
 #hero div.layout:first-child {
     padding: 0 var(--padding);
 }
 
 #hero nav {
+    position: relative;
     padding: 1rem;
     grid-column: 3 / -1;
     background-color: rgba(255, 255, 255, 0.15);
@@ -24,6 +26,15 @@
     align-items: flex-start;
     gap: 1rem;
     z-index: 2;
+}
+
+@media (min-width: 769px) {
+    #hero nav {
+        position: relative;
+        left: -3rem;
+        padding-left: 3rem;
+        width: calc(100% + 3rem);
+    }
 }
 
 @media (max-width: 769px) {
@@ -42,18 +53,10 @@
     }
 }
 
-@media (min-width: 769px) {
-    #hero nav {
-        position: relative;
-        left: -3rem;
-        padding-left: 3rem;
-        width: calc(100% + 3rem);
-    }
+#hero .logo {
+    background-image: url(../../img/logo/Kc_logo_full_logo_raster_lght.png);
+    filter: drop-shadow(0 0 1.5px cornflowerblue);
 }
-
-
-
-/* Меню главной страницы */
 #hero nav ul {
     margin: 0;
     padding: 0;
@@ -62,10 +65,7 @@
     list-style-type: none;
     margin: 0.5rem 0 0;
 }
-#hero .logo {
-    background-image: url(../../img/logo/Kc_logo_full_logo_raster_lght.png);
-    filter: drop-shadow(0 0 1.5px cornflowerblue);
-}
+
 #hero nav a,
 #hero nav a:link,
 #hero nav a:visited {
@@ -73,6 +73,25 @@
 }
 #hero nav a:hover {
     color: var(--BrightBlue);
+}
+/* Выпадающий блок при наведении */
+#hero nav li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 1.5rem;
+    display: block;
+    background-color: var(--CosmicLatte);
+    opacity: 0.35;
+    background-blend-mode: soft-light;
+    z-index: -1;
+    transition: all 250ms ease-in;
+}
+#hero nav :is(li:hover, li.active)::before {
+    content: "";
+    width: 100%;
+    transition: all 250ms ease-out;
 }
 
 #hero h1,
@@ -84,31 +103,36 @@
         0 0 0.5px yellow;
 }
 
-#hero h1 {
-    margin: calc(var(--sectiongap) / 2) 2rem;
-    z-index: 2;
-}
-@media (max-width: 769px) {
-    #hero h1 {
-        text-align: center;
-        text-shadow:
-        0 0 100px cornflowerblue,
-        0 0 65px var(--CosmicLatte),
-        0 0 10px tan,
-        0 0 1.5px gold,
-        0 0 0.5px white;
-    }
-}
-
 #hero .outline {
     position: absolute;
     font-family: Unovis100;
     font-size: 10vw;
     line-height: 4.5vw;
 }
+
 @media (max-width: 769px) {
     #hero .outline {
         font-size: 9vw;
+    }
+}
+
+#hero h1 {
+    position: relative;
+    margin: 2rem auto;
+    padding: 0 var(--padding);
+    width: fit-content;
+    box-sizing: content-box;
+    z-index: 3;
+    max-width: 1400px;
+}
+@media (max-width: 769px) {
+    #hero h1 {
+        text-shadow:
+        0 0 100px cornflowerblue,
+        0 0 65px var(--CosmicLatte),
+        0 0 10px tan,
+        0 0 1.5px gold,
+        0 0 0.5px white;
     }
 }
 
@@ -131,13 +155,21 @@
     flex-direction: column;
     gap: 0.5rem;
 }
-#hero div.layout:last-child span {
+#hero div.layout:last-child .side {
     position: absolute;
     bottom: 0;
     left: -3rem;
     rotate: -90deg;
     transform-origin: left;
     color: slategray;
+}
+@media (min-width: 1400px) {
+    #hero div.layout:last-child .side {
+        bottom: -4.75rem;
+    }
+}
+#hero div.layout:last-child .btn {
+    margin-bottom: 0;
 }
 
 /* 2. Value-секция */
