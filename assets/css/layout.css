@@ -21,7 +21,7 @@
 }
 @media (min-width: 2500px) {
     :root {
-        --sectiongap: clamp(120vw, 10vh, 200px);
+        --sectiongap: clamp(120px, 10vh, 200px);
     }
 }
 
@@ -45,7 +45,9 @@
 }
 }
 
-
+ul, ol, dl {
+    margin: 0;
+}
 
 /* Размещает поля */
 body > :is(main, section, header, footer, article, aside, nav, blockquote, figure, details, pre, table, fieldset, form, address, dl) {
@@ -57,7 +59,7 @@ body > :is(p, h1, h2, h3, h4, h5, h6, ul, ol, blockquote, pre, table, dl, hr, ad
     margin-right: var(--padding);
 }
 
-* > article{
+* > article {
     padding: calc(var(--sectiongap) / 2) 0;
 }
 
@@ -73,9 +75,14 @@ footer {
     padding-top: 1rem !important;
 }
 
+
+/* СЕТКА*/
+
 section,
 footer,
-body > aside,
+article,
+aside,
+main,
 .layout {
     display: grid;
     grid-template-columns: var(--grid);
@@ -86,14 +93,16 @@ body > aside,
 @media (max-width: 1024px) {
     section,
     footer,
-    body > aside,
+    article,
+    body > :is(aside),
+    main,
     .layout {
         column-gap: 1.5rem;
     }
 }
 
 /* Лейаут: растягиваем элементы по умолчанию на все колонки */
-:is(section, footer, .layout) > :is(
+
     /* Заголовки и текст */
     h1, h2, h3, h4, h5, h6, p, small, a, button, .btn,
     /* Структурные блоки */
@@ -107,9 +116,66 @@ body > aside,
     video, audio, iframe, embed, object, picture, source,
     /* Технические */
     section, footer
-) {
+{
     grid-column: 1 / -1;
 }
+@media (min-width: 1600px) {
+    :is(section,
+    footer,
+    article,
+    aside,
+    main,
+    .layout) > :is(
+    /* Заголовки и текст */
+    h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, .p, small, a, button, .btn,
+    /* Структурные блоки */
+    div, nav, img, ul, ol, li,
+    /* Семантические добавки */
+    address, blockquote, pre, hr,
+    figure, figcaption, details, summary, fieldset, legend,
+    form, label, table, caption, thead, tbody, tfoot, tr, th, td,
+    dl, dt, dd,
+    /* Медиа и встраиваемое */
+    video, audio, iframe, embed, object, picture, source
+    ) {
+        grid-column-start: 2;
+    }
+}
+@media (min-width: 2500px) {
+    :is(section,
+    footer,
+    article,
+    body > aside,
+    main,
+    .layout) > :is(
+    /* Заголовки и текст */
+    h1, .h1, h2, .h2,
+    ) {
+        grid-column-start: 2;
+    }
+    :is(section,
+    footer,
+    article,
+    aside,
+    main,
+    .layout) > :is(
+    /* Заголовки и текст */
+    h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, .p, small, a, button, .btn,
+    /* Структурные блоки */
+    div, nav, img, ul, ol, li,
+    /* Семантические добавки */
+    address, blockquote, pre, hr,
+    figure, figcaption, details, summary, legend,
+    form, label, table, caption, thead, tbody, tfoot, tr, th, td,
+    dl, dt, dd,
+    /* Медиа и встраиваемое */
+    video, audio, iframe, embed, object, picture, source
+    ) {
+        grid-column-start: 3;
+    }
+}
+
+
 
 /*текстовая врезка с названием секции */
 @media screen and (min-width: 769px) {

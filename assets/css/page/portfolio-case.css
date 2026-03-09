@@ -52,7 +52,7 @@ body > header nav ul li a:visited {
     }
 }
 
-main > time.side {
+main.portfolio-case > time.side {
     color: var(--CosmicLatte);
     right: calc(var(--padding) / 2);
     top: calc(var(--sectiongap) + 30px);
@@ -60,18 +60,18 @@ main > time.side {
     text-shadow: var(--textShadow);
 }
 
-main.padding {
-    padding-top: 0;
+main.portfolio-case {
+    display: block;
     position: relative;
+    padding: unset;
 }
 
-main.padding .cover {
-    position: relative;
-    left: calc(0px - var(--padding));
+main.portfolio-case .cover {
     width: 100vw;
+    box-sizing: border-box;
     max-width: none;
     padding: var(--sectiongap) var(--padding) calc(var(--sectiongap) * 0.75);
-    margin: 0 0 2rem;
+    margin: 0;
     background: var(--BrightBlue);
     background-position: center;
     background-size: cover;
@@ -79,8 +79,6 @@ main.padding .cover {
 }
 
 #gallery {
-    position: relative;
-    left: calc(0vw - var(--padding));
     max-width: unset;
     width: 100vw;
     white-space: nowrap;
@@ -88,12 +86,30 @@ main.padding .cover {
     display: flex;
     align-items: center;
     gap: 1em;
-    margin-top: 2rem;
     scroll-behavior: smooth;
+    margin: 2rem 0;
 }
 
 #gallery img {
     max-width: 95%;
     max-height: 75vh;
     display: inline-block;
+}
+
+.portfolio-case > article {
+    padding: 0 var(--padding);
+}
+@media (min-width: 1800px) {
+    .portfolio-case article {
+        gap: 75px 2rem;
+    }
+    main.portfolio-case article :is(p, .p):nth-child(odd) {
+        grid-column: 2 / span 2;
+    }
+    main.portfolio-case article :is(p, .p):nth-child(even) {
+        grid-column: 4 / span 2;
+    }
+    main.portfolio-case article :is(p, .p) {
+        margin: 0;
+    }
 }

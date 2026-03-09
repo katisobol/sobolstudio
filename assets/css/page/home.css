@@ -84,7 +84,7 @@
     display: block;
     background-color: var(--CosmicLatte);
     opacity: 0.35;
-    background-blend-mode: soft-light;
+    mix-blend-mode: soft-light;
     z-index: -1;
     transition: all 250ms ease-in;
 }
@@ -92,6 +92,11 @@
     content: "";
     width: 100%;
     transition: all 250ms ease-out;
+}
+@media (max-width: 769px) {
+    #hero nav li::before {
+    height: 50px;
+    }
 }
 
 #hero h1,
@@ -120,7 +125,6 @@
     position: relative;
     margin: 2rem auto;
     padding: 0 var(--padding);
-    width: fit-content;
     box-sizing: content-box;
     z-index: 3;
     max-width: 1400px;
@@ -168,6 +172,12 @@
         bottom: -4.75rem;
     }
 }
+@media (max-width: 769px) {
+    #hero div.layout:last-child .side {
+        display: none;
+    }
+}
+
 #hero div.layout:last-child .btn {
     margin-bottom: 0;
 }
@@ -322,7 +332,7 @@ h2::before {
 #portfolio h2 {
     rotate: -90deg;
     position: absolute;
-    right: calc(1rem + 2vw);
+    right: calc(0.5rem + 2vw);
     font-size: calc(0.35rem + 2.3vw);
     bottom: 0;
     width: 0;

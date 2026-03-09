@@ -2,7 +2,8 @@
 layout: default
 ---
 
-<main class="padding">
+<main class="portfolio-case">
+
   <h1
       {% if page.cover %}
       class="cover" style="background: url({{ page.cover | relative_url }})"
@@ -10,9 +11,9 @@ layout: default
       class="cover" style="background: url({{ page.thumbnail | relative_url }})"
       {% endif %}
       >{{ page.title }}</h1>
+
   <time class="side" datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%d.%m.%Y" }}</time>
 
-  {{ content }}
 
 
 {% if page.images %}
@@ -22,7 +23,13 @@ layout: default
   {% endfor %}
 </div>
 {% endif %}
+
+  <article>
+    {{ content }}
+  </article>
+
 </main>
+
 <aside class="portfolio">
   <div class="card"><p>Смотрите также:</p></div>
   {% include portfolio.html %}

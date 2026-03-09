@@ -13,7 +13,20 @@ h2, .h2 {
     letter-spacing: 0.03rem;
     margin: 0;
     max-width: 1200px;
+    box-sizing: content-box;
 }
+@media (max-width: 769px) {
+    h1, .h1{
+        font-size: 2rem;
+    }
+
+    h2, .h2 {
+        font-size: 1.5rem;
+    }
+}
+
+
+
 h5, .h5,
 h6, .h6, small, .small {
     font-family: Santello, Raleway;
@@ -25,8 +38,11 @@ h5, .h5,
 h6, .h6,
 small, .small {
     max-width: 600px;
+    box-sizing: content-box;
     margin: 0;
 }
+
+
 
 /* h1,  .h1 и его оведение около других элементов */
 h1, .h1 {
@@ -124,13 +140,10 @@ p, .p
     font-size: 0.75rem;
 }
 
-/* Мобильный лейаут */
-@media (max-width: 769px) {
-    h1, .h1{
-        font-size: 2rem;
-    }
+:is(h1, .h1, h2, .h2) + :is(fieldset, form, table, ul, ol, dl) {
+    margin-top: 1.5rem;
+}
 
-    h2, .h2 {
-        font-size: 1.5rem;
-    }
+:is(h3, .h3, h4, .h4, fieldset, form, table, ul, ol, dl) + :is(fieldset, form, table, ul, ol, dl) {
+    margin-top: 1rem;
 }
