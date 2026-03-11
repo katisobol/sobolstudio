@@ -1,32 +1,34 @@
-body > header {
+@import url(portfolio-gallery.css);
+
+body.portfolio-case > header {
     display: inline-flex;
     position: absolute;
     background: transparent;
     z-index: 2;
 }
 
-body > header nav ul li {
+body.portfolio-case > header nav ul li {
     white-space: nowrap;
 }
-body > header nav ul li::after {
+body.portfolio-case > header nav ul li::after {
     content: "/";
     padding-right: 0;
 }
-body > header nav ul li:nth-child(1) {
+body.portfolio-case > header nav ul li:nth-child(1) {
     display: inline;
 }
-body > header nav ul li:nth-child(1) a::before {
+body.portfolio-case > header nav ul li:nth-child(1) a::before {
     content: "Портфолио";
 }
 
-body > header nav ul li a:link,
-body > header nav ul li a:visited {
+body.portfolio-case > header nav ul li a:link,
+body.portfolio-case > header nav ul li a:visited {
     color: silver;
     text-shadow: var(--textShadow);
 }
 
 @media screen and (min-width: 769px) {
-    body > header {
+    body.portfolio-case > header {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
@@ -34,17 +36,17 @@ body > header nav ul li a:visited {
         padding: calc(var(--sectiongap) + 1rem) 2rem 0 0;
         width: var(--padding);
     }
-    body > header nav {
+    body.portfolio-case > header nav {
         flex-direction: column;
         align-items: flex-end;
     }
-    body > header nav ul li::before {
+    body.portfolio-case > header nav ul li::before {
         padding-left: 0;
     }
 }
 
 @media handheld, (max-width: 769px) {
-    body > header {
+    body.portfolio-case > header {
         padding: 1.5rem 0 0 1.5rem;
     }
     h1 {
@@ -52,7 +54,7 @@ body > header nav ul li a:visited {
     }
 }
 
-main.portfolio-case > time.side {
+.portfolio-case main > time.side {
     color: var(--CosmicLatte);
     right: calc(var(--padding) / 2);
     top: calc(var(--sectiongap) + 30px);
@@ -60,13 +62,13 @@ main.portfolio-case > time.side {
     text-shadow: var(--textShadow);
 }
 
-main.portfolio-case {
+.portfolio-case main {
     display: block;
     position: relative;
     padding: unset;
 }
 
-main.portfolio-case .cover {
+.portfolio-case main .cover {
     width: 100vw;
     box-sizing: border-box;
     max-width: none;
@@ -78,38 +80,86 @@ main.portfolio-case .cover {
     text-shadow: var(--textShadow);
 }
 
-#gallery {
-    max-width: unset;
+#gallery, .gallery {
     width: 100vw;
+    max-width: unset;
     white-space: nowrap;
     overflow-x: scroll;
     display: flex;
     align-items: center;
     gap: 1em;
     scroll-behavior: smooth;
-    margin: 2rem 0;
+    padding: 1rem var(--padding);
 }
 
-#gallery img {
-    max-width: 95%;
+:is(#gallery, .gallery) > img {
+    width: max-content;
+    max-width: 95vw;
     max-height: 75vh;
     display: inline-block;
 }
 
-.portfolio-case > article {
-    padding: 0 var(--padding);
+:is(#gallery, .gallery) > * {
+    flex-shrink: 0;
 }
+
+body.portfolio-case main  article {
+    font-family: Raleway;
+    padding: var(--columngap) var(--padding);
+    column-gap: var(--columngap);
+    row-gap: calc(var(--columngap) / 2);
+}
+
+.portfolio-case main article > .gallery{
+    position: relative;
+    left: calc(0px - var(--padding));
+}
+
+.portfolio-case main article :is(h2, .h2) {
+    font-family: Unovis100;
+    font-size: 10vw;
+    height: 2rem;
+    position: relative;
+    top: -0.75em;
+    left: calc(0px - var(--padding));
+    z-index: -1;
+}
+
+.portfolio-case main article :is(h3, .h3, h4, .h4) {
+    color: silver;
+}
+
+.portfolio-case article :is(p, li, table) {
+    color: slategray;
+}
+.portfolio-case strong {
+    color: var(--CosmicLatte);
+}
+
 @media (min-width: 1800px) {
-    .portfolio-case article {
-        gap: 75px 2rem;
-    }
-    main.portfolio-case article :is(p, .p):nth-child(odd) {
+    .portfolio-case main article :is(p, .p),
+    .portfolio-case main article :not(p, .p) + :is(p, .p) {
         grid-column: 2 / span 2;
     }
-    main.portfolio-case article :is(p, .p):nth-child(even) {
+    .portfolio-case main article :is(p, .p) + :is(p, .p):nth-child(even) {
         grid-column: 4 / span 2;
     }
-    main.portfolio-case article :is(p, .p) {
+    .portfolio-case main article :is(p, .p) {
         margin: 0;
     }
+}
+
+.portfolio-case main article td {
+    vertical-align: top;
+}
+.portfolio-case main article td + td {
+    padding-left: var(--columngap);
+}
+.portfolio-case main article tr + tr td {
+    padding-top: calc(var(--sectiongap) / 3);
+}
+
+.portfolio-case main section.thanks {
+    padding: calc(var(--sectiongap) / 2) var(--padding);
+    display: none;
 }

@@ -1,12 +1,12 @@
-#about, #experience, #skills {
+.portfolio-list #about, #experience, #skills {
     display: none;
 }
 
-header nav ul::after {
+.portfolio-list header nav ul::after {
     content: " / Портфолио";
     color: slategray;
 }
 
-section .side {
+.portfolio-list section .side {
     bottom: 0;
 }

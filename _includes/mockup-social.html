@@ -1,0 +1,42 @@
+{% if include.images %}
+  {% assign image_list = include.images | split: ',' %}
+  <div class="gallery" style="max-height: unset; height: unset;">
+    {% for img in image_list %}
+      <div class="socialMockupPost">
+        <div class="userProfile">
+          <img class="userPic" src="{{
+            include.userpic
+            | default: page.thumbnail
+            | default: 'assets/icons/Kc_logo_full_logo_raster_lght.png'
+            | relative_url
+          }}" />
+          <p class="userName">{{
+            include.username
+            | default: page.description
+            | default: 'username'
+          }}</p>
+        </div>
+        <img src="{{ img | strip | relative_url }}" alt="{{ include.alt | default: 'post image' }}" />
+      </div>
+    {% endfor %}
+  </div>
+{% elsif include.image %}
+  <div class="socialMockupPost">
+    <div class="userProfile">
+      <img class="userPic" src="{{
+        include.userpic
+        | default: page.thumbnail
+        | default: 'assets/icons/Kc_logo_full_logo_raster_lght.png'
+        | relative_url
+      }}" />
+      <p class="userName">{{
+        include.username
+        | default: page.description
+        | default: 'username'
+      }}</p>
+    </div>
+    <img src="{{ include.image | relative_url }}" alt="{{ include.alt | default: 'post image' }}" />
+  </div>
+{% else %}
+  <p class="error-message">Изображение не указано</p>
+{% endif %}

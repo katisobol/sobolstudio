@@ -87,7 +87,8 @@ main,
     display: grid;
     grid-template-columns: var(--grid);
     grid-auto-flow: row;
-    gap: 0 75px;
+    column-gap: var(--columngap);
+    row-gap: 0;
 }
 
 @media (max-width: 1024px) {
@@ -166,7 +167,7 @@ main,
     /* Семантические добавки */
     address, blockquote, pre, hr,
     figure, figcaption, details, summary, legend,
-    form, label, table, caption, thead, tbody, tfoot, tr, th, td,
+    form, label, caption, thead, tbody, tfoot, tr, th, td,
     dl, dt, dd,
     /* Медиа и встраиваемое */
     video, audio, iframe, embed, object, picture, source

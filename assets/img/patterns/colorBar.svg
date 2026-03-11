@@ -1,0 +1,7 @@
+<svg width="126" height="24" viewBox="0 0 126 24" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="24" height="24" fill="#141414" /> <!-- SoftBlack -->
+  <rect x="25.5" y="0" width="24" height="24" fill="#1b355b" /> <!-- DeepBlue -->
+  <rect x="51" y="0" width="24" height="24" fill="#fff8e7" /> <!-- CosmicLatte -->
+  <rect x="76.5" y="0" width="24" height="24" fill="#1a58ae" /> <!-- BrightBlue -->
+  <rect x="102" y="0" width="24" height="24" fill="#d2a33c" /> <!-- Golden -->
+</svg>

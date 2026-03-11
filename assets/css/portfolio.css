@@ -3,15 +3,19 @@
     position: relative;
     display: grid;
     grid-template-columns: var(--grid);
-    gap: 1.5vw;
+    gap: calc(2vw - var(--padding) * 0.04);
     grid-auto-flow: dense;
 }
+
 @media (max-width: 950px) {
     .portfolio,
     #portfolio {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+    }
+    :is(.portfolio, #portfolio) .card > p {
+        font-size: 0.75rem;
     }
 }
 
@@ -33,7 +37,7 @@
     position: absolute;
     transform-origin: bottom right;
     right: 1em;
-    top: 0;
+    top: -2%;
     rotate: -90deg;
     white-space: nowrap;
     margin: 0;
@@ -42,21 +46,27 @@
 }
 
 :is(.portfolio, #portfolio) .card.blank::after {
-    content: url(../../assets/img/logo/Kc_logo_full_logo_raster_dk.png);
+    content: url(../../assets/icons/Kc_logo_full_logo_raster_dk.png);
     filter: drop-shadow(0 0 1.5px rgba(0, 0, 0, 0.65));
     color: white;
-    position: absolute;
     width: 1.5rem;
     height: 1.5rem;
+    position: absolute;
     left: 0.75rem;
     bottom: 0.75rem;
 }
 .card.blank::before {
-    content: unset;
+    content: url(../icons/icon_newTab.svg);
+    position: absolute;
+    right: -1px;
+    top: -1px;
+    width: 1rem;
+    height: 1rem;
+    object-fit: contain;
 }
 
 :is(.portfolio, #portfolio) .card.blank.behance::after {
-    content: url(../../assets/img/logo/behance-square.svg);
+    content: url(../icons/behance-square.svg);
 }
 
 :is(.portfolio, #portfolio) .card .keyvisual {
@@ -91,17 +101,14 @@
     max-width: unset;
     transition: all 250ms ease;
     background-color: grey;
-    box-shadow:
-        35px 50px 50px #826a56,
-        50px 35px 50px rgba(34, 66, 120, 1),
-        0 0.5px 1.5px #826a56,
-        0.5px 0 1.5px rgba(34, 66, 120, 0.65);
+    box-shadow: var(--shadowHuge);
     mix-blend-mode: hard-light;
 }
 
 .card > .cover {
     position: absolute;
     left: -75px;
+    top: -0.5px;
     color: white;
     width: calc(150px + 100%);
     height: 0;
@@ -166,5 +173,5 @@
 
 /* проклятое название стиля для скрытых кейсов */
 .sizenone {
-    display: none;
+    display: none !important;
 }

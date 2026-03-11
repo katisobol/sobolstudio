@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<main class="portfolio-case">
+<main>
 
   <h1
       {% if page.cover %}
@@ -17,7 +17,7 @@ layout: default
 
 
 {% if page.images %}
-<div id="gallery">
+<div id="gallery" class="white">
   {% for image in page.images %}
   <img src="{{ image | relative_url }}" alt="" />
   {% endfor %}
@@ -27,6 +27,12 @@ layout: default
   <article>
     {{ content }}
   </article>
+
+
+
+  <section class="thanks white">
+      <h2>Спасибо за внимание!</h2>
+    </section>
 
 </main>
 

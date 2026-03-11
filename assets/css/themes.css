@@ -1,17 +1,22 @@
 :root {
-    --SoftBlack: #141414; /* Задний план */
-    --DeepBlue: #1b355b; /* Цвет кнопки при наведении */
+    --SoftBlack: hsl(0, 0%, 10%); /* Задний план */
+    --DeepBlue: hsl(216, 54%, 23%); /* Цвет кнопки при наведении */
     --CosmicLatte: #fff8e7; /* Цвет текста */
-    --BrightBlue: #1a58ae; /* Цвет ссылки */
-    --Golden: #d2a33c; /* Я просто оставлю это здесь */
+    --BrightBlue: hsl(215, 74%, 39%); /* Цвет ссылки */
+    --Golden: hsl(40, 65%, 55%); /* Я просто оставлю это здесь */
 }
 
 /* тенюшки под текст */
 :root {
-    --textShadow: 0.15em 0.35em 1em hsla(218, 100%, 35%, 0.15), 0.35em 0.15em 1em hsla(30, 100%, 35%, 0.15),
-        0.25rem 0.5rem 0.65rem hsl(218, 100%, 15%), 0.5rem 0.25rem 0.65rem hsl(30, 100%, 15%),
-        0.01rem 0.025rem 0.035rem hsl(218, 100%, 15%), 0.025em 0.01rem 0.035rem hsl(30, 100%, 15%),
-        0 0 0.5px black;
+    --textShadow:
+        0 0 0.5px black,
+        0.01rem 0.015rem 0.065rem hsl(218, 100%, 1%), 0.015em 0.01rem 0.065rem hsl(30, 100%, 1%),
+        0.25rem 0.35rem 0.65rem hsla(218, 100%, 5%, 1), 0.35rem 0.25rem 0.65rem hsla(30, 100%, 5%, 1),
+        0.15em 0.35em 1em hsla(218, 100%, 20%, 0.35), 0.35em 0.15em 1em hsla(30, 100%, 20%, 0.35);
+    --shadowHuge:
+        0.25rem 0.5rem 0.65rem hsla(218, 100%, 25%, 0.35), 0.5rem 0.25rem 0.65rem hsla(30, 100%, 25%, 0.35),
+        35px 50px 50px hsla(218, 56%, 30%, 0.65), 50px 35px 50px hsl(30, 20%, 42%),
+        0 0.5px 1.5px hsla(218, 56%, 30%, 0.65), 0.5px 0 1.5px hsl(30, 20%, 42%);
 }
 
 /* Цвета по умолчанию */
@@ -52,13 +57,10 @@ body {
 
 /* ! ПРИМЕНЯЕТ режим наложения ! */
 
-.shadowhuge {
+.shadowhuge,
+.portfolio-case main article :is(h2, .h2) {
     color: grey;
-    text-shadow:
-        35px 50px 50px rgba(34, 65, 119, 0.65),
-        50px 35px 50px #826a56,
-        0 0.5px 1.5px rgba(34, 66, 120, 0.65),
-        0.5px 0 1.5px #826a56;
+    text-shadow: var(--shadowHuge);
     mix-blend-mode: hard-light;
 }
 

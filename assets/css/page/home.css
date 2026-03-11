@@ -54,7 +54,7 @@
 }
 
 #hero .logo {
-    background-image: url(../../img/logo/Kc_logo_full_logo_raster_lght.png);
+    background-image: url(../../icons/Kc_logo_full_logo_raster_lght.png);
     filter: drop-shadow(0 0 1.5px cornflowerblue);
 }
 #hero nav ul {
