@@ -149,7 +149,10 @@
     display: grid;
     grid-template-columns: var(--grid);
     color: var(--CosmicLatte);
-    background: var(--SoftBlack);
+    background: url(../../img/patterns/paperTxtr.png),
+        var(--SoftBlack);
+    background-repeat: repeat;
+    background-size: auto;
     padding: 2rem var(--padding) var(--sectiongap);
 }
 
@@ -240,18 +243,15 @@ h2::before {
 }
 */
 
-/* рисую крестики*/
+/* рисую крестики */
 #value .crosses {
     position: relative;
     padding: var(--sectiongap) 0 calc(var(--sectiongap) / 2);
     background: none;
     background-repeat: repeat;
-    z-index: -1;
 }
-#value .crosses::after {
+#value .crosses::before{
     width: calc(100% + var(--padding));
-    background: url(../../img/patterns/crossesBlk.svg);
-    z-index: -2;
 }
 
 #value .layout p {
@@ -321,19 +321,22 @@ h2::before {
 
 /* секция портфолио */
 
-#portfolio .card.description {
-    position: relative;
+#portfolio .card.heading {
     grid-column: 5;
     grid-row: 1;
-    aspect-ratio: 3 / 4;
-    padding-right: calc(1rem + 2vw);
+    padding-right: 1.5rem;
+}
+@media (max-width: 1079px){
+    #portfolio .card.heading {
+        min-width: 100px;
+    }
 }
 
-#portfolio h2 {
+#portfolio .card.heading h2 {
     rotate: -90deg;
     position: absolute;
-    right: calc(0.5rem + 2vw);
-    font-size: calc(0.35rem + 2.3vw);
+    right: 0.95em;
+    font-size: calc(2rem + 20%);
     bottom: 0;
     width: 0;
     height: 0;
@@ -343,9 +346,14 @@ h2::before {
     z-index: 3;
 }
 
+#portfolio  .small {
+    margin-top: 0;
+    position: relative;
+    top: -0.35em;
+}
 @media (min-width: 1400px) {
-    #portfolio .description small::before {
-        content: "Дизайн должен передавать конкретное качество или ценность";
+    #portfolio .heading small::before {
+        content: "";
     }
 }
 

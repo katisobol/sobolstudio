@@ -33,6 +33,41 @@ a:visited {
     color: #a88ab8;
 }
 
+* + details {
+    margin-top: 2em;
+}
+
+details > summary {
+    list-style: none;
+    position: relative;
+    top: -0.25rem;
+    padding-left: 1em;
+}
+
+details > summary::before {
+    content: "▶";
+    position: absolute;
+    left: -0.35em;
+    top: -0.15em;
+    font-size: 1.5em;
+    transition: all 0.2s ease;
+    color: var(--SoftBlack);
+    text-shadow: 1px 1px 0 var(--CosmicLatte),
+        1px -1px 0 var(--CosmicLatte),
+        -1px 1px 0 var(--CosmicLatte),
+        -1px -1px 0 var(--CosmicLatte)
+        ;
+    z-index: -1;
+}
+
+details[open] > summary::before {
+    transform: rotate(90deg);
+    left: -0.25em;
+    top: -0.25em;
+}
+
+
+
 button,
 input[type="button"],
 input[type="submit"],

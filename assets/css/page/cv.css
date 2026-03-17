@@ -1,0 +1,137 @@
+:root {
+    --cardborder: var(--BrightBlue);
+}
+
+.cv #about, #experience {
+    display: none;
+}
+
+.cv header nav ul::after {
+    content: " / Портфолио";
+    color: slategray;
+}
+
+.cv section .side {
+    bottom: 0;
+}
+
+@media (max-width: 1079px) {
+    .cv #skills .portfolio {
+        --columngap: 2.5rem;
+        gap: 1.5rem;
+    }
+}
+
+.cv #skills h2 {
+    position: absolute;
+    left: calc(0px - var(--padding));
+    top: calc(-0.75em - var(--sectiongap));
+    font-size: 10rem;
+}
+
+.cv #skills ul {
+    grid-template-columns: repeat(5, auto);
+    padding-left: 0;
+}
+
+.cv #skills ul li {
+    list-style: none;
+    border: solid 1rem var(--cardborder);
+    padding: 1.5rem;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.85),
+        rgba(0, 0, 0, 0.85)
+    ), var(--cardborder);
+    box-shadow: var(--textShadow);
+}
+@media (max-width: 769px) {
+    .cv #skills ul li {
+        width: 100%;
+    }
+}
+
+.cv #skills ul li h3 {
+    color: var(--cardborder);
+}
+
+.cv #skills ul li * + :is(p, h4) {
+    margin-top: 0.25em;
+}
+
+.cv details {
+    position: relative;
+    top: -0.25rem;
+}
+
+.cv #skills ul li details :is(h4, p) {
+    font-family: Raleway;
+    font-size: 0.75rem;
+}
+
+.cv #skills * + details {
+    margin-top: 0;
+}
+
+.cv #skills details > summary {
+    padding: 0;
+}
+
+.cv #skills details > summary::before {
+    left: -0.35em;
+    top: -0.5em;
+    font-size: 2em;
+    color: black;
+    text-shadow: 0 0 10px var(--cardborder);
+    z-index: 0;
+}
+
+.cv #skills details[open] > summary::before {
+    transform: rotate(90deg);
+}
+
+.cv #skills details > summary h3 {
+    position: relative;
+    z-index: 2;
+}
+
+
+
+.cv #skills ul li.ps {
+    grid-column: span 3;
+    --cardborder: #22B9EE;
+}
+
+.cv #skills ul li.ai {
+    grid-column: span 3;
+    --cardborder: #F97914;
+}
+
+.cv #skills ul li.id {
+    grid-column: span 2;
+    --cardborder: #EC4793;
+}
+
+.cv #skills ul li.figma {
+    grid-column: span 2;
+    --cardborder: #FF3737;
+}
+
+.cv #skills ul li.css {
+    grid-column: span 2;
+    --cardborder: #663199;
+}
+
+.cv #skills ul li.llm {
+    grid-column: span 1;
+    --cardborder: #00A680;
+}
+
+.cv #skills ul li.ae {
+    grid-column: span 1;
+    --cardborder: #D391F2;
+}
+
+.cv #skills ul li.ch {
+    grid-column: span 1;
+    --cardborder: #9B9BFF;
+}

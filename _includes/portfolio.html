@@ -25,10 +25,10 @@
 <!-- Добавляет кейвижуал во всплывашку -->
   {% if case.keyvisual %}
   <img src="{{ case.keyvisual | relative_url }}" alt="{{ case.title }}">
-  {% endif %}      <p>{{ case.description }}</p></div>
+  {% endif %}      <p class="description">{{ case.description }}</p></div>
 
 <!-- Контент внутри карточки: название, кейвижуал -->
-  <p class="cardname">{{ case.description }}</p>
+  <p class="description">{{ case.description }}</p>
   {% if case.keyvisual %}
   <img class="keyvisual" src="{{ case.keyvisual | relative_url }}" alt="{{ case.title }}">
   {% endif %}
@@ -38,15 +38,15 @@
 
 <a class="card blank behance" style="background:url(https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/add5e8169548731.Y3JvcCw4MDgsNjMyLDAsMA.png); background-position: center"
 href="https://www.behance.net/gallery/169548731/Logofolio-2023" target="_blank">
-  <p>Logofolio</p>
+  <p class="description">Logofolio</p>
 </a>
 
 <a class="card blank behance"  style="background:url(https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/6e3e9a164116753.Y3JvcCw4MDgsNjMyLDAsMA.png); background-position: center"
 href="https://www.behance.net/gallery/164116753/Key-visual-banners" target="_blank">
-  <p>Key visual</p>
+  <p class="description">Key visual</p>
 </a>
 
 <a class="card blank behance"  style="background:url(https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/45b12c165280831.Y3JvcCw4MDgsNjMyLDAsMA.png); background-position-x: left"
 href="https://www.behance.net/gallery/165280831/magazin-rjukzakov-BackPack" target="_blank">
-  <p>E-commerce</p>
+  <p class="description">E-commerce</p>
 </a>

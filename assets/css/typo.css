@@ -1,17 +1,42 @@
 /* Глобальные правила */
+html {
+    font-size: 16px;
+}
+
+/* НАСТРОЙКИ ДЛЯ Avant Garde */
+h1, .h1,
+h2, .h2,
+.avant {
+    font-family: AvantGarde, Raleway;
+    letter-spacing: 0.02em;
+}
+/* Потом замени на курсивный без наклона */
+h5, .h5,
+h6, .h6,
+small, .small {
+    font-family: Santello, Raleway;
+}
 
 body {
     font-family: Santello, Raleway;
     line-height: 1.5;
 }
+p, .p,
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6,
+small, .small,
+li, td {
+    margin: 0;
+}
 
 h1, .h1,
 h2, .h2 {
-    font-family: AvantGarde, Raleway;
     font-weight: bold;
     line-height: 1.1;
-    letter-spacing: 0.03rem;
-    margin: 0;
     max-width: 1200px;
     box-sizing: content-box;
 }
@@ -27,10 +52,6 @@ h2, .h2 {
 
 
 
-h5, .h5,
-h6, .h6, small, .small {
-    font-family: Santello, Raleway;
-}
 p, .p,
 h3, .h3,
 h4, .h4,
@@ -40,7 +61,6 @@ small, .small,
 li, td {
     max-width: 600px;
     box-sizing: content-box;
-    margin: 0;
 }
 
 
@@ -55,14 +75,12 @@ h1, .h1 {
 
 
 /*h2,  .h2 и его друзья */
-h2, .h2 {
-    margin-top: calc(var(--sectiongap) / 2);
-}
+
 * + :is(h2, .h2) {
-    margin-top: 2rem;
+    margin-top: 1em;
 }
 :is(h1, .h1) + :is(h2, .h2) {
-    margin-top: 1rem;
+    margin-top: 0.5em;
 }
 
 

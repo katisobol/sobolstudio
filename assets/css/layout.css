@@ -27,14 +27,20 @@
 
 /* Сетка исчезает на узкой странице */
 :root {
-    --grid: repeat(5, 1fr);
+    --grid: repeat(5, calc((100% - (var(--columngap) * 4) ) / 5));
 }
+
 @media (max-width: 769px) {
     :root {
-        --grid: unset;
+    --grid: unset;
     }
 }
 
+@media (min-width: 1800px) {
+    :root {
+        --grid: repeat(5, 220px);
+    }
+}
 /* Расстояние между колонками */
 :root {
     --columngap: 75px;
@@ -64,7 +70,7 @@ body > :is(p, h1, h2, h3, h4, h5, h6, ul, ol, blockquote, pre, table, dl, hr, ad
 }
 
 :not(body) > section + :is(section, article, aside) {
-    margin-top: var(--sectiongap);
+    margin-top: calc(var(--sectiongap) * 2);
 }
 
 
@@ -84,6 +90,7 @@ article,
 aside,
 main,
 .layout {
+    position: relative;
     display: grid;
     grid-template-columns: var(--grid);
     grid-auto-flow: row;
@@ -97,9 +104,29 @@ main,
     article,
     body > :is(aside),
     main,
-    .layout {
+    .layout,
+    .portfolio {
         column-gap: 1.5rem;
     }
+}
+
+ :is(section,
+footer,
+article,
+aside,
+main,
+.layout, .portfolio) > :not(
+p, .p,
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6,
+small, .small
+) {
+  min-width: 0;
+  max-width: 100%;
 }
 
 /* Лейаут: растягиваем элементы по умолчанию на все колонки */
@@ -117,16 +144,14 @@ main,
     video, audio, iframe, embed, object, picture, source,
     /* Технические */
     section, footer
-{
-    grid-column: 1 / -1;
-}
+{ grid-column: 1 / -1; }
 @media (min-width: 1600px) {
     :is(section,
     footer,
     article,
     aside,
     main,
-    .layout) > :is(
+    .layout, .portfolio) > :is(
     /* Заголовки и текст */
     h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, .p, small, a, button, .btn,
     /* Структурные блоки */
@@ -148,7 +173,7 @@ main,
     article,
     body > aside,
     main,
-    .layout) > :is(
+    .layout, .portfolio) > :is(
     /* Заголовки и текст */
     h1, .h1, h2, .h2,
     ) {
@@ -159,7 +184,7 @@ main,
     article,
     aside,
     main,
-    .layout) > :is(
+    .layout, .portfolio) > :is(
     /* Заголовки и текст */
     h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, .p, small, a, button, .btn,
     /* Структурные блоки */

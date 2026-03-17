@@ -1,39 +1,49 @@
-.portfolio,
-#portfolio {
+#portfolio, .portfolio {
+    --columngap: 1.5rem;
+    gap: var(--columngap);
     position: relative;
     display: grid;
-    grid-template-columns: var(--grid);
-    gap: calc(2vw - var(--padding) * 0.04);
+    grid-template-columns: repeat(5, calc((100% - (var(--columngap) * 4)) / 5));
     grid-auto-flow: dense;
 }
 
-@media (max-width: 950px) {
-    .portfolio,
-    #portfolio {
+:is(.portfolio, #portfolio) .card {
+    grid-column: span 1;
+    aspect-ratio: 3 / 4;
+    text-decoration: none;
+    padding: 0;
+    background-position: center;
+    background-size: cover !important;
+    min-height: 175px;
+    max-width: unset;
+}
+
+@media (max-width: 1201px) {
+    #portfolio,
+    .portfolio {
         display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: flex-start;
+        align-items: stretch;
+        align-content: stretch;
     }
-    :is(.portfolio, #portfolio) .card > p {
-        font-size: 0.75rem;
+    :is(.portfolio, #portfolio) .card {
+        width: calc(5rem + 10%);
+        min-height: 120px;
     }
 }
 
-:is(.portfolio, #portfolio) .card {
-    position: relative;
-    background-position: center;
-    background-size: cover !important;
-    grid-column: span 1;
-    aspect-ratio: 3 / 4;
-    color: var(--CosmicLatte);
-    text-decoration: none;
-    padding: 0;
-}
+
+
+
+
+
 :is(.portfolio, #portfolio) .card:hover {
     text-decoration: none;
 }
 
-:is(.portfolio, #portfolio) .card > p {
+:is(.portfolio, #portfolio) .card > p.description {
     position: absolute;
     transform-origin: bottom right;
     right: 1em;
@@ -42,6 +52,7 @@
     white-space: nowrap;
     margin: 0;
     text-align: right;
+    color: var(--CosmicLatte);
     text-shadow: var(--textShadow);
 }
 
@@ -75,15 +86,6 @@
     width: 100%;
     height: 100%;
     object-fit: contain;
-}
-
-@media screen and (max-width: 950px) {
-    #portfolio .card,
-    :is(.portfolio, #portfolio) .card {
-        display: inline-block;
-        width: calc(100px + 10%);
-        aspect-ratio: 4 / 3;
-    }
 }
 
 .card {
@@ -150,8 +152,8 @@
     object-fit: contain;
 }
 
-
-:is(.portfolio, #portfolio) :is(.size2, .size3, .size4, .size5) {
+/* Визуальная иерархия  */
+:is(.portfolio, #portfolio) :is(.size2, .size3, .size4) {
     aspect-ratio: unset;
 }
 :is(.portfolio, #portfolio) .card.size2 {
@@ -169,6 +171,24 @@
 :is(.portfolio, #portfolio) .size5 {
     grid-column: span 5;
         aspect-ratio: 5 / 2;
+}
+@media (max-width: 961px) {
+    :is(.portfolio, #portfolio) :is(.size2, .size3, .size4) {
+        height: 100%;
+        min-height: 150px;
+    }
+    :is(.portfolio, #portfolio) .card.size2 {
+        width: 35%;
+    }
+    :is(.portfolio, #portfolio) .size3 {
+        width: 50%;
+    }
+    :is(.portfolio, #portfolio) .size4 {
+        width: 75%;
+    }
+    :is(.portfolio, #portfolio) .size5 {
+        width: 100%;
+    }
 }
 
 /* проклятое название стиля для скрытых кейсов */

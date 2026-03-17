@@ -22,21 +22,23 @@
 /* Цвета по умолчанию */
 
 body {
-    background: var(--SoftBlack);
+    background: url(../img/patterns/paperTxtr.png),
+        var(--SoftBlack);
+    background-repeat: repeat;
+    background-size: auto;
     color: var(--CosmicLatte);
     caret-color: transparent;
 }
 
-.crosses::after {
+.crosses::before {
     content: "";
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background: url(../../img/patterns/crossesBlk.svg);
-    z-index: -1;
-    opacity: 0.65;
+    background: url(../img/patterns/crossesBlk.svg);
+    opacity: 0.35;
 }
 
 .glass-morphism-card,
@@ -59,6 +61,7 @@ body {
 
 .shadowhuge,
 .portfolio-case main article :is(h2, .h2) {
+    font-family: Unovis100;
     color: grey;
     text-shadow: var(--shadowHuge);
     mix-blend-mode: hard-light;
