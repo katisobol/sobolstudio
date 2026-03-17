@@ -17,6 +17,9 @@
     min-height: 175px;
     max-width: unset;
 }
+:is(.portfolio, #portfolio) .card:is(.case, .blank) {
+    box-shadow: var(--textShadow);
+}
 
 @media (max-width: 1201px) {
     #portfolio,
@@ -33,11 +36,6 @@
         min-height: 120px;
     }
 }
-
-
-
-
-
 
 :is(.portfolio, #portfolio) .card:hover {
     text-decoration: none;

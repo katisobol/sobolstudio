@@ -1,5 +1,15 @@
+body.home > header{
+    display: none;
+}
+
+
+body.home a.btn:hover::before,
+body.home a.btn:active::before {
+    box-shadow: var(--textShadow);
+}
+
 /* 1. hero-секция */
-#hero {
+body.home > #hero {
     background-image: url(../../img/page/home/hero3.png);
     background-position-y: top;
     background-attachment: fixed;
@@ -10,11 +20,11 @@
 }
 
 /* Меню главной страницы */
-#hero div.layout:first-child {
+body.home > #hero div.layout:first-child {
     padding: 0 var(--padding);
 }
 
-#hero nav {
+body.home > #hero nav {
     position: relative;
     padding: 1rem;
     grid-column: 3 / -1;
@@ -29,7 +39,7 @@
 }
 
 @media (min-width: 769px) {
-    #hero nav {
+    body.home > #hero nav {
         position: relative;
         left: -3rem;
         padding-left: 3rem;
@@ -38,44 +48,44 @@
 }
 
 @media (max-width: 769px) {
-    #hero nav {
+    body.home > #hero nav {
         max-width: max-content;
         padding: 35px 5rem 1rem 35px;
         background-color: rgba(255, 255, 255, 0.25);
     }
-    #hero nav ul li {
+    body.home > #hero nav ul li {
         margin-top: 0 !important;
     }
-    #hero nav ul li a {
+    body.home > #hero nav ul li a {
         display: inline-flex;
         align-items: center;
         min-height: 50px;
     }
 }
 
-#hero .logo {
+body.home > #hero .logo {
     background-image: url(../../icons/Kc_logo_full_logo_raster_lght.png);
     filter: drop-shadow(0 0 1.5px cornflowerblue);
 }
-#hero nav ul {
+body.home > #hero nav ul {
     margin: 0;
     padding: 0;
 }
-#hero nav ul li {
+body.home > #hero nav ul li {
     list-style-type: none;
     margin: 0.5rem 0 0;
 }
 
-#hero nav a,
-#hero nav a:link,
-#hero nav a:visited {
+body.home > #hero nav a,
+body.home > #hero nav a:link,
+body.home > #hero nav a:visited {
     color: var(--SoftBlack);
 }
-#hero nav a:hover {
+body.home > #hero nav a:hover {
     color: var(--BrightBlue);
 }
 /* Выпадающий блок при наведении */
-#hero nav li::before {
+body.home > #hero nav li::before {
     content: "";
     position: absolute;
     left: 0;
@@ -88,19 +98,19 @@
     z-index: -1;
     transition: all 250ms ease-in;
 }
-#hero nav :is(li:hover, li.active)::before {
+body.home > #hero nav :is(li:hover, li.active)::before {
     content: "";
     width: 100%;
     transition: all 250ms ease-out;
 }
 @media (max-width: 769px) {
-    #hero nav li::before {
+    body.home > #hero nav li::before {
     height: 50px;
     }
 }
 
-#hero h1,
-#hero nav a {
+body.home > #hero h1,
+body.home > #hero nav a {
     text-shadow:
         0 0 50px cornflowerblue,
         0 0 10px var(--CosmicLatte),
@@ -108,20 +118,21 @@
         0 0 0.5px yellow;
 }
 
-#hero .outline {
+body.home > #hero .outline {
     position: absolute;
     font-family: Unovis100;
     font-size: 10vw;
     line-height: 4.5vw;
+    user-select: none;
 }
 
 @media (max-width: 769px) {
-    #hero .outline {
+    body.home > #hero .outline {
         font-size: 9vw;
     }
 }
 
-#hero h1 {
+body.home > #hero h1 {
     position: relative;
     margin: 2rem auto;
     padding: 0 var(--padding);
@@ -130,7 +141,7 @@
     max-width: 1400px;
 }
 @media (max-width: 769px) {
-    #hero h1 {
+    body.home > #hero h1 {
         text-shadow:
         0 0 100px cornflowerblue,
         0 0 65px var(--CosmicLatte),
@@ -140,12 +151,12 @@
     }
 }
 
-#hero .layout *,
-#hero .layout p {
+body.home > #hero .layout *,
+body.home > #hero .layout p {
     grid-column: 3 / -1;
 }
 
-#hero div.layout:last-child {
+body.home > #hero div.blk.paper {
     display: grid;
     grid-template-columns: var(--grid);
     color: var(--CosmicLatte);
@@ -156,46 +167,42 @@
     padding: 2rem var(--padding) var(--sectiongap);
 }
 
-#hero div.layout:last-child div {
+body.home > #hero div.blk.paper div {
     position: relative;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
 }
-#hero div.layout:last-child .side {
+body.home > #hero div.blk.paper .side {
     position: absolute;
-    bottom: 0;
+    top: 11.4em;
     left: -3rem;
     rotate: -90deg;
     transform-origin: left;
     color: slategray;
 }
-@media (min-width: 1400px) {
-    #hero div.layout:last-child .side {
-        bottom: -4.75rem;
-    }
 }
 @media (max-width: 769px) {
-    #hero div.layout:last-child .side {
+    body.home > #hero div.blk.paper .side {
         display: none;
     }
 }
 
-#hero div.layout:last-child .btn {
+body.home > #hero div.blk.paper .btn {
     margin-bottom: 0;
 }
 
 /* 2. Value-секция */
 
-#value {
+body.home > #value {
     padding-top: 0;
     row-gap: 0;
 }
 /* украшаю направляющими. Как же проклято выглядят стили, ё-моё */
-#value::before,
-#value::after,
-#value ul::before,
-#value ul::after {
+body.home > #value::before,
+body.home > #value::after,
+body.home > #value ul::before,
+body.home > #value ul::after {
     content: url(../../img/patterns/guides.svg);
     position: absolute;
     opacity: 0.35;
@@ -204,30 +211,30 @@
     overflow: visible;
     grid-column: 1 / -1;
 }
-#value::before {
+body.home > #value::before {
     left: 0;
     top: var(--sectiongap);
     rotate: 180deg;
 }
-#value::after {
+body.home > #value::after {
     right: 0;
     top: var(--sectiongap);
     rotate: -90deg;
 }
-#value ul::before {
+body.home > #value ul::before {
     left: 0;
     bottom: var(--sectiongap);
     rotate: 90deg;
 }
-#value ul::after {
+body.home > #value ul::after {
     right: 0;
     bottom: var(--sectiongap);
 }
 @media screen and (max-width: 769px) {
-    #value::before,
-    #value::after,
-    #value ul::before,
-    #value ul::after {
+    body.home > #value::before,
+    body.home > #value::after,
+    body.home > #value ul::before,
+    body.home > #value ul::after {
         display: none;
     }
 }
@@ -244,38 +251,38 @@ h2::before {
 */
 
 /* рисую крестики */
-#value .crosses {
+body.home > #value .crosses {
     position: relative;
     padding: var(--sectiongap) 0 calc(var(--sectiongap) / 2);
     background: none;
     background-repeat: repeat;
 }
-#value .crosses::before{
+body.home > #value .crosses::before{
     width: calc(100% + var(--padding));
 }
 
-#value .layout p {
+body.home > #value .layout p {
     grid-column-start: 2 !important;
 }
 
-#value strong {
+body.home > #value strong {
     font-weight: normal;
     color: slategray;
 }
 
-#value h3 {
+body.home > #value h3 {
     color: slategray;
     grid-column-start: 2;
     margin: 0 0 0.5rem;
 }
 
-#value h2 {
+body.home > #value h2 {
     font-size: 4vw;
     text-indent: -12vw;
     grid-column-start: 2;
 }
 
-#value ul {
+body.home > #value ul {
     grid-column: 2 / -1;
     grid-template-columns: 3 / -1;
     display: flex;
@@ -287,16 +294,16 @@ h2::before {
     gap: var(--columngap);
 }
 
-#value li {
+body.home > #value li {
     list-style-type: none;
     height: auto;
 }
 
-#value li p {
+body.home > #value li p {
     margin-bottom: 0;
 }
 
-#value h3 {
+body.home > #value h3 {
     color: slategray;
     display: flex;
     align-items: flex-end;
@@ -305,34 +312,34 @@ h2::before {
 }
 
 @media (max-width: 1024px) {
-    #value ul {
+    body.home > #value ul {
         grid-column-start: 1;
     }
-    #value h2 {
+    body.home > #value h2 {
         font-size: 2.5rem;
     }
 }
 
 @media (max-width: 1000px) {
-    #value h2 {
+    body.home > #value h2 {
         text-indent: 0;
     }
 }
 
 /* секция портфолио */
 
-#portfolio .card.heading {
+body.home > #portfolio .card.heading {
     grid-column: 5;
     grid-row: 1;
     padding-right: 1.5rem;
 }
 @media (max-width: 1079px){
-    #portfolio .card.heading {
+    body.home > #portfolio .card.heading {
         min-width: 100px;
     }
 }
 
-#portfolio .card.heading h2 {
+body.home > #portfolio .card.heading h2 {
     rotate: -90deg;
     position: absolute;
     right: 0.95em;
@@ -346,25 +353,25 @@ h2::before {
     z-index: 3;
 }
 
-#portfolio  .small {
+body.home > #portfolio  .small {
     margin-top: 0;
     position: relative;
     top: -0.35em;
 }
 @media (min-width: 1400px) {
-    #portfolio .heading small::before {
+    body.home > #portfolio .heading small::before {
         content: "";
     }
 }
 
-#portfolio .btn {
+body.home > #portfolio .btn {
     position: absolute;
     bottom: 0;
     left: 0;
     margin: 0;
     width: 100%;
 }
-#portfolio .btn {
+body.home > #portfolio .btn {
     padding: unset;
 }
 
@@ -378,11 +385,26 @@ h2::before {
     grid-column: 2 / -1;
 }
 
-#CTA {
+body.home > #CTA {
     position: relative;
 }
 @media (max-width: 769px) {
-    #CTA h2 {
+    body.home > #CTA h2 {
         display: none;
     }
+}
+body.home > #CTA * + small {
+    margin-top: 0.25rem;
+}
+
+
+body.home div.scales {
+    position: relative;
+    height: 24px;
+}
+
+body.home div > img.colorbar {
+    position: absolute;
+    right: 24px;
+    bottom: 24px;
 }

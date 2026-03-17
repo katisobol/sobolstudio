@@ -1,34 +1,34 @@
-@import url(portfolio-gallery.css);
+@import url(../case-gallery.css);
 
-body.portfolio-case > header {
+body.case header {
     display: inline-flex;
     position: absolute;
     background: transparent;
     z-index: 2;
 }
 
-body.portfolio-case > header nav ul li {
+body.case header nav ul li {
     white-space: nowrap;
 }
-body.portfolio-case > header nav ul li::after {
+body.case header nav ul li::after {
     content: "/";
     padding-right: 0;
 }
-body.portfolio-case > header nav ul li:nth-child(1) {
+body.case header nav ul li:nth-child(1) {
     display: inline;
 }
-body.portfolio-case > header nav ul li:nth-child(1) a::before {
+body.case header nav ul li:nth-child(1) a::before {
     content: "Портфолио";
 }
 
-body.portfolio-case > header nav ul li a:link,
-body.portfolio-case > header nav ul li a:visited {
+body.case header nav ul li a:link,
+body.case header nav ul li a:visited {
     color: silver;
     text-shadow: var(--textShadow);
 }
 
 @media screen and (min-width: 769px) {
-    body.portfolio-case > header {
+    body.case header {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
@@ -36,25 +36,25 @@ body.portfolio-case > header nav ul li a:visited {
         padding: calc(var(--sectiongap) + 1rem) 2rem 0 0;
         width: var(--padding);
     }
-    body.portfolio-case > header nav {
+    body.case header nav {
         flex-direction: column;
         align-items: flex-end;
     }
-    body.portfolio-case > header nav ul li::before {
+    body.case header nav ul li::before {
         padding-left: 0;
     }
 }
 
 @media handheld, (max-width: 769px) {
-    body.portfolio-case > header {
+    body.case header {
         padding: 1.5rem 0 0 1.5rem;
     }
-    h1 {
+    body.case h1 {
         padding-top: 100px !important;
     }
 }
 
-.portfolio-case main > time.side {
+body.case time.side {
     color: var(--CosmicLatte);
     right: calc(var(--padding) / 2);
     top: calc(var(--sectiongap) + 30px);
@@ -62,13 +62,13 @@ body.portfolio-case > header nav ul li a:visited {
     text-shadow: var(--textShadow);
 }
 
-.portfolio-case main {
+body.case main {
     display: block;
     position: relative;
     padding: unset;
 }
 
-.portfolio-case main .cover {
+body.case h1.cover {
     width: 100vw;
     box-sizing: border-box;
     max-width: none;
@@ -80,7 +80,7 @@ body.portfolio-case > header nav ul li a:visited {
     text-shadow: var(--textShadow);
 }
 
-#gallery, .gallery {
+body.case :is(#gallery, .gallery) {
     width: 100vw;
     max-width: unset;
     white-space: nowrap;
@@ -90,9 +90,11 @@ body.portfolio-case > header nav ul li a:visited {
     gap: 1em;
     scroll-behavior: smooth;
     padding: 1rem var(--padding);
+    background-color: silver;
+    box-sizing: border-box;
 }
 
-:is(#gallery, .gallery) > img {
+body.case :is(#gallery, .gallery) > img {
     width: max-content;
     max-width: 95vw;
     max-height: 75vh;
@@ -103,19 +105,19 @@ body.portfolio-case > header nav ul li a:visited {
     flex-shrink: 0;
 }
 
-body.portfolio-case main  article {
+body.case  article {
     font-family: Raleway;
     padding: var(--columngap) var(--padding);
     column-gap: var(--columngap);
     row-gap: calc(var(--columngap) / 2);
 }
 
-.portfolio-case main article > .gallery{
+body.case article > .gallery {
     position: relative;
     left: calc(0px - var(--padding));
 }
 
-.portfolio-case main article :is(h2, .h2) {
+body.case article :is(h2, .h2) {
     font-family: Unovis100;
     font-size: 10vw;
     height: 2rem;
@@ -125,41 +127,41 @@ body.portfolio-case main  article {
     z-index: -1;
 }
 
-.portfolio-case main article :is(h3, .h3, h4, .h4) {
+body.case article :is(h3, .h3, h4, .h4) {
     color: silver;
 }
 
-.portfolio-case article :is(p, li, table) {
+body.case article :is(p, li, table) {
     color: slategray;
 }
-.portfolio-case strong {
+body.case strong {
     color: var(--CosmicLatte);
 }
 
 @media (min-width: 1800px) {
-    .portfolio-case main article :is(p, .p),
-    .portfolio-case main article :not(p, .p) + :is(p, .p) {
+    body.case article :is(p, .p),
+    body.case article :not(p, .p) + :is(p, .p) {
         grid-column: 2 / span 2;
     }
-    .portfolio-case main article :is(p, .p) + :is(p, .p):nth-child(even) {
+    body.case article :is(p, .p) + :is(p, .p):nth-child(even) {
         grid-column: 4 / span 2;
     }
-    .portfolio-case main article :is(p, .p) {
+    body.case article :is(p, .p) {
         margin: 0;
     }
 }
 
-.portfolio-case main article td {
+body.case article td {
     vertical-align: top;
 }
-.portfolio-case main article td + td {
+body.case article td + td {
     padding-left: var(--columngap);
 }
-.portfolio-case main article tr + tr td {
+body.case article tr + tr td {
     padding-top: calc(var(--sectiongap) / 3);
 }
 
-.portfolio-case main section.thanks {
+body.case section.thanks {
     padding: calc(var(--sectiongap) / 2) var(--padding);
     display: none;
 }

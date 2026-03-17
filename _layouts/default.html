@@ -19,15 +19,19 @@
             href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
             rel="stylesheet" />
     </head>
-    {% if page.extra_css %}
-  {% assign css_class = page.extra_css | split: '/' | last | split: '.' | first %}
-  <body class="{{ css_class }}">
-{% else %}
-  <body>
-{% endif %}
+    <body {% if page.extra_css %}
+            {% assign css_classes = "" %}
+                {% for css_file in page.extra_css %}
+                    {% assign file_name = css_file | split: '/' | last | split: '.' | first %}
+                    {% capture css_classes %}{{ css_classes }} {{ file_name }}{% endcapture %}
+                {% endfor %}
+           class="{{ css_classes | strip }}"
+          {% endif %}
+    onload="onPageLoaded()">
 
 
         {% include header.html %}
         {{ content }}
-    </body>
+</body>
+
 </html>

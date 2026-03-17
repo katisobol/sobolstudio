@@ -1,3 +1,21 @@
+
+@font-face {
+    font-family: "AvantGarde";
+    src: url("../fonts/URWGothic-Book.ttf");
+}
+@font-face {
+    font-family: "Santello";
+    src: url("../fonts/SANTELLO.ttf");
+}
+@font-face {
+    font-family: "Unovis100";
+    src: url("../fonts/UNOVIS100.otf");
+}
+@font-face {
+    font-family: "TaylorSans";
+    src: url("../fonts/TaylorSans-Regular.ttf");
+}
+
 /* Глобальные правила */
 html {
     font-size: 16px;
@@ -13,8 +31,10 @@ h2, .h2,
 /* Потом замени на курсивный без наклона */
 h5, .h5,
 h6, .h6,
-small, .small {
-    font-family: Santello, Raleway;
+small, .small,
+.taylor {
+    font-family: TaylorSans, Santello, Raleway;
+    letter-spacing: 0.01em;
 }
 
 body {
@@ -157,6 +177,8 @@ p, .p
 /* Текст на правом поле */
 .side {
     font-size: 0.75rem;
+    font-family: TaylorSans, Santello, Raleway;
+    letter-spacing: 0.03em;
 }
 
 :is(h1, .h1, h2, .h2) + :is(fieldset, form, table, ul, ol, dl) {

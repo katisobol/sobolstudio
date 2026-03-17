@@ -6,18 +6,6 @@
 @import url(typo.css);
 @import url(ui.css);
 
-@font-face {
-    font-family: "AvantGarde";
-    src: url("../fonts/URWGothic-Book.ttf");
-}
-@font-face {
-    font-family: "Santello";
-    src: url("../fonts/SANTELLO.ttf");
-}
-@font-face {
-    font-family: "Unovis100";
-    src: url("../fonts/UNOVIS100.otf");
-}
 
 
 /* технические палатки */
@@ -25,17 +13,13 @@ body :is(*, *::before, *::after) {
     box-sizing: border-box;
     background-size: cover;
     background-position: center;
+    overflow-x: unset;
 }
 body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
-}
-
-/* Глобальная стилизация */
-body {
-    font-family: Santello, Raleway;
-    line-height: 1.5;
+    overflow-x: hidden;
 }
 
 *,

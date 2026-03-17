@@ -22,9 +22,9 @@ defaults:
       path: ""
       type: "portfolio"
     values:
-      layout: "portfolio-case"
+      layout: "case"
       extra_css:
-        - /assets/css/page/portfolio-case.css # все файлы портфолио используют этот шаблон
+        - /assets/css/page/case.css # все файлы портфолио используют этот шаблон
   - scope:
       path: ""
       type: "posts"
