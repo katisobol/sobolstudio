@@ -6,12 +6,12 @@
         <title>{% if page.title %}{{ page.title }} | {% endif %}Лаборатория визуальной коммуникации</title>
         <link rel="icon" type="image/x-icon" href="https://katisobol.github.io/sobolstudio/Kc_logo_full.svg" />
         <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}" />
+
         {% if page.extra_css %}
             {% for css in page.extra_css %}
-            <link rel="stylesheet" href="{{ css | relative_url }}">
+        <link rel="stylesheet" href="{{ css | relative_url }}">
             {% endfor %}
         {% endif %}
-        <!-- Специфичные стили в зависимости от layout -->
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

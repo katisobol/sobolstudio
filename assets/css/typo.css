@@ -8,12 +8,12 @@
     src: url("../fonts/SANTELLO.ttf");
 }
 @font-face {
-    font-family: "Unovis100";
-    src: url("../fonts/UNOVIS100.otf");
-}
-@font-face {
     font-family: "TaylorSans";
     src: url("../fonts/TaylorSans-Regular.ttf");
+}
+@font-face {
+    font-family: "Unovis100";
+    src: url("../fonts/UNOVIS100.otf");
 }
 
 /* Глобальные правила */
@@ -53,14 +53,16 @@ li, td {
     margin: 0;
 }
 
+body :is(
 h1, .h1,
-h2, .h2 {
+h2, .h2
+) {
     font-weight: bold;
     line-height: 1.1;
     max-width: 1200px;
     box-sizing: content-box;
 }
-@media (max-width: 769px) {
+@media (max-width: 768px) {
     h1, .h1{
         font-size: 2rem;
     }
@@ -174,12 +176,6 @@ p, .p
 }
 
 
-/* Текст на правом поле */
-.side {
-    font-size: 0.75rem;
-    font-family: TaylorSans, Santello, Raleway;
-    letter-spacing: 0.03em;
-}
 
 :is(h1, .h1, h2, .h2) + :is(fieldset, form, table, ul, ol, dl) {
     margin-top: 1.5rem;

@@ -44,7 +44,7 @@
     ), var(--cardborder);
     box-shadow: var(--textShadow);
 }
-@media (max-width: 769px) {
+@media (max-width: 768px) {
     .cv #skills ul li {
         width: 100%;
     }

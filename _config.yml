@@ -5,7 +5,7 @@ author: Екатерина Соболь
 description: "Соболь Екатерина. Лаборатория визуальной коммуникации"
 baseurl: "/sobolstudio"
 url: "https://katisobol.github.io/"
-date_format: "%-d.%m.%Y"
+date_format: "%-d.%m.%y"
 
 # Collections
 collections:

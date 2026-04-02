@@ -1,18 +1,22 @@
 @import url(https://csstools.github.io/normalize.css/11.0.0/normalize.css);
-@import url(header.css);
+@import url(tokens/header.css);
 @import url(layout.css);
 @import url(portfolio.css);
 @import url(themes.css);
+@import url(tokens/tokens.css);
 @import url(typo.css);
-@import url(ui.css);
+@import url(tokens/ui.css);
 
 
 
 /* технические палатки */
-body :is(*, *::before, *::after) {
+body *,
+body *::before,
+body *::after {
     box-sizing: border-box;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     overflow-x: unset;
 }
 body {
@@ -20,6 +24,10 @@ body {
     padding: 0;
     min-height: 100vh;
     overflow-x: hidden;
+}
+
+img, table {
+    max-width: 100%;
 }
 
 *,

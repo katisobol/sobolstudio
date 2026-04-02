@@ -1,4 +1,4 @@
-@import url(../case-gallery.css);
+@import url(../tokens/case-gallery.css);
 
 body.case header {
     display: inline-flex;
@@ -80,7 +80,8 @@ body.case h1.cover {
     text-shadow: var(--textShadow);
 }
 
-body.case :is(#gallery, .gallery) {
+body.case #gallery,
+body.case .gallery {
     width: 100vw;
     max-width: unset;
     white-space: nowrap;
@@ -103,6 +104,7 @@ body.case :is(#gallery, .gallery) > img {
 
 :is(#gallery, .gallery) > * {
     flex-shrink: 0;
+    display: inline-block;
 }
 
 body.case  article {
@@ -112,9 +114,23 @@ body.case  article {
     row-gap: calc(var(--columngap) / 2);
 }
 
+body.case article > :not(.gallery) {
+    max-width: calc(100vw - 2 * var(--padding));
+}
+
 body.case article > .gallery {
     position: relative;
     left: calc(0px - var(--padding));
+}
+
+body.case article .gallery {
+    position: relative;
+    left: calc(0px - var(--padding));
+    background-color: hsla(0, 0%, 0%, 0.35);
+}
+
+body.case article .gallery img {
+    filter: drop-shadow(0 0 1rem black);
 }
 
 body.case article :is(h2, .h2) {
@@ -126,8 +142,13 @@ body.case article :is(h2, .h2) {
     left: calc(0px - var(--padding));
     z-index: -1;
 }
+@media (max-width: 768px) {
+    body.case article :is(h2, .h2) {
+        font-size: 5rem;
+    }
+}
 
-body.case article :is(h3, .h3, h4, .h4) {
+body.case article :is(h3, .h3, h4, .h4, table th) {
     color: silver;
 }
 

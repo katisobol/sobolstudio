@@ -9,7 +9,7 @@
     }
 }
 
-@media handheld, (max-width: 769px) {
+@media handheld, (max-width: 768px) {
     :root {
         --padding: 1.5rem;
     }
@@ -24,10 +24,18 @@
         --sectiongap: clamp(120px, 10vh, 200px);
     }
 }
-@media handheld, (max-width: 769px) {
+@media handheld, (max-width: 768px) {
     :root {
         --sectiongap: 10vh;
     }
+}
+/* Новомодные единицы */
+@media (hover: none) and (pointer: coarse) {
+  @supports (height: 1svh) {
+    :root {
+        --sectiongap: 10svh;
+    }
+  }
 }
 
 /* Сетка исчезает на узкой странице */
@@ -35,7 +43,7 @@
     --grid: repeat(5, calc((100% - (var(--columngap) * 4) ) / 5));
 }
 
-@media (max-width: 769px) {
+@media (max-width: 768px) {
     :root {
     --grid: unset;
     }
@@ -48,12 +56,12 @@
 }
 /* Расстояние между колонками */
 :root {
-    --columngap: 75px;
+    --columngap: 4rem;
 }
-@media (max-width: 1200px){
-:root {
-    --columngap: 1rem;
-}
+@media (max-width: 1200px) {
+    :root {
+        --columngap: 1rem;
+    }
 }
 
 ul, ol, dl {
@@ -128,6 +136,7 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6,
+hr,
 small, .small
 ) {
   min-width: 0;
@@ -136,6 +145,7 @@ small, .small
 
 /* Лейаут: растягиваем элементы по умолчанию на все колонки */
 
+    hr,
     /* Заголовки и текст */
     h1, h2, h3, h4, h5, h6, p, small, a, button, .btn,
     /* Структурные блоки */
@@ -207,20 +217,11 @@ small, .small
 }
 
 
+figure {
+    margin: 0;
+}
 
-/*текстовая врезка с названием секции */
-@media screen and (min-width: 769px) {
-    .side {
-        position: absolute;
-        right: calc(var(--padding) / -2 + 1rem);
-        bottom: var(--sectiongap);
-        font-family: Santello, Raleway;
-        font-weight: normal;
-        width: 0;
-        height: 0;
-        white-space: nowrap;
-        rotate: -90deg;
-        color: silver;
-        z-index: 2;
-    }
+figcaption table:only-child {
+    margin-top: calc(var(--sectiongap) / 2);
+    margin-bottom: calc(var(--sectiongap) / 2);
 }

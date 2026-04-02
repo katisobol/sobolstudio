@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 450 620">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-2 {
+        letter-spacing: 0em;
+      }
+
+      .cls-3, .cls-4, .cls-5, .cls-6, .cls-7 {
+        fill: none;
+      }
+
+      .cls-3, .cls-6, .cls-7 {
+        stroke: #000;
+      }
+
+      .cls-3, .cls-7 {
+        stroke-width: 5px;
+      }
+
+      .cls-8 {
+        letter-spacing: 0em;
+      }
+
+      .cls-9 {
+        letter-spacing: .03em;
+      }
+
+      .cls-10 {
+        letter-spacing: 0em;
+      }
+
+      .cls-11, .cls-12 {
+        fill: #fff;
+      }
+
+      .cls-13 {
+        letter-spacing: .02em;
+      }
+
+      .cls-14 {
+        letter-spacing: 0em;
+      }
+
+      .cls-12, .cls-15, .cls-5 {
+        font-family: Consolas, Consolas;
+      }
+
+      .cls-12, .cls-15, .cls-5, .cls-16 {
+        font-size: 12px;
+      }
+
+      .cls-17 {
+        opacity: .65;
+      }
+
+      .cls-17, .cls-18 {
+        mix-blend-mode: multiply;
+      }
+
+      .cls-19 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-20 {
+        isolation: isolate;
+      }
+
+      .cls-21 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-22 {
+        letter-spacing: 0em;
+      }
+
+      .cls-23 {
+        fill: #2b2b2b;
+      }
+
+      .cls-24 {
+        letter-spacing: .02em;
+      }
+
+      .cls-4 {
+        stroke: #194cb3;
+      }
+
+      .cls-4, .cls-5, .cls-7 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-25 {
+        fill: #333;
+      }
+
+      .cls-15, .cls-16 {
+        fill: #e68600;
+      }
+
+      .cls-26 {
+        letter-spacing: .03em;
+      }
+
+      .cls-27 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-28 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-29 {
+        letter-spacing: 0em;
+      }
+
+      .cls-30 {
+        fill: #7d009c;
+      }
+
+      .cls-5 {
+        stroke: #291800;
+      }
+
+      .cls-16 {
+        font-family: Roboto-Regular, Roboto;
+      }
+
+      .cls-6 {
+        stroke-width: 4.55px;
+      }
+
+      .cls-31 {
+        letter-spacing: -.05em;
+      }
+
+      .cls-32 {
+        clip-path: url(#clippath);
+      }
+
+      .cls-33 {
+        letter-spacing: 0em;
+      }
+
+      .cls-34 {
+        fill: #2e2e2e;
+      }
+    </style>
+    <clipPath id="clippath">
+      <path class="cls-25" d="M-620.6,605.84c-1.25,0-2.51-.12-3.74-.35-3.88-.74-7.41-2.62-10.22-5.43-2.13-2.13-3.76-4.75-4.73-7.58-.7-2.05-1.05-4.19-1.05-6.38V34.2c0-2.38.42-4.7,1.24-6.91.99-2.66,2.52-5.03,4.54-7.05,2.81-2.81,6.34-4.69,10.22-5.43,1.22-.23,2.48-.35,3.74-.35H-238.86c1.64,0,3.28.2,4.86.6,1.29.33,2.57.79,3.77,1.38,1.98.96,3.77,2.24,5.33,3.8,2.02,2.02,3.55,4.39,4.54,7.05.82,2.21,1.24,4.53,1.24,6.91v551.9c0,2.18-.35,4.33-1.05,6.38-.97,2.83-2.6,5.46-4.73,7.59-1.56,1.56-3.36,2.84-5.34,3.8-1.2.58-2.47,1.05-3.77,1.38-1.58.4-3.21.6-4.85.6h-381.73Z"/>
+    </clipPath>
+  </defs>
+  <g class="cls-20">
+    <g id="sketch">
+      <image width="450" height="620" xlink:href="DH_notebook_raster.png"/>
+      <g id="NOTEBOOK" class="cls-18">
+        <path class="cls-25" d="M-620.6,605.84c-1.25,0-2.51-.12-3.74-.35-3.88-.74-7.41-2.62-10.22-5.43-2.13-2.13-3.76-4.75-4.73-7.58-.7-2.05-1.05-4.19-1.05-6.38V34.2c0-2.38.42-4.7,1.24-6.91.99-2.66,2.52-5.03,4.54-7.05,2.81-2.81,6.34-4.69,10.22-5.43,1.22-.23,2.48-.35,3.74-.35H-238.86c1.64,0,3.28.2,4.86.6,1.29.33,2.57.79,3.77,1.38,1.98.96,3.77,2.24,5.33,3.8,2.02,2.02,3.55,4.39,4.54,7.05.82,2.21,1.24,4.53,1.24,6.91v551.9c0,2.18-.35,4.33-1.05,6.38-.97,2.83-2.6,5.46-4.73,7.59-1.56,1.56-3.36,2.84-5.34,3.8-1.2.58-2.47,1.05-3.77,1.38-1.58.4-3.21.6-4.85.6h-381.73Z"/>
+        <g class="cls-32">
+          <path class="cls-23" d="M-219.12,541.41V34.2c0-2.38-.42-4.7-1.24-6.91-.99-2.66-2.52-5.03-4.54-7.05-1.56-1.56-3.36-2.84-5.33-3.8-1.21-.59-2.48-1.05-3.77-1.38-1.58-.4-3.21-.6-4.86-.6h-253.58v375.25l32.96,32.85,141.87.24,71.78,71.78v21.18l26.71,25.65Z"/>
+        </g>
+      </g>
+      <g>
+        <path class="cls-11" d="M383.97,551.42l-7.28-7.28c-.08-.08-.19-.12-.3-.12h-1.08s-8.1,0-8.1,0h-5.37c-.75,0-1.13.91-.6,1.44l5.84,5.84c.08.08.19.12.3.12h7.92s0,18.48,0,18.48h-7.92c-.11,0-.22.04-.3.12l-5.84,5.84c-.53.53-.15,1.44.6,1.44h5.37s8.1,0,8.1,0h1.08c.11,0,.22-.04.3-.12l7.28-7.28v-18.48s0,0,0,0Z"/>
+        <path class="cls-30" d="M361,553.46v14.81c0,.75.91,1.13,1.44.6l7.7-7.7c.16-.16.16-.43,0-.6l-7.7-7.7c-.53-.53-1.44-.15-1.44.6Z"/>
+        <path class="cls-30" d="M407.22,544.44v32.44c0,.23-.19.42-.42.42h-7.81c-.23,0-.42-.19-.42-.42v-12.98h-5.95v12.98c0,.23-.19.42-.42.42h-7.81c-.23,0-.42-.19-.42-.42v-32.44c0-.23.19-.42.42-.42h7.81c.23,0,.42.19.42.42v12.05h5.95v-12.05c0-.23.19-.42.42-.42h7.81c.23,0,.42.19.42.42Z"/>
+      </g>
+      <path class="cls-34" d="M408.9,515.62v-21.18l-71.78-71.78-141.87-.24-32.96-32.85v-65.39c-17.19-17.92-41.38-29.08-68.18-29.08-23.56,0-45.1,8.62-61.65,22.89C14.83,333.19,2.87,354.81.21,379.22v240.64h449.57v-65.25s-40.88-39-40.88-39Z"/>
+      <path class="cls-11" d="M.21.13v379.09c2.66-24.41,14.61-46.03,32.26-61.24,16.54-14.26,38.09-22.89,61.65-22.89,26.79,0,50.98,11.16,68.18,29.08V.13H.21Z"/>
+      <g>
+        <text class="cls-15" transform="translate(148.95 482.89)"><tspan x="0" y="0">class Future {</tspan><tspan x="0" y="15.6">constructor(ideas) {</tspan><tspan x="0" y="31.2">this.implement();</tspan><tspan x="0" y="46.8">}</tspan><tspan x="0" y="62.4">}</tspan></text>
+        <text class="cls-5" transform="translate(148.95 482.89)"><tspan x="0" y="0">class Future {</tspan><tspan x="0" y="15.6">constructor(ideas) {</tspan><tspan x="0" y="31.2">this.implement();</tspan><tspan x="0" y="46.8">}</tspan><tspan x="0" y="62.4">}</tspan></text>
+        <text class="cls-15" transform="translate(148.95 482.89)"><tspan x="0" y="0">class Future {</tspan><tspan x="0" y="15.6">constructor(ideas) {</tspan><tspan x="0" y="31.2">this.implement();</tspan><tspan x="0" y="46.8">}</tspan><tspan x="0" y="62.4">}</tspan></text>
+      </g>
+      <text class="cls-16" transform="translate(82.78 279.28) rotate(-90)"><tspan x="0" y="0">Clean code. Clear logic.</tspan></text>
+      <text class="cls-16" transform="translate(48.97 279.28) rotate(-90)"><tspan x="0" y="0">Пишу б</tspan><tspan class="cls-27" x="40.47" y="0">у</tspan><tspan x="45.82" y="0">ду</tspan><tspan class="cls-29" x="58.74" y="0">щ</tspan><tspan x="68.74" y="0">ее. Строка за стро</tspan><tspan class="cls-1" x="171.93" y="0">к</tspan><tspan x="178.28" y="0">ой.</tspan></text>
+      <text class="cls-16" transform="translate(115.5 279.28) rotate(-90)"><tspan x="0" y="0">Refac</tspan><tspan class="cls-14" x="30.72" y="0">t</tspan><tspan x="34.52" y="0">oring thoughts...</tspan></text>
+      <text class="cls-16" transform="translate(148.95 279.28) rotate(-90)"><tspan x="0" y="0">Debugging </tspan><tspan class="cls-22" x="60.28" y="0">r</tspan><tspan x="64.22" y="0">ealit</tspan><tspan class="cls-31" x="86.85" y="0">y</tspan><tspan x="91.9" y="0">...</tspan></text>
+      <g class="cls-18">
+        <line class="cls-3" x1="362.91" y1="483.61" x2="312.86" y2="483.61"/>
+        <g class="cls-17">
+          <g>
+            <polyline class="cls-7" points="394.44 515.15 331.07 451.78 261.39 451.78"/>
+            <circle cx="261.39" cy="451.78" r="5.64"/>
+          </g>
+          <g>
+            <polyline class="cls-7" points="429.39 534.28 429.39 478.87 390.1 439.59"/>
+            <path d="M394.09,435.6c-2.2-2.2-5.77-2.2-7.98,0-2.2,2.2-2.2,5.77,0,7.98s5.77,2.2,7.98,0c2.2-2.2,2.2-5.77,0-7.98Z"/>
+          </g>
+          <g>
+            <path class="cls-7" d="M408.9,515.62v-21.18l-71.78-71.78-141.87-.24-32.96-32.85c0-37.65-30.52-68.18-68.18-68.18s-68.17,30.52-68.17,68.18"/>
+            <circle cx="25.94" cy="389.56" r="5.64"/>
+          </g>
+          <g>
+            <path class="cls-7" d="M162.29,389.56h-25.66c0-23.48-19.03-42.51-42.51-42.51s-42.51,19.03-42.51,42.51"/>
+            <circle cx="51.6" cy="389.56" r="5.64"/>
+          </g>
+          <g>
+            <line class="cls-7" x1="362.91" y1="483.61" x2="312.86" y2="483.61"/>
+            <circle cx="312.86" cy="483.61" r="5.64"/>
+          </g>
+        </g>
+      </g>
+      <polyline class="cls-3" points="456.28 561.11 410.78 515.62 355.95 515.62 294.57 577 95.85 577 79.78 560.93 79.78 516.95"/>
+      <g>
+        <g>
+          <path class="cls-7" d="M162.29,391.24v-67.07c-17.19-17.92-41.38-29.08-68.18-29.08-23.56,0-45.1,8.62-61.65,22.89C12.37,335.3-.35,360.94-.35,389.56"/>
+          <circle cx="-.35" cy="389.56" r="5.64"/>
+        </g>
+        <g>
+          <line class="cls-7" x1="95.38" y1="295.09" x2="95.38" y2="113.23"/>
+          <circle cx="95.38" cy="113.23" r="5.64"/>
+        </g>
+        <g>
+          <line class="cls-7" x1="128.84" y1="301.86" x2="128.84" y2="168.57"/>
+          <circle cx="128.84" cy="168.57" r="5.64"/>
+        </g>
+        <g>
+          <line class="cls-7" x1="61.93" y1="301.23" x2="61.93" y2="64.73"/>
+          <path d="M67.57,64.73c0-3.11-2.53-5.64-5.64-5.64s-5.64,2.53-5.64,5.64,2.53,5.64,5.64,5.64,5.64-2.53,5.64-5.64Z"/>
+        </g>
+        <g>
+          <line class="cls-7" x1="162.29" y1="324.17" x2="162.29" y2="23.67"/>
+          <circle cx="162.29" cy="23.67" r="5.64"/>
+        </g>
+        <g>
+          <polyline class="cls-7" points="162.29 151.41 138.93 128.05 138.93 75.34"/>
+          <path d="M144.57,75.34c0-3.11-2.53-5.64-5.64-5.64s-5.64,2.53-5.64,5.64,2.53,5.64,5.64,5.64,5.64-2.53,5.64-5.64Z"/>
+        </g>
+      </g>
+      <rect x="77.84" y="470.08" width="36.03" height="36.03"/>
+      <rect class="cls-30" x="81.69" y="473.93" width="28.33" height="28.33"/>
+      <path class="cls-30" d="M101.95,448.02h-12.18c-.62,0-.93.75-.49,1.18l6.34,6.34c.14.14.35.14.49,0l6.34-6.34c.44-.44.13-1.18-.49-1.18Z"/>
+      <path class="cls-30" d="M118.03,448.02h-12.18c-.62,0-.93.75-.49,1.18l6.34,6.34c.14.14.35.14.49,0l6.34-6.34c.44-.44.13-1.18-.49-1.18Z"/>
+      <path class="cls-30" d="M85.86,448.02h-12.18c-.62,0-.93.75-.49,1.18l6.34,6.34c.14.14.35.14.49,0l6.34-6.34c.44-.44.13-1.18-.49-1.18Z"/>
+      <path d="M52.69,479.36v17.45c0,.88,1.07,1.33,1.69.7l9.08-9.08c.19-.19.19-.51,0-.7l-9.08-9.08c-.63-.63-1.69-.18-1.69.7Z"/>
+      <path class="cls-30" d="M126.64,457.31h-61.56v61.56h7.94c-.06.23-.03.48.17.68l6.34,6.34c.14.14.35.14.49,0l6.34-6.34c.2-.2.24-.45.17-.68h2.59c-.06.23-.02.48.17.68l4.65,4.65v47.39l2.94,2.87h.91v-50.26l4.65-4.65c.2-.2.24-.45.17-.68h2.59c-.06.23-.03.48.17.68l4.65,4.65v50.3h3.85v-50.3l4.65-4.65c.2-.2.23-.45.17-.68h7.94v-61.56ZM122.78,515.02h-53.86v-53.86h53.86v53.86Z"/>
+      <circle class="cls-6" cx="94.11" cy="389.56" r="21.26"/>
+      <text class="cls-12" transform="translate(197.46 256.49)"><tspan class="cls-26" x="0" y="0">Написа</tspan><tspan class="cls-10" x="41.46" y="0">л </tspan><tspan class="cls-9" x="54.75" y="0">тес</tspan><tspan class="cls-10" x="75.48" y="0">т </tspan><tspan class="cls-9" x="88.77" y="0">дл</tspan><tspan class="cls-33" x="102.59" y="0">я </tspan><tspan class="cls-9" x="115.88" y="0">критическог</tspan><tspan class="cls-10" x="191.88" y="0">о </tspan><tspan class="cls-26" x="0" y="16.2">модуля</tspan><tspan class="cls-10" x="41.46" y="16.2">. </tspan><tspan class="cls-9" x="54.75" y="16.2">Тепер</tspan><tspan class="cls-10" x="89.3" y="16.2">ь </tspan><tspan class="cls-9" x="102.59" y="16.2">н</tspan><tspan class="cls-10" x="109.5" y="16.2">е </tspan><tspan class="cls-26" x="122.79" y="16.2">страшн</tspan><tspan class="cls-33" x="164.25" y="16.2">о </tspan><tspan class="cls-26" x="0" y="32.4">деплоит</tspan><tspan class="cls-10" x="48.37" y="32.4">ь в </tspan><tspan class="cls-26" x="74.95" y="32.4">пятниц</tspan><tspan class="cls-33" x="116.41" y="32.4">у</tspan></text>
+      <text class="cls-12" transform="translate(197.45 375.61)"><tspan class="cls-19" x="0" y="0">Коллег</tspan><tspan class="cls-2" x="38.43" y="0">а </tspan><tspan class="cls-19" x="51.51" y="0">поблагодари</tspan><tspan class="cls-8" x="121.97" y="0">л </tspan><tspan class="cls-19" x="135.05" y="0">з</tspan><tspan class="cls-2" x="141.45" y="0">а </tspan><tspan class="cls-19" x="154.53" y="0">понятну</tspan><tspan class="cls-8" x="199.37" y="0">ю </tspan><tspan class="cls-19" x="0" y="16.2">схем</tspan><tspan class="cls-2" x="25.62" y="16.2">у в </tspan><tspan class="cls-19" x="51.77" y="16.2">READM</tspan><tspan class="cls-2" x="83.8" y="16.2">E</tspan></text>
+      <text class="cls-12" transform="translate(197.24 316.05)"><tspan class="cls-28" x="0" y="0">Переписал</tspan><tspan class="cls-33" x="57.44" y="0">а </tspan><tspan class="cls-28" x="70.73" y="0">стары</tspan><tspan class="cls-10" x="102.64" y="0">й </tspan><tspan class="cls-21" x="115.93" y="0">легаси-модуль</tspan><tspan class="cls-10" x="198.89" y="0">. </tspan><tspan class="cls-28" x="0" y="16.2">Тепер</tspan><tspan class="cls-10" x="31.91" y="16.2">ь </tspan><tspan class="cls-28" x="45.2" y="16.2">о</tspan><tspan class="cls-10" x="51.58" y="16.2">н в 3 </tspan><tspan class="cls-21" x="91.46" y="16.2">раз</tspan><tspan class="cls-33" x="110.6" y="16.2">а </tspan><tspan class="cls-28" x="123.89" y="16.2">короч</tspan><tspan class="cls-10" x="155.8" y="16.2">е </tspan><tspan class="cls-10" x="0" y="32.4">и </tspan><tspan class="cls-28" x="13.29" y="32.4">понятне</tspan><tspan class="cls-33" x="57.96" y="32.4">е</tspan></text>
+      <text class="cls-12" transform="translate(197.46 137.37)"><tspan class="cls-26" x="0" y="0">Разобралась</tspan><tspan class="cls-10" x="76.01" y="0">, </tspan><tspan class="cls-26" x="89.3" y="0">почем</tspan><tspan class="cls-10" x="123.84" y="0">у </tspan><tspan class="cls-9" x="137.14" y="0">падае</tspan><tspan class="cls-10" x="171.68" y="0">т </tspan><tspan class="cls-26" x="0" y="16.2">сборка</tspan><tspan class="cls-10" x="41.46" y="16.2">. </tspan><tspan class="cls-9" x="54.75" y="16.2">Нашл</tspan><tspan class="cls-10" x="82.39" y="16.2">а </tspan><tspan class="cls-26" x="95.68" y="16.2">опечатк</tspan><tspan class="cls-10" x="144.05" y="16.2">у </tspan><tspan class="cls-10" x="0" y="32.4">в </tspan><tspan class="cls-26" x="13.29" y="32.4">конфиге</tspan><tspan class="cls-10" x="61.66" y="32.4">. </tspan><tspan class="cls-26" x="74.95" y="32.4">Вс</tspan><tspan class="cls-33" x="88.77" y="32.4">ё </tspan><tspan class="cls-9" x="102.06" y="32.4">заработал</tspan><tspan class="cls-33" x="164.25" y="32.4">о</tspan></text>
+      <text class="cls-12" transform="translate(197.45 77.81)"><tspan class="cls-26" x="0" y="0">Запрос</tspan><tspan class="cls-10" x="41.46" y="0">, </tspan><tspan class="cls-9" x="54.75" y="0">которы</tspan><tspan class="cls-10" x="96.21" y="0">й </tspan><tspan class="cls-26" x="109.5" y="0">раньш</tspan><tspan class="cls-10" x="144.05" y="0">е </tspan><tspan class="cls-26" x="0" y="16.2">выполнялс</tspan><tspan class="cls-10" x="62.19" y="16.2">я </tspan><tspan class="cls-26" x="75.48" y="16.2">1</tspan><tspan class="cls-10" x="82.39" y="16.2">0 </tspan><tspan class="cls-26" x="95.68" y="16.2">секунд</tspan><tspan class="cls-33" x="137.14" y="16.2">, </tspan><tspan class="cls-9" x="150.43" y="16.2">тепер</tspan><tspan class="cls-33" x="184.97" y="16.2">ь </tspan><tspan class="cls-26" x="0" y="32.4">летае</tspan><tspan class="cls-33" x="34.55" y="32.4">т </tspan><tspan class="cls-26" x="47.84" y="32.4">з</tspan><tspan class="cls-33" x="54.75" y="32.4">а </tspan><tspan class="cls-9" x="68.04" y="32.4">0.</tspan><tspan class="cls-10" x="81.86" y="32.4">3 </tspan><tspan class="cls-26" x="95.15" y="32.4">се</tspan><tspan class="cls-10" x="108.97" y="32.4">к</tspan></text>
+      <text class="cls-12" transform="translate(197.45 196.93)"><tspan class="cls-13" x="0" y="0">Тепер</tspan><tspan class="cls-2" x="34.01" y="0">ь </tspan><tspan class="cls-24" x="47.08" y="0">понятно</tspan><tspan class="cls-2" x="94.69" y="0">, </tspan><tspan class="cls-24" x="107.77" y="0">почем</tspan><tspan class="cls-8" x="141.78" y="0">у </tspan><tspan class="cls-13" x="154.85" y="0">серве</tspan><tspan class="cls-2" x="188.86" y="0">р </tspan><tspan class="cls-13" x="0" y="16.2">иногд</tspan><tspan class="cls-2" x="34.01" y="16.2">а </tspan><tspan class="cls-24" x="47.08" y="16.2">зависает</tspan><tspan class="cls-2" x="101.5" y="16.2">. </tspan><tspan class="cls-13" x="114.57" y="16.2">Добави</tspan><tspan class="cls-2" x="155.38" y="16.2">л </tspan><tspan class="cls-13" x="168.46" y="16.2">лог</tspan><tspan class="cls-2" x="188.86" y="16.2">и </tspan><tspan class="cls-13" x="0" y="32.4">п</tspan><tspan class="cls-2" x="6.8" y="32.4">о </tspan><tspan class="cls-13" x="19.88" y="32.4">узки</tspan><tspan class="cls-8" x="47.08" y="32.4">м </tspan><tspan class="cls-13" x="60.16" y="32.4">места</tspan><tspan class="cls-2" x="94.17" y="32.4">м</tspan></text>
+      <rect class="cls-4" x="14.39" y="14.31" width="421.22" height="591.38"/>
+    </g>
+  </g>
+</svg>

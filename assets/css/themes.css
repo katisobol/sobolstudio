@@ -1,9 +1,9 @@
 :root {
-    --SoftBlack: hsl(0, 0%, 10%); /* Задний план */
-    --DeepBlue: hsl(216, 54%, 23%); /* Цвет кнопки при наведении */
+    --SoftBlack: #1a1a1a; /* hsl(0, 0%, 10%) */
+    --DeepBlue: #1a305b; /* hsl(220, 55%, 23%) */
     --CosmicLatte: #fff8e7; /* Цвет текста */
-    --BrightBlue: hsl(215, 74%, 39%); /* Цвет ссылки */
-    --Golden: hsl(40, 65%, 55%); /* Я просто оставлю это здесь */
+    --BrightBlue: #194cb3; /* Цвет ссылки hsl(220, 75%, 40%) */
+    --Golden: #d7a542; /* hsl(40, 65%, 55%) */
 }
 
 /* тенюшки под текст */
@@ -21,19 +21,19 @@
 
 /* Цвета по умолчанию */
 
-body {
+body, .blk {
     color: var(--CosmicLatte);
     caret-color: transparent;
 }
 
 body, .paper {
+    background-image: url(../img/patterns/paperTxtr.png);
     background-repeat: repeat;
     background-size: auto;
 }
 
-body, .blk.paper {
-    background: url(../img/patterns/paperTxtr.png),
-        var(--SoftBlack);
+body, .blk {
+    background-color: var(--SoftBlack);
 }
 
 .crosses * {
@@ -42,13 +42,11 @@ body, .blk.paper {
 .crosses::before {
     content: "";
     position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
+    left: 0; top: 0; width: 100%; height: 100%;
     background: url(../img/patterns/crossesBlk.svg);
     opacity: 0.35;
     z-index: 1;
+    pointer-events: none;
 }
 
 
@@ -61,21 +59,26 @@ body, .blk.paper {
     -webkit-backdrop-filter: blur(10px) saturate(180%);
 }
 
-.glass-morphism-card {
-    position: relative;
-    left: -1.5rem;
-    padding-left: 1.5rem;
-    width: calc(100% + 1.5rem);
-}
 
+
+.shadowhuge,
+.outline {
+    position: absolute;
+    left: calc(0px - var(--padding));
+    top: -0.35em;
+    font-family: Unovis100;
+    letter-spacing: unset;
+    font-size: calc(3rem + 5vw);
+}
 
 @supports (mix-blend-mode: hard-light) {
 
-.shadowhuge,
-.shadowhuge * {
+:is(section, div).shadowhuge,
+:is(section, div).shadowhuge * {
     z-index: 2;
+    isolation: isolate;
 }
-.shadowhuge::before {
+:is(section, div).shadowhuge::before {
     content: "";
     position: absolute;
     left: 0;
@@ -89,13 +92,19 @@ body, .blk.paper {
 }
 
 /* ! режим наложения НА ВЕСЬ ОБЪЕДОК ! */
-    .txtshadowhuge,
+    :is(h1, .h1,
+    h2, .h2,
+    h3, .h3,
+    h4, .h4,
+    p, .p,
+    span, .span).shadowhuge,
     .case main article :is(h2, .h2) {
-        font-family: Unovis100;
         color: grey;
         text-shadow: var(--shadowHuge);
         mix-blend-mode: hard-light;
         user-select: none;
+        max-width: 100vw;
+        pointer-events: none;
     }
 
     .outline {
@@ -106,8 +115,31 @@ body, .blk.paper {
             -1.5px 1.5px 0 silver,
             1.5px -1.5px 0 silver;
         mix-blend-mode: overlay;
+        pointer-events: none;
     }
 
+
+    .white .outline,
+    .white.outline {
+        text-shadow:
+            1.5px 1.5px 0 white,
+            -1.5px -1.5px 0 white,
+            -1.5px 1.5px 0 white,
+            1.5px -1.5px 0 white;
+    }
+
+}
+
+@supports not (mix-blend-mode: hard-light) {
+    :is(h1, .h1,
+    h2, .h2,
+    h3, .h3,
+    h4, .h4,
+    p, .p,
+    span, .span).shadowhuge,
+    .outline {
+        color: hsla(220, 50%, 50%, 0.15);
+    }
 }
 
 /* БЕЛАЯ ТЕМА */

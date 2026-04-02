@@ -1,0 +1,43 @@
+/*текстовая врезка с названием секции */
+@media (min-width: 769px) {
+    .side {
+        position: absolute;
+        right: calc(var(--padding) / -2 + 1rem);
+        bottom: var(--sectiongap);
+        width: 0;
+        height: 0;
+        font-family: Santello, Raleway;
+        font-weight: normal;
+        font-size: 0.75rem;
+        white-space: nowrap;
+        rotate: -90deg;
+        color: silver;
+        z-index: 2;
+    }
+}
+@media (max-width: 768px) {
+    .side {
+        display: block;
+        position: unset;
+        text-align: right;
+    }
+}
+
+hr {
+    border: solid 1.5px hsla(0, 0%, 0%, 0.35);
+    margin: 1rem 0;
+}
+
+
+table td, table th {
+    text-align: left;
+    vertical-align: top;
+}
+body.case article td + td,
+body.case article th + td {
+    padding-left: var(--columngap);
+}
+body.case article tr + tr td,
+body.case article tr + tr th {
+    padding-top: calc(var(--sectiongap) / 4);
+}

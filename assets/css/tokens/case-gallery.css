@@ -1,0 +1,157 @@
+/* Создаёт горизонтальный скролл-галерею */
+body.case #gallery,
+body.case .gallery {
+    position: relative;
+    width: 100vw;
+    max-width: unset;
+    white-space: nowrap;
+    overflow-x: scroll;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    scroll-behavior: smooth;
+    padding: 1rem var(--padding);
+    background-color: silver;
+    box-sizing: border-box;
+}
+
+@media (pointer: fine) {
+    body.case :is(#gallery, .gallery)::before {
+        content: url(../../icons/mouseWheelIcon_64p.svg);
+        position: absolute;
+        left: 32px; top: 32px;
+        width: 32px; height: 32px;
+        opacity: 0.65;
+    }
+}
+
+body.case #gallery > img,
+body.case .gallery > img {
+    width: max-content;
+    max-width: 95vw;
+    max-height: 75vh;
+}
+@media (hover: none) and (pointer: coarse) {
+    @supports (height: 1svh) {
+        body.case :is(#gallery, .gallery) > img {
+            max-height: 75svh; /* Новомодные единицы */
+        }
+    }
+}
+
+
+/* Стикер-галерея */
+
+body.case article .gallery.stickers {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; /* элементы переносятся в новые колонки */
+    justify-content: space-evenly;
+    overflow-y: hidden;
+    height: 75vh;
+    gap: var(--columngap);
+    padding: 15% var(--padding);
+}
+@media (hover: none) and (pointer: coarse) {
+    @supports (height: 1svh) {
+        body.case article .gallery.stickers {
+            height: 75svh; /* Новомодные единицы */
+        }
+    }
+}
+
+body.case article .gallery.stickers > img {
+    min-width: max-content;
+    max-width: unset;
+    flex-shrink: 0;
+}
+
+
+
+/* Инфографика, совмещающая три слоя */
+body.case article .infograpaphic {
+    position: relative;
+    display: block;
+    width: 100%;
+    min-height: 200px;
+}
+
+body.case article .infograpaphic .fg {
+    position: absolute;
+    z-index: 3;
+}
+body.case article .infograpaphic .hero {
+    position: absolute;
+    width: max-content;
+    max-width: 100%;
+    max-height: 100%;
+    z-index: 2;
+}
+body.case article .infograpaphic .bg {
+    position: relative;
+    height: max-content;
+    max-width: unset;
+    z-index: 1;
+}
+
+/* Создаёт мокап для соцсетей со скроллом */
+
+.socialMockupPost {
+    position: relative;
+    background: white;
+    width: calc(100vw - var(--padding)*2);
+    max-width: 500px;
+    padding: 60px 0;
+    border-radius: 12px;
+    color: var(--SoftBlack);
+    box-shadow: var(--textShadow);
+}
+
+.socialMockupPost::after {
+    content: "";
+    background-image: url(../../img/mockups/socialMockupPost.svg);
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    width: calc(100% - 32px);
+    height: 36px;
+}
+
+.socialMockupPost > img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.socialMockupPost .userProfile {
+    height: 36px;
+    box-sizing: content-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 12px 16px;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+}
+
+.socialMockupPost .userPic {
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.socialMockupPost > .userProfile > .userName {
+    font-family: Raleway;
+    font-size: 16px;
+}
+
+.socialMockupPost > .userProfile > .userName::before {
+    content: "@";
+}
+
