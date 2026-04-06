@@ -9,7 +9,7 @@ images:
   - /assets/img/portfolio/merch/DH_longsleeve_mockup4.png
   - /assets/img/portfolio/merch/DH_notebook_mockup1.png
 excerpt: "Разработала мерч для IT‑ивента: от векторизации до готовых макетов под печать"
-size: none
+size: 2
 extra_css:
  - assets/css/page/case.css
  - assets/css/portfolio/DHmerch.css
