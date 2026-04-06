@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 450 620">
+  <defs>
+    <linearGradient id="_Безымянный_градиент_62" data-name="Безымянный градиент 62" x1="137.32" y1="286.13" x2="435.15" y2="367.21" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#cf2300"/>
+      <stop offset=".56" stop-color="#ff9500"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+    <clipPath id="clippath">
+      <rect x="0" width="450" height="620" fill="none"/>
+    </clipPath>
+    <filter id="outer-glow-1" x="190" y="61" width="226" height="341" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="0"/>
+      <feGaussianBlur result="blur" stdDeviation="2"/>
+      <feFlood flood-color="gray" flood-opacity="1"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <image id="image" width="6000" height="4000" xlink:href="D:\source\{to sort}\bryn-young-F6VI5_Vnxo8-unsplash.jpg"/>
+    <image id="image-2" width="256" height="256" xlink:href="../../patterns/paperTxtr.png"/>
+  </defs>
+  <g isolation="isolate">
+    <g id="sketch">
+      <g mix-blend-mode="multiply" opacity=".3">
+        <use transform="translate(-25.63 -119.1)" xlink:href="#image-2"/>
+        <use transform="translate(230.37 -119.1)" xlink:href="#image-2"/>
+        <use transform="translate(-25.63 136.9)" xlink:href="#image-2"/>
+        <use transform="translate(230.37 136.9)" xlink:href="#image-2"/>
+        <use transform="translate(-25.63 392.9)" xlink:href="#image-2"/>
+        <use transform="translate(230.37 392.9)" xlink:href="#image-2"/>
+      </g>
+      <g clip-path="url(#clippath)">
+        <use transform="translate(-304.49 -7.12) scale(.14)" xlink:href="#image"/>
+        <use transform="translate(-304.49 1136.28) scale(.14 -.14)" xlink:href="#image"/>
+      </g>
+      <rect x="0" width="450" height="620" fill="url(#_Безымянный_градиент_62)" mix-blend-mode="multiply" opacity=".75"/>
+      <g filter="url(#outer-glow-1)">
+        <text transform="translate(197.45 256.49)" fill="none" font-family="Consolas, Consolas" font-size="12"><tspan x="0" y="0" letter-spacing=".03em">Написа</tspan><tspan x="41.46" y="0" letter-spacing="0em">л </tspan><tspan x="54.75" y="0" letter-spacing=".03em">тес</tspan><tspan x="75.48" y="0" letter-spacing="0em">т </tspan><tspan x="88.77" y="0" letter-spacing=".03em">дл</tspan><tspan x="102.59" y="0" letter-spacing="0em">я </tspan><tspan x="115.88" y="0" letter-spacing=".03em">критическог</tspan><tspan x="191.88" y="0" letter-spacing="0em">о </tspan><tspan x="0" y="16.2" letter-spacing=".03em">модуля</tspan><tspan x="41.46" y="16.2" letter-spacing="0em">. </tspan><tspan x="54.75" y="16.2" letter-spacing=".03em">Тепер</tspan><tspan x="89.3" y="16.2" letter-spacing="0em">ь </tspan><tspan x="102.59" y="16.2" letter-spacing=".03em">н</tspan><tspan x="109.5" y="16.2" letter-spacing="0em">е </tspan><tspan x="122.79" y="16.2" letter-spacing=".03em">страшн</tspan><tspan x="164.25" y="16.2" letter-spacing="0em">о </tspan><tspan x="0" y="32.4" letter-spacing=".03em">деплоит</tspan><tspan x="48.37" y="32.4" letter-spacing="0em">ь в </tspan><tspan x="74.95" y="32.4" letter-spacing=".03em">пятниц</tspan><tspan x="116.41" y="32.4" letter-spacing="0em">у</tspan></text>
+        <text transform="translate(197.45 375.61)" fill="none" font-family="Consolas, Consolas" font-size="12"><tspan x="0" y="0" letter-spacing="-.02em">Коллег</tspan><tspan x="38.43" y="0" letter-spacing="0em">а </tspan><tspan x="51.51" y="0" letter-spacing="-.02em">поблагодари</tspan><tspan x="121.97" y="0" letter-spacing="0em">л </tspan><tspan x="135.05" y="0" letter-spacing="-.02em">з</tspan><tspan x="141.45" y="0" letter-spacing="0em">а </tspan><tspan x="154.53" y="0" letter-spacing="-.02em">понятну</tspan><tspan x="199.37" y="0" letter-spacing="0em">ю </tspan><tspan x="0" y="16.2" letter-spacing="-.02em">схем</tspan><tspan x="25.62" y="16.2" letter-spacing="0em">у в </tspan><tspan x="51.77" y="16.2" letter-spacing="-.02em">READM</tspan><tspan x="83.8" y="16.2" letter-spacing="0em">E</tspan></text>
+        <text transform="translate(197.24 316.05)" fill="none" font-family="Consolas, Consolas" font-size="12"><tspan x="0" y="0" letter-spacing="-.02em">Переписал</tspan><tspan x="57.44" y="0" letter-spacing="0em">а </tspan><tspan x="70.73" y="0" letter-spacing="-.02em">стары</tspan><tspan x="102.64" y="0" letter-spacing="0em">й </tspan><tspan x="115.93" y="0" letter-spacing="-.02em">легаси-модуль</tspan><tspan x="198.89" y="0" letter-spacing="0em">. </tspan><tspan x="0" y="16.2" letter-spacing="-.02em">Тепер</tspan><tspan x="31.91" y="16.2" letter-spacing="0em">ь </tspan><tspan x="45.2" y="16.2" letter-spacing="-.02em">о</tspan><tspan x="51.58" y="16.2" letter-spacing="0em">н в 3 </tspan><tspan x="91.46" y="16.2" letter-spacing="-.02em">раз</tspan><tspan x="110.6" y="16.2" letter-spacing="0em">а </tspan><tspan x="123.89" y="16.2" letter-spacing="-.02em">короч</tspan><tspan x="155.8" y="16.2" letter-spacing="0em">е </tspan><tspan x="0" y="32.4" letter-spacing="0em">и </tspan><tspan x="13.29" y="32.4" letter-spacing="-.02em">понятне</tspan><tspan x="57.96" y="32.4" letter-spacing="0em">е</tspan></text>
+        <text transform="translate(197.45 137.37)" fill="none" font-family="Consolas, Consolas" font-size="12"><tspan x="0" y="0" letter-spacing=".03em">Разобралась</tspan><tspan x="76.01" y="0" letter-spacing="0em">, </tspan><tspan x="89.3" y="0" letter-spacing=".03em">почем</tspan><tspan x="123.84" y="0" letter-spacing="0em">у </tspan><tspan x="137.14" y="0" letter-spacing=".03em">падае</tspan><tspan x="171.68" y="0" letter-spacing="0em">т </tspan><tspan x="0" y="16.2" letter-spacing=".03em">сборка</tspan><tspan x="41.46" y="16.2" letter-spacing="0em">. </tspan><tspan x="54.75" y="16.2" letter-spacing=".03em">Нашл</tspan><tspan x="82.39" y="16.2" letter-spacing="0em">а </tspan><tspan x="95.68" y="16.2" letter-spacing=".03em">опечатк</tspan><tspan x="144.05" y="16.2" letter-spacing="0em">у </tspan><tspan x="0" y="32.4" letter-spacing="0em">в </tspan><tspan x="13.29" y="32.4" letter-spacing=".03em">конфиге</tspan><tspan x="61.66" y="32.4" letter-spacing="0em">. </tspan><tspan x="74.95" y="32.4" letter-spacing=".03em">Вс</tspan><tspan x="88.77" y="32.4" letter-spacing="0em">ё </tspan><tspan x="102.06" y="32.4" letter-spacing=".03em">заработал</tspan><tspan x="164.25" y="32.4" letter-spacing="0em">о</tspan></text>
+        <text transform="translate(197.45 196.93)" fill="none" font-family="Consolas, Consolas" font-size="12"><tspan x="0" y="0" letter-spacing=".02em">Тепер</tspan><tspan x="34.01" y="0" letter-spacing="0em">ь </tspan><tspan x="47.08" y="0" letter-spacing=".02em">понятно</tspan><tspan x="94.69" y="0" letter-spacing="0em">, </tspan><tspan x="107.77" y="0" letter-spacing=".02em">почем</tspan><tspan x="141.78" y="0" letter-spacing="0em">у </tspan><tspan x="154.85" y="0" letter-spacing=".02em">серве</tspan><tspan x="188.86" y="0" letter-spacing="0em">р </tspan><tspan x="0" y="16.2" letter-spacing=".02em">иногд</tspan><tspan x="34.01" y="16.2" letter-spacing="0em">а </tspan><tspan x="47.08" y="16.2" letter-spacing=".02em">зависает</tspan><tspan x="101.5" y="16.2" letter-spacing="0em">. </tspan><tspan x="114.57" y="16.2" letter-spacing=".02em">Добави</tspan><tspan x="155.38" y="16.2" letter-spacing="0em">л </tspan><tspan x="168.46" y="16.2" letter-spacing=".02em">лог</tspan><tspan x="188.86" y="16.2" letter-spacing="0em">и </tspan><tspan x="0" y="32.4" letter-spacing=".02em">п</tspan><tspan x="6.8" y="32.4" letter-spacing="0em">о </tspan><tspan x="19.88" y="32.4" letter-spacing=".02em">узки</tspan><tspan x="47.08" y="32.4" letter-spacing="0em">м </tspan><tspan x="60.16" y="32.4" letter-spacing=".02em">места</tspan><tspan x="94.17" y="32.4" letter-spacing="0em">м</tspan></text>
+        <text transform="translate(197.45 77.81)" fill="none" font-family="Consolas, Consolas" font-size="12"><tspan x="0" y="0" letter-spacing=".03em">Запрос</tspan><tspan x="41.46" y="0" letter-spacing="0em">, </tspan><tspan x="54.75" y="0" letter-spacing=".03em">которы</tspan><tspan x="96.21" y="0" letter-spacing="0em">й </tspan><tspan x="109.5" y="0" letter-spacing=".03em">раньш</tspan><tspan x="144.05" y="0" letter-spacing="0em">е </tspan><tspan x="0" y="16.2" letter-spacing=".03em">выполнялс</tspan><tspan x="62.19" y="16.2" letter-spacing="0em">я </tspan><tspan x="75.48" y="16.2" letter-spacing=".03em">1</tspan><tspan x="82.39" y="16.2" letter-spacing="0em">0 </tspan><tspan x="95.68" y="16.2" letter-spacing=".03em">секунд</tspan><tspan x="137.14" y="16.2" letter-spacing="0em">, </tspan><tspan x="150.43" y="16.2" letter-spacing=".03em">тепер</tspan><tspan x="184.97" y="16.2" letter-spacing="0em">ь </tspan><tspan x="0" y="32.4" letter-spacing=".03em">летае</tspan><tspan x="34.55" y="32.4" letter-spacing="0em">т </tspan><tspan x="47.84" y="32.4" letter-spacing=".03em">з</tspan><tspan x="54.75" y="32.4" letter-spacing="0em">а </tspan><tspan x="68.04" y="32.4" letter-spacing=".03em">0.</tspan><tspan x="81.86" y="32.4" letter-spacing="0em">3 </tspan><tspan x="95.15" y="32.4" letter-spacing=".03em">се</tspan><tspan x="108.97" y="32.4" letter-spacing="0em">к</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>

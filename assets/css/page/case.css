@@ -114,7 +114,7 @@ body.case  article {
     row-gap: calc(var(--columngap) / 2);
 }
 
-body.case article > :not(.gallery) {
+body.case article > :not(.gallery, p, li, td) {
     max-width: calc(100vw - 2 * var(--padding));
 }
 
@@ -129,7 +129,7 @@ body.case article .gallery {
     background-color: hsla(0, 0%, 0%, 0.35);
 }
 
-body.case article .gallery img {
+body.case article .gallery > img {
     filter: drop-shadow(0 0 1rem black);
 }
 
@@ -185,4 +185,8 @@ body.case article tr + tr td {
 body.case section.thanks {
     padding: calc(var(--sectiongap) / 2) var(--padding);
     display: none;
+}
+
+body.case article small {
+    color: slategray;
 }

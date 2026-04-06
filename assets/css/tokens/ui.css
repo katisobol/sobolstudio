@@ -1,24 +1,3 @@
-/* Стандартная кнопка с логотипом */
-.logo {
-    display: inline-block;
-    aspect-ratio: 1/1;
-    height: auto;
-    width: 24px;
-    background-image: url(../icons/Kc_logo_full_logo_raster_dk.png);
-    filter: drop-shadow(0 0 1.5px rgba(0, 0, 0, 0.65));
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    border: none;
-}
-
-@media screen and (max-width: 768px) {
-    .logo {
-        width: 50px;
-    }
-}
-
-
 /* Состояния ссылки */
 a:link {
     text-decoration: none;

@@ -3,9 +3,11 @@ title: Перенос фирменного стиля на мерч
 date: 2026-03-10
 description: Мерч для клиента
 thumbnail: /assets/img/portfolio/ib-security/thumbnail.jpg   # маленькое превью для карточки
-cover: /assets/img/portfolio/ib-security/thumbnail.jpg   # обложка под h1
+cover: /assets/img/portfolio/merch/DHcover.png   # обложка под h1
 images:
-  - /assets/img/portfolio/ib-security/frame1.png
+  - /assets/img/portfolio/merch/DH_sticker_mockup3.png
+  - /assets/img/portfolio/merch/DH_longsleeve_mockup4.png
+  - /assets/img/portfolio/merch/DH_notebook_mockup1.png
 excerpt: "Разработала мерч для IT‑ивента: от векторизации до готовых макетов под печать"
 size: none
 extra_css:
@@ -28,7 +30,7 @@ extra_css:
 - Логотип должен читаться на любых носителях
 - А все макеты быть готовыми к печати без доработок
 
-Я работаю по прозрачному плану: анализ → концепции → макеты и согласование. на каждом этапе заказчик видит промежуточные результаты. Никаких сюрпризов, только предсказуемый процесс
+Я работаю по прозрачному плану: анализ → концепции → макеты и согласование. На каждом этапе заказчик видит промежуточные результаты. Процесс прозрачен и предсказуем
 
 ***
 
@@ -53,9 +55,9 @@ extra_css:
 {::nomarkdown}
 <figure>
     <div class="gallery" style="gap: var(--sectiongap); padding: var(--sectiongap) var(--padding)">
-      <img src="/sobolstudio/assets/img/portfolio/merch/DHLongsleeveMockup1.png" alt="Стильный свитшот с паттерном стилизации по анатомическим линиям. Логотип мероприятия + стильные микросхемы на боку">
-    <img src="/sobolstudio/assets/img/portfolio/merch/DHLongsleeveMockup2.png" alt="Стильный свитшот с паттерном стилизации по анатомическим линиям. Логотип мероприятия + микросхемы спереди">
-    <img src="/sobolstudio/assets/img/portfolio/merch/DHLongsleeveMockup3.png" alt="Стильный свитшот с паттерном стилизации по анатомическим линиям. Логотип мероприятия + микросхемы спереди">
+      <img src="/sobolstudio/assets/img/portfolio/merch/DH_longsleeve_mockup1.png" alt="Стильный свитшот с паттерном стилизации по анатомическим линиям. Логотип мероприятия + стильные микросхемы на боку">
+    <img src="/sobolstudio/assets/img/portfolio/merch/DH_longsleeve_mockup2.png" alt="Стильный свитшот с паттерном стилизации по анатомическим линиям. Логотип мероприятия + микросхемы спереди">
+    <img src="/sobolstudio/assets/img/portfolio/merch/DH_longsleeve_mockup3.png" alt="Стильный свитшот с паттерном стилизации по анатомическим линиям. Логотип мероприятия + микросхемы спереди">
   </div>
   <figcaption>
     <table>
@@ -68,13 +70,24 @@ extra_css:
 </figure>
 {:/nomarkdown}
 
+{% include mockup-social.html
+  userpic='/assets/img/portfolio/merch/DH_longsleeve_social1.png'
+  username='DevHiveProject'
+  images='/assets/img/portfolio/merch/DH_longsleeve_social1.png,
+          /assets/img/portfolio/merch/DH_longsleeve_social2.png,
+          /assets/img/portfolio/merch/DH_longsleeve_social3.png,
+          /assets/img/portfolio/merch/DH_longsleeve_social4.png,
+          /assets/img/portfolio/merch/DH_longsleeve_social5.png'
+  alt='изображение в соцсеть с печатью по лонгсливу'
+%}
+
 ### Стикеры
 
 {::nomarkdown}
     <div class="gallery stickers">
       <img src="/sobolstudio/assets/img/portfolio/merch/DH_sticker1.svg" alt="Стикер с буквами DH, логотип бренда">
       <img src="/sobolstudio/assets/img/portfolio/merch/DH_sticker2.svg" alt="Стикер с 404">
-      <img src="/sobolstudio/assets/img/portfolio/merch/DH_sticker3.svg" alt="Стикер с кодом: false = true while false:. Парадокс лжеца">
+      <img src="/sobolstudio/assets/img/portfolio/merch/DH_sticker3.svg" alt="Стикер с кодом: false = true while false:. Фрагмент кода выглядит как парадокс лжеца">
       <img src="/sobolstudio/assets/img/portfolio/merch/DH_sticker4.svg" alt="Стикер с текстом: if you are reading this you can read">
       <img src="/sobolstudio/assets/img/portfolio/merch/DH_sticker5.svg" alt="Стикер с текстом: как же я люблю этот язык — притон. Отсылка на Python">
       <img src="/sobolstudio/assets/img/portfolio/merch/DH_sticker6.svg" alt="Стикер с текстом: Аллоб программирование? Да-да, if else. Отсылка на низкий грейд программиста">
@@ -88,10 +101,10 @@ extra_css:
 {:/nomarkdown}
 
 {::nomarkdown}
-<figure style="margin-top: calc(var(--sectiongap) / 2)">
-  <div class="infograpaphic" height="320px">
+<figure>
+  <div class="infographic">
     <img class="fg" src="/sobolstudio/assets/img/portfolio/merch/DH_stickerInfograhicDieline.svg" alt="Контуры вырубки для стикеров нестандартной формы">
-    <img class="hero" style=" bottom: 0; right: calc(0px - var(--padding) / 2)" src="/sobolstudio/assets/img/portfolio/merch/DHstickerInfograhic.png" alt="Меню слоёв Illustrator со слоями под печать и вырубку">
+    <img class="hero" style=" bottom: 0; right: 0" src="/sobolstudio/assets/img/portfolio/merch/DHstickerInfograhic.png" alt="Меню слоёв Illustrator со слоями под печать и вырубку">
     <img class="bg" src="/sobolstudio/assets/img/portfolio/merch/DH_stickerInfograhic.svg" alt="Набор стикеров с припусками под обрезку">
   </div>
   <figcaption>
@@ -105,33 +118,66 @@ extra_css:
 </figure>
 {:/nomarkdown}
 
-### Блокнот
-
-
+{::nomarkdown}
+<img src="/sobolstudio/assets/img/portfolio/merch/DH_sticker_mockup1.png" alt="Наклейка weekend на термосе" >
+{:/nomarkdown}
 
 {::nomarkdown}
-<figure>
-    <object type="image/svg+xml" data="/sobolstudio/assets/img/portfolio/merch/DH_notebook_print.svg">
-      Обновите браузер, чтобы увидеть блокнот с печатью и вырубкой
+<img src="/sobolstudio/assets/img/portfolio/merch/DH_sticker_mockup2.png" alt="Наклейка testing the code в скетчбуке" >
+{:/nomarkdown}
+
+{::nomarkdown}
+<img src="/sobolstudio/assets/img/portfolio/merch/DH_sticker_mockup3.png" alt="Наклейка c хз-шкалой и i dunno каомодзи на ноутбуке" >
+{:/nomarkdown}
+
+{::nomarkdown}
+<img src="/sobolstudio/assets/img/portfolio/merch/DH_sticker_mockup4.png" alt="Рабочее место программиста с наклейкой 404 на месте работника" >
+{:/nomarkdown}
+
+### Блокнот
+
+Перевела макет в CMYK, добавила вылеты под обрез, проверила треппинг. Типография может сразу пускать макет в печать, без переделок и доплат
+
+{::nomarkdown}
+<figure class="detail">
+  <object type="image/svg+xml" style="aspect-ratio: 1/1;" data="/sobolstudio/assets/img/portfolio/merch/DH_notebook_minus.svg" height="256px">
+      Обновите браузер, чтобы увидеть пример работы с вывороткой текста на сложном фоне
     </object>
   <figcaption>
-    <table>
-      <tr>
-        <th>Препресс для офсета</th>
-        <td>Перевела макет в CMYK, добавила вылеты под обрез, проверила треппинг. Типография может сразу пускать макет в печать, без переделок и доплат</td>
-      </tr>
-      <tr>
-        <th>Тиснение фольгой</th>
-        <td>Обложка с матовой ламинацией и тиснением. Это тактильный премиум: блокнот не стыдно подарить партнёру</td>
-      </tr>
-    </table>
+    <strong class="side">Выворотка</strong>
+    Работаю с вывороткой текста на сложном фоне: убираю все цветовые каналы кроме одного (чёрный) рядом с белой областью. Макет полностью совместим с офсетным оборудованием
   </figcaption>
 </figure>
 {:/nomarkdown}
 
+{::nomarkdown}
+<figure class="detail">
+  <img  style="aspect-ratio: 1/1;" src="/sobolstudio/assets/img/portfolio/merch/DH_notebook_trapping.svg">
+  <figcaption>
+    <strong class="side">Треппинг</strong>
+    Для избежания белого края из-за смещения
+  </figcaption>
+</figure>
+{:/nomarkdown}
+
+{::nomarkdown}
+<figure class="detail">
+    <img class="bg" src="/sobolstudio/assets/img/portfolio/merch/DH_notebook_foil.svg" alt="Демонстрация технологии печати под металлик">
+    <img class="hero" style=" bottom: 0; right: 0" src="/sobolstudio/assets/img/portfolio/merch/DH_notebook_foilInfographic.png" alt="Создание свотча PANTONE 877 C Silver Metallic">
+  <figcaption>
+    <strong class="side">Металлик</strong>
+    Для печати с эффектом металлик нужно настроить отдельный слой и плашечный цвет. <br><small>PANTONE 877 C, классический «серебряный металлик»</small>
+  </figcaption>
+</figure>
+{:/nomarkdown}
+
+{::nomarkdown}
+<img class="bg" src="/sobolstudio/assets/img/portfolio/merch/DH_notebook_mockup1.png" alt="Блокнот лежит на столе, презентация продукта" style="background-image: url(/sobolstudio/assets/img/portfolio/merch/DH_notebook_mockup1compress.png)" >
+{:/nomarkdown}
+
 ***
 
-## в итоге
+## В итоге
 
 | **Консистентность на всех носителях** | Я знаю, как расширить фирменный стиль на новые продукты, даже если они не предусмотрены гайдлайнами. У стиля всегда есть свои элементы оформления, общие правила композиции, типографика, цветовая гамма. Анализ стиля позволяет создавать новые продукты без лишних согласований |
 | **Создание гайдлайнов «на коленке»** | У клиента не было брендбука. Он отказался от его разработки. Я собрала чек-лист: шрифты, цвета (Pantone/CMYK/RGB), правила вёрстки. Теперь любой следующий мерч можно делать без меня, и он не рассыплется |

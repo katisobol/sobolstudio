@@ -19,8 +19,10 @@ body.case .gallery {
     body.case :is(#gallery, .gallery)::before {
         content: url(../../icons/mouseWheelIcon_64p.svg);
         position: absolute;
-        left: 32px; top: 32px;
-        width: 32px; height: 32px;
+        left: 32px;
+        top: 32px;
+        width: 32px;
+        height: 32px;
         opacity: 0.65;
     }
 }
@@ -38,7 +40,6 @@ body.case .gallery > img {
         }
     }
 }
-
 
 /* Стикер-галерея */
 
@@ -66,40 +67,47 @@ body.case article .gallery.stickers > img {
     flex-shrink: 0;
 }
 
-
+body.case article .gallery + figure {
+    margin-top: calc(var(--sectiongap) / 2)
+}
 
 /* Инфографика, совмещающая три слоя */
-body.case article .infograpaphic {
+body.case article .infographic {
     position: relative;
     display: block;
     width: 100%;
     min-height: 200px;
+    max-height: 50vh;
 }
 
-body.case article .infograpaphic .fg {
+body.case article .infographic .fg {
     position: absolute;
     z-index: 3;
+    max-height: 100%;
 }
-body.case article .infograpaphic .hero {
+body.case article .infographic .hero {
     position: absolute;
-    width: max-content;
+    width: fit-content;
     max-width: 100%;
     max-height: 100%;
     z-index: 2;
 }
-body.case article .infograpaphic .bg {
+body.case article .infographic .bg {
     position: relative;
-    height: max-content;
-    max-width: unset;
     z-index: 1;
+    max-height: 50vh;
 }
 
 /* Создаёт мокап для соцсетей со скроллом */
 
+.gallery:has(.socialMockupPost) {
+    background-color: transparent;
+}
+
 .socialMockupPost {
     position: relative;
     background: white;
-    width: calc(100vw - var(--padding)*2);
+    width: calc(100vw - var(--padding) * 2);
     max-width: 500px;
     padding: 60px 0;
     border-radius: 12px;
@@ -154,4 +162,3 @@ body.case article .infograpaphic .bg {
 .socialMockupPost > .userProfile > .userName::before {
     content: "@";
 }
-
