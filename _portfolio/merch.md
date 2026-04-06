@@ -2,12 +2,16 @@
 title: Перенос фирменного стиля на мерч
 date: 2026-03-10
 description: Мерч для клиента
-thumbnail: /assets/img/portfolio/ib-security/thumbnail.jpg   # маленькое превью для карточки
-cover: /assets/img/portfolio/merch/DHcover.png   # обложка под h1
+thumbnail: /assets/img/portfolio/merch/DH_cover.png
+keyvisual: /assets/img/portfolio/merch/DH_hero.png
+cover: /assets/img/portfolio/merch/DH_cover.png
 images:
   - /assets/img/portfolio/merch/DH_sticker_mockup3.png
   - /assets/img/portfolio/merch/DH_longsleeve_mockup4.png
   - /assets/img/portfolio/merch/DH_notebook_mockup1.png
+  - /assets/img/portfolio/merch/DH_longsleeve_social5.png
+  - /assets/img/portfolio/merch/DH_sticker_mockup2.png
+  - /assets/img/portfolio/merch/DH_longsleeve_social1.png
 excerpt: "Разработала мерч для IT‑ивента: от векторизации до готовых макетов под печать"
 size: 2
 extra_css:
@@ -71,7 +75,7 @@ extra_css:
 {:/nomarkdown}
 
 {% include mockup-social.html
-  userpic='/assets/img/portfolio/merch/DH_longsleeve_social1.png'
+  userpic='/assets/img/portfolio/merch/DH_hero.png'
   username='DevHiveProject'
   images='/assets/img/portfolio/merch/DH_longsleeve_social1.png,
           /assets/img/portfolio/merch/DH_longsleeve_social2.png,

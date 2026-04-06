@@ -152,6 +152,7 @@ body.case article .infographic .bg {
     aspect-ratio: 1 / 1;
     object-fit: cover;
     border-radius: 50%;
+    overflow: clip;
 }
 
 .socialMockupPost > .userProfile > .userName {

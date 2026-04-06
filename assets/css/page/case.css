@@ -27,7 +27,7 @@ body.case header nav ul li a:visited {
     text-shadow: var(--textShadow);
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1000px) {
     body.case header {
         display: flex;
         flex-direction: row;
@@ -37,15 +37,16 @@ body.case header nav ul li a:visited {
         width: var(--padding);
     }
     body.case header nav {
-        flex-direction: column;
+        flex-direction: row;
         align-items: flex-end;
+    gap: 1em;
     }
     body.case header nav ul li::before {
         padding-left: 0;
     }
 }
 
-@media handheld, (max-width: 769px) {
+@media handheld, (max-width: 1000px) {
     body.case header {
         padding: 1.5rem 0 0 1.5rem;
     }

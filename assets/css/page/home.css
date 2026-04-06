@@ -371,7 +371,7 @@ body.home > #value h3 {
 
 body.home > #portfolio .card.heading {
     grid-column: 5;
-    grid-row: 1;
+    grid-row: 2;
     padding-right: 1.75rem;
 }
 @media (max-width: 1079px) {

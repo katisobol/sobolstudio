@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-:root {
-    --orange: #e68600;
-}
-
 body.DHmerch main article {
     font-family: Roboto, Santello;
 }
@@ -65,4 +61,9 @@ body.DHmerch .side {
 
 body.DHmerch .userProfile > .userName {
     font-family: Roboto;
+}
+
+body.DHmerch .socialMockupPost .userPic {
+    background-color: #e68600;
+    object-fit: contain;
 }
