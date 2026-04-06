@@ -89,9 +89,9 @@ body.case .gallery {
     overflow-x: scroll;
     display: flex;
     align-items: center;
-    gap: 1em;
+    gap: var(--columngap);
     scroll-behavior: smooth;
-    padding: 1rem var(--padding);
+    padding: var(--columngap) var(--padding);
     background-color: silver;
     box-sizing: border-box;
 }

@@ -12,10 +12,7 @@ body.DHmerch figure.detail {
     align-items: center;
 }
 
-body.DHmerch p + figure.detail {
-    margin-top: var(--sectiongap);
-}
-
+body.DHmerch p + figure.detail,
 body.DHmerch figure.detail + figure.detail {
     margin-top: calc(var(--sectiongap) / 3);
 }

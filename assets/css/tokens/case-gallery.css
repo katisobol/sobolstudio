@@ -102,6 +102,7 @@ body.case article .infographic .bg {
 
 .gallery:has(.socialMockupPost) {
     background-color: transparent;
+    gap: 1rem;
 }
 
 .socialMockupPost {

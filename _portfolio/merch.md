@@ -2,16 +2,16 @@
 title: Перенос фирменного стиля на мерч
 date: 2026-03-10
 description: Мерч для клиента
-thumbnail: /assets/img/portfolio/merch/DH_cover.png
+thumbnail: /assets/img/portfolio/merch/DH_cover.jpg
 keyvisual: /assets/img/portfolio/merch/DH_hero.png
-cover: /assets/img/portfolio/merch/DH_cover.png
+cover: /assets/img/portfolio/merch/DH_cover.jpg
 images:
-  - /assets/img/portfolio/merch/DH_sticker_mockup3.png
+  - /assets/img/portfolio/merch/DH_sticker_mockup3.jpg
   - /assets/img/portfolio/merch/DH_longsleeve_mockup4.png
   - /assets/img/portfolio/merch/DH_notebook_mockup1.png
-  - /assets/img/portfolio/merch/DH_longsleeve_social5.png
-  - /assets/img/portfolio/merch/DH_sticker_mockup2.png
-  - /assets/img/portfolio/merch/DH_longsleeve_social1.png
+  - /assets/img/portfolio/merch/DH_longsleeve_social5.jpg
+  - /assets/img/portfolio/merch/DH_sticker_mockup2.jpg
+  - /assets/img/portfolio/merch/DH_longsleeve_social1.jpg
 excerpt: "Разработала мерч для IT‑ивента: от векторизации до готовых макетов под печать"
 size: 2
 extra_css:
@@ -77,11 +77,11 @@ extra_css:
 {% include mockup-social.html
   userpic='/assets/img/portfolio/merch/DH_hero.png'
   username='DevHiveProject'
-  images='/assets/img/portfolio/merch/DH_longsleeve_social1.png,
-          /assets/img/portfolio/merch/DH_longsleeve_social2.png,
-          /assets/img/portfolio/merch/DH_longsleeve_social3.png,
-          /assets/img/portfolio/merch/DH_longsleeve_social4.png,
-          /assets/img/portfolio/merch/DH_longsleeve_social5.png'
+  images='/assets/img/portfolio/merch/DH_longsleeve_social1.jpg,
+          /assets/img/portfolio/merch/DH_longsleeve_social2.jpg,
+          /assets/img/portfolio/merch/DH_longsleeve_social3.jpg,
+          /assets/img/portfolio/merch/DH_longsleeve_social4.jpg,
+          /assets/img/portfolio/merch/DH_longsleeve_social5.jpg'
   alt='изображение в соцсеть с печатью по лонгсливу'
 %}
 
@@ -123,19 +123,19 @@ extra_css:
 {:/nomarkdown}
 
 {::nomarkdown}
-<img src="/sobolstudio/assets/img/portfolio/merch/DH_sticker_mockup1.png" alt="Наклейка weekend на термосе" >
+<img src="/sobolstudio/assets/img/portfolio/merch/DH_sticker_mockup1.jpg" alt="Наклейка weekend на термосе" >
 {:/nomarkdown}
 
 {::nomarkdown}
-<img src="/sobolstudio/assets/img/portfolio/merch/DH_sticker_mockup2.png" alt="Наклейка testing the code в скетчбуке" >
+<img src="/sobolstudio/assets/img/portfolio/merch/DH_sticker_mockup2.jpg" alt="Наклейка testing the code в скетчбуке" >
 {:/nomarkdown}
 
 {::nomarkdown}
-<img src="/sobolstudio/assets/img/portfolio/merch/DH_sticker_mockup3.png" alt="Наклейка c хз-шкалой и i dunno каомодзи на ноутбуке" >
+<img src="/sobolstudio/assets/img/portfolio/merch/DH_sticker_mockup3.jpg" alt="Наклейка c хз-шкалой и i dunno каомодзи на ноутбуке" >
 {:/nomarkdown}
 
 {::nomarkdown}
-<img src="/sobolstudio/assets/img/portfolio/merch/DH_sticker_mockup4.png" alt="Рабочее место программиста с наклейкой 404 на месте работника" >
+<img src="/sobolstudio/assets/img/portfolio/merch/DH_sticker_mockup4.jpg" alt="Рабочее место программиста с наклейкой 404 на месте работника" >
 {:/nomarkdown}
 
 ### Блокнот
