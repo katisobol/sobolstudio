@@ -1,7 +1,7 @@
 <!-- Скрипт добавляет карточки -->
 {% for case in site.portfolio reversed %}
 <!-- Скрипт увеличит карточку если добавить в кейс переменную size -->
-  <a class="card case
+  <a class="portfolio-card case
             {% if case.size %}
             size{{ case.size }}
             {% endif %}
@@ -15,7 +15,7 @@
   {% endif %}
   >
 <!-- Всплывающее окно при наведении курсора -->
-    <div class="cover"
+    <div class="case-card-popup"
   {% if case.thumbnail %}
   style='background: url(
                    {{ case.thumbnail | relative_url }}
@@ -36,17 +36,17 @@
 </a>
 {% endfor %}
 
-<a class="card blank behance" style="background:url(https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/add5e8169548731.Y3JvcCw4MDgsNjMyLDAsMA.png); background-position: center"
+<a class="portfolio-card blank behance" style="background:url(https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/add5e8169548731.Y3JvcCw4MDgsNjMyLDAsMA.png); background-position: center"
 href="https://www.behance.net/gallery/169548731/Logofolio-2023" target="_blank">
   <p class="description">Logofolio</p>
 </a>
 
-<a class="card blank behance"  style="background:url(https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/6e3e9a164116753.Y3JvcCw4MDgsNjMyLDAsMA.png); background-position: center"
+<a class="portfolio-card blank behance"  style="background:url(https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/6e3e9a164116753.Y3JvcCw4MDgsNjMyLDAsMA.png); background-position: center"
 href="https://www.behance.net/gallery/164116753/Key-visual-banners" target="_blank">
   <p class="description">Key visual</p>
 </a>
 
-<a class="card blank behance"  style="background:url(https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/45b12c165280831.Y3JvcCw4MDgsNjMyLDAsMA.png); background-position-x: left"
+<a class="portfolio-card blank behance"  style="background:url(https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/45b12c165280831.Y3JvcCw4MDgsNjMyLDAsMA.png); background-position-x: left"
 href="https://www.behance.net/gallery/165280831/magazin-rjukzakov-BackPack" target="_blank">
   <p class="description">E-commerce</p>
 </a>

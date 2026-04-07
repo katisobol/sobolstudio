@@ -8,7 +8,7 @@
     padding-bottom: calc(var(--sectiongap) * 1.5);
 }
 
-:is(.portfolio, #portfolio) .card {
+.portfolio .portfolio-card {
     grid-column: span 1;
     aspect-ratio: 3 / 4;
     text-decoration: none;
@@ -18,7 +18,7 @@
     min-height: 175px;
     max-width: unset;
 }
-:is(.portfolio, #portfolio) .card:is(.case, .blank) {
+.portfolio .portfolio-card:is(.case, .blank) {
     box-shadow: var(--textShadow);
 }
 
@@ -32,17 +32,17 @@
         align-items: stretch;
         align-content: stretch;
     }
-    :is(.portfolio, #portfolio) .card {
+    .portfolio .portfolio-card {
         width: calc(5rem + 10%);
         min-height: 120px;
     }
 }
 
-:is(.portfolio, #portfolio) .card:hover {
+.portfolio .portfolio-card:hover {
     text-decoration: none;
 }
 
-:is(.portfolio, #portfolio) .card > p.description {
+.portfolio .portfolio-card > p.description {
     position: absolute;
     transform-origin: bottom right;
     right: 1em;
@@ -55,7 +55,7 @@
     text-shadow: var(--textShadow);
 }
 
-:is(.portfolio, #portfolio) .card.blank::after {
+.portfolio .portfolio-card.blank::after {
     content: url(../../assets/icons/Kc_logo_full_logo_raster_dk.png);
     filter: drop-shadow(0 0 1.5px rgba(0, 0, 0, 0.65));
     color: white;
@@ -65,7 +65,7 @@
     left: 0.75rem;
     bottom: 0.75rem;
 }
-.card.blank::before {
+.portfolio-card.blank::before {
     content: url(../icons/icon_newTab.svg);
     position: absolute;
     right: -1px;
@@ -75,11 +75,11 @@
     object-fit: contain;
 }
 
-:is(.portfolio, #portfolio) .card.blank.behance::after {
+.portfolio .portfolio-card.blank.behance::after {
     content: url(../icons/behance-square.svg);
 }
 
-:is(.portfolio, #portfolio) .card .keyvisual {
+.portfolio .portfolio-card .keyvisual {
     position: absolute;
     top: 0;
     width: 100%;
@@ -87,12 +87,12 @@
     object-fit: contain;
 }
 
-.card {
+.portfolio-card {
     position: relative;
     background-size: cover;
 }
 
-.card.case::before {
+.portfolio-card.case::before {
     content: "";
     z-index: 2;
     position: absolute;
@@ -107,7 +107,7 @@
     pointer-events: none;
 }
 
-.card > .cover {
+.portfolio-card > .case-card-popup {
     position: absolute;
     left: -75px;
     top: -0.5px;
@@ -125,12 +125,12 @@
     z-index: 3;
 }
 
-.card:hover > .cover,
-.card:hover::before {
+.portfolio-card:hover > .case-card-popup,
+.portfolio-card:hover::before {
     height: calc(100% + var(--sectiongap));
 }
 
-.cover > p {
+.case-card-popup > p {
     margin: 0 0.5em 0.5em;
     text-align: end;
     font-family: AvantGarde;
@@ -138,11 +138,11 @@
     height: 0;
 }
 
-.cover:hover > p {
+.case-card-popup:hover > p {
     height: auto;
 }
 
-.cover > img {
+.case-card-popup > img {
     position: absolute;
     width: 120%;
     max-width: unset;
@@ -153,24 +153,24 @@
 
 /* Визуальная иерархия  */
 
-:is(.portfolio, #portfolio) .card.size2 {
+.portfolio .portfolio-card.size2 {
     grid-column: span 2;
     grid-row: span 2;
 }
-:is(.portfolio, #portfolio) .size3 {
+.portfolio .size3 {
     grid-column: span 3;
     grid-row: span 2;
 }
-:is(.portfolio, #portfolio) .size4 {
+.portfolio .size4 {
     grid-column: span 4;
     grid-row: span 2;
 }
-:is(.portfolio, #portfolio) .size5 {
+.portfolio .size5 {
     grid-column: span 5;
         aspect-ratio: 5 / 2;
 }
 @media (max-width: 961px) {
-    :is(.portfolio, #portfolio) :is(.size2, .size3, .size4) {
+    .portfolio :is(.size2, .size3, .size4) {
         min-height: 150px;
     }
 }

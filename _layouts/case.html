@@ -12,12 +12,12 @@ layout: default
       {% endif %}
       >{{ page.title }}</h1>
 
-  <time class="side" datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%d.%m.%Y" }}</time>
+  <time class="side-text" datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%d.%m.%Y" }}</time>
 
 
 
 {% if page.images %}
-<div id="gallery" class="white">
+<div class="gallery white">
   {% for image in page.images %}
   <img src="{{ image | relative_url }}" alt="" />
   {% endfor %}
@@ -37,6 +37,6 @@ layout: default
 </main>
 
 <aside class="portfolio">
-  <div class="card"><p>Смотрите также:</p></div>
+  <div class="portfolio-card"><p>Смотрите также:</p></div>
   {% include portfolio.html %}
 </aside>

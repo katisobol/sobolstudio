@@ -20,7 +20,7 @@
 
 /*текстовая врезка с названием секции */
 @media (min-width: 769px) {
-    .side {
+    .side-text {
         position: absolute;
         right: calc(var(--padding) / -2 + 1rem);
         bottom: var(--sectiongap);
@@ -36,12 +36,12 @@
     }
 }
 @media (max-width: 768px) {
-    .side {
+    .side-text {
         display: block;
         position: unset;
     }
 }
-*:has(.side) {
+*:has(.side-text) {
     position: relative;
 }
 

@@ -1,13 +1,13 @@
-body.home > header {
+.home > header {
     display: none;
 }
 
 /* 1. hero-секция */
 @supports (mix-blend-mode: screen) {
-    Добавим потом норм пикчу как светоэффект на главную страницу body.home #hero :is(nav, h1, div p, div a) {
+    Добавим потом норм пикчу как светоэффект на главную страницу .home #hero :is(nav, h1, div p, div a) {
         z-index: 2;
     }
-    body.home #hero::after {
+    .home #hero::after {
         content: "";
         display: block;
         position: absolute;
@@ -21,14 +21,14 @@ body.home > header {
         background-size: contain;
     }
     @media (max-width: 768px){
-        body.home #hero::after{
+        .home #hero::after{
             bottom: 0; left: 0;
             width: 100%; height: 50%;
         }
     }
 }
 
-body.home > #hero {
+.home > #hero {
     background-image: url(../../img/page/home/hero3.png);
     background-position-y: top;
     background-attachment: fixed;
@@ -39,11 +39,11 @@ body.home > #hero {
 }
 
 /* Меню главной страницы */
-body.home > #hero div.layout:first-child {
+.home > #hero div.layout:first-child {
     padding: 0 var(--padding);
 }
 
-body.home > #hero nav {
+.home > #hero nav {
     grid-column: 3 / -1;
     position: relative;
     padding: 1rem; padding-top: 24px;
@@ -58,7 +58,7 @@ body.home > #hero nav {
 }
 
 @media (min-width: 769px) {
-    body.home > #hero nav {
+    .home > #hero nav {
         position: relative;
         left: -3rem;
         padding-left: 3rem;
@@ -67,44 +67,44 @@ body.home > #hero nav {
 }
 
 @media (max-width: 768px) {
-    body.home > #hero nav {
+    .home > #hero nav {
         max-width: max-content;
         padding: 35px 5rem 1rem 35px;
         background-color: rgba(255, 255, 255, 0.25);
     }
-    body.home > #hero nav ul li {
+    .home > #hero nav ul li {
         margin-top: 0 !important;
     }
-    body.home > #hero nav ul li a {
+    .home > #hero nav ul li a {
         display: inline-flex;
         align-items: center;
         min-height: 50px;
     }
 }
 
-body.home > #hero .logo {
+.home > #hero .logo {
     background-image: url(../../icons/Kc_logo_full_logo_raster_lght.png);
     filter: drop-shadow(0 0 1.5px cornflowerblue);
 }
-body.home > #hero nav ul {
+.home > #hero nav ul {
     margin: 0;
     padding: 0;
 }
-body.home > #hero nav ul li {
+.home > #hero nav ul li {
     list-style-type: none;
     margin: 0.5rem 0 0;
 }
 
-body.home > #hero nav a,
-body.home > #hero nav a:link,
-body.home > #hero nav a:visited {
+.home > #hero nav a,
+.home > #hero nav a:link,
+.home > #hero nav a:visited {
     color: var(--SoftBlack);
 }
-body.home > #hero nav a:hover {
+.home > #hero nav a:hover {
     color: var(--BrightBlue);
 }
 /* Выпадающий блок при наведении */
-body.home > #hero nav li::before {
+.home > #hero nav li::before {
     content: "";
     position: absolute;
     left: 0;
@@ -117,19 +117,19 @@ body.home > #hero nav li::before {
     z-index: -1;
     transition: all 250ms ease-in;
 }
-body.home > #hero nav :is(li:hover, li.active)::before {
+.home > #hero nav :is(li:hover, li.active)::before {
     content: "";
     width: 100%;
     transition: all 250ms ease-out;
 }
 @media (max-width: 768px) {
-    body.home > #hero nav li::before {
+    .home > #hero nav li::before {
     height: 50px;
     }
 }
 
-body.home > #hero h1,
-body.home > #hero nav a {
+.home > #hero h1,
+.home > #hero nav a {
     text-shadow:
         0 0 50px cornflowerblue,
         0 0 10px var(--CosmicLatte),
@@ -137,7 +137,7 @@ body.home > #hero nav a {
         0 0 0.5px yellow;
 }
 
-body.home > #hero .outline {
+.home > #hero .outline {
     display: block;
     position: relative;
     left: unset; top: -1.23em;
@@ -150,12 +150,12 @@ body.home > #hero .outline {
 }
 
 @media (max-width: 768px) {
-    body.home > #hero .outline {
+    .home > #hero .outline {
         font-size: 9vw;
     }
 }
 
-body.home > #hero h1 {
+.home > #hero h1 {
     position: relative;
     margin: calc(var(--sectiongap) / 2) auto;
     padding: 0 var(--padding);
@@ -164,7 +164,7 @@ body.home > #hero h1 {
     max-width: 1400px;
 }
 @media (max-width: 768px) {
-    body.home > #hero h1 {
+    .home > #hero h1 {
         text-shadow:
         0 0 100px cornflowerblue,
         0 0 65px var(--CosmicLatte),
@@ -174,12 +174,12 @@ body.home > #hero h1 {
     }
 }
 
-body.home > #hero .layout *,
-body.home > #hero .layout p {
+.home > #hero .layout *,
+.home > #hero .layout p {
     grid-column: 3 / -1;
 }
 
-body.home > #hero div.blk.paper {
+.home > #hero div.blk.paper {
     display: grid;
     grid-template-columns: var(--grid);
     color: var(--CosmicLatte);
@@ -190,13 +190,13 @@ body.home > #hero div.blk.paper {
     padding: 2rem var(--padding) var(--sectiongap);
 }
 
-body.home > #hero div.blk.paper div {
+.home > #hero div.blk.paper div {
     position: relative;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
 }
-body.home > #hero div.blk.paper .side {
+.home > #hero div.blk.paper .side-text {
     position: absolute;
     top: 10em;
     left: -3rem;
@@ -206,12 +206,12 @@ body.home > #hero div.blk.paper .side {
 }
 
 @media (max-width: 768px) {
-    body.home > #hero div.blk.paper .side {
+    .home > #hero div.blk.paper .side-text {
         display: none;
     }
 }
 
-body.home > #hero div.blk.paper .btn {
+.home > #hero div.blk.paper .btn {
     margin-bottom: 0;
 }
 
@@ -219,15 +219,15 @@ body.home > #hero div.blk.paper .btn {
 
 /* 2. Value-секция */
 
-body.home > #value {
+.home > #value {
     padding-top: 0;
     row-gap: 0;
 }
 /* украшаю направляющими. Как же проклято выглядят стили, ё-моё */
-body.home > #value::before,
-body.home > #value::after,
-body.home > #value ul::before,
-body.home > #value ul::after {
+.home > #value::before,
+.home > #value::after,
+.home > #value ul::before,
+.home > #value ul::after {
     content: url(../../img/patterns/guides.svg);
     position: absolute;
     opacity: 0.35;
@@ -236,30 +236,30 @@ body.home > #value ul::after {
     overflow: visible;
     grid-column: 1 / -1;
 }
-body.home > #value::before {
+.home > #value::before {
     left: 0;
     top: var(--sectiongap);
     rotate: 180deg;
 }
-body.home > #value::after {
+.home > #value::after {
     right: 0;
     top: var(--sectiongap);
     rotate: -90deg;
 }
-body.home > #value ul::before {
+.home > #value ul::before {
     left: 0;
     bottom: var(--sectiongap);
     rotate: 90deg;
 }
-body.home > #value ul::after {
+.home > #value ul::after {
     right: 0;
     bottom: var(--sectiongap);
 }
 @media screen and (max-width: 768px) {
-    body.home > #value::before,
-    body.home > #value::after,
-    body.home > #value ul::before,
-    body.home > #value ul::after {
+    .home > #value::before,
+    .home > #value::after,
+    .home > #value ul::before,
+    .home > #value ul::after {
         display: none;
     }
 }
@@ -277,7 +277,7 @@ h2::before {
 
 /* рисую крестики */
 
-body.home > #value h2 {
+.home > #value h2 {
     order: 3;
     font-size: 3vw;
     text-indent: -12vw;
@@ -285,39 +285,39 @@ body.home > #value h2 {
     margin-top: 3rem;
 }
 @supports (text-indent: calc(10px + var(--columngap))) {
-    body.home > #value h2 {
+    .home > #value h2 {
         text-indent: calc(0px - (100% - (var(--columngap) * 3)) / 4 - var(--columngap));
     }
 }
 @media (max-width: 768px) {
-    body.home > #value h2 {
+    .home > #value h2 {
         text-indent: 0;
     }
 }
 @media (max-width: 1024px) {
-    body.home > #value h2 {
+    .home > #value h2 {
         font-size: 2.5rem;
     }
 }
 
 
 
-body.home > #value .crosses {
+.home > #value .crosses {
     position: relative;
     padding: var(--sectiongap) 0 calc(var(--sectiongap) / 2);
     background: none;
     background-repeat: repeat;
 }
-body.home > #value .crosses::before{
+.home > #value .crosses::before{
     width: calc(100% + var(--padding));
 }
 
-body.home > #value .layout p {
+.home > #value .layout p {
     grid-column-start: 2 !important;
 }
 
-body.home > #value p.strong,
-body.home > #value h3 {
+.home > #value p.strong,
+.home > #value h3 {
     color: var(--Golden);
     font-family: AvantGarde, Santello, Raleway;
     letter-spacing: 0.03em;
@@ -325,12 +325,12 @@ body.home > #value h3 {
     text-shadow: var(--textShadow);
 }
 
-body.home > #value h3 {
+.home > #value h3 {
     grid-column-start: 2;
     margin: 0 0 0.5rem;
 }
 
-body.home > #value ul {
+.home > #value ul {
     grid-column: 2 / -1;
     grid-template-columns: 3 / -1;
     display: flex;
@@ -342,16 +342,16 @@ body.home > #value ul {
     gap: var(--columngap);
 }
 
-body.home > #value li {
+.home > #value li {
     list-style-type: none;
     height: auto;
 }
 
-body.home > #value li p {
+.home > #value li p {
     margin-bottom: 0;
 }
 
-body.home > #value h3 {
+.home > #value h3 {
     color: var(--Golden);
     display: flex;
     align-items: flex-end;
@@ -360,7 +360,7 @@ body.home > #value h3 {
 }
 
 @media (max-width: 1024px) {
-    body.home > #value ul {
+    .home > #value ul {
         grid-column-start: 1;
     }
 }
@@ -369,23 +369,23 @@ body.home > #value h3 {
 
 /* секция портфолио */
 
-body.home > #portfolio .card.heading {
+.home > #portfolio .card.heading {
     grid-column: 5;
     grid-row: 2;
     padding-right: 1.75rem;
 }
 @media (max-width: 1079px) {
-    body.home > #portfolio .card.heading {
+    .home > #portfolio .card.heading {
         min-width: 100px;
     }
 }
 @media (min-width: 1201px) {
-    body.home > #portfolio .card.heading {
+    .home > #portfolio .card.heading {
         padding-right: calc(1.25rem + 12.5%);
     }
 }
 
-body.home > #portfolio .card.heading h2 {
+.home > #portfolio .card.heading h2 {
     rotate: -90deg;
     position: absolute;
     right: 0.95em;
@@ -400,35 +400,35 @@ body.home > #portfolio .card.heading h2 {
     pointer-events: none;
 }
 
-body.home > #portfolio .small {
+.home > #portfolio .small {
     margin-top: 0;
     position: relative;
     top: -0.35em;
     font-family: Santello;
 }
 @media (min-height: 1201px) {
-    body.home > #portfolio .small {
+    .home > #portfolio .small {
         line-height: 2.25cqh;
     }
 }
 @media (min-width: 1500px) {
-    body.home > #portfolio .heading .small::after {
+    .home > #portfolio .heading .small::after {
         content: ". Дизайн должен показывать ценность или качество";
     }
 }
 
-body.home > #portfolio .btn {
+.home > #portfolio .btn {
     position: absolute;
     bottom: 0;
     left: 0;
     margin: 0;
     width: 100%;
 }
-body.home > #portfolio .btn {
+.home > #portfolio .btn {
     padding: unset;
 }
 @media (min-width: 1800px) {
-    body.home > :is(#likeability, #scarcity, #commitment) p {
+    .home > :is(#likeability, #scarcity, #commitment) p {
         grid-column-start: 2;
     }
 }
@@ -436,24 +436,24 @@ body.home > #portfolio .btn {
 
 
 
-body.home > #likeability {
+.home > #likeability {
     background-image: url(../../img/page/home/claudio-guglieri-YITqbi1T64Q-unsplash.jpg);
     background-size: cover;
 }
 
-body.home > #likeability h2.outline {
+.home > #likeability h2.outline {
     bottom: calc(0.35em - var(--sectiongap));
     right: 0;
 }
 
-body.home > #scarcity {
+.home > #scarcity {
     z-index: -1;
 }
 
-body.home > #needs h2 {
+.home > #needs h2 {
     color: var(--BrightBlue);
 }
-body.home > #needs p {
+.home > #needs p {
     color: var(--DeepBlue);
 }
 
@@ -467,25 +467,25 @@ body.home > #needs p {
     grid-column: 2 / -1;
 }
 
-body.home > #CTA {
+.home > #CTA {
     position: relative;
 }
 @media (max-width: 768px) {
-    body.home > #CTA h2 {
+    .home > #CTA h2 {
         display: none;
     }
 }
-body.home > #CTA * + small {
+.home > #CTA * + small {
     margin-top: 0.25rem;
 }
 
 
-body.home div.scales {
+.home div.scales {
     position: relative;
     height: 24px;
 }
 
-body.home div > img.colorbar {
+.home div > img.colorbar {
     position: absolute;
     right: 24px;
     bottom: 24px;

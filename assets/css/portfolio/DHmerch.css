@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-body.DHmerch main article {
+.DHmerch main article {
     font-family: Roboto, Santello;
 }
 
-body.DHmerch figure.detail {
+.DHmerch figure.detail {
     position: relative;
     display: flex;
     flex-direction: row;
@@ -12,33 +12,33 @@ body.DHmerch figure.detail {
     align-items: center;
 }
 
-body.DHmerch p + figure.detail,
-body.DHmerch figure.detail + figure.detail {
+.DHmerch p + figure.detail,
+.DHmerch figure.detail + figure.detail {
     margin-top: calc(var(--sectiongap) / 3);
 }
 
-body.DHmerch figure.detail:nth-last-of-type(1) {
+.DHmerch figure.detail:nth-last-of-type(1) {
     margin-bottom: var(--sectiongap);
 }
 
-body.DHmerch figure.detail :is(object, img, figcaption, div) {
+.DHmerch figure.detail :is(object, img, figcaption, div) {
     display: block;
 }
 
-body.DHmerch figure.detail :is(object, img) {
+.DHmerch figure.detail :is(object, img) {
     height: fit-content;
     max-width: 15%;
 }
 
-body.DHmerch figure.detail div.infographic {
+.DHmerch figure.detail div.infographic {
     max-width: 65%;
 }
 
-body.DHmerch figure.detail img {
+.DHmerch figure.detail img {
     background-color: #2e2e2e;
 }
 
-body.DHmerch figure.detail figcaption {
+.DHmerch figure.detail figcaption {
     position: static;
     min-width: 10em;
     font-size: 12px;
@@ -46,21 +46,21 @@ body.DHmerch figure.detail figcaption {
     letter-spacing: 0.05em;
 }
 
-body.DHmerch figure.detail figcaption .side {
+.DHmerch figure.detail figcaption .side-text {
     bottom: 0;
     color: #e68600;
     left: calc(0px - var(--padding) / 2);
 }
 
-body.DHmerch .side {
+.DHmerch .side-text {
     letter-spacing: 0.02em;
 }
 
-body.DHmerch .userProfile > .userName {
+.DHmerch .userProfile > .userName {
     font-family: Roboto;
 }
 
-body.DHmerch .socialMockupPost .userPic {
+.DHmerch .socialMockupPost .userPic {
     background-color: #e68600;
     object-fit: contain;
 }

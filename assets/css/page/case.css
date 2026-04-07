@@ -1,34 +1,34 @@
 @import url(../tokens/case-gallery.css);
 
-body.case header {
+.case header {
     display: inline-flex;
     position: absolute;
     background: transparent;
     z-index: 2;
 }
 
-body.case header nav ul li {
+.case header nav ul li {
     white-space: nowrap;
 }
-body.case header nav ul li::after {
+.case header nav ul li::after {
     content: "/";
     padding-right: 0;
 }
-body.case header nav ul li:nth-child(1) {
+.case header nav ul li:nth-child(1) {
     display: inline;
 }
-body.case header nav ul li:nth-child(1) a::before {
+.case header nav ul li:nth-child(1) a::before {
     content: "Портфолио";
 }
 
-body.case header nav ul li a:link,
-body.case header nav ul li a:visited {
+.case header nav ul li a:link,
+.case header nav ul li a:visited {
     color: silver;
     text-shadow: var(--textShadow);
 }
 
 @media screen and (min-width: 1000px) {
-    body.case header {
+    .case header {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
@@ -36,26 +36,26 @@ body.case header nav ul li a:visited {
         padding: calc(var(--sectiongap) + 1rem) 2rem 0 0;
         width: var(--padding);
     }
-    body.case header nav {
+    .case header nav {
         flex-direction: row;
         align-items: flex-end;
     gap: 1em;
     }
-    body.case header nav ul li::before {
+    .case header nav ul li::before {
         padding-left: 0;
     }
 }
 
 @media handheld, (max-width: 1000px) {
-    body.case header {
+    .case header {
         padding: 1.5rem 0 0 1.5rem;
     }
-    body.case h1 {
+    .case h1 {
         padding-top: 100px !important;
     }
 }
 
-body.case time.side {
+.case time.side-text {
     color: var(--CosmicLatte);
     right: calc(var(--padding) / 2);
     top: calc(var(--sectiongap) + 30px);
@@ -63,13 +63,13 @@ body.case time.side {
     text-shadow: var(--textShadow);
 }
 
-body.case main {
+.case main {
     display: block;
     position: relative;
     padding: unset;
 }
 
-body.case h1.cover {
+.case h1.cover {
     width: 100vw;
     box-sizing: border-box;
     max-width: none;
@@ -81,8 +81,7 @@ body.case h1.cover {
     text-shadow: var(--textShadow);
 }
 
-body.case #gallery,
-body.case .gallery {
+.case .gallery {
     width: 100vw;
     max-width: unset;
     white-space: nowrap;
@@ -96,45 +95,45 @@ body.case .gallery {
     box-sizing: border-box;
 }
 
-body.case :is(#gallery, .gallery) > img {
+.case .gallery > img {
     width: max-content;
     max-width: 95vw;
     max-height: 75vh;
     display: inline-block;
 }
 
-:is(#gallery, .gallery) > * {
+.gallery > * {
     flex-shrink: 0;
     display: inline-block;
 }
 
-body.case  article {
+.case  article {
     font-family: Raleway;
     padding: var(--columngap) var(--padding);
     column-gap: var(--columngap);
     row-gap: calc(var(--columngap) / 2);
 }
 
-body.case article > :not(.gallery, p, li, td) {
+.case article > :not(.gallery, p, li, td) {
     max-width: calc(100vw - 2 * var(--padding));
 }
 
-body.case article > .gallery {
+.case article > .gallery {
     position: relative;
     left: calc(0px - var(--padding));
 }
 
-body.case article .gallery {
+.case article .gallery {
     position: relative;
     left: calc(0px - var(--padding));
     background-color: hsla(0, 0%, 0%, 0.35);
 }
 
-body.case article .gallery > img {
+.case article .gallery > img {
     filter: drop-shadow(0 0 1rem black);
 }
 
-body.case article :is(h2, .h2) {
+.case article :is(h2, .h2) {
     font-family: Unovis100;
     font-size: 10vw;
     height: 2rem;
@@ -144,50 +143,50 @@ body.case article :is(h2, .h2) {
     z-index: -1;
 }
 @media (max-width: 768px) {
-    body.case article :is(h2, .h2) {
+    .case article :is(h2, .h2) {
         font-size: 5rem;
     }
 }
 
-body.case article :is(h3, .h3, h4, .h4, table th) {
+.case article :is(h3, .h3, h4, .h4, table th) {
     color: silver;
 }
 
-body.case article :is(p, li, table) {
+.case article :is(p, li, table) {
     color: slategray;
 }
-body.case strong {
+.case strong {
     color: var(--CosmicLatte);
 }
 
 @media (min-width: 1800px) {
-    body.case article :is(p, .p),
-    body.case article :not(p, .p) + :is(p, .p) {
+    .case article :is(p, .p),
+    .case article :not(p, .p) + :is(p, .p) {
         grid-column: 2 / span 2;
     }
-    body.case article :is(p, .p) + :is(p, .p):nth-child(even) {
+    .case article :is(p, .p) + :is(p, .p):nth-child(even) {
         grid-column: 4 / span 2;
     }
-    body.case article :is(p, .p) {
+    .case article :is(p, .p) {
         margin: 0;
     }
 }
 
-body.case article td {
+.case article td {
     vertical-align: top;
 }
-body.case article td + td {
+.case article td + td {
     padding-left: var(--columngap);
 }
-body.case article tr + tr td {
+.case article tr + tr td {
     padding-top: calc(var(--sectiongap) / 3);
 }
 
-body.case section.thanks {
+.case section.thanks {
     padding: calc(var(--sectiongap) / 2) var(--padding);
     display: none;
 }
 
-body.case article small {
+.case article small {
     color: slategray;
 }

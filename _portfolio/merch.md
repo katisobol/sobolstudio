@@ -1,19 +1,18 @@
 ---
 title: Перенос фирменного стиля на мерч
 date: 2026-03-10
-description: Мерч для клиента
+description: Мерч для ивента
 thumbnail: /assets/img/portfolio/merch/DH_cover.jpg
 keyvisual: /assets/img/portfolio/merch/DH_hero.png
 cover: /assets/img/portfolio/merch/DH_cover.jpg
-images:
-  - /assets/img/portfolio/merch/DH_sticker_mockup3.jpg
-  - /assets/img/portfolio/merch/DH_longsleeve_mockup4.png
-  - /assets/img/portfolio/merch/DH_notebook_mockup1.png
-  - /assets/img/portfolio/merch/DH_longsleeve_social5.jpg
-  - /assets/img/portfolio/merch/DH_sticker_mockup2.jpg
-  - /assets/img/portfolio/merch/DH_longsleeve_social1.jpg
 excerpt: "Разработала мерч для IT‑ивента: от векторизации до готовых макетов под печать"
 size: 2
+images:
+  - /assets/img/portfolio/merch/DH_sticker_mockup3.jpg
+  - /assets/img/portfolio/merch/DH_gallery_longsleeve2.png
+  - /assets/img/portfolio/merch/DH_notebook_mockup1.png
+  - /assets/img/portfolio/merch/DH_gallery_longsleeve1.jpg
+  - /assets/img/portfolio/merch/DH_sticker_mockup2.jpg
 extra_css:
  - assets/css/page/case.css
  - assets/css/portfolio/DHmerch.css
@@ -60,8 +59,8 @@ extra_css:
 <figure>
     <div class="gallery" style="gap: var(--sectiongap); padding: var(--sectiongap) var(--padding)">
       <img src="/sobolstudio/assets/img/portfolio/merch/DH_longsleeve_mockup1.png" alt="Стильный свитшот с паттерном стилизации по анатомическим линиям. Логотип мероприятия + стильные микросхемы на боку">
-    <img src="/sobolstudio/assets/img/portfolio/merch/DH_longsleeve_mockup2.png" alt="Стильный свитшот с паттерном стилизации по анатомическим линиям. Логотип мероприятия + микросхемы спереди">
-    <img src="/sobolstudio/assets/img/portfolio/merch/DH_longsleeve_mockup3.png" alt="Стильный свитшот с паттерном стилизации по анатомическим линиям. Логотип мероприятия + микросхемы спереди">
+      <img src="/sobolstudio/assets/img/portfolio/merch/DH_longsleeve_mockup2.png" alt="Стильный свитшот с паттерном стилизации по анатомическим линиям. Логотип мероприятия + микросхемы спереди">
+      <img src="/sobolstudio/assets/img/portfolio/merch/DH_longsleeve_mockup3.png" alt="Стильный свитшот с паттерном стилизации по анатомическим линиям. Логотип мероприятия + микросхемы спереди">
   </div>
   <figcaption>
     <table>
@@ -148,7 +147,7 @@ extra_css:
       Обновите браузер, чтобы увидеть пример работы с вывороткой текста на сложном фоне
     </object>
   <figcaption>
-    <strong class="side">Выворотка</strong>
+    <strong class="side-text">Выворотка</strong>
     Работаю с вывороткой текста на сложном фоне: убираю все цветовые каналы кроме одного (чёрный) рядом с белой областью. Макет полностью совместим с офсетным оборудованием
   </figcaption>
 </figure>
@@ -158,8 +157,8 @@ extra_css:
 <figure class="detail">
   <img  style="aspect-ratio: 1/1;" src="/sobolstudio/assets/img/portfolio/merch/DH_notebook_trapping.svg">
   <figcaption>
-    <strong class="side">Треппинг</strong>
-    Для избежания белого края из-за смещения
+    <strong class="side-text">Треппинг</strong>
+    Для избежания белых краёв края из-за смещения печати, применяют треппинг. Суть в том, чтобы «спрятать» край одного элемента под другой. Смешивание цветов не даст образоваться разрывам. В данном случае,
   </figcaption>
 </figure>
 {:/nomarkdown}
@@ -169,7 +168,7 @@ extra_css:
     <img class="bg" src="/sobolstudio/assets/img/portfolio/merch/DH_notebook_foil.svg" alt="Демонстрация технологии печати под металлик">
     <img class="hero" style=" bottom: 0; right: 0" src="/sobolstudio/assets/img/portfolio/merch/DH_notebook_foilInfographic.png" alt="Создание свотча PANTONE 877 C Silver Metallic">
   <figcaption>
-    <strong class="side">Металлик</strong>
+    <strong class="side-text">Металлик</strong>
     Для печати с эффектом металлик нужно настроить отдельный слой и плашечный цвет. <br><small>PANTONE 877 C, классический «серебряный металлик»</small>
   </figcaption>
 </figure>
