@@ -369,23 +369,23 @@ h2::before {
 
 /* секция портфолио */
 
-.home > #portfolio .card.heading {
+.home > #portfolio .portfolio-card.heading {
     grid-column: 5;
     grid-row: 2;
     padding-right: 1.75rem;
 }
 @media (max-width: 1079px) {
-    .home > #portfolio .card.heading {
+    .home > #portfolio .portfolio-card.heading {
         min-width: 100px;
     }
 }
 @media (min-width: 1201px) {
-    .home > #portfolio .card.heading {
+    .home > #portfolio .portfolio-card.heading {
         padding-right: calc(1.25rem + 12.5%);
     }
 }
 
-.home > #portfolio .card.heading h2 {
+.home > #portfolio .portfolio-card.heading h2 {
     rotate: -90deg;
     position: absolute;
     right: 0.95em;
