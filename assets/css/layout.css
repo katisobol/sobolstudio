@@ -73,7 +73,7 @@ body > :is(main, section, header, footer, article, aside, nav, blockquote, figur
     padding: var(--sectiongap) var(--padding);
     position: relative;
 }
-:is(body, main) > :is(p, h1, h2, h3, h4, h5, h6, ul, ol, blockquote, pre, table, dl, hr, address, details, figure, figcaption) {
+body > :is(p, h1, h2, h3, h4, h5, h6, ul, ol, blockquote, pre, table, dl, hr, address, details, figure, figcaption) {
     margin-left: var(--padding);
     margin-right: var(--padding);
 }

@@ -1,7 +1,7 @@
 ---
 title: Не прячьтесь за флэтом&#58; ребрендинг кибербезопасности
 date: 2026-02-10
-description: Сайт ИБ
+card-label: Сайт ИБ
 thumbnail: /assets/img/portfolio/ib-security/thumbnail.jpg   # маленькое превью для карточки
 cover: /assets/img/portfolio/ib-security/thumbnail.jpg   # обложка под h1
 images:

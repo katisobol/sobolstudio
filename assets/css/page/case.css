@@ -39,7 +39,7 @@
     .case header nav {
         flex-direction: row;
         align-items: flex-end;
-    gap: 1em;
+        gap: 1em;
     }
     .case header nav ul li::before {
         padding-left: 0;
@@ -107,7 +107,7 @@
     display: inline-block;
 }
 
-.case  article {
+.case article {
     font-family: Raleway;
     padding: var(--columngap) var(--padding);
     column-gap: var(--columngap);
@@ -134,12 +134,13 @@
 }
 
 .case article :is(h2, .h2) {
-    font-family: Unovis100;
-    font-size: 10vw;
-    height: 2rem;
     position: relative;
     top: -0.75em;
     left: calc(0px - var(--padding));
+    height: 2rem;
+    margin: var(--sectiongap) 0 calc(var(--sectiongap) / 2);
+    font-family: Unovis100;
+    font-size: 10vw;
     z-index: -1;
 }
 @media (max-width: 768px) {
@@ -148,11 +149,11 @@
     }
 }
 
-.case article :is(h3, .h3, h4, .h4, table th) {
+.case article :is(h3, .h3, h4, .h4, table th, dl dt) {
     color: silver;
 }
 
-.case article :is(p, li, table) {
+.case article :is(p, li, table, dl) {
     color: slategray;
 }
 .case strong {
@@ -189,4 +190,36 @@
 
 .case article small {
     color: slategray;
+}
+
+.case article table td,
+dl dt {
+    font-family: Santello, Raleway;
+}
+
+.case article > :not(h2, .h2) + :is(dl, table) {
+    margin-top: calc(var(--sectiongap) / 2);
+    gap: calc(var(--sectiongap) / 3);
+}
+
+@media (max-width: 1080px) {
+    .case article dl {
+        display: block;
+    }
+    .case article dl dd + dt {
+        margin-top: calc(var(--sectiongap) / 3);
+    }
+    .case article dl {
+        margin-top: 1em;
+    }
+}
+
+.case article dl dt {
+    grid-column: 1;
+}
+
+.case article,
+dl dd {
+    grid-column-start: 2;
+    margin: 0;
 }

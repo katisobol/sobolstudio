@@ -1,7 +1,7 @@
 ---
 title: Перенос фирменного стиля на мерч
 date: 2026-03-10
-description: Мерч для ивента
+card-label: Мерч для ивента
 thumbnail: /assets/img/portfolio/merch/DH_cover.jpg
 keyvisual: /assets/img/portfolio/merch/DH_hero.png
 cover: /assets/img/portfolio/merch/DH_cover.jpg
@@ -15,7 +15,7 @@ images:
   - /assets/img/portfolio/merch/DH_sticker_mockup2.jpg
 extra_css:
  - assets/css/page/case.css
- - assets/css/portfolio/DHmerch.css
+ - assets/css/page/portfolio/DHmerch.css
 
 ---
 

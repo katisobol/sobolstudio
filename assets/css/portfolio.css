@@ -176,6 +176,6 @@
 }
 
 /* проклятое название стиля для скрытых кейсов */
-.sizenone {
+.portfolio :is(.size0, .sizenone) {
     display: none !important;
 }

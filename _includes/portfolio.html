@@ -25,10 +25,10 @@
 <!-- Добавляет кейвижуал во всплывашку -->
   {% if case.keyvisual %}
   <img src="{{ case.keyvisual | relative_url }}" alt="{{ case.title }}">
-  {% endif %}      <p class="description">{{ case.description }}</p></div>
+  {% endif %}      <p class="description">{{ case.card-label }}</p></div>
 
 <!-- Контент внутри карточки: название, кейвижуал -->
-  <p class="description">{{ case.description }}</p>
+  <p class="description">{{ case.card-label }}</p>
   {% if case.keyvisual %}
   <img class="keyvisual" src="{{ case.keyvisual | relative_url }}" alt="{{ case.title }}">
   {% endif %}
