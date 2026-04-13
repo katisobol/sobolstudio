@@ -6,7 +6,7 @@ layout: default
 
   <h1
       {% if page.cover %}
-      class="cover" style="background: url({{ page.cover | relative_url }})"
+      class="cover" style="background: url({{ page.cover | relative_url }}) center"
       {% elsif page.thumbnail %}
       class="cover" style="background: url({{ page.thumbnail | relative_url }})"
       {% endif %}

@@ -55,11 +55,36 @@ table td, table th {
     text-align: left;
     vertical-align: top;
 }
-body.case article td + td,
-body.case article th + td {
+
+
+
+td + td,
+th + td {
     padding-left: var(--columngap);
 }
-body.case article tr + tr td,
-body.case article tr + tr th {
-    padding-top: calc(var(--sectiongap) / 4);
+
+
+dl {
+    margin-top: calc(var(--sectiongap) / 2);
+    gap: calc(var(--sectiongap) / 3);
+}
+
+@media (max-width: 1080px) {
+    .case article dl {
+        grid-template: unset;
+        row-gap: 0.5em;
+    }
+    .case article dl dd + dt {
+        margin-top: 1em;
+    }
+}
+
+.case article dl dt {
+    grid-column: 1;
+}
+
+.case article,
+dl dd {
+    grid-column-start: 2;
+    margin: 0;
 }

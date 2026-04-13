@@ -197,29 +197,12 @@ dl dt {
     font-family: Santello, Raleway;
 }
 
+tr + tr td,
+tr + tr th {
+    padding-top: calc(var(--sectiongap) / 4);
+}
+
+
 .case article > :not(h2, .h2) + :is(dl, table) {
     margin-top: calc(var(--sectiongap) / 2);
-    gap: calc(var(--sectiongap) / 3);
-}
-
-@media (max-width: 1080px) {
-    .case article dl {
-        display: block;
-    }
-    .case article dl dd + dt {
-        margin-top: calc(var(--sectiongap) / 3);
-    }
-    .case article dl {
-        margin-top: 1em;
-    }
-}
-
-.case article dl dt {
-    grid-column: 1;
-}
-
-.case article,
-dl dd {
-    grid-column-start: 2;
-    margin: 0;
 }

@@ -102,6 +102,7 @@ footer,
 article,
 aside,
 main,
+dl,
 .layout {
     position: relative;
     display: grid;
