@@ -52,7 +52,7 @@
     margin: 0;
     text-align: right;
     color: var(--CosmicLatte);
-    text-shadow: var(--textShadow);
+    text-shadow: var(--textShadow) !important;
 }
 
 .portfolio .portfolio-card.blank::after {
@@ -81,9 +81,9 @@
 
 .portfolio .portfolio-card .keyvisual {
     position: absolute;
-    top: 0;
+    bottom: 0;
     width: 100%;
-    height: 100%;
+    height: 95%;
     object-fit: contain;
 }
 
@@ -131,11 +131,15 @@
 }
 
 .case-card-popup > p {
-    margin: 0 0.5em 0.5em;
+    margin: 0 0.25em;
     text-align: end;
-    font-family: AvantGarde;
+    font-family: Unovis100;
     overflow: hidden;
     height: 0;
+    color: rgba(0, 0, 0, 0.35);
+    text-shadow: none;
+    font-size: 2rem;
+    mix-blend-mode: overlay;
 }
 
 .case-card-popup:hover > p {

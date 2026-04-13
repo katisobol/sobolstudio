@@ -2,7 +2,7 @@
 title: Перенос фирменного стиля на мерч
 date: 2026-03-10
 card-label: Мерч для ивента
-thumbnail: /assets/img/portfolio/merch/DH_cover.jpg
+thumbnail: /assets/img/portfolio/merch/DH_thumbnail.jpg
 keyvisual: /assets/img/portfolio/merch/DH_hero.png
 cover: /assets/img/portfolio/merch/DH_cover.jpg
 excerpt: "Разработала мерч для IT‑ивента: от векторизации до готовых макетов под печать"
