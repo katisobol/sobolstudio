@@ -55,7 +55,7 @@
     text-shadow: var(--textShadow) !important;
 }
 
-.portfolio .portfolio-card.blank::after {
+.portfolio .portfolio-card.blank::before {
     content: url(../../assets/icons/Kc_logo_full_logo_raster_dk.png);
     filter: drop-shadow(0 0 1.5px rgba(0, 0, 0, 0.65));
     color: white;
@@ -65,17 +65,8 @@
     left: 0.75rem;
     bottom: 0.75rem;
 }
-.portfolio-card.blank::before {
-    content: url(../icons/icon_newTab.svg);
-    position: absolute;
-    right: -1px;
-    top: -1px;
-    width: 1rem;
-    height: 1rem;
-    object-fit: contain;
-}
 
-.portfolio .portfolio-card.blank.behance::after {
+.portfolio .portfolio-card.blank.behance::before {
     content: url(../icons/behance-square.svg);
 }
 
@@ -96,8 +87,8 @@
     content: "";
     z-index: 2;
     position: absolute;
-    left: -75px;
-    width: calc(150px + 100%);
+    left: calc(0px - var(--columngap) / 2);
+    width: calc(var(--columngap) + 100%);
     height: 0;
     max-width: unset;
     transition: all 250ms ease;
@@ -109,10 +100,10 @@
 
 .portfolio-card > .case-card-popup {
     position: absolute;
-    left: -75px;
+    left: calc(0px - var(--sectiongap) / 2);
     top: -0.5px;
     color: white;
-    width: calc(150px + 100%);
+    width: calc(var(--sectiongap) + 100%);
     height: 0;
     max-width: unset;
     background-color: var(--Golden);
@@ -125,8 +116,23 @@
     z-index: 3;
 }
 
-.portfolio-card:hover > .case-card-popup,
+@media (max-width: 768px) {
+    .portfolio-card.case::before {
+        left: calc(0px - var(--columngap));
+        width: calc(var(--columngap) * 2 + 100%);
+    }
+
+    .portfolio-card > .case-card-popup {
+        left: calc(0px - var(--columngap));
+        width: calc(var(--columngap) * 2 + 100%);
+    }
+}
+
 .portfolio-card:hover::before {
+    height: calc(100% + var(--sectiongap) - 1px);
+}
+
+.portfolio-card:hover > .case-card-popup {
     height: calc(100% + var(--sectiongap));
 }
 
@@ -142,7 +148,7 @@
     mix-blend-mode: overlay;
 }
 
-.case-card-popup:hover > p {
+.portfolio-card:hover > .case-card-popup > p {
     height: auto;
 }
 
@@ -173,7 +179,7 @@
     grid-column: span 5;
         aspect-ratio: 5 / 2;
 }
-@media (max-width: 961px) {
+@media (max-width: 960px) {
     .portfolio :is(.size2, .size3, .size4) {
         min-height: 150px;
     }

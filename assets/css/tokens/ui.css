@@ -119,16 +119,15 @@ input[type="reset"],
 .btn:link,
 .btn:visited,
 .btn:hover {
-    font-family: Santello, Raleway;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     height: 50px;
     margin: 1.5rem 0;
     padding: 0 4em;
+    font-family: Santello, Raleway;
     position: relative;
     transition: 150ms ease;
-    overflow: hidden;
     width: max-content;
     cursor: pointer;
     background: transparent;
@@ -136,6 +135,7 @@ input[type="reset"],
     text-decoration: none;
     z-index: 2;
     color: var(--CosmicLatte);
+    white-space: nowrap;
 }
 
 :is(input[type="button"], input[type="submit"], input[type="reset"], button, .btn, .btn:link, .btn:visited)::before {
@@ -183,6 +183,18 @@ input[type="reset"],
     border-left: solid var(--BrightBlue) 2.5px;
     border-top: solid var(--BrightBlue) 2.5px;
     border-bottom: solid var(--BrightBlue) 2.5px;
+}
+
+/* на все элементы с target blank вешаем специальную иконку */
+
+[target="_blank"]::after {
+    content: url(../../icons/icon_newTab.svg);
+    position: absolute;
+    right: -1px;
+    top: -1px;
+    width: 1rem;
+    height: 1rem;
+    object-fit: contain;
 }
 
 .social img {

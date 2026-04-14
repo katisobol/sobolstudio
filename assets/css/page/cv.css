@@ -37,7 +37,7 @@
 .cv #skills ul li {
     list-style: none;
     border: solid 1rem var(--cardborder);
-    padding: 1.5rem;
+    padding: 1.5rem 1rem 2rem 1.5rem;
     background: linear-gradient(
         rgba(0, 0, 0, 0.85),
         rgba(0, 0, 0, 0.85)
@@ -56,6 +56,32 @@
 
 .cv #skills ul li * + :is(p, h4) {
     margin-top: 0.25em;
+}
+
+.cv #skills .btn {
+    margin: 0;
+    margin-top: 1em;
+    margin-right: 0.5em;
+    padding: 0.5em 2em;
+    border-radius: 1.5em;
+    min-width: 10em; max-width: 100%;
+    background-color: rgba(0, 0, 0, 0.35);
+}
+.cv #skills .btn::before {
+    border: 1.5px solid var(--cardborder);
+    border-right: none;
+    border-radius: 1.5em 0 0 1.5em;
+}
+.cv #skills .btn:hover::before{
+    border-radius: 0 1.5em 1.5em 0;
+    background-color: var(--cardborder);
+}
+.cv #skills [target="_blank"]::after {
+    opacity: 0;
+}
+.cv #skills [target="_blank"]:hover::after {
+    opacity: 1;
+    transition: all 250ms ease;
 }
 
 .cv details {
