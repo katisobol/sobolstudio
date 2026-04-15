@@ -114,6 +114,7 @@
     box-shadow: var(--textshadow);
     transition: all 250ms ease;
     z-index: 3;
+    pointer-events: none;
 }
 
 @media (max-width: 768px) {

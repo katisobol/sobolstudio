@@ -450,6 +450,9 @@ h2::before {
     z-index: -1;
 }
 
+.home > #needs {
+    display: none;
+}
 .home > #needs h2 {
     color: var(--BrightBlue);
 }

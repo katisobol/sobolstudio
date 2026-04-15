@@ -187,7 +187,7 @@ input[type="reset"],
 
 /* на все элементы с target blank вешаем специальную иконку */
 
-[target="_blank"]::after {
+:not(.social)[target="_blank"]::after {
     content: url(../../icons/icon_newTab.svg);
     position: absolute;
     right: -1px;
@@ -195,6 +195,7 @@ input[type="reset"],
     width: 1rem;
     height: 1rem;
     object-fit: contain;
+    pointer-events: none;
 }
 
 .social img {
