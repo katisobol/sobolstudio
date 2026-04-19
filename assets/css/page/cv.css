@@ -76,13 +76,6 @@
     border-radius: 0 1.5em 1.5em 0;
     background-color: var(--cardborder);
 }
-.cv #skills [target="_blank"]::after {
-    opacity: 0;
-}
-.cv #skills [target="_blank"]:hover::after {
-    opacity: 1;
-    transition: all 250ms ease;
-}
 
 .cv details {
     position: relative;

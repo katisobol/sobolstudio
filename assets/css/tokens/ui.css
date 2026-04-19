@@ -197,6 +197,13 @@ input[type="reset"],
     object-fit: contain;
     pointer-events: none;
 }
+.btn[target="_blank"]::after {
+    opacity: 0;
+}
+.btn[target="_blank"]:hover::after {
+    opacity: 1;
+    transition: all 250ms ease;
+}
 
 .social img {
     height: 100%;
