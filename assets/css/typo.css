@@ -53,12 +53,17 @@ li, td {
     margin: 0;
 }
 
-body :is(
+
+h1, .h1,
+h2, .h2 {
+    font-weight: bold;
+    line-height: 1.1;
+}
+
+body > :is(
 h1, .h1,
 h2, .h2
 ) {
-    font-weight: bold;
-    line-height: 1.1;
     max-width: 1200px;
     box-sizing: content-box;
 }
@@ -87,11 +92,11 @@ li, td {
 
 
 
-/* h1,  .h1 и его оведение около других элементов */
+/* h1,  .h1 и его поведение около других элементов */
 h1, .h1 {
     font-size: 3rem;
 }
-* + :is(h1, .h1) {
+.typo * + :is(h1, .h1) {
     margin-top: calc(var(--sectiongap) / 2);
 }
 
@@ -101,7 +106,7 @@ h1, .h1 {
 * + :is(h2, .h2) {
     margin-top: 1em;
 }
-:is(h1, .h1) + :is(h2, .h2) {
+.typo :is(h1, .h1) + :is(h2, .h2) {
     margin-top: 0.5em;
 }
 
@@ -113,7 +118,7 @@ h3, .h3 {
 * + :is(h3, .h3) {
     margin-top: 1.25rem;
 }
-:is(h2, .h2) + :is(h3, .h3) {
+.typo :is(h2, .h2) + :is(h3, .h3) {
     margin-top: 0.75rem;
 }
 
@@ -125,7 +130,7 @@ h4, .h4 {
 * + :is(h4, .h4) {
     margin-top: 1rem;
 }
-:is(h3, .h3) + :is(h4, .h4) {
+.typo :is(h3, .h3) + :is(h4, .h4) {
     margin-top: 0.5rem;
 }
 
@@ -135,13 +140,13 @@ h5, .h5,
 h6, .h6, small, .small {
     font-size: 0.75rem;
 }
-* + :is(
+.typo * + :is(
 h5, .h5,
 h6, .h6, small, .small
 ){
     margin-top: 0.5rem;
 }
-:is(
+.typo :is(
 h4, .h4,
 h5, .h5
 ) + :is(
@@ -156,16 +161,16 @@ h6, .h6, small, .small
 p, .p {
     font-size: 1rem;
 }
-:is(h1, .h1) + :is(p, .p) {
+.typo :is(h1, .h1) + :is(p, .p) {
     margin-top: 1rem;
 }
-:is(h2, .h2) + :is(p, .p) {
+.typo :is(h2, .h2) + :is(p, .p) {
     margin-top: 0.75rem;
 }
-:is(h3, .h3) + :is(p, .p) {
+.typo :is(h3, .h3) + :is(p, .p) {
     margin-top: 0.5rem;
 }
-:is(
+.typo :is(
 h4, .h4,
 h5, .h5,
 h6, .h6,
@@ -177,10 +182,11 @@ p, .p
 
 
 
-:is(h1, .h1, h2, .h2) + :is(fieldset, form, table, ul, ol, dl) {
+.typo :is(h1, .h1, h2, .h2) + :is(fieldset, form, table, ul, ol, dl) {
     margin-top: 1.5rem;
 }
 
-:is(h3, .h3, h4, .h4, fieldset, form, table, ul, ol, dl) + :is(fieldset, form, table, ul, ol, dl) {
+.typo :is(h3, .h3, h4, .h4, fieldset, form, table, ul, ol, dl) + :is(fieldset, form, table, ul, ol, dl) {
     margin-top: 1rem;
 }
+

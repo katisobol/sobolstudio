@@ -4,15 +4,26 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{% if page.title %}{{ page.title }} | {% endif %}Лаборатория визуальной коммуникации</title>
-        {% assign description = page.metadescription | default: page.excerpt | default: page.title %}
-        {% if description %}
-            <meta name="description" content="{{ description | strip_html | normalize_whitespace }}">
+
+
+        {% if page.description %}
+        <meta name="description" content="{{ page.description | strip_html | normalize_whitespace }}">
+        <meta property="og:description" content="{{ page.description | strip_html | normalize_whitespace }}" />
+        {% elsif page.excerpt %}
+        <meta name="description" content="{{ page.excerpt | strip_html | normalize_whitespace }}">
+        <meta property="og:description" content="{{ page.excerpt | strip_html | normalize_whitespace }}" />
         {% endif %}
 
+        <meta property="og:image" content="{{
+            page.og_image
+            | default: page.cover
+            | default: '/assets/img/page/meta_preview.jpg'
+            | relative_url
+        }}" />
 
-        <link rel="icon" type="image/x-icon" href="https://katisobol.github.io/sobolstudio/Kc_logo_full.svg" />
+        <link rel="icon" type="image/x-icon" href="{% if page.favicon %} {{ page.favicon }} {% else %}https://katisobol.github.io/sobolstudio/Kc_logo_full.svg"{% endif %} />
+
         <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}" />
-
         {% if page.extra_css %}
             {% for css in page.extra_css %}
         <link rel="stylesheet" href="{{ css | relative_url }}">
@@ -22,7 +33,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
             rel="stylesheet" />
     </head>
     <body {% if page.extra_css %}
@@ -36,8 +47,10 @@
     onload="onPageLoaded()">
 
 
+        {% include icons.html %}
         {% include header.html %}
         {{ content }}
+        {% include footer.html %}
 </body>
 
 </html>

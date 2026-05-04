@@ -1,0 +1,26 @@
+footer {
+    row-gap: 1rem;
+}
+
+footer .btn {
+    grid-column: span 2;
+    margin: 0;
+}
+
+footer .btn:link::before,
+footer .btn:visited::before
+ {
+    border-color: var(--DeepBlue);
+}
+footer .btn:hover::before {
+    border-color: hsla(220, 75%, 40%, 0);
+}
+
+
+
+
+footer .tg.btn svg {
+    position: absolute;
+    right: 1rem;
+    color: var(--SoftBlack);
+}

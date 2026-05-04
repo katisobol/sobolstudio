@@ -109,7 +109,7 @@
 
 .case article {
     font-family: Raleway;
-    padding: var(--columngap) var(--padding);
+    padding: var(--columngap) var(--padding) var(--sectiongap);
     column-gap: var(--columngap);
     row-gap: calc(var(--columngap) / 2);
 }
@@ -205,4 +205,21 @@ tr + tr th {
 
 .case article > :not(h2, .h2) + :is(dl, table) {
     margin-top: calc(var(--sectiongap) / 2);
+}
+
+.case .comments-section {
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .case .comments-section h2 {
+        position: absolute;
+        bottom: 0.5em;
+    }
+}
+
+.case .comments-section .tg-link-wrapper {
+    position: absolute; top: var(--sectiongap); right: 0;
+    background-color: white;
+    padding: 1rem;
 }

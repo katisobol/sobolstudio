@@ -5,7 +5,7 @@
     display: grid;
     grid-template-columns: repeat(5, calc((100% - (var(--columngap) * 4)) / 5));
     grid-auto-flow: dense;
-    padding-bottom: calc(var(--sectiongap) * 1.5);
+    margin-bottom: calc(var(--sectiongap) * 1.5);
 }
 
 .portfolio .portfolio-card {
@@ -18,7 +18,12 @@
     min-height: 175px;
     max-width: unset;
 }
-.portfolio .portfolio-card:is(.case, .blank) {
+@media (min-width: 1201px) {
+    .portfolio .portfolio-card {
+        height: 100%;
+    }
+}
+.portfolio .portfolio-card:is(.case, .behance) {
     box-shadow: var(--textShadow);
 }
 
@@ -168,19 +173,19 @@
 
 /* Визуальная иерархия  */
 
-.portfolio .portfolio-card.size2 {
+.portfolio .portfolio-card.case-size2 {
     grid-column: span 2;
     grid-row: span 2;
 }
-.portfolio .size3 {
+.portfolio-card.case-size3 {
     grid-column: span 3;
     grid-row: span 2;
 }
-.portfolio .size4 {
+.portfolio-card.case-size4 {
     grid-column: span 4;
     grid-row: span 2;
 }
-.portfolio .size5 {
+.portfolio-card.case-size5 {
     grid-column: span 5;
         aspect-ratio: 5 / 2;
 }

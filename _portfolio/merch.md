@@ -6,6 +6,7 @@ thumbnail: /assets/img/portfolio/merch/DH_thumbnail.jpg
 keyvisual: /assets/img/portfolio/merch/DH_hero.png
 cover: /assets/img/portfolio/merch/DH_cover.jpg
 excerpt: "Разработала мерч для IT‑ивента: от векторизации до готовых макетов под печать"
+tgID: 74
 size: 2
 images:
   - /assets/img/portfolio/merch/DH_sticker_mockup3.jpg

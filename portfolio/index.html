@@ -3,32 +3,42 @@ layout: default
 title: Портфолио
 extra_css:
  - assets/css/page/cv.css
+description: Екатерина Соболь, опытный графический дизайнер работает с ценностями бизнеса, без затягивания сроков работ
 ---
 <main>
-  <section id="portfolio" class="portfolio">
-    <h1 class="side-text">Портфолио</h1>
-    {% include portfolio.html %}
-  </section>
-
 
 
   <section id="about">
-    <p>Инженерия восприятия</p>
-    <p>Перевожу ценности в визуальный язык</p>
+
     <p>Соболь Екатерина</p>
+    <p>
+      Графический дизайнер с опытом менторства и полиграфической вёрстки
+    </p>
     <p>более 5 лет в графическом дизайне</p>
-    <p>сотрудничество с компаниями из сфер образования, добывающей промышленности</p>
+    <p>брендинг, многостраничные издания, препресс, дизайн мерча и упаковки</p>
+    <p>Ищу проектную работу или штатную должность в продуктовой компании / студии</p>
 
     <ul>
-      <li>Системный ценностно-ориентированный подход: <small>дизайн-решения обоснованы</small></li>
-      <li>Знаю весь процесс препресса <small>вплоть до спуска полос</small></li>
+      <li>Illustrator, Photoshop, InDesign любое аналогичное ПО, они все похожи</li>
+      <li>Вёрстка многостраничных изданий</li>
+      <li>Брендинг и айдентика</li>
       <li>Фронтэнд и UX/UI: <small><a href="https://github.com/katisobol/sobolstudio/">написала</a> этот сайт на&nbsp;<a href="https://jekyllrb.com/">CMS&nbsp;Jekyll</a></small></li>
     </ul>
   </section>
 
 
 
-  <section id="experience"><h2>Опыт, образование</h2></section>
+  <nav class="contact" aria-label="Ключевые ссылки для рекрутинга">
+    <a class="btn" href="/assets/files/%D0%A1%D0%BE%D0%B1%D0%BE%D0%BB%D1%8CCV2026.pdf" download="cv.pdf" aria-label="Скачивание резюме">Скачать резюме</a>
+    <a class="btn" href="#CTA" aria-label="Переход к секции связи">Связаться</a>
+  </nav>
+
+
+
+  <section id="portfolio" class="portfolio">
+    <h1 class="side-text">Портфолио</h1>
+    {% include portfolio.html %}
+  </section>
 
 
 
@@ -48,9 +58,9 @@ extra_css:
         <h3>Adobe Illustrator</h3>
         <h4>Векторная графика</h4>
         <p>Всё что связано с Безье: логотипы, иконки, шрифты</p>
+        <a class="btn" target="_blank" href="https://www.behance.net/gallery/169548731/Logofolio-2023">Логотипы</a>
         <h4>Мелкая полиграфия</h4>
         <p>Визитки, листовки, открытки</p>
-        <a class="btn" target="_blank" href="https://www.behance.net/gallery/169548731/Logofolio-2023">Логотипы</a>
         <a class="btn" href="https://katisobol.github.io/sobolstudio/portfolio/merch/">Мерч</a>
       </li>
       <li class="id">
@@ -98,5 +108,24 @@ extra_css:
     </ul>
 
   </section>
+
+
+
+  <section id="CTA">
+    <h2>Как связаться</h2>
+    <p>Вы можете написать мне на электронную почту или в telegram</p>
+    <div class="message">
+      <p>Здравствуйте, Екатерина!</p>
+      <p>
+        Здорово, что специалисты с системным мышлением действительно существуют. Потому что мы ищем системного дизайнера, который понимает ценности бренда.
+      </p>
+      <p>
+        Пожалуйста, предоставьте резюме. Рассматриваемая позиция:
+      </p>
+    </div>
+    <a href="mailto:kati-sobol@mail.ru?subject=Приглашение на собеседование / Вакансия&body=Здравствуйте, Екатерина!%0D%0A%0D%0AЗдорово, что специалисты с системным мышлением действительно существуют. Потому что мы ищем системного дизайнера, который понимает ценности бренда.%0D%0A%0D%0AКогда вам удобно созвониться, чтобы обсудить детали?%0D%0A%0D%0AПожалуйста, предоставьте резюме. Рассматриваемая позиция::" class="btn cta email">Написать</a>
+    <a href="https://t.me/katisobol" class="tg small">Связаться в&nbsp;tg</a>
+  </section>
+
 
 </main>

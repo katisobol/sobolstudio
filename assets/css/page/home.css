@@ -4,7 +4,7 @@
 
 /* 1. hero-секция */
 @supports (mix-blend-mode: screen) {
-    Добавим потом норм пикчу как светоэффект на главную страницу .home #hero :is(nav, h1, div p, div a) {
+    .home #hero :is(nav, h1, div p, div a) {
         z-index: 2;
     }
     .home #hero::after {
@@ -38,6 +38,7 @@
     display: block;
 }
 
+
 /* Меню главной страницы */
 .home > #hero div.layout:first-child {
     padding: 0 var(--padding);
@@ -56,17 +57,40 @@
     gap: 1rem;
     z-index: 2;
 }
-
-@media (min-width: 769px) {
+.home > #hero nav a {
+    white-space: nowrap;
+}
+.home > #hero nav ul .contacts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: calc(100% - 2rem);
+    font-size: 0.75rem;
+}
+.home > #hero nav .contacts a:link {
+    color: var(--DeepBlue);
+    text-shadow: none;
+}
+/* nav меню стилизовано для десктопной версии */
+@media (min-width: 801px) {
     .home > #hero nav {
         position: relative;
         left: -3rem;
         padding-left: 3rem;
         width: calc(100% + 3rem);
     }
+    .home > #hero nav ul {
+        width: 100%;
+    }
+    .home > #hero nav ul li {
+        width: max-content;
+    }
+    .home > #hero nav .contacts::before {
+        height: 1.25rem;
+    }
 }
-
-@media (max-width: 768px) {
+/* nav Меню стилизовано для Мобильной версии */
+@media (max-width: 800px) {
     .home > #hero nav {
         max-width: max-content;
         padding: 35px 5rem 1rem 35px;
@@ -74,6 +98,9 @@
     }
     .home > #hero nav ul li {
         margin-top: 0 !important;
+    }
+    .home > #hero nav ul .contacts {
+        gap: 1.5em;
     }
     .home > #hero nav ul li a {
         display: inline-flex;
@@ -86,6 +113,7 @@
     background-image: url(../../icons/Kc_logo_full_logo_raster_lght.png);
     filter: drop-shadow(0 0 1.5px cornflowerblue);
 }
+
 .home > #hero nav ul {
     margin: 0;
     padding: 0;
@@ -95,14 +123,7 @@
     margin: 0.5rem 0 0;
 }
 
-.home > #hero nav a,
-.home > #hero nav a:link,
-.home > #hero nav a:visited {
-    color: var(--SoftBlack);
-}
-.home > #hero nav a:hover {
-    color: var(--BrightBlue);
-}
+
 /* Выпадающий блок при наведении */
 .home > #hero nav li::before {
     content: "";
@@ -122,11 +143,23 @@
     width: 100%;
     transition: all 250ms ease-out;
 }
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .home > #hero nav li::before {
     height: 50px;
     }
 }
+
+
+
+.home > #hero nav a,
+.home > #hero nav a:link,
+.home > #hero nav a:visited {
+    color: var(--SoftBlack);
+}
+.home > #hero nav a:hover {
+    color: var(--BrightBlue);
+}
+
 
 .home > #hero h1,
 .home > #hero nav a {
@@ -218,11 +251,6 @@
 
 
 /* 2. Value-секция */
-
-.home > #value {
-    padding-top: 0;
-    row-gap: 0;
-}
 /* украшаю направляющими. Как же проклято выглядят стили, ё-моё */
 .home > #value::before,
 .home > #value::after,
@@ -275,8 +303,6 @@ h2::before {
 }
 */
 
-/* рисую крестики */
-
 .home > #value h2 {
     order: 3;
     font-size: 3vw;
@@ -300,16 +326,17 @@ h2::before {
     }
 }
 
-
-
+/* рисую крестики */
 .home > #value .crosses {
     position: relative;
-    padding: var(--sectiongap) 0 calc(var(--sectiongap) / 2);
+    padding: 0 0 calc(var(--sectiongap) / 2);
     background: none;
     background-repeat: repeat;
 }
-.home > #value .crosses::before{
+.home > #value .crosses::before {
     width: calc(100% + var(--padding));
+    height: calc(100% + var(--sectiongap));
+    top: calc(0px - var(--sectiongap));
 }
 
 .home > #value .layout p {
@@ -448,26 +475,14 @@ h2::before {
 
 .home > #scarcity {
     z-index: -1;
+    position: relative;
 }
 
-.home > #needs {
-    display: none;
-}
-.home > #needs h2 {
-    color: var(--BrightBlue);
-}
-.home > #needs p {
-    color: var(--DeepBlue);
-}
-
-/* скрытая philosophy-секция; снесу её когда-нибудь */
-
-#philosophy h3 {
-    grid-column: 1;
-}
-
-#philosophy p {
-    grid-column: 2 / -1;
+.home > #scarcity .outline {
+    position: absolute;
+    bottom: 1em; right: 0;
+    --outlineColor: black;
+    color: var(--SoftBlack);
 }
 
 .home > #CTA {
@@ -483,13 +498,56 @@ h2::before {
 }
 
 
-.home div.scales {
-    position: relative;
-    height: 24px;
+
+.home > #blog .tg-post {
+    grid-column: span 4;
+    width: 100%;
+    max-height: 50vh;
+    overflow-y: scroll;
+    padding-top: calc(var(--sectiongap) / 2);
+    background: url(../../img/page/home/hero5.jpg) center / cover;
+    box-shadow:
+        inset 50px 35px 65px 0 hsla(40, 100%, 50%, 0.05),
+        inset 35px 50px 65px 0 hsla(220, 100%, 50%, 0.05),
+        inset 15px 5px 15px 10px hsla(40, 100%, 5%, 0.35),
+        inset 5px 15px 15px 10px hsla(220, 100%, 5%, 0.35),
+        inset 3.5px 1.5px 1.5px -2px hsla(40, 100%, 5%, 0.65),
+        inset 1.5px 3.5px 1.5px -2px hsla(220, 100%, 5%, 0.65);
+}
+@supports (height: 50svh) {
+    .home > #blog .tg-post {
+        max-height: 50svh;
+    }
 }
 
-.home div > img.colorbar {
-    position: absolute;
-    right: 24px;
-    bottom: 24px;
+.home > #blog iframe {
+    margin-top: 0.25rem;
+    color-scheme: none !important;
+}
+
+.home > #blog {
+    overflow: visible;
+}
+
+.home > #blog .subscribe {
+    grid-column: span 1;
+    overflow: visible;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+    gap: 0.5rem;
+    color: slategray;
+}
+
+.home > #blog .subscribe .tg {
+    overflow: visible;
+    margin-right: 0;
+}
+@media (max-width: 1080px) {
+    .home > #blog {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
 }

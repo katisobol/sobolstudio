@@ -56,7 +56,7 @@
 }
 /* Расстояние между колонками */
 :root {
-    --columngap: 4rem;
+    --columngap: calc(var(--sectiongap) / 2);
 }
 @media (max-width: 1200px) {
     :root {
@@ -68,10 +68,14 @@ ul, ol, dl {
     margin: 0;
 }
 
-/* Размещает поля */
+/* Размещает поля, если я вдруг что-то дропну прямо в body (удалить?) */
 body > :is(main, section, header, footer, article, aside, nav, blockquote, figure, details, pre, table, fieldset, form, address, dl) {
     padding: var(--sectiongap) var(--padding);
     position: relative;
+}
+section, aside {
+    padding-top: var(--sectiongap);
+    padding-bottom: var(--sectiongap);
 }
 body > :is(p, h1, h2, h3, h4, h5, h6, ul, ol, blockquote, pre, table, dl, hr, address, details, figure, figcaption) {
     margin-left: var(--padding);
@@ -80,10 +84,6 @@ body > :is(p, h1, h2, h3, h4, h5, h6, ul, ol, blockquote, pre, table, dl, hr, ad
 
 * > article {
     padding: calc(var(--sectiongap) / 2) 0;
-}
-
-:not(body) > section + :is(section, article, aside) {
-    margin-top: calc(var(--sectiongap) * 2);
 }
 
 
@@ -109,7 +109,7 @@ dl,
     grid-template-columns: var(--grid);
     grid-auto-flow: row;
     column-gap: var(--columngap);
-    row-gap: 0;
+    row-gap: 1.5rem;
 }
 
 @media (max-width: 1024px) {

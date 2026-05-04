@@ -1,3 +1,5 @@
+@import url(input.css);
+
 /* Стандартная кнопка с логотипом */
 .logo {
     display: inline-block;
@@ -18,7 +20,10 @@
     }
 }
 
-/*текстовая врезка с названием секции */
+
+
+/* Side Text */
+
 @media (min-width: 769px) {
     .side-text {
         position: absolute;
@@ -31,19 +36,27 @@
         font-size: 0.75rem;
         white-space: nowrap;
         rotate: -90deg;
-        color: silver;
+        color: slategray;
         z-index: 2;
+        cursor: vertical-text;
     }
 }
 @media (max-width: 768px) {
     .side-text {
-        display: block;
-        position: unset;
+        position: absolute;
+        right: 0; bottom: calc(var(--sectiongap) / 2);
+        color: rgba(0, 0, 0, 0.65);
+        font-family: Unovis100;
     }
 }
 *:has(.side-text) {
     position: relative;
 }
+.white .side-text {
+    color: var(--Golden);
+}
+
+
 
 hr {
     border: solid 1.5px hsla(0, 0%, 0%, 0.35);
@@ -51,17 +64,17 @@ hr {
 }
 
 
+
 table td, table th {
     text-align: left;
     vertical-align: top;
 }
 
-
-
 td + td,
 th + td {
     padding-left: var(--columngap);
 }
+
 
 
 dl {
@@ -79,11 +92,10 @@ dl {
     }
 }
 
-.case article dl dt {
+dl dt {
     grid-column: 1;
 }
 
-.case article,
 dl dd {
     grid-column-start: 2;
     margin: 0;

@@ -11,6 +11,7 @@ images:
   - /assets/img/portfolio/patent-landscape/spread3.jpg
   - /assets/img/portfolio/patent-landscape/spread4.jpg
 excerpt: "Системная вёрстка патентного ландшафта для Роснефти: 370+ страниц, сложная инфографика, перекрёстные ссылки и полный препресс. Показываю, как сделать многостраничник удобным для чтения и печати без бесконечных правок"
+tgID: 76
 size: 1
 
 ---

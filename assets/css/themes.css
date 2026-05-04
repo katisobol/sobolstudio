@@ -1,9 +1,9 @@
 :root {
     --SoftBlack: #1a1a1a; /* hsl(0, 0%, 10%) */
-    --DeepBlue: #1a305b; /* hsl(220, 55%, 23%) */
+    --DeepBlue: #0a335c; /* hsl(210, 80%, 20%) */
     --CosmicLatte: #fff8e7; /* Цвет текста */
     --BrightBlue: #194cb3; /* Цвет ссылки hsl(220, 75%, 40%) */
-    --Golden: #d7a542; /* hsl(40, 65%, 55%) */
+    --Golden: #e2a52e; /* hsl(40, 65%, 55%) */
 }
 
 /* тенюшки под текст */
@@ -34,6 +34,11 @@ body, .paper {
 
 body, .blk {
     background-color: var(--SoftBlack);
+}
+
+mark {
+    color: var(--Golden);
+    background-color: transparent;
 }
 
 .crosses * {
@@ -69,6 +74,7 @@ body, .blk {
     font-family: Unovis100;
     letter-spacing: unset;
     font-size: calc(3rem + 5vw);
+    line-height: 0.45;
 }
 
 @supports (mix-blend-mode: hard-light) {
@@ -108,12 +114,13 @@ body, .blk {
     }
 
     .outline {
+        --outlineColor: silver;
         color: grey;
         text-shadow:
-            1.5px 1.5px 0 silver,
-            -1.5px -1.5px 0 silver,
-            -1.5px 1.5px 0 silver,
-            1.5px -1.5px 0 silver;
+            1.5px 1.5px 0 var(--outlineColor),
+            -1.5px -1.5px 0 var(--outlineColor),
+            -1.5px 1.5px 0 var(--outlineColor),
+            1.5px -1.5px 0 var(--outlineColor);
         mix-blend-mode: overlay;
         pointer-events: none;
     }
@@ -172,6 +179,9 @@ body, .blk {
         .btn:visited
     )::before {
     border-color: var(--SoftBlack);
+}
+.white.btn.email::after {
+    color: var(--CosmicLatte);
 }
 
 .white :is(button, .btn, input, button):hover::before,
@@ -240,5 +250,5 @@ body, .blk {
 .blueprint h2,
 .blueprint h3,
 .blueprint h4 {
-    color: white;
+    color: var(--CosmicLatte);
 }

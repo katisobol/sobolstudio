@@ -39,6 +39,8 @@
     }
 }
 
+
+
 /* Стикер-галерея */
 
 .case article .gallery.stickers {
@@ -69,7 +71,30 @@
     margin-top: calc(var(--sectiongap) / 2)
 }
 
+
+
+/* Галерея-мудборд */
+
+.case article .gallery.moodboard {
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    grid-auto-flow: dense;
+    gap: 0;
+}
+
+.case article .gallery.moodboard::before {content: unset;}
+
+.case article .gallery.moodboard img {
+    grid-column: span 1;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    filter: unset;
+}
+
 /* Инфографика, совмещающая три слоя */
+
 .case article .infographic {
     position: relative;
     display: block;

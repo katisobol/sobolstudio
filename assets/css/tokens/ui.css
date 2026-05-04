@@ -109,33 +109,41 @@ details[open] > summary::before {
 }
 
 
+
+abbr {
+    cursor: help;
+    text-decoration-color: var(--Golden);
+}
+
+
 /* КНОПКИ */
 
 button,
 input[type="button"],
 input[type="submit"],
 input[type="reset"],
-.btn,
-.btn:link,
-.btn:visited,
-.btn:hover {
+.btn {
+    position: relative;
+    width: max-content; height: 50px;
+    padding: 0 calc(var(--sectiongap) / 1.5);
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    height: 50px;
-    margin: 1.5rem 0;
-    padding: 0 4em;
     font-family: Santello, Raleway;
-    position: relative;
-    transition: 150ms ease;
-    width: max-content;
+    color: var(--CosmicLatte);
     cursor: pointer;
     background: transparent;
     border: none;
-    text-decoration: none;
     z-index: 2;
-    color: var(--CosmicLatte);
     white-space: nowrap;
+    transition: 150ms ease;
+}
+
+.btn:link,
+.btn:visited,
+.btn:hover {
+    color: var(--CosmicLatte);
+    text-decoration: none;
 }
 
 :is(input[type="button"], input[type="submit"], input[type="reset"], button, .btn, .btn:link, .btn:visited)::before {
@@ -158,35 +166,14 @@ input[type="reset"],
 :is(button, .btn):active::before {
     left: 50%;
     background-color: var(--DeepBlue);
-    border-color: transparent;
+    border-color: hsla(220, 75%, 40%, 0);
 }
 
-/* Кнопки социальных сетей   */
-
-.social,
-.social:link,
-.social:visited {
-    font-size: 0.75rem;
-    color: var(--CosmicLatte);
-    padding: 0.2rem;
-    margin: 0 0.5rem;
-    height: 2rem;
-    width: 2rem;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    background-color: var(--CosmicLatte);
-    transition: all 0.15s ease;
-    border-left: solid var(--BrightBlue) 2.5px;
-    border-top: solid var(--BrightBlue) 2.5px;
-    border-bottom: solid var(--BrightBlue) 2.5px;
-}
 
 /* на все элементы с target blank вешаем специальную иконку */
-
+:not(.social)[target="_blank"] {
+    position: relative;
+}
 :not(.social)[target="_blank"]::after {
     content: url(../../icons/icon_newTab.svg);
     position: absolute;
@@ -197,17 +184,72 @@ input[type="reset"],
     object-fit: contain;
     pointer-events: none;
 }
-.btn[target="_blank"]::after {
+:not(.btn, .social, .portfolio-card)[target="_blank"]::after{
+    right: -1em;
+    top: 0;
+}
+:not(.social, .portfolio-card)[target="_blank"]::after {
     opacity: 0;
 }
-.btn[target="_blank"]:hover::after {
+[target="_blank"]:hover::after {
     opacity: 1;
     transition: all 250ms ease;
 }
 
-.social img {
-    height: 100%;
-    z-index: 1;
+/* кнопка с емейлом */
+.btn.email::after {
+    position: absolute;
+    right: 0.75rem;
+    color: var(--SoftBlack);
+    content: "@";
+    font-family: "Santello";
+    font-weight: bold;
+    font-size: 28px;
+    padding-bottom: 0.15em;
+    z-index: -1;
+}
+
+
+/* Все кнопки скачивания со стрелочкой вниз */
+.btn[download]::before {
+    content: "↓";
+    color: transparent;
+    padding-right: calc(var(--sectiongap) / 1.5 - 1rem);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.btn[download]:hover::before {
+    color: var(--SoftBlack);
+}
+
+/* Кнопки социальных сетей   */
+
+.social,
+.social:link,
+.social:visited {
+    position: relative;
+    height: 2rem;
+    width: 2rem;
+    padding: 0.2rem;
+    display: inline-block;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: var(--CosmicLatte);
+    border: solid var(--BrightBlue) 2.5px;
+    border-right: none;
+    transition: all 0.15s ease;
+}
+
+.blue.social,
+.white .social {
+    background-color: var(--BrightBlue);
+    border-color: var(--SoftBlack);
+}
+:is(.blue.social,
+.white .social):hover {
+    border-color: var(--Golden);
+    border: solid var(--Golden) 0;
 }
 
 .social:before {
@@ -225,4 +267,32 @@ input[type="reset"],
     content: "";
     width: 100%;
     background-color: var(--BrightBlue);
+}
+:is(.blue.social,
+.white .social):hover::before {
+    background-color: var(--Golden);
+}
+
+@supports (mask-composite: exclude) {
+    .social.tg {
+        mask-image: linear-gradient(white, white), url(#tg-mask);
+        mask-composite: exclude;
+        mask-mode: luminance;
+        mask-size: contain;
+        mask-position: center;
+        mask-origin: content-box;
+    }
+}
+
+@supports not (mask-composite: exclude) {
+    .social.tg::after {
+        content: "";
+        position: relative;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-image: url(../../icons/Telegram_black_logo.svg);
+    }
 }

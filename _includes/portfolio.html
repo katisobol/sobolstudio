@@ -1,12 +1,7 @@
 <!-- Скрипт добавляет карточки -->
 {% for case in site.portfolio reversed %}
 <!-- Скрипт увеличит карточку если добавить в кейс переменную size -->
-  <a class="portfolio-card case
-            {% if case.size %}
-            size{{ case.size }}
-            {% endif %}
-            "
-  href="{{ case.url | relative_url }}"
+  <a class="portfolio-card case{% if case.size %}-size{{ case.size }}{% endif %}" href="{{ case.url | relative_url }}"
 
 
   {% if case.thumbnail %}

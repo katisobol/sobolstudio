@@ -37,6 +37,4 @@
     </div>
     <img src="{{ include.image | relative_url }}" alt="{{ include.alt | default: 'post image' }}" />
   </div>
-{% else %}
-  <p class="error-message">Изображение не указано</p>
 {% endif %}

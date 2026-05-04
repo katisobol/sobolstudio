@@ -1,0 +1,205 @@
+/* Токены состояний (модификаторы) */
+
+input,
+textarea {
+    color: silver;
+    height: 50px;
+    caret-color: var(--CosmicLatte);
+}
+
+input:focus,
+textarea:focus {
+    color: var(--CosmicLatte);
+    text-shadow: 0.5px 1px 1px black;
+    outline: none;
+}
+
+/* Ввод текста */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+input[type="url"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+textarea {
+    background-color: hsla(218, 100%, 1%, 0.1);
+    border: none;
+    box-shadow:
+        -0.5rem -0.5rem 0.75rem hsla(30, 35%, 20%, 0.15),
+        0.25rem 0.25rem 0.5rem hsla(218, 100%, 5%, 0.15),
+        inset -0.5rem -0.5rem 2rem hsla(30, 35%, 20%, 0.05),
+        inset 0.5rem 0.5rem 2rem hsla(218, 100%, 5%, 0.35),
+        inset 0.5px 0.5px 0.75px hsla(218, 100%, 1%, 0.65);
+    padding-left: 1.5em;
+    font-family: Santello, Raleway;
+}
+textarea {
+    padding: 1.5em 1em 1em 1.5em;
+}
+
+:is(
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+input[type="url"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="time"]
+):is(
+:hover,:focus
+) {
+    box-shadow:
+        -0.15rem -0.15rem 0.34rem hsla(30, 35%, 20%, 0.25),
+        0.25rem 0.25rem 0.5rem hsla(218, 100%, 5%, 0.15),
+        inset -0.5rem -0.5rem 1rem hsla(30, 35%, 20%, 0.1),
+        inset 1rem 1rem 3rem hsla(218, 100%, 5%, 0.35),
+        inset 0.25em 0.25em 0.5em hsla(218, 100%, 5%, 0.65);
+}
+
+input:required {
+    position: relative;
+}
+input:required::after {
+    content: "*";
+    position: absolute;
+    right: 1.5em;
+    color: black;
+}
+
+input[type="search"] {
+    height: 3em;
+    font-family: Santello, Raleway;
+}
+
+input:focus-visible {
+  /* Фокус для клавиатурной навигации */
+}
+
+
+input:disabled {
+    color: slategray;
+}
+
+input:readonly {
+  /* Только для чтения */
+}
+
+input:optional {
+  /* Необязательное поле */
+}
+
+input:valid {
+  /* Валидное значение */
+}
+
+input:invalid {
+    background-color: maroon;
+    background-image: url(../../img/patterns/paperTxtr.png);
+    color: var(--CosmicLatte);
+    text-shadow: 0.5px 1px 1px black;
+}
+input:invalid::after {
+    content: "← Исправьте, пожалуйста!";
+}
+
+input:placeholder-shown {
+  /* Отображается плейсхолдер */
+}
+
+input:checked {
+  /* Для checkbox/radio: выбран */
+}
+
+input:indeterminate {
+  /* Для checkbox: неопределённое состояние */
+}
+
+input:default {
+  /* Значение по умолчанию */
+}
+
+input:autofill {
+  /* Автозаполнение браузером */
+}
+
+/* Токены типов (при необходимости) */
+input:text {
+}
+
+input:password {
+}
+
+input:number {
+}
+
+input:email {
+}
+
+input:search {
+}
+
+input:checkbox {
+}
+
+input:radio {
+}
+
+input:range {
+}
+
+input:file {
+}
+
+input:button {
+}
+
+input:submit {
+}
+
+input:reset {
+}
+
+input:color {
+}
+
+input:date {
+}
+
+/* Токены размеров */
+input:small {
+}
+
+input:medium {
+}
+
+input:large {
+}
+
+/* Токены тем/вариантов */
+input:primary {
+}
+
+input:secondary {
+}
+
+input:outline {
+}
+
+input:ghost {
+}
+
+
+input[type="search"] {
+    background-color: transparent;
+    border: none;
+    border-bottom: solid 1.5px var(--CosmicLatte);
+}

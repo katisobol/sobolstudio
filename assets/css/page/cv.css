@@ -2,24 +2,50 @@
     --cardborder: var(--BrightBlue);
 }
 
-.cv #about, #experience {
-    display: none;
-}
-
 .cv header nav ul::after {
     content: " / Портфолио";
     color: slategray;
 }
 
-.cv section .side-text {
-    bottom: 0;
-}
 
 @media (max-width: 1079px) {
     .cv #skills .portfolio {
         --columngap: 2.5rem;
         gap: 1.5rem;
     }
+}
+
+.cv .contact {
+    position: fixed;
+    bottom: 0; right: 0;
+    min-width: var(--padding); height: max-content;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    z-index: 3;
+    padding: 1.5rem;
+    opacity: 0.35;
+}
+.cv .contact:hover {
+    opacity: 1;
+}
+
+.cv .contact:hover .btn {
+    background-color: var(--SoftBlack);
+}
+
+.cv .contact .btn[download]::after {
+    content: ".pdf";
+    color: var(--BrightBlue);
+    transition: all 150ms ease;
+}
+.cv .contact .btn[download]:hover::after {
+    color: var(--CosmicLatte);
+}
+
+
+.cv .portfolio + #skills {
+    margin-top: calc(var(--sectiongap) * 1.5);
 }
 
 .cv #skills h2 {
@@ -32,6 +58,7 @@
 .cv #skills ul {
     grid-template-columns: repeat(5, auto);
     padding-left: 0;
+    padding-bottom: 0;
 }
 
 .cv #skills ul li {
@@ -59,9 +86,8 @@
 }
 
 .cv #skills .btn {
-    margin: 0;
-    margin-top: 1em;
-    margin-right: 0.5em;
+    height: 2.75rem;
+    margin: 1em 0.5em 0 0;
     padding: 0.5em 2em;
     border-radius: 1.5em;
     min-width: 10em; max-width: 100%;
@@ -82,9 +108,13 @@
     top: -0.25rem;
 }
 
-.cv #skills ul li details :is(h4, p) {
-    font-family: Raleway;
+.cv #skills ul li h4 {
+    color: var(--cardborder);
     font-size: 0.75rem;
+}
+
+.cv #skills ul li a + h4 {
+    margin-top: 2em;
 }
 
 .cv #skills * + details {
@@ -153,4 +183,62 @@
 .cv #skills ul li.ch {
     grid-column: span 1;
     --cardborder: #9B9BFF;
+}
+
+
+
+.cv #CTA {
+    align-items: end;
+    gap: 1.5rem;
+}
+
+.cv #CTA .message {
+    position: relative;
+    width: 100%;
+    background-color: var(--DeepBlue);
+    grid-column: 1 / 5;
+    padding: 1.25rem 1.5rem;
+    border-radius: 0.5rem;
+}
+/* CSS-треугольник на десктоп */
+.cv #CTA .message::after {
+    content: "";
+    position: absolute;
+    bottom: 0.5rem; right: -1.5rem;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 1.5rem 1.5rem 0 0;
+    border-color: var(--DeepBlue) transparent transparent transparent;
+}
+
+.cv #CTA a {
+    grid-column: 5;
+}
+.cv #CTA .tg {
+    text-align: right;
+}
+/* На мобилки */
+@media (max-width: 800px) {
+    .cv #CTA {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .cv #CTA .message {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+    .cv #CTA .message::after {
+        content: "";
+        position: absolute;
+        bottom: -1.5rem; right: calc(var(--sectiongap) / 1.5);
+        width: 0; height: 0;
+        border-style: solid;
+        border-width: 1.5rem 1.5rem 0 0;
+        border-color: var(--DeepBlue) transparent transparent transparent;
+    }
+    .cv #CTA .tg {
+        padding-right: calc(var(--sectiongap) / 2.5);
+    }
 }
