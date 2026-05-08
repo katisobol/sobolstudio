@@ -16,10 +16,10 @@
 }
 
 .cv .contact {
+    display: none;
     position: fixed;
     bottom: 0; right: 0;
     min-width: var(--padding); height: max-content;
-    display: flex;
     flex-direction: column;
     gap: 1.5rem;
     z-index: 3;
