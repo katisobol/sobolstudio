@@ -396,23 +396,23 @@ h2::before {
 
 /* секция портфолио */
 
-.home > #portfolio .portfolio-card.heading {
+.portfolio-card.heading {
     grid-column: 5;
     grid-row: 2;
     padding-right: 1.75rem;
 }
 @media (max-width: 1079px) {
-    .home > #portfolio .portfolio-card.heading {
+    .portfolio-card.heading {
         min-width: 100px;
     }
 }
 @media (min-width: 1201px) {
-    .home > #portfolio .portfolio-card.heading {
+    .portfolio-card.heading {
         padding-right: calc(1.25rem + 12.5%);
     }
 }
 
-.home > #portfolio .portfolio-card.heading h2 {
+.portfolio-heading {
     rotate: -90deg;
     position: absolute;
     right: 0.95em;
@@ -427,19 +427,19 @@ h2::before {
     pointer-events: none;
 }
 
-.home > #portfolio .small {
+.portfolio-description {
     margin-top: 0;
     position: relative;
     top: -0.35em;
     font-family: Santello;
 }
 @media (min-height: 1201px) {
-    .home > #portfolio .small {
+    .portfolio-description {
         line-height: 2.25cqh;
     }
 }
 @media (min-width: 1500px) {
-    .home > #portfolio .heading .small::after {
+    .portfolio-description::after {
         content: ". Дизайн должен показывать ценность или качество";
     }
 }
@@ -451,51 +451,7 @@ h2::before {
     margin: 0;
     width: 100%;
 }
-.home > #portfolio .btn {
-    padding: unset;
-}
-@media (min-width: 1800px) {
-    .home > :is(#likeability, #scarcity, #commitment) p {
-        grid-column-start: 2;
-    }
-}
 
-
-
-
-.home > #likeability {
-    background-image: url(../../img/page/home/claudio-guglieri-YITqbi1T64Q-unsplash.jpg);
-    background-size: cover;
-}
-
-.home > #likeability h2.outline {
-    bottom: calc(0.35em - var(--sectiongap));
-    right: 0;
-}
-
-.home > #scarcity {
-    z-index: -1;
-    position: relative;
-}
-
-.home > #scarcity .outline {
-    position: absolute;
-    bottom: 1em; right: 0;
-    --outlineColor: black;
-    color: var(--SoftBlack);
-}
-
-.home > #CTA {
-    position: relative;
-}
-@media (max-width: 768px) {
-    .home > #CTA h2 {
-        display: none;
-    }
-}
-.home > #CTA * + small {
-    margin-top: 0.25rem;
-}
 
 
 
