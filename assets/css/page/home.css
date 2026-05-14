@@ -1,13 +1,13 @@
-.home > header {
+header {
     display: none;
 }
 
 /* 1. hero-секция */
 @supports (mix-blend-mode: screen) {
-    .home #hero :is(nav, h1, div p, div a) {
+    #hero :is(nav, h1, div p, div a) {
         z-index: 2;
     }
-    .home #hero::after {
+    #hero::after {
         content: "";
         display: block;
         position: absolute;
@@ -21,14 +21,14 @@
         background-size: contain;
     }
     @media (max-width: 768px){
-        .home #hero::after{
+        #hero::after{
             bottom: 0; left: 0;
             width: 100%; height: 50%;
         }
     }
 }
 
-.home > #hero {
+#hero {
     background-image: url(../../img/page/home/hero3.png);
     background-position-y: top;
     background-attachment: fixed;
@@ -40,11 +40,11 @@
 
 
 /* Меню главной страницы */
-.home > #hero div.layout:first-child {
+#hero div.layout:first-child {
     padding: 0 var(--padding);
 }
 
-.home > #hero nav {
+#hero nav {
     grid-column: 3 / -1;
     position: relative;
     padding: 1rem; padding-top: 24px;
@@ -57,75 +57,75 @@
     gap: 1rem;
     z-index: 2;
 }
-.home > #hero nav a {
+#hero nav a {
     white-space: nowrap;
 }
-.home > #hero nav ul .contacts {
+#hero nav ul .contacts {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: calc(100% - 2rem);
     font-size: 0.75rem;
 }
-.home > #hero nav .contacts a:link {
+#hero nav .contacts a:link {
     color: var(--DeepBlue);
     text-shadow: none;
 }
 /* nav меню стилизовано для десктопной версии */
 @media (min-width: 801px) {
-    .home > #hero nav {
+    #hero nav {
         position: relative;
         left: -3rem;
         padding-left: 3rem;
         width: calc(100% + 3rem);
     }
-    .home > #hero nav ul {
+    #hero nav ul {
         width: 100%;
     }
-    .home > #hero nav ul li {
+    #hero nav ul li {
         width: max-content;
     }
-    .home > #hero nav .contacts::before {
+    #hero nav .contacts::before {
         height: 1.25rem;
     }
 }
 /* nav Меню стилизовано для Мобильной версии */
 @media (max-width: 800px) {
-    .home > #hero nav {
+    #hero nav {
         max-width: max-content;
         padding: 35px 5rem 1rem 35px;
         background-color: rgba(255, 255, 255, 0.25);
     }
-    .home > #hero nav ul li {
+    #hero nav ul li {
         margin-top: 0 !important;
     }
-    .home > #hero nav ul .contacts {
+    #hero nav ul .contacts {
         gap: 1.5em;
     }
-    .home > #hero nav ul li a {
+    #hero nav ul li a {
         display: inline-flex;
         align-items: center;
         min-height: 50px;
     }
 }
 
-.home > #hero .logo {
+#hero .logo {
     background-image: url(../../icons/Kc_logo_full_logo_raster_lght.png);
     filter: drop-shadow(0 0 1.5px cornflowerblue);
 }
 
-.home > #hero nav ul {
+#hero nav ul {
     margin: 0;
     padding: 0;
 }
-.home > #hero nav ul li {
+#hero nav ul li {
     list-style-type: none;
     margin: 0.5rem 0 0;
 }
 
 
 /* Выпадающий блок при наведении */
-.home > #hero nav li::before {
+#hero nav li::before {
     content: "";
     position: absolute;
     left: 0;
@@ -138,31 +138,31 @@
     z-index: -1;
     transition: all 250ms ease-in;
 }
-.home > #hero nav :is(li:hover, li.active)::before {
+#hero nav :is(li:hover, li.active)::before {
     content: "";
     width: 100%;
     transition: all 250ms ease-out;
 }
 @media (max-width: 800px) {
-    .home > #hero nav li::before {
+    #hero nav li::before {
     height: 50px;
     }
 }
 
 
 
-.home > #hero nav a,
-.home > #hero nav a:link,
-.home > #hero nav a:visited {
+#hero nav a,
+#hero nav a:link,
+#hero nav a:visited {
     color: var(--SoftBlack);
 }
-.home > #hero nav a:hover {
+#hero nav a:hover {
     color: var(--BrightBlue);
 }
 
 
-.home > #hero h1,
-.home > #hero nav a {
+#hero h1,
+#hero nav a {
     text-shadow:
         0 0 50px cornflowerblue,
         0 0 10px var(--CosmicLatte),
@@ -170,7 +170,7 @@
         0 0 0.5px yellow;
 }
 
-.home > #hero .outline {
+#hero .outline {
     display: block;
     position: relative;
     left: unset; top: -1.23em;
@@ -183,12 +183,12 @@
 }
 
 @media (max-width: 768px) {
-    .home > #hero .outline {
+    #hero .outline {
         font-size: 9vw;
     }
 }
 
-.home > #hero h1 {
+#hero h1 {
     position: relative;
     margin: calc(var(--sectiongap) / 2) auto;
     padding: 0 var(--padding);
@@ -197,7 +197,7 @@
     max-width: 1400px;
 }
 @media (max-width: 768px) {
-    .home > #hero h1 {
+    #hero h1 {
         text-shadow:
         0 0 100px cornflowerblue,
         0 0 65px var(--CosmicLatte),
@@ -207,12 +207,12 @@
     }
 }
 
-.home > #hero .layout *,
-.home > #hero .layout p {
+#hero .layout *,
+#hero .layout p {
     grid-column: 3 / -1;
 }
 
-.home > #hero div.blk.paper {
+#hero div.blk.paper {
     display: grid;
     grid-template-columns: var(--grid);
     color: var(--CosmicLatte);
@@ -223,13 +223,13 @@
     padding: 2rem var(--padding) var(--sectiongap);
 }
 
-.home > #hero div.blk.paper div {
+#hero div.blk.paper div {
     position: relative;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
 }
-.home > #hero div.blk.paper .side-text {
+#hero div.blk.paper .side-text {
     position: absolute;
     top: 10em;
     left: -3rem;
@@ -239,12 +239,12 @@
 }
 
 @media (max-width: 768px) {
-    .home > #hero div.blk.paper .side-text {
+    #hero div.blk.paper .side-text {
         display: none;
     }
 }
 
-.home > #hero div.blk.paper .btn {
+#hero div.blk.paper .btn {
     margin-bottom: 0;
 }
 
@@ -252,10 +252,10 @@
 
 /* 2. Value-секция */
 /* украшаю направляющими. Как же проклято выглядят стили, ё-моё */
-.home > #value::before,
-.home > #value::after,
-.home > #value ul::before,
-.home > #value ul::after {
+.value::before,
+.value::after,
+.value ul::before,
+.value ul::after {
     content: url(../../img/patterns/guides.svg);
     position: absolute;
     opacity: 0.35;
@@ -264,30 +264,30 @@
     overflow: visible;
     grid-column: 1 / -1;
 }
-.home > #value::before {
+.value::before {
     left: 0;
     top: var(--sectiongap);
     rotate: 180deg;
 }
-.home > #value::after {
+.value::after {
     right: 0;
     top: var(--sectiongap);
     rotate: -90deg;
 }
-.home > #value ul::before {
+.value ul::before {
     left: 0;
     bottom: var(--sectiongap);
     rotate: 90deg;
 }
-.home > #value ul::after {
+.value ul::after {
     right: 0;
     bottom: var(--sectiongap);
 }
 @media screen and (max-width: 768px) {
-    .home > #value::before,
-    .home > #value::after,
-    .home > #value ul::before,
-    .home > #value ul::after {
+    .value::before,
+    .value::after,
+    .value ul::before,
+    .value ul::after {
         display: none;
     }
 }
@@ -303,7 +303,7 @@ h2::before {
 }
 */
 
-.home > #value h2 {
+.value h2 {
     order: 3;
     font-size: 3vw;
     text-indent: -12vw;
@@ -311,40 +311,40 @@ h2::before {
     margin-top: 3rem;
 }
 @supports (text-indent: calc(10px + var(--columngap))) {
-    .home > #value h2 {
+    .value h2 {
         text-indent: calc(0px - (100% - (var(--columngap) * 3)) / 4 - var(--columngap));
     }
 }
 @media (max-width: 768px) {
-    .home > #value h2 {
+    .value h2 {
         text-indent: 0;
     }
 }
 @media (max-width: 1024px) {
-    .home > #value h2 {
+    .value h2 {
         font-size: 2.5rem;
     }
 }
 
 /* рисую крестики */
-.home > #value .crosses {
+.value .crosses {
     position: relative;
     padding: 0 0 calc(var(--sectiongap) / 2);
     background: none;
     background-repeat: repeat;
 }
-.home > #value .crosses::before {
+.value .crosses::before {
     width: calc(100% + var(--padding));
     height: calc(100% + var(--sectiongap));
     top: calc(0px - var(--sectiongap));
 }
 
-.home > #value .layout p {
+.value .layout p {
     grid-column-start: 2 !important;
 }
 
-.home > #value p.strong,
-.home > #value h3 {
+.value p.strong,
+.value h3 {
     color: var(--Golden);
     font-family: AvantGarde, Santello, Raleway;
     letter-spacing: 0.03em;
@@ -352,12 +352,12 @@ h2::before {
     text-shadow: var(--textShadow);
 }
 
-.home > #value h3 {
+.value h3 {
     grid-column-start: 2;
     margin: 0 0 0.5rem;
 }
 
-.home > #value ul {
+.value ul {
     grid-column: 2 / -1;
     grid-template-columns: 3 / -1;
     display: flex;
@@ -369,16 +369,16 @@ h2::before {
     gap: var(--columngap);
 }
 
-.home > #value li {
+.value li {
     list-style-type: none;
     height: auto;
 }
 
-.home > #value li p {
+.value li p {
     margin-bottom: 0;
 }
 
-.home > #value h3 {
+.value h3 {
     color: var(--Golden);
     display: flex;
     align-items: flex-end;
@@ -387,7 +387,7 @@ h2::before {
 }
 
 @media (max-width: 1024px) {
-    .home > #value ul {
+    .value ul {
         grid-column-start: 1;
     }
 }
@@ -444,7 +444,7 @@ h2::before {
     }
 }
 
-.home > #portfolio .btn {
+.portfolio-btn {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -455,7 +455,7 @@ h2::before {
 
 
 
-.home > #blog .tg-post {
+#blog .tg-post {
     grid-column: span 4;
     width: 100%;
     max-height: 50vh;
@@ -471,21 +471,21 @@ h2::before {
         inset 1.5px 3.5px 1.5px -2px hsla(220, 100%, 5%, 0.65);
 }
 @supports (height: 50svh) {
-    .home > #blog .tg-post {
+    #blog .tg-post {
         max-height: 50svh;
     }
 }
 
-.home > #blog iframe {
+#blog iframe {
     margin-top: 0.25rem;
     color-scheme: none !important;
 }
 
-.home > #blog {
+#blog {
     overflow: visible;
 }
 
-.home > #blog .subscribe {
+#blog .subscribe {
     grid-column: span 1;
     overflow: visible;
     display: flex;
@@ -496,12 +496,12 @@ h2::before {
     color: slategray;
 }
 
-.home > #blog .subscribe .tg {
+#blog .subscribe .tg {
     overflow: visible;
     margin-right: 0;
 }
 @media (max-width: 1080px) {
-    .home > #blog {
+    #blog {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
