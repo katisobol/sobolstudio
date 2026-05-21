@@ -24,18 +24,16 @@
         --sectiongap: clamp(120px, 10vh, 200px);
     }
 }
-@media handheld, (max-width: 768px) {
+@media (max-width: 768px) {
     :root {
         --sectiongap: 10vh;
     }
-}
-/* Новомодные единицы */
-@media (hover: none) and (pointer: coarse) {
-  @supports (height: 1svh) {
-    :root {
-        --sectiongap: 10svh;
+    /* Новомодные единицы */
+    @supports (height: 1svh) {
+        :root {
+            --sectiongap: 10svh;
+        }
     }
-  }
 }
 
 /* Сетка исчезает на узкой странице */

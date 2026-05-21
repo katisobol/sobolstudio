@@ -189,4 +189,3 @@ p, .p
 .typo :is(h3, .h3, h4, .h4, fieldset, form, table, ul, ol, dl) + :is(fieldset, form, table, ul, ol, dl) {
     margin-top: 1rem;
 }
-

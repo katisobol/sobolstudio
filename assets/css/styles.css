@@ -27,6 +27,11 @@ body {
     overflow-x: hidden;
 }
 
+/* создаю технический класс для скипа элемента в стилизации */
+.contents {
+    display: contents;
+}
+
 img, table {
     max-width: 100%;
 }

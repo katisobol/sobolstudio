@@ -57,6 +57,13 @@
 }
 
 
+/* специальный класс возвращает стандартное оформление */
+ul:not(.list) {
+    list-style: none;
+    padding-left: 0;
+}
+
+
 
 hr {
     border: solid 1.5px hsla(0, 0%, 0%, 0.35);
