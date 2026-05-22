@@ -2,7 +2,7 @@
 
 title: Системная вёрстка патентного ландшафта для Роснефти
 date: 2026-04-10
-card-label: Патентный ландшафт
+card-label: Многостраничка
 thumbnail: /assets/img/portfolio/patent-landscape/patent-landscape_thumbnail.jpg
 cover: /assets/img/portfolio/patent-landscape/patent-landscape_cover.jpg
 images:
