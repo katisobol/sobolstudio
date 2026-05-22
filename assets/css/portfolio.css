@@ -1,4 +1,4 @@
-#portfolio, .portfolio {
+.portfolio {
     --columngap: 1.5rem;
     gap: var(--columngap);
     position: relative;
@@ -28,7 +28,6 @@
 }
 
 @media (max-width: 1200px) {
-    #portfolio,
     .portfolio {
         display: flex;
         flex-direction: row;

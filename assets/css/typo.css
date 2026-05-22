@@ -9,7 +9,7 @@
 }
 @font-face {
     font-family: "TaylorSans";
-    src: url("../fonts/TaylorSans-Regular.ttf");
+    src: url("../fonts/Consolas-Regular.ttf");
 }
 @font-face {
     font-family: "Unovis100";
@@ -33,7 +33,8 @@ h5, .h5,
 h6, .h6,
 small, .small,
 .taylor {
-    font-family: TaylorSans, Santello, Raleway;
+    font-family: Consolas, TaylorSans, Santello, Raleway;
+    font-weight: normal;
     letter-spacing: 0.01em;
 }
 

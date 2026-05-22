@@ -59,7 +59,7 @@ mark {
 .glass-morphism {
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.18);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    box-shadow: 0 0.5rem 2rem 0 hsla(220, 55%, 30%, 0.35);
     backdrop-filter: blur(10px) saturate(180%);
     -webkit-backdrop-filter: blur(10px) saturate(180%);
 }
@@ -193,7 +193,7 @@ mark {
 /* the draggable scrolling handle */
 /* For WebKit browsers */
 *.white::-webkit-scrollbar {
-    width: 14px; /* Немного увеличил для лучшего пространства */
+    width: 16px;
 }
 
 *.white::-webkit-scrollbar-track {

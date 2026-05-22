@@ -466,6 +466,9 @@ header {
 
 
 .skills {
+    grid-template-columns: repeat(5, 20%);
+    gap: 0;
+
     background: repeating-linear-gradient(
             to right,
             transparent 0,
@@ -484,24 +487,40 @@ header {
         url(../../img/page/home/aerial-view.jpg);
 }
 
+
 .skills::after {
     content: "04";
     font-family: Unovis100;
     font-size: 15vw;
-    transform: translateY(0.25em);
+    transform: translateX(0.03em) translateY(0.25em);
 
     /*position: absolute;
     right: 0;*/
     grid-row: 2;
     grid-column: 1 / 2;
-    justify-self: start;
+    justify-self: end;
 
-    color: rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.1);
     background: url(../../img/page/home/glitch.gif);
     background-size: contain;
     background-position-y: 85%;
     -webkit-background-clip: text;
     background-clip: text;
+}
+
+
+.skills__heading.skills__card {
+    grid-column: 5 / -1;
+    grid-row: 2;
+    justify-content: end;
+
+    background: linear-gradient(to bottom right,
+        var(--SoftBlack),
+        hsla(0, 0%, 15%, 0.85)),
+        url(../../img/page/home/glitch.gif);
+    background-size: cover;
+
+    color: var(--Golden);
 }
 
 @supports (mix-blend-mode: screen) {
@@ -518,25 +537,23 @@ header {
     }
 }
 
-.skills__list {
-    display: contents;
-}
-
 .skills__card {
-    border: solid 1.5px slategray;
-    padding: 1.5em;
+    padding: calc(1rem + 1.5vw);
     grid-column: 2 / 4;
+    align-content: end;
 }
-.skills__card:nth-child(3) {
-    grid-column: 4 / -1;
-    grid-row: 2;
+.skills .glass-morphism {
+    border: solid 1.5px slategray;
 }
 
 .glass-morphism small {
-    font-family: Consolas, TaylorSans, Raleway;
     display: block;
-    color: black;
     margin-top: 0.5em;
+}
+.glass-morphism small {
+    color: black;
+    text-shadow: 0 0 1.5px rgba(255, 255, 255, 0.35),
+        0 0 3em lime;
 }
 
 

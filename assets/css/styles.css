@@ -11,6 +11,9 @@
 
 
 /* технические палатки */
+html {
+    scroll-behavior: smooth;
+}
 body *,
 body *::before,
 body *::after {

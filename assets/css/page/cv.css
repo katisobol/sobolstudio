@@ -2,7 +2,7 @@
     --cardborder: var(--BrightBlue);
 }
 
-.cv header nav ul::after {
+header nav ul::after {
     content: " / Портфолио";
     color: slategray;
 }
@@ -10,6 +10,21 @@
 
 
 
+.summary {
+    row-gap: calc(var(--sectiongap) / 1.5);
+}
+
+@media (max-width: 900px) {
+    .summary {
+        display: flex;
+        flex-direction: column;
+    }
+    .summary__colorbar {
+        position: absolute;
+        top: 0; right: 0;
+        width: min-content;
+    }
+}
 .summary__gif {
     display: none;
     mix-blend-mode: screen;
@@ -19,13 +34,17 @@
     opacity: 0.05;
 }
 
-.summary__header {
+.summary__heading {
     grid-column: span 1;
     grid-column-start: 3;
+
+    margin: 0;
+
     font-size: 1rem;
     text-transform: uppercase;
     line-height: 1.5rem;
     letter-spacing: 0.3em;
+
     color: var(--Golden);
 }
 
@@ -40,6 +59,7 @@
 .summary__point {
     grid-column: span 1;
     grid-row: 2;
+    align-content: end;
 }
 
 .summary__point:nth-child(2) {
@@ -49,6 +69,18 @@
 .summary__point:nth-child(3) {
     grid-column: 5;
 }
+
+.summary__card-title {
+    bottom: 0;
+    transform-origin: left bottom;
+}
+@media (min-width: 768px) {
+    .summary__card-title {
+        left: -2.5em;
+    }
+}
+
+
 
 .actions {
     display: none;
@@ -79,7 +111,7 @@
 }
 
 
-.cv .portfolio + .skills {
+.portfolio + .skills {
     margin-top: calc(var(--sectiongap) * 1.5);
 }
 @media (max-width: 1079px) {
