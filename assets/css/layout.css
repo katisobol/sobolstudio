@@ -38,8 +38,9 @@
 
 /* Сетка исчезает на узкой странице */
 :root {
-    --grid: repeat(5, calc((100% - (var(--columngap) * 4) ) / 5));
+    --grid: repeat(5, calc(((100vw - 2 * var(--padding)) - (4 * var(--columngap)) ) / 5));
 }
+
 
 @media (max-width: 768px) {
     :root {
@@ -79,11 +80,6 @@ body > :is(p, h1, h2, h3, h4, h5, h6, ul, ol, blockquote, pre, table, dl, hr, ad
     margin-left: var(--padding);
     margin-right: var(--padding);
 }
-
-* > article {
-    padding: calc(var(--sectiongap) / 2) 0;
-}
-
 
 header {
     padding-bottom: 1rem !important;

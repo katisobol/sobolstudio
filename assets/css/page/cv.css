@@ -14,7 +14,7 @@ header nav ul::after {
     row-gap: calc(var(--sectiongap) / 1.5);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
     .summary {
         display: flex;
         flex-direction: column;
@@ -40,11 +40,6 @@ header nav ul::after {
 
     margin: 0;
 
-    font-size: 1rem;
-    text-transform: uppercase;
-    line-height: 1.5rem;
-    letter-spacing: 0.3em;
-
     color: var(--Golden);
 }
 
@@ -68,6 +63,11 @@ header nav ul::after {
 
 .summary__point:nth-child(3) {
     grid-column: 5;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .summary__point:nth-child(2n){
+        margin-left: 2rem;
+    }
 }
 
 .summary__card-title {
@@ -150,7 +150,7 @@ header nav ul::after {
     }
 }
 
-.skills ul li h3 {
+.skills__software {
     color: var(--cardborder);
 }
 
@@ -260,9 +260,36 @@ header nav ul::after {
 
 
 
+
+.experience {
+    row-gap: calc(var(--sectiongap) / 1.5);
+}
+
+.experience__item-title {
+    position: relative;
+    grid-column: 1 / 4;
+    color: var(--Golden);
+    align-content: end;
+}
+.experience__item-note {
+    display: block;
+    top: 0;
+    color: slategray;
+}
+
+.experience__date {
+    grid-column: span 1;
+    bottom: 0;
+}
+
+.experience__list {
+    grid-column: 4 / -1;
+}
+
+
+
 .contact {
     align-items: end;
-    gap: 1.5rem;
 }
 
 .contact-message {
@@ -285,18 +312,26 @@ header nav ul::after {
     border-color: var(--DeepBlue) transparent transparent transparent;
 }
 
-.contact a {
+.contact__buttons {
+    display: contents;
+}
+.contact__cta,
+.contact__tg {
     grid-column: 5;
 }
-.contact .tg {
-    text-align: right;
+.contact__cta {
+    width: 100%;
 }
+.contact__tg {
+    text-align: center;
+}
+
 /* На мобилки */
-@media (max-width: 800px) {
+@media (max-width: 768px) {
     .contact {
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
+        justify-content: end;
     }
     .contact-message {
         margin-right: 0;
@@ -311,7 +346,12 @@ header nav ul::after {
         border-width: 1.5rem 1.5rem 0 0;
         border-color: var(--DeepBlue) transparent transparent transparent;
     }
-    .contact .tg {
-        padding-right: calc(var(--sectiongap) / 2.5);
+    .contact__buttons {
+        width: calc(7em + 10%);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+        gap: var(--columngap);
     }
 }
