@@ -10,10 +10,6 @@ header nav ul::after {
 
 
 
-.summary {
-    row-gap: calc(var(--sectiongap) / 1.5);
-}
-
 @media (max-width: 768px) {
     .summary {
         display: flex;
@@ -35,16 +31,40 @@ header nav ul::after {
 }
 
 .summary__heading {
-    grid-column: span 1;
-    grid-column-start: 3;
-
     margin: 0;
 
     color: var(--Golden);
 }
+@media (max-width: 768px) {
+    .summary__heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+    }
+}
+
+
+.summary__name,
+.summary__position {
+    grid-column: span 1;
+    grid-column-start: 3;
+}
 
 .summary__position {
     grid-row: 3;
+}
+
+@media (max-width: 768px) {
+    .summary__position {
+        font-family: Santello, Raleway;
+        font-size: 0.75rem;
+        line-height: 1.25rem;
+        letter-spacing: unset;
+        text-transform: unset;
+        color: slategray;
+
+        text-align: right;
+    }
 }
 
 .summary__colorbar {
@@ -112,7 +132,7 @@ header nav ul::after {
 
 
 .portfolio + .skills {
-    margin-top: calc(var(--sectiongap) * 1.5);
+    margin-top: 0;
 }
 @media (max-width: 1079px) {
     .skills .portfolio {
@@ -121,20 +141,20 @@ header nav ul::after {
     }
 }
 
-.skills h2 {
+.skills__heading {
     position: absolute;
     left: calc(0px - var(--padding));
-    top: calc(-0.75em - var(--sectiongap));
+    top: -0.75em;
     font-size: 10rem;
 }
 
-.skills ul {
+.skills__list {
     grid-template-columns: repeat(5, auto);
     padding-left: 0;
     padding-bottom: 0;
 }
 
-.skills ul li {
+.skills__item {
     list-style: none;
     border: solid 1rem var(--cardborder);
     padding: 1.5rem 1rem 2rem 1.5rem;
@@ -145,7 +165,7 @@ header nav ul::after {
     box-shadow: var(--textShadow);
 }
 @media (max-width: 768px) {
-    .skills ul li {
+    .skills__item {
         width: 100%;
     }
 }
@@ -154,7 +174,7 @@ header nav ul::after {
     color: var(--cardborder);
 }
 
-.skills ul li * + :is(p, h4) {
+.skills__item * + :is(p, h4) {
     margin-top: 0.25em;
 }
 
@@ -261,29 +281,54 @@ header nav ul::after {
 
 
 
-.experience {
-    row-gap: calc(var(--sectiongap) / 1.5);
+/* десктоп-лейаут */
+@media (min-width: 768) {
+    .experience__item-title,
+    .experience__date {
+        grid-column: 4 / 5;
+    }
+    .experience__list {
+        display: flex;
+    }
+    .experience__list-item {
+        padding: calc(1.5rem + 1.5vw);
+    }
 }
 
 .experience__item-title {
-    position: relative;
-    grid-column: 1 / 4;
     color: var(--Golden);
     align-content: end;
 }
 .experience__item-note {
     display: block;
-    top: 0;
     color: slategray;
 }
 
 .experience__date {
-    grid-column: span 1;
-    bottom: 0;
+    order: -1;
+    color: slategray;
 }
 
-.experience__list {
-    grid-column: 4 / -1;
+
+.education__card:nth-child(2n + 1) .education__card-title {
+    align-content: end;
+}
+
+.education__card-title {
+        grid-column: 1 / 4;
+}
+
+.education__card-description {
+        grid-column: 4 / -1;
+}
+
+.education__card-title {
+    color: var(--Golden);
+}
+
+.education__card-note {
+    text-transform: none;
+    color: slategray;
 }
 
 

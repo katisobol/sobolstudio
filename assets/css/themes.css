@@ -75,6 +75,7 @@ mark {
     letter-spacing: unset;
     font-size: calc(3rem + 5vw);
     line-height: 0.45;
+    z-index: -1;
 }
 
 @supports (mix-blend-mode: hard-light) {

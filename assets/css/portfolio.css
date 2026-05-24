@@ -5,7 +5,6 @@
     display: grid;
     grid-template-columns: repeat(5, calc((100% - (var(--columngap) * 4)) / 5));
     grid-auto-flow: dense;
-    margin-bottom: calc(var(--sectiongap) * 1.5);
 }
 
 .portfolio .portfolio-card {
