@@ -17,22 +17,23 @@
 
 /* Основная переменная расстояний между секциями*/
 :root {
-    --sectiongap: 7.5vw;
+    --sectiongap: 15vh;
 }
+/* Новомодные единицы */
+@supports (height: 1svh) {
+    :root {
+        --sectiongap: 15svh;
+    }
+}
+
 @media (min-width: 2500px) {
     :root {
-        --sectiongap: clamp(120px, 10vh, 200px);
+        --sectiongap: clamp(120px, 10vh, 160px);
     }
 }
 @media (max-width: 768px) {
     :root {
-        --sectiongap: 15vh;
-    }
-    /* Новомодные единицы */
-    @supports (height: 1svh) {
-        :root {
-            --sectiongap: 15svh;
-        }
+        --sectiongap: 2rem;
     }
 }
 
@@ -68,7 +69,7 @@ ul, ol, dl {
 }
 
 /* Размещает поля, если я вдруг что-то дропну прямо в body (удалить?) */
-body > :is(main, section, header, footer, article, aside, nav, blockquote, figure, details, pre, table, fieldset, form, address, dl) {
+body > :is(main, section, article, aside, nav, blockquote, figure, details, pre, table, fieldset, form, address, dl) {
     padding: var(--sectiongap) var(--padding);
     position: relative;
 }
@@ -98,32 +99,12 @@ aside,
 main,
 dl,
 .layout {
-    position: relative;
     display: grid;
     grid-template-columns: var(--grid);
     grid-auto-flow: row;
     column-gap: var(--columngap);
     row-gap: calc(var(--sectiongap) / 3);
-}
-
- :is(section,
-footer,
-article,
-aside,
-main,
-.layout, .portfolio) > :not(
-p, .p,
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6,
-hr,
-small, .small
-) {
-  min-width: 0;
-  max-width: 100%;
+    grid-auto-flow: dense;
 }
 
 /* Лейаут: растягиваем элементы по умолчанию на все колонки */
@@ -143,68 +124,9 @@ small, .small
     /* Технические */
     section, footer
 { grid-column: 1 / -1; }
-@media (min-width: 1600px) {
-    :is(section,
-    footer,
-    article,
-    aside,
-    main,
-    .layout, .portfolio) > :is(
-    /* Заголовки и текст */
-    h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, .p, small, a, button, .btn,
-    /* Структурные блоки */
-    div, nav, img, ul, ol, li,
-    /* Семантические добавки */
-    address, blockquote, pre, hr,
-    figure, figcaption, details, summary, fieldset, legend,
-    form, label, table, caption, thead, tbody, tfoot, tr, th, td,
-    dl, dt, dd,
-    /* Медиа и встраиваемое */
-    video, audio, iframe, embed, object, picture, source
-    ) {
-        grid-column-start: 2;
-    }
-}
-@media (min-width: 2500px) {
-    :is(section,
-    footer,
-    article,
-    body > aside,
-    main,
-    .layout, .portfolio) > :is(
-    /* Заголовки и текст */
-    h1, .h1, h2, .h2,
-    ) {
-        grid-column-start: 2;
-    }
-    :is(section,
-    footer,
-    article,
-    aside,
-    main,
-    .layout, .portfolio) > :is(
-    /* Заголовки и текст */
-    h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, .p, small, a, button, .btn,
-    /* Структурные блоки */
-    div, nav, img, ul, ol, li,
-    /* Семантические добавки */
-    address, blockquote, pre, hr,
-    figure, figcaption, details, summary, legend,
-    form, label, caption, thead, tbody, tfoot, tr, th, td,
-    dl, dt, dd,
-    /* Медиа и встраиваемое */
-    video, audio, iframe, embed, object, picture, source
-    ) {
-        grid-column-start: 3;
-    }
-}
+
 
 
 figure {
     margin: 0;
-}
-
-figcaption table:only-child {
-    margin-top: calc(var(--sectiongap) / 2);
-    margin-bottom: calc(var(--sectiongap) / 2);
 }

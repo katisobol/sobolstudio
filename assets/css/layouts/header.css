@@ -1,3 +1,6 @@
+header {
+    padding: var(--sectiongap) var(--padding);
+}
 header,
 header nav,
 header nav ul {

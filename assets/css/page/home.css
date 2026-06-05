@@ -2,6 +2,10 @@ header {
     display: none;
 }
 
+ul {
+    list-style: none;
+}
+
 /* 1. hero-секция */
 @supports (mix-blend-mode: screen) {
     .hero :is(nav, h1, div p, div a, div) {
@@ -112,6 +116,7 @@ header {
 
 .hero .logo {
     background-image: url(../../icons/Kc_logo_full_logo_raster_lght.png);
+    background-position-x: left;
     filter: drop-shadow(0 0 1.5px cornflowerblue);
 }
 
@@ -310,12 +315,9 @@ header {
     grid-column: 1 / -1;
     display: block;
 }
-.value__heading {
-    font-size: 3.5vw;
-}
-@media (max-width: 1024px) {
+@media (min-width: 768px) {
     .value__heading {
-        font-size: 2.5rem;
+    font-size: 3.5vw;
     }
 }
 @media (min-width: 768px) {
@@ -408,23 +410,21 @@ header {
 
 
 /* секция портфолио */
-.portfolio-card.heading {
-    grid-column: 5;
+.portfolio__card.portfolio__heading {
+    box-shadow: unset;
+}
+.portfolio__heading {
+    padding: 0;
+
+    grid-column: -2 / -1;
     grid-row: 2;
-    padding-right: 1.75rem;
-}
-@media (max-width: 1079px) {
-    .portfolio-card.heading {
-        min-width: 100px;
-    }
-}
-@media (min-width: 1201px) {
-    .portfolio-card.heading {
-        padding-right: calc(1.25rem + 12.5%);
-    }
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.portfolio-heading {
+.portfolio__header {
     rotate: -90deg;
     position: absolute;
     right: 0.95em;
@@ -439,29 +439,28 @@ header {
     pointer-events: none;
 }
 
-.portfolio-description {
+.portfolio__description {
+    padding: 0.5em 1.75rem 0.75em 1em;
     margin-top: 0;
-    position: relative;
-    top: -0.35em;
-    font-family: Santello;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 10;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
+    color: slategray;
 }
 @media (min-height: 1201px) {
-    .portfolio-description {
-        line-height: 2.25cqh;
-    }
-}
-@media (min-width: 1500px) {
-    .portfolio-description::after {
-        content: ". Дизайн должен показывать ценность или качество";
+    .portfolio__description {
+        padding-right: calc(1.25rem + 12.5%);
     }
 }
 
-.portfolio-btn {
-    position: absolute;
+.portfolio__btn {
     width: 100%;
-    left: 0; bottom: 0;
     padding: 0;
     margin: 0;
+    flex-shrink: 0;
 }
 
 
@@ -510,7 +509,7 @@ header {
 
 
 .skills__heading.skills__card {
-    grid-column: 5 / -1;
+    grid-column: -2 / -1;
     grid-row: 2;
     justify-content: end;
 
@@ -533,7 +532,7 @@ header {
         background-image: url(../../img/page/home/white-noise.gif);
         background-size: cover;
         mix-blend-mode: screen;
-        opacity: 0.05;
+        opacity: 0.035;
     }
 }
 

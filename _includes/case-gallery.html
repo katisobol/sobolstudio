@@ -1,0 +1,33 @@
+{%- if include.images -%}
+{%- assign image_list = include.images | split: ',' -%}
+{%- assign alt_list = include.seo | split: ',' -%}
+{%- assign caption_text = include.caption_desc | strip -%}
+{%- assign has_term = include.caption_term | strip -%}
+{%- assign has_caption = false -%}
+{%- if has_term != "" or caption_text != "" -%}
+  {%- assign has_caption = true -%}
+{%- endif -%}
+{%- if has_caption -%}<figure class="case__figure">{%- endif -%}
+<div class="content__gallery case__gallery">
+  <div class="case__gallery-track">
+    {%- for img in image_list -%}
+      {%- assign img_src = img | strip | relative_url -%}
+      {%- assign img_alt = alt_list[forloop.index0] | strip | default: include.alt | default: page.excerpt -%}
+      <div class="case__gallery-item"><img src="{{ img_src }}" alt="{{ img_alt }}" loading="lazy"></div>
+    {%- endfor -%}
+  </div>
+</div>
+{%- if has_caption -%}
+  <figcaption class="case__figcaption">
+    {%- if has_term != "" and caption_text != "" -%}
+      <dl class="case__definition-list">
+        <dt class="case__term">{{ has_term }}</dt>
+        <dd class="case__description">{{ caption_text | newline_to_br }}</dd>
+      </dl>
+    {%- elsif caption_text != "" -%}
+      <p class="case__description">{{ caption_text | newline_to_br }}</p>
+    {%- endif -%}
+  </figcaption>
+{%- endif -%}
+{%- if has_caption -%}</figure>{%- endif -%}
+{%- endif -%}

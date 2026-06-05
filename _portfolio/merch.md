@@ -15,8 +15,8 @@ images:
   - /assets/img/portfolio/merch/DH_gallery_longsleeve1.jpg
   - /assets/img/portfolio/merch/DH_sticker_mockup2.jpg
 extra_css:
- - assets/css/page/case.css
  - assets/css/page/portfolio/DHmerch.css
+ - assets/css/page/case.css
 
 ---
 
@@ -24,57 +24,59 @@ extra_css:
 
 Организатор закрытого IT‑ивента хотел, чтобы мерч не пылился на полках, а стал частью образа команды и участников. Нужно было придумать вещи, которые захочется носить и показывать
 
-### В проект вошли:
+<table>
+  <tr>
+    <th><h3>В проект вошли:</h3></th>
+    <td>
+      <ul>
+        <li>Свитшот с авторским принтом</li>
+        <li>Набор стикеров для ноутбуков и техники</li>
+        <li>Блокнот с тиснением фольгой</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
-- Свитшот с авторским принтом
-- Набор стикеров для ноутбуков и техники
-- Блокнот с тиснением фольгой
+<table>
+  <tr>
+    <th><h3>Главные требования:</h3></th>
+    <td>
+      <ul>
+        <li>Логотип должен читаться на любых носителях</li>
+        <li>А все макеты быть готовыми к печати без доработок</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
-### Главные требования:
-- Логотип должен читаться на любых носителях
-- А все макеты быть готовыми к печати без доработок
-
-Я работаю по прозрачному плану: анализ → концепции → макеты и согласование. На каждом этапе заказчик видит промежуточные результаты. Процесс прозрачен и предсказуем
-
-***
+Я работаю по прозрачному плану: анализ → концепции → макеты и согласование. На каждом этапе заказчик видит промежуточные результаты. Процесс прозрачен и предсказуем
 
 ## Особенности
 
+
 {::nomarkdown}
-<figure>
+<figure class="case__figure">
     <img src="/sobolstudio/assets/img/portfolio/merch/DH_logoInfographic.svg" alt="Версия логотипа слева — исходный пиксельный JPEG, справа — вектор с опорными точками. Все линии переведены в кривые, готово для любого использования и масштабирования" style="width: 100%; max-height: 10rem; display: inline; text-align: center; background-color: white; padding: 2rem 0">
-  <figcaption>
-    <table>
-      <tr>
-        <th>Векторизация в Illustrator</th>
-        <td>Логотип прислали пиксельным JPEG, так печатать нельзя. Перевела в кривые, сохранила все детали. Теперь лого чёткий: и на свитшоте, и на билборде</td>
-      </tr>
-    </table>
+  <figcaption class="case__figcaption">
+      <dl class="case__definition-list">
+        <dt class="case__term">Векторизация в Illustrator</dt>
+        <dd class="case__description">Логотип прислали пиксельным JPEG, так печатать нельзя. Перевела в кривые, сохранила все детали. Теперь лого чёткий: и на свитшоте, и на билборде</dd>
+      </dl>
   </figcaption>
 </figure>
 {:/nomarkdown}
 
 ### Свитшот
 
-{::nomarkdown}
-<figure>
-    <div class="gallery" style="gap: var(--sectiongap); padding: var(--sectiongap) var(--padding)">
-      <img src="/sobolstudio/assets/img/portfolio/merch/DH_longsleeve_mockup1.png" alt="Стильный свитшот с паттерном стилизации по анатомическим линиям. Логотип мероприятия + стильные микросхемы на боку">
-      <img src="/sobolstudio/assets/img/portfolio/merch/DH_longsleeve_mockup2.png" alt="Стильный свитшот с паттерном стилизации по анатомическим линиям. Логотип мероприятия + микросхемы спереди">
-      <img src="/sobolstudio/assets/img/portfolio/merch/DH_longsleeve_mockup3.png" alt="Стильный свитшот с паттерном стилизации по анатомическим линиям. Логотип мероприятия + микросхемы спереди">
-  </div>
-  <figcaption>
-    <table>
-      <tr>
-        <th>Подготовка под шелкографию</th>
-        <td>Разложила принт на спотовые цвета из библиотеки Pantone. Для печатников это готовая инструкция: цвета попадают в цель с первого тиража, без брака и пересогласований</td>
-      </tr>
-    </table>
-  </figcaption>
-</figure>
-{:/nomarkdown}
+{% include case-gallery.html
+  images="/assets/img/portfolio/merch/DH_longsleeve_mockup1.png, /assets/img/portfolio/merch/DH_longsleeve_mockup2.png, /assets/img/portfolio/merch/DH_longsleeve_mockup3.png"
+  seo="Стильный свитшот с паттерном стилизации по анатомическим линиям. Логотип мероприятия + стильные микросхемы на боку, Стильный свитшот с паттерном стилизации по анатомическим линиям. Логотип мероприятия + микросхемы спереди, Стильный свитшот с паттерном стилизации по анатомическим линиям. Логотип мероприятия + микросхемы спереди"
+  alt="Стильный свитшот с паттерном стилизации по анатомическим линиям"
+  caption_term="Подготовка под шелкографию"
+  caption_desc="Разложила принт на спотовые цвета из библиотеки Pantone. Для печатников это готовая инструкция: цвета попадают в цель с первого тиража, без брака и пересогласований"
+%}
 
-{% include mockup-social.html
+{% include case-mockup-social.html
   userpic='/assets/img/portfolio/merch/DH_hero.png'
   username='DevHiveProject'
   images='/assets/img/portfolio/merch/DH_longsleeve_social1.jpg,
@@ -82,13 +84,17 @@ extra_css:
           /assets/img/portfolio/merch/DH_longsleeve_social3.jpg,
           /assets/img/portfolio/merch/DH_longsleeve_social4.jpg,
           /assets/img/portfolio/merch/DH_longsleeve_social5.jpg'
-  alt='изображение в соцсеть с печатью по лонгсливу'
+  seo='изображение в соцсеть с печатью по лонгсливу1,
+       изображение в соцсеть с печатью по лонгсливу2,
+       изображение в соцсеть с печатью по лонгсливу3,
+       изображение в соцсеть с печатью по лонгсливу4,
+       изображение в соцсеть с печатью по лонгсливу5'
 %}
 
 ### Стикеры
 
 {::nomarkdown}
-    <div class="gallery stickers">
+    <div class="gallery-stickers content__gallery case__gallery">
       <img src="/sobolstudio/assets/img/portfolio/merch/DH_sticker1.svg" alt="Стикер с буквами DH, логотип бренда">
       <img src="/sobolstudio/assets/img/portfolio/merch/DH_sticker2.svg" alt="Стикер с 404">
       <img src="/sobolstudio/assets/img/portfolio/merch/DH_sticker3.svg" alt="Стикер с кодом: false = true while false:. Фрагмент кода выглядит как парадокс лжеца">
@@ -104,23 +110,26 @@ extra_css:
     </div>
 {:/nomarkdown}
 
+#### Вырубка
+
 {::nomarkdown}
-<figure>
-  <div class="infographic">
+<figure class="case__figure">
+  <div class="case__infographic">
     <img class="fg" src="/sobolstudio/assets/img/portfolio/merch/DH_stickerInfograhicDieline.svg" alt="Контуры вырубки для стикеров нестандартной формы">
     <img class="hero" style=" bottom: 0; right: 0" src="/sobolstudio/assets/img/portfolio/merch/DHstickerInfograhic.png" alt="Меню слоёв Illustrator со слоями под печать и вырубку">
     <img class="bg" src="/sobolstudio/assets/img/portfolio/merch/DH_stickerInfograhic.svg" alt="Набор стикеров с припусками под обрезку">
   </div>
-  <figcaption>
-    <table>
-      <tr>
-        <th>Подготовка под плоттерную резку</th>
-        <td>Создала контуры в отдельном слое с припусками под обрез. Наклейки вырезаются идеально, без белых краёв и повреждений</td>
-      </tr>
-    </table>
+  <figcaption class="case__figcaption">
+    <dl class="case__definition-list">
+      <dt class="case__term">Подготовка под плоттерную резку</dt>
+      <dd class="case__description">Создала контуры в отдельном слое с припусками под обрез. Наклейки вырезаются идеально, без белых краёв и повреждений</dd>
+    </dl>
   </figcaption>
 </figure>
 {:/nomarkdown}
+
+
+
 
 {::nomarkdown}
 <img src="/sobolstudio/assets/img/portfolio/merch/DH_sticker_mockup1.jpg" alt="Наклейка weekend на термосе" >
@@ -135,7 +144,7 @@ extra_css:
 {:/nomarkdown}
 
 {::nomarkdown}
-<img src="/sobolstudio/assets/img/portfolio/merch/DH_sticker_mockup4.jpg" alt="Рабочее место программиста с наклейкой 404 на месте работника" >
+<img src="/sobolstudio/assets/img/portfolio/merch/DH_sticker_mockup4.jpg" alt="Рабочее место пролраммиста с наклейкой 404 на месте работника" >
 {:/nomarkdown}
 
 ### Блокнот
@@ -170,7 +179,7 @@ extra_css:
     <img class="hero" style=" bottom: 0; right: 0" src="/sobolstudio/assets/img/portfolio/merch/DH_notebook_foilInfographic.png" alt="Создание свотча PANTONE 877 C Silver Metallic">
   <figcaption>
     <strong class="side-text">Металлик</strong>
-    Для печати с эффектом металлик нужно настроить отдельный слой и плашечный цвет. <br><small>PANTONE 877 C, классический «серебряный металлик»</small>
+    Для печати с эффектом металлик нужно настроить отдельный слой и плашечный цвет. <br><small>PANTONE 877 C, классический «серебряный металлик»</small>
   </figcaption>
 </figure>
 {:/nomarkdown}
@@ -178,8 +187,6 @@ extra_css:
 {::nomarkdown}
 <img class="bg" src="/sobolstudio/assets/img/portfolio/merch/DH_notebook_mockup1.png" alt="Блокнот лежит на столе, презентация продукта" style="background-image: url(/sobolstudio/assets/img/portfolio/merch/DH_notebook_mockup1compress.png)" >
 {:/nomarkdown}
-
-***
 
 ## В итоге
 

@@ -1,0 +1,16 @@
+/* Галерея-мудборд */
+
+.case__moodboard {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-auto-flow: dense;
+    gap: 0;
+}
+
+.case__moodboard img {
+    grid-column: span 1;
+    width: 100%; height: 100%;
+    max-width: unset; max-height: unset;
+    object-fit: cover; overflow: clip;
+    filter: unset;
+}

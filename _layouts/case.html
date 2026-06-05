@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<main>
+<main class="case__main">
 
   <h1
       {% if page.cover %}
@@ -17,22 +17,24 @@ layout: default
 
 
 {% if page.images %}
-<div class="gallery white">
-  {% for image in page.images %}
-  <img src="{{ image | relative_url }}" alt="" />
-  {% endfor %}
+<div class="case__gallery">
+  <div class="case__gallery-track">
+    {% for image in page.images %}
+    <div class="case__gallery-item"><img src="{{ image | relative_url }}" alt="{{ page.exerpt }}" /></div>
+    {% endfor %}
+  </div>
 </div>
 {% endif %}
 
-  <article>
+  <article class="case__content">
     {{ content }}
   </article>
 
 </main>
 
 {% if page.tgID %}
-  <section aria-label="Комментарии" aria-live="polite" class="comments-section white">
-    <h2 class="side-text">Обсуждение</h2>
+  <section aria-label="Комментарии" class="case__comments white">
+    <h2 class="card__label">Обсуждение</h2>
     <div class="tg-link-wrapper"><a class="social tg" href="https://t.me/katisobol"></a></div>
     <script
       async
@@ -45,6 +47,9 @@ layout: default
 {% endif %}
 
 <aside class="portfolio">
-  <div class="portfolio-card"><p>Смотрите также:</p></div>
+  <div class="portfolio__also"><h2 class="small">Смотрите также</h2></div>
   {% include portfolio.html %}
 </aside>
+
+<script src="{{ '/scripts/case/double-content.js' | relative_url }}"></script>
+<script src="{{ '/scripts/case/fullslide_animlength.js' | relative_url }}"></script>

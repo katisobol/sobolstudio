@@ -1,5 +1,6 @@
 footer {
     row-gap: 1rem;
+    padding: var(--sectiongap) var(--padding);
 }
 
 footer .btn {

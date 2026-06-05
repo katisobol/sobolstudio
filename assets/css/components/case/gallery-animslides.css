@@ -1,0 +1,77 @@
+/*
+ * Семантика:
+<div class="case__fullslide">
+    <div class="case__fullslide-row case__fullslide-row--first double-content"> // класс .double-content дублирует содержимое
+        <!-- 1-й набор изображений 1400×800 -->
+      <img src="/sobolstudio/assets/img/portfolio/branding-stratum/guideline_slide1.jpg" alt="Гайдлайн, слайд 1. Дизайн не должен привлекать внимание к себе, он должен помогать принимать решения">
+      <img src="/sobolstudio/assets/img/portfolio/branding-stratum/guideline_slide2.jpg" alt="Гайдлайн, слайд 2. Цветовая палитра">
+      <img src="/sobolstudio/assets/img/portfolio/branding-stratum/guideline_slide3.jpg" alt="Гайдлайн, слайд 3. Типографика">
+    </div>
+    <div class="case__fullslide-row case__fullslide-row--second double-content"> // класс .double-content дублирует содержимое
+      <img src="/sobolstudio/assets/img/portfolio/branding-stratum/guideline_slide4.jpg" alt="Гайдлайн, слайд 4. Композиция и лейаут">
+      <img src="/sobolstudio/assets/img/portfolio/branding-stratum/guideline_slide5.jpg" alt="Гайдлайн, слайд 5. Логотип и его варианты">
+      <img src="/sobolstudio/assets/img/portfolio/branding-stratum/guideline_slide6.jpg" alt="Гайдлайн, слайд 6. Паттерны и текстуры">
+    </div>
+</div>
+*/
+
+.case__fullslide {
+    --slideLength: -1000px;
+}
+
+@keyframes slideToLeft {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(var(--slideLength)); }
+}
+
+.case__fullslide {
+    /* Заставляем блок игнорировать паддинги родителя и растянуться на всю ширину окна */
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    /* Основные свойства */
+    height: 100vh;
+    padding: var(--sectiongap) 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--columngap);
+    overflow-x: hidden;
+    box-sizing: border-box;
+
+    background: hsla(0, 0%, 0%, 0.35);
+}
+@supports (height: 100svh) {
+    .case__fullslide {
+        height: 100svh;
+    }
+}
+@media (max-height: 800px) {
+    .case__fullslide {
+        --columngap: 24px;
+    }
+}
+
+.case__fullslide-row {
+    flex: 1;
+    display: flex;
+    gap: var(--columngap);
+    min-height: 0;
+    width: max-content;
+}
+
+.case__fullslide-row img {
+    height: 100%;
+    width: auto;
+    flex-shrink: 0;
+    display: block;
+}
+
+.case__fullslide-row--first {
+    animation: slideToLeft 2.5s ease-in-out infinite alternate;
+}
+
+.case__fullslide-row--second {
+    animation: slideToLeft 6.5s ease-in-out infinite alternate;
+}

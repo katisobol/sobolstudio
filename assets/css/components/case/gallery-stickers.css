@@ -1,0 +1,35 @@
+/* Стикер-галерея */
+
+.gallery-stickers {
+    /* Заставляем блок игнорировать паддинги родителя и растянуться на всю ширину окна */
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; /* элементы переносятся в новые колонки */
+    justify-content: space-evenly;
+    overflow-y: hidden;
+    height: 75vh;
+    gap: 7.5vh;
+    padding: 10vh var(--padding);
+}
+@supports (height: 1svh) {
+        .gallery.stickers {
+            height: 75svh; /* Новомодные единицы */
+            gap: 7.5svh;
+            padding: 10svh var(--padding);
+        }
+    }
+
+.gallery-stickers > img {
+    max-height: 35%!important;
+    flex-shrink: 0;
+    object-fit: contain;
+}
+
+article .gallery + figure {
+    margin-top: calc(var(--sectiongap) / 2)
+}

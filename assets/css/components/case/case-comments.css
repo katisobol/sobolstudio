@@ -1,0 +1,16 @@
+.case__comments {
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .case .comments-section h2 {
+        position: absolute;
+        bottom: 0.5em;
+    }
+}
+
+.case .comments-section .tg-link-wrapper {
+    position: absolute; top: var(--sectiongap); right: 0;
+    background-color: white;
+    padding: 1rem;
+}

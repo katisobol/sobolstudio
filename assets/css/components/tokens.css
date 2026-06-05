@@ -16,7 +16,8 @@
 
 @media screen and (max-width: 768px) {
     .logo {
-        width: 50px;
+        width: 64px;
+        background-size: 32px 32px;
     }
 }
 
@@ -60,13 +61,6 @@
 }
 
 
-/* специальный класс возвращает стандартное оформление */
-ul:not(.list) {
-    list-style: none;
-    padding-left: 0;
-}
-
-
 
 hr {
     border: solid 1.5px hsla(0, 0%, 0%, 0.35);
@@ -88,8 +82,7 @@ th + td {
 
 
 dl {
-    margin-top: calc(var(--sectiongap) / 2);
-    gap: calc(var(--sectiongap) / 3);
+    gap: var(--columngap);
 }
 
 @media (max-width: 1080px) {

@@ -56,11 +56,11 @@
     letter-spacing: 0.02em;
 }
 
-.DHmerch .userProfile > .userName {
+.DHmerch .case__social-post__profile > .case__social-post__username {
     font-family: Roboto;
 }
 
-.DHmerch .socialMockupPost .userPic {
+.DHmerch .case__social-post .case__social-post__avatar {
     background-color: #e68600;
     object-fit: contain;
 }

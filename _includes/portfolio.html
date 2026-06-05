@@ -1,47 +1,48 @@
 <!-- Скрипт добавляет карточки -->
 {% for case in site.portfolio reversed %}
 <!-- Скрипт увеличит карточку если добавить в кейс переменную size -->
-  <a class="portfolio-card case{% if case.size %}-size{{ case.size }}{% endif %}" href="{{ case.url | relative_url }}"
-
+  <a class="portfolio__card {% if case.size %}card--size--{{ case.size }}{% endif %}" href="{{ case.url | relative_url }}"
 
   {% if case.thumbnail %}
   style='background:
-    url("{{ case.thumbnail | relative_url }}") center/cover;'
+    url("{{ case.thumbnail | relative_url }}") no-repeat center/cover;'
   {% endif %}
   >
+
 <!-- Всплывающее окно при наведении курсора -->
-    <div class="case-card-popup"
+    <div class="card__popup"
   {% if case.thumbnail %}
   style='background: url(
                    {{ case.thumbnail | relative_url }}
-                         ) center/cover;'
+                         ) no-repeat center/cover;'
   {% endif %}>
 
 <!-- Добавляет кейвижуал во всплывашку -->
   {% if case.keyvisual %}
-  <img src="{{ case.keyvisual | relative_url }}" alt="{{ case.title }}">
-  {% endif %}      <p class="description">{{ case.card-label }}</p></div>
+  <img class="popup__keyvisual" src="{{ case.keyvisual | relative_url }}" alt="{{ case.title }}">
+  {% endif %}
+      <p class="popup__label portfolio__label small">{{ case.card-label }}</p></div>
 
 <!-- Контент внутри карточки: название, кейвижуал -->
   {% if case.keyvisual %}
-  <img class="keyvisual" src="{{ case.keyvisual | relative_url }}" alt="{{ case.title }}">
+  <img class="card__keyvisual" src="{{ case.keyvisual | relative_url }}" alt="{{ case.title }}">
   {% endif %}
-  <p class="description">{{ case.card-label }}</p>
+  <p class="card__label portfolio__label small">{{ case.card-label }}</p>
 
 </a>
 {% endfor %}
 
-<a class="portfolio-card behance" style="background:url(https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/add5e8169548731.Y3JvcCw4MDgsNjMyLDAsMA.png); background-position: center"
+<a class="portfolio__card portfolio__behance" style="background: url(https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/add5e8169548731.Y3JvcCw4MDgsNjMyLDAsMA.png) no-repeat center/cover;"
 href="https://www.behance.net/gallery/169548731/Logofolio-2023" target="_blank">
-  <p class="description">Logofolio</p>
+  <p class="card__label portfolio__label small" >Logofolio</p>
 </a>
 
-<a class="portfolio-card behance"  style="background:url(https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/6e3e9a164116753.Y3JvcCw4MDgsNjMyLDAsMA.png); background-position: center"
+<a class="portfolio__card portfolio__behance" style="background: url(https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/6e3e9a164116753.Y3JvcCw4MDgsNjMyLDAsMA.png) no-repeat center/cover;"
 href="https://www.behance.net/gallery/164116753/Key-visual-banners" target="_blank">
-  <p class="description">Key visual</p>
+  <p class="card__label portfolio__label small">Key visual</p>
 </a>
 
-<a class="portfolio-card behance"  style="background:url(https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/45b12c165280831.Y3JvcCw4MDgsNjMyLDAsMA.png); background-position-x: left"
+<a class="portfolio__card portfolio__behance" style="background: url(https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/45b12c165280831.Y3JvcCw4MDgsNjMyLDAsMA.png) no-repeat left/cover;"
 href="https://www.behance.net/gallery/165280831/magazin-rjukzakov-BackPack" target="_blank">
-  <p class="description">E-commerce</p>
+  <p class="card__label portfolio__label small">E-commerce</p>
 </a>

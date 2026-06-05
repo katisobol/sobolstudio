@@ -1,0 +1,34 @@
+.case__credits {
+    display: flex;
+    flex-direction: row;
+    gap: var(--columngap);
+}
+
+.credits__heading {
+    grid-row: 2;
+    grid-column: 1;
+
+    padding-left: 2em;
+}
+
+.credits__list {
+    grid-column: 2 / 5;
+
+    padding-left: 0;
+    list-style: none;
+
+    font-family: Santello, Raleway;
+    color: silver!important;
+}
+
+.credits__item {
+    margin-bottom: calc(var(--sectiongap) / 4);
+}
+
+.credits__note {
+    grid-row: 2;
+    grid-column: 5;
+
+    display: block;
+    color: slategray;
+}

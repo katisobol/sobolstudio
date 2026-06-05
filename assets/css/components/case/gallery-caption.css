@@ -1,0 +1,25 @@
+/*
+ * можно не включать заголовок, либо заголовок с текстом
+{% include case-gallery.html
+  images="/path/to/img1.png, /path/to/img2.png, /path/to/img3.png"
+  seo="Стильный свитшот с паттерном, Логотип на боку, Принт спереди"
+  alt="Мерч мероприятия"
+  caption_term="Подготовка под шелкографию"
+  caption_desc="Разложила принт на спотовые цвета из библиотеки Pantone. Для печатников это готовая инструкция: цвета попадают в цель с первого тиража, без брака и пересогласований"
+%}
+*/
+.content__gallery.case__gallery {
+    background-color: hsla(0, 0%, 0%, 0.15);
+    filter: drop-shadow(0 0 1rem black);
+}
+@media (pointer: fine) {
+  .content__gallery.case__gallery::before {
+    content: url(../../../icons/mouseWheelIcon_64p.svg);
+    position: absolute;
+    left: 32px;
+    top: 32px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.65;
+  }
+}

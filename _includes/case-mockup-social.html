@@ -1,0 +1,47 @@
+{% if include.images %}
+  {% assign image_list = include.images | split: ',' %}
+  {% assign alt_list = include.seo | split: ',' %}
+  <div class="gallery-mockup content__gallery case__gallery">
+    <div class="case__gallery-track">
+      {% for img in image_list %}
+        {% assign img_src = img | strip | relative_url %}
+        {% assign img_alt = alt_list[forloop.index0] | strip | default: include.alt | default: 'Post image' %}
+        <div class="case__gallery-item">
+          <div class="case__social-post">
+            <div class="case__social-post__profile">
+              <img class="case__social-post__avatar" src="{{
+                include.userpic
+                | default: page.keyvisual
+                | default: 'assets/icons/Kc_logo_full_logo_raster_lght.png'
+                | relative_url
+              }}" alt="User avatar" />
+              <p class="case__social-post__username">{{ include.username | default: page.description | default: 'username' }}</p>
+            </div>
+            <img class="case__social-post__img" src="{{ img_src }}" alt="{{ img_alt }}" />
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+{% elsif include.image %}
+  {% assign img_alt = include.alt | default: 'Post image' %}
+  <div class="gallery-mockup content__gallery case__gallery">
+    <div class="case__gallery-track">
+      <div class="case__gallery-item">
+        <div class="case__social-post">
+          <div class="case__social-post__profile">
+            <img class="case__social-post__avatar" src="{{
+              include.userpic
+              | default: page.keyvisual
+              | default: 'assets/icons/Kc_logo_full_logo_raster_lght.png'
+              | relative_url
+            }}" alt="{{ include.username | default: page.description }} user avatar" />
+            <p class="case__social-post__username">{{ include.username | default: page.description | default: 'username' }}</p>
+          </div>
+          <img src="{{ include.image | relative_url }}" alt="{{ img_alt }}" />
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}

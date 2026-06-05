@@ -105,7 +105,7 @@ mark {
     h4, .h4,
     p, .p,
     span, .span).shadowhuge,
-    .case main article :is(h2, .h2) {
+    .case__content > h2 {
         color: grey;
         text-shadow: var(--shadowHuge);
         mix-blend-mode: hard-light;

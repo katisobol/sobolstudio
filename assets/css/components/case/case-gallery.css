@@ -1,0 +1,83 @@
+/*
+{% include case-gallery.html
+  images="/assets/img/portfolio/merch/DH_longsleeve_mockup1.png, /assets/img/portfolio/merch/DH_longsleeve_mockup2.png, /assets/img/portfolio/merch/DH_longsleeve_mockup3.png"
+  seo="Стильный свитшот с паттерном стилизации по анатомическим линиям. Логотип мероприятия + стильные микросхемы на боку, Стильный свитшот с паттерном стилизации по анатомическим линиям. Логотип мероприятия + микросхемы спереди, Стильный свитшот с паттерном стилизации по анатомическим линиям. Логотип мероприятия + микросхемы спереди"
+  alt="Стильный свитшот с паттерном стилизации по анатомическим линиям"
+  caption_term="Подготовка под шелкографию"
+  caption_desc="Разложила принт на спотовые цвета из библиотеки Pantone. Для печатников это готовая инструкция: цвета попадают в цель с первого тиража, без брака и пересогласований"
+%}
+*/
+
+/* Создаёт горизонтальный скролл-галерею */
+.case__gallery {
+    /* Заставляем блок игнорировать паддинги родителя и растянуться на всю ширину окна */
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    max-height: 100vh;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: var(--columngap) var(--padding);
+    box-sizing: border-box;
+    gap: var(--columngap);
+
+    background-color: silver;
+}
+@supports (max-height: 100svh) {
+    .case__gallery {
+        max-height: 100svh;
+    }
+}
+
+@media (pointer: fine) {
+    .case__gallery::before {
+        content: url(../../../icons/mouseWheelIcon_64p.svg);
+        position: absolute;
+        left: 16px;
+        top: 16px;
+        width: 16px;
+        height: 16px;
+        opacity: 0.65;
+    }
+}
+
+.case__gallery-track {
+  display: flex;
+  gap: var(--columngap);
+  align-items: center;
+
+    width: max-content;
+}
+
+/* Каждый элемент галереи – не сжимается при переполнении */
+.case__gallery-item {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+/* Изображения */
+.case__gallery-item img {
+  display: block;
+  max-height: calc(100vh - (var(--sectiongap) * 2));
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+@supports (max-height: 100svh) {
+    .case__gallery-item img {
+        max-height: calc(100svh - (var(--columngap) * 2));
+    }
+}
+
+
+.case__figcaption {
+    margin-top: calc(var(--sectiongap) / 2);
+}
+
+.case__description {
+    color: slategray;
+}
+
