@@ -12,7 +12,7 @@ images:
   - /assets/img/portfolio/branding-stratum/stratum_pattern2.png
   - /assets/img/portfolio/branding-stratum/guideline_slide03.jpg
 excerpt: "Создаю сильный брендинг для IT-аналитикики, визуал базируется на бизнес-ценностях"
-size: 0
+size: 3
 
 ---
 
