@@ -4,6 +4,7 @@ title: Системная вёрстка патентного ландшафта
 date: 2026-04-10
 card-label: Многостраничка
 thumbnail: /assets/img/portfolio/patent-landscape/patent-landscape_thumbnail.jpg
+keyvisual: /assets/img/portfolio/patent-landscape/patent-landscape_keyvisual.png
 cover: /assets/img/portfolio/patent-landscape/patent-landscape_cover.jpg
 images:
   - /assets/img/portfolio/patent-landscape/spread1.jpg

@@ -16,6 +16,8 @@ collections:
     output: true # это встроенная коллекция, можно оставить как есть
   products:
     output: true # на будущее
+  lightbox:
+    output: false
 
 defaults:
   - scope:

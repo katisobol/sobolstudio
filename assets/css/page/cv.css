@@ -314,9 +314,11 @@ ul {
 }
 
 .experience__item-title {
+    grid-column: span 3;
     color: var(--Golden);
     align-content: end;
 }
+
 .experience__item-note {
     display: block;
     color: slategray;
