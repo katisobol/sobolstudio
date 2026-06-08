@@ -1,4 +1,4 @@
-header {
+.header {
     display: none;
 }
 
@@ -440,7 +440,7 @@ ul {
 }
 
 .portfolio__description {
-    padding: 0.5em 1.75rem 0.75em 1em;
+    padding: calc(0.5em + 0.5vw) 1.75rem 0.75em calc(1em + 0.5vw);
     margin-top: 0;
 
   display: -webkit-box;
