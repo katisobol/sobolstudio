@@ -34,7 +34,33 @@
 
 
 
+<!-- Цикл для лайтбокс-элементов (упрощённая карточка-тамбнейл) -->
+{% for lightbox in site.lightbox reversed %}
+  {% capture bp_html %}
+    <div class="lightbox-content">
+      <h3>{{ lightbox.title }}</h3>
+      {{ lightbox.content }}
+    </div>
+  {% endcapture %}
 
+  <div class="portfolio__card portfolio__card--lightbox {% if lightbox.size %}card--size--{{ lightbox.size }}{% endif %}"
+     data-bp='{
+       "items": [{
+         "html": {{ bp_html | strip | jsonify }},
+         "width": 800,
+         "height": 600
+       }]
+     }'
+     {% if lightbox.thumbnail %}
+     style='background: url("{{ lightbox.thumbnail | relative_url }}") no-repeat center/cover;'
+     {% endif %}
+     role="button"
+     tabindex="0"
+     aria-label="{{ lightbox.title | default: 'Открыть галерею' }}"
+  >
+    <!-- Карточка без текста, только фон (тамбнейл) -->
+  </div>
+{% endfor %}
 
 
 

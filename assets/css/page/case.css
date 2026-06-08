@@ -40,12 +40,16 @@
     }
 }
 
+@media (max-width: 768px) {
+    .case .case__cover {
+        padding: var(--padding);
+    }
+}
 @media handheld, (max-width: 1080px) {
     .header__breadcrumbs {
         padding-top: calc(var(--sectiongap) / 1.5);
     }
     .case .case__cover {
-        padding: var(--padding);
         padding-top: 7.5rem;
     }
 }
@@ -63,6 +67,12 @@
     position: relative;
     padding: unset;
 
+}
+
+@media (orientation: portrait) {
+    main > .case__gallery img {
+        max-width: 100vw;
+    }
 }
 
 .case__content {
@@ -93,7 +103,6 @@
 .case__content .gallery > img {
     filter: drop-shadow(0 0 1rem black);
 }
-
 .case__content > :is(h2, .h2) {
     position: relative;
     top: -0.45em; left: calc(0px - var(--padding));

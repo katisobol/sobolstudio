@@ -115,10 +115,6 @@ abbr {
 
 /* КНОПКИ */
 
-button,
-input[type="button"],
-input[type="submit"],
-input[type="reset"],
 .btn {
     position: relative;
     width: max-content; height: 50px;
@@ -143,7 +139,7 @@ input[type="reset"],
     text-decoration: none;
 }
 
-:is(input[type="button"], input[type="submit"], input[type="reset"], button, .btn, .btn:link, .btn:visited)::before {
+.btn::before {
     content: "";
     position: absolute;
     left: 0;
@@ -159,8 +155,8 @@ input[type="reset"],
     z-index: -1;
 }
 
-:is(button, .btn, input, button):hover::before,
-:is(button, .btn):active::before {
+.btn:hover::before,
+.btn:active::before {
     left: 50%;
     background-color: var(--DeepBlue);
     border-color: hsla(220, 75%, 40%, 0);

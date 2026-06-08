@@ -27,6 +27,10 @@
     text-decoration: none !important;
 }
 
+.portfolio__card--lightbox {
+    cursor: zoom-in;
+}
+
 .card__keyvisual {
     position: absolute;
     width: 100%; height: 100%;

@@ -1,5 +1,5 @@
 .header__breadcrumbs {
-    padding: var(--sectiongap) var(--padding);
+    padding: var(--sectiongap) var(--padding) 0;
 }
 .header,
 .header__breadcrumbs {
