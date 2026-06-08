@@ -263,7 +263,7 @@ ul {
 .value::after,
 .value ul::before,
 .value ul::after {
-    content: url(../../img/patterns/guides.svg);
+    content: url(../../img/patterns/crop-marks.svg);
     position: absolute;
     opacity: 0.35;
     width: 0;

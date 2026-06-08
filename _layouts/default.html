@@ -36,6 +36,7 @@
         href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
             rel="stylesheet" />
 
+        <script src="https://cdn.jsdelivr.net/npm/bigger-picture@1.1.12/dist/bigger-picture.umd.min.js"></script>
         <script src="https://katisobol.github.io/sobolstudio/scripts/addAssets/script.js"></script>
     </head>
     <body {% if page.extra_css %}
@@ -52,16 +53,6 @@
         {% include header.html %}
         {{ content }}
         {% include footer.html %}
-
-<!-- Скрипт Bigger Picture -->
-<script src="https://cdn.jsdelivr.net/npm/bigger-picture@1.1.12/dist/bigger-picture.umd.min.js"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const bp = BiggerPicture({
-      target: document.body,
-    });
-  });
-</script>
 
     </body>
 </html>

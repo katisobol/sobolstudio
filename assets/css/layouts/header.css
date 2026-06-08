@@ -1,48 +1,44 @@
-header {
+.header__breadcrumbs {
     padding: var(--sectiongap) var(--padding);
 }
-header,
-header nav,
-header nav ul {
+.header,
+.header__breadcrumbs {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
 }
 
-header nav ul {
-    padding-left: 0.15rem;
+.breadcrumbs__list {
     flex-direction: row-reverse;
 }
-header nav ul li {
+.breadcrumbs__level {
     display: none;
     list-style: none;
 }
-header nav ul li::before {
+.breadcrumbs__level::before {
     content: "/";
-}
-header nav ul li::before,
-header nav ul li::after {
-    padding: 0 1rem;
+    margin: 0 1em;
 }
 
-header nav ul li::before,
-header nav ul li::after,
+.breadcrumbs__level::before,
+.breadcrumbs__level::after,
 header nav ul::before,
 header nav ul::after {
     color: slategray;
     text-shadow: var(--textShadow);
 }
 
-header nav ul li a:link,
-header nav ul li a:visited {
+
+.breadcrumbs__link:link,
+.breadcrumbs__link:visited {
     color: slategray;
 }
-header nav ul li a:hover,
-header nav ul li a:focus {
+.breadcrumbs__link:hover,
+.breadcrumbs__link:focus {
     color: cornflowerblue;
 }
-header nav ul li a:active {
+.breadcrumbs__link:active {
     color: var(--CosmicLatte);
 }
 /*

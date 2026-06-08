@@ -9,6 +9,7 @@ images:
   - /assets/img/portfolio/branding-stratum/stratum_reference_sage6.jpg
   - /assets/img/portfolio/branding-stratum/logo_visual_1.jpg
   - /assets/img/portfolio/branding-stratum/stratum_colors_DataBlue.png
+  - /assets/img/portfolio/branding-stratum/stratum_logo_monocrome_copper.jpg
   - /assets/img/portfolio/branding-stratum/stratum_pattern2.png
   - /assets/img/portfolio/branding-stratum/guideline_slide03.jpg
 excerpt: "Создаю сильный брендинг для IT-аналитикики, визуал базируется на бизнес-ценностях"

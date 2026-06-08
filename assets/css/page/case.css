@@ -8,22 +8,15 @@
 @import url(../components/case/gallery-infographic.css);
 @import url(../components/case/social-mockup-post.css);
 
-.case header {
-    display: inline-flex;
+.case .header {
     position: absolute;
     background: transparent;
     z-index: 2;
 }
 
-.case header nav ul li {
-    white-space: nowrap;
-}
-.case header nav ul li::after {
-    content: "/";
-    padding-right: 0;
-}
-.case header nav ul li:nth-child(1) {
-    display: inline;
+.case header nav ul li:nth-child(1),
+.case header nav ul li:nth-child(2) {
+    display: block;
 }
 .case header nav ul li:nth-child(1) a::before {
     content: "Портфолио";
@@ -35,31 +28,25 @@
     text-shadow: var(--textShadow);
 }
 
-@media screen and (min-width: 1000px) {
-    .case header {
+@media (min-width: 1080px) {
+    .header__breadcrumbs {
+        padding: calc(var(--sectiongap) + 1em) 0 0 1em;
+        width: var(--padding);
+
         display: flex;
         flex-direction: row;
+        justify-content: end;
         flex-wrap: nowrap;
-        justify-content: flex-end;
-        padding: calc(var(--sectiongap) + 1rem) 2rem 0 0;
-        width: var(--padding);
-    }
-    .case header nav {
-        flex-direction: row;
-        align-items: flex-end;
-        gap: 1em;
-    }
-    .case header nav ul li::before {
-        padding-left: 0;
     }
 }
 
-@media handheld, (max-width: 1000px) {
-    .case header {
-        padding: 1.5rem 0 0 1.5rem;
+@media handheld, (max-width: 1080px) {
+    .header__breadcrumbs {
+        padding-top: calc(var(--sectiongap) / 1.5);
     }
-    .case h1 {
-        padding-top: 100px !important;
+    .case .case__cover {
+        padding: var(--padding);
+        padding-top: 7.5rem;
     }
 }
 
@@ -93,15 +80,13 @@
     }
 }
 
-.case h1.cover {
+.case__cover {
     width: 100vw;
     box-sizing: border-box;
     max-width: none;
     padding: var(--sectiongap) var(--padding) calc(var(--sectiongap) * 0.75);
     margin: 0;
     background: var(--BrightBlue);
-    background-position: center;
-    background-size: cover;
     text-shadow: var(--textShadow);
 }
 
@@ -155,7 +140,7 @@
     }
 }
 @media (min-width: 1000px) {
-    .case__content > :is(p, .p) {
+    .case__content > :is(p, .p, ul, small) {
         grid-column-start: 2;
     }
 }

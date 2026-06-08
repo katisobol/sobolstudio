@@ -6,9 +6,9 @@ layout: default
 
   <h1
       {% if page.cover %}
-      class="cover" style="background: url({{ page.cover | relative_url }}) center"
+      class="case__cover" style="background: url({{ page.cover | relative_url }}) center / cover no-repeat"
       {% elsif page.thumbnail %}
-      class="cover" style="background: url({{ page.thumbnail | relative_url }})"
+      class="case__cover" style="background: url({{ page.thumbnail | relative_url }})"
       {% endif %}
       >{{ page.title }}</h1>
 

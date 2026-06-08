@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const guideTemplate = document.createElement("img");
 
-    guideTemplate.src = "assets/img/patterns/guides.svg";
+    guideTemplate.src = "assets/img/patterns/crop-marks.svg";
     guideTemplate.style.position = "absolute";
     guideTemplate.style.width = "100px";
     guideTemplate.style.height = "100px";

@@ -39,21 +39,21 @@
 
 /* Сетка исчезает на узкой странице */
 :root {
-    --grid: repeat(5, calc(((100vw - 2 * var(--padding)) - (4 * var(--columngap)) ) / 5));
+    --grid: repeat(5, minmax(0, 1fr));
 }
 
+@media (max-width: 1280px) {
+    :root {
+    --grid: repeat(4, minmax(0, 1fr));
+    }
+}
 
 @media (max-width: 768px) {
     :root {
-    --grid: unset;
+    --grid: repeat(3, minmax(0, 1fr));
     }
 }
 
-@media (min-width: 1800px) {
-    :root {
-        --grid: repeat(5, 220px);
-    }
-}
 /* Расстояние между колонками */
 :root {
     --columngap: calc(var(--sectiongap) / 2);
@@ -101,10 +101,9 @@ dl,
 .layout {
     display: grid;
     grid-template-columns: var(--grid);
-    grid-auto-flow: row;
-    column-gap: var(--columngap);
-    row-gap: calc(var(--sectiongap) / 3);
+    gap: var(--columngap);
     grid-auto-flow: dense;
+    justify-items: stretch;
 }
 
 /* Лейаут: растягиваем элементы по умолчанию на все колонки */
