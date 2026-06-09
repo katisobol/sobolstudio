@@ -127,6 +127,14 @@ ul {
     padding: 1.5rem;
     opacity: 0.35;
 }
+@media (min-width: 1400px) {
+    .actions {
+        width: var(--padding);
+    }
+    .actions__btn {
+        padding: 0;
+    }
+}
 .actions:hover {
     opacity: 1;
 }

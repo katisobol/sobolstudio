@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
   const bp = BiggerPicture({
-    target: document.body,
-    animation: 'fade',           // меняем анимацию на fade (вместо странного растяжения)
-    animationDuration: 150,      // длительность в мс
+      target: document.body,
+    intro: 'fade',
+    animationDuration: 150,      // длительность в мс      // длительность анимации в мс
     backgroundClose: true,       // закрытие по клику на фон
     keyboard: true,              // навигация с клавиатуры
     scrollable: true,            // разрешаем скролл внутри контента

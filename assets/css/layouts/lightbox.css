@@ -1,4 +1,15 @@
-.lightbox-content img {
+.bp-inner img {
     max-width: 100vw;
     max-height: 100vh;
+
+    object-fit: contain;
+    cursor: default;
 }
+
+.portfolio .bp-x,
+.bp-inner {
+    cursor: zoom-out;
+}
+
+
+
