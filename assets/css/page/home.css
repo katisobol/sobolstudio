@@ -34,158 +34,167 @@ ul {
 }
 
 .hero {
+    padding-top: var(--columngap);
+    padding-bottom: 0;
+
     background-image: url(../../img/page/home/hero3.png);
     background-position-y: top;
     background-attachment: fixed;
-    background-color: black;
+
     color: var(--SoftBlack);
-    padding: var(--sectiongap) 0 0;
-    display: block;
 }
 
+hero__heading {
+    position: relative;
+}
 
 /* Меню главной страницы */
-.hero div.layout:first-child {
-    padding: 0 var(--padding);
-}
-
-.hero nav {
-    grid-column: 3 / -1;
+.hero__navbar {
     position: relative;
+
+    grid-column: -4 / -1;
     padding: 1rem; padding-top: 24px;
     background-color: rgba(255, 255, 255, 0.15);
     margin: 0;
+
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     gap: 1rem;
+
     z-index: 2;
 }
-.hero nav a {
-    white-space: nowrap;
-}
-.hero nav ul .contacts {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: calc(100% - 2rem);
-    font-size: 0.75rem;
-}
-.hero nav .contacts a:link {
-    color: var(--DeepBlue);
-    text-shadow: none;
-}
-/* nav меню стилизовано для десктопной версии */
-@media (min-width: 801px) {
-    .hero nav {
-        position: relative;
-        left: -3rem;
-        padding-left: 3rem;
-        width: calc(100% + 3rem);
-    }
-    .hero nav ul {
-        width: 100%;
-    }
-    .hero nav ul li {
-        width: max-content;
-    }
-    .hero nav .contacts::before {
-        height: 1.25rem;
-    }
-}
-/* nav Меню стилизовано для Мобильной версии */
-@media (max-width: 800px) {
-    .hero nav {
-        max-width: max-content;
-        padding: 35px 5rem 1rem 35px;
-        background-color: rgba(255, 255, 255, 0.25);
-    }
-    .hero nav ul li {
-        margin-top: 0 !important;
-    }
-    .hero nav ul .contacts {
-        gap: 1.5em;
-    }
-    .hero nav ul li a {
-        display: inline-flex;
-        align-items: center;
-        min-height: 50px;
-    }
-}
-
-.hero .logo {
-    background-image: url(../../icons/Kc_logo_full_logo_raster_lght.png);
-    background-position-x: left;
-    filter: drop-shadow(0 0 1.5px cornflowerblue);
-}
-
-.hero nav ul {
-    margin: 0;
-    padding: 0;
-}
-.hero nav ul li {
-    list-style-type: none;
-    margin: 0.5rem 0 0;
-}
-
-
-/* Выпадающий блок при наведении */
-.hero nav li::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    width: 0;
-    height: 1.5rem;
-    display: block;
-    background-color: var(--CosmicLatte);
-    opacity: 0.35;
-    mix-blend-mode: soft-light;
-    z-index: -1;
-    transition: all 250ms ease-in;
-}
-.hero nav :is(li:hover, li.active)::before {
-    content: "";
-    width: 100%;
-    transition: all 250ms ease-out;
-}
-@media (max-width: 800px) {
-    .hero nav li::before {
-    height: 50px;
-    }
-}
-
-
-
-.hero nav a,
-.hero nav a:link,
-.hero nav a:visited {
-    color: var(--SoftBlack);
-}
-.hero nav a:hover {
-    color: var(--BrightBlue);
-}
-
-
-.hero h1,
-.hero nav a {
+.navbar__link {
+    min-width: max-content;
     text-shadow:
         0 0 50px cornflowerblue,
         0 0 10px var(--CosmicLatte),
         0 0 1.5px tan,
         0 0 0.5px yellow;
 }
+.navbar__item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--columngap);
+}
+.navbar__contacts {
+    width: calc(100% - 2rem);
+
+    font-size: 0.75rem;
+}
+.navbar__contacts a:link {
+    color: var(--DeepBlue);
+    text-shadow: none;
+}
+/* nav меню стилизовано для десктопной версии */
+@media (min-width: 801px) {
+    .hero__navbar {
+        position: relative;
+        left: -3rem;
+        padding-left: 3rem;
+        width: calc(100% + 3rem);
+    }
+    .navbar__list {
+        width: 100%;
+    }
+    .navbar__item {
+        width: max-content;
+    }
+    .navbar__contacts::before {
+        height: 1.25rem;
+    }
+}
+/* nav Меню стилизовано для Мобильной версии */
+@media (max-width: 800px) {
+    .hero__navbar {
+        max-width: max-content;
+        padding: 35px 5rem 1rem 35px;
+        background-color: rgba(255, 255, 255, 0.25);
+    }
+    .navbar__item {
+        margin-top: 0 !important;
+    }
+    .navbar__contacts {
+        gap: 1.5em;
+    }
+    .navbar__link {
+        display: inline-flex;
+        align-items: center;
+        min-height: 50px;
+    }
+}
+
+.hero .navbar__logo {
+    background-image: url(../../icons/Kc_logo_full_logo_raster_lght.png);
+    background-position-x: left;
+    filter: drop-shadow(0 0 1.5px cornflowerblue);
+}
+
+.navbar__list {
+    margin: 0;
+    padding: 0;
+}
+.navbar__item {
+    list-style-type: none;
+    margin: 0.5rem 0 0;
+}
+
+
+/* Выпадающий блок при наведении */
+.navbar__item::before {
+    content: "";
+
+    display: block;
+    width: 0; height: 1.5rem;
+
+    position: absolute;
+    left: 0;
+
+    background-color: var(--CosmicLatte);
+    opacity: 0.35;
+    mix-blend-mode: soft-light;
+
+    z-index: -1;
+
+    transition: all 250ms ease-in;
+}
+:is(.navbar__item:hover, .navbar__item:active)::before {
+    content: "";
+    width: 100%;
+    transition: all 250ms ease-out;
+}
+@media (max-width: 800px) {
+    .navbar__item::before {
+    height: 50px;
+    }
+}
+
+
+
+.navbar__link,
+.navbar__link:link,
+.navbar__link:visited {
+    color: var(--SoftBlack);
+}
+.navbar__link:hover {
+    color: var(--BrightBlue);
+}
+
 
 .hero__decorative {
     display: block;
-    position: relative;
-    left: unset; top: -1.23em;
-    height: 0;
-    overflow: visible;
+
+    position: absolute;
+    left: 0; bottom: 0;
+
     font-family: Unovis100;
     font-size: 10vw;
     line-height: 4.5vw;
     user-select: none;
+
+    /* z-index: 1; */
 }
 
 @media (max-width: 768px) {
@@ -194,23 +203,16 @@ ul {
     }
 }
 
-.hero h1 {
+.hero__header {
     position: relative;
-    margin: calc(var(--sectiongap) / 2) auto;
-    padding: 0 var(--padding);
-    box-sizing: content-box;
     z-index: 3;
-    max-width: 1400px;
-}
-@media (max-width: 768px) {
-    .hero h1 {
-        text-shadow:
+
+    text-shadow:
         0 0 100px cornflowerblue,
         0 0 65px var(--CosmicLatte),
         0 0 10px tan,
         0 0 1.5px gold,
         0 0 0.5px white;
-    }
 }
 
 .hero .layout *,
@@ -219,19 +221,21 @@ ul {
 }
 
 .hero__offer {
-    position: relative;
-    display: grid;
-    grid-template-columns: var(--grid);
     color: var(--CosmicLatte);
-    background: url(../../img/patterns/paperTxtr.png),
-        var(--SoftBlack);
+    background: url(../../img/patterns/paperTxtr.png) center/auto repeat,
+                var(--SoftBlack) !important;
     background-repeat: repeat;
     background-size: auto;
+
     padding: 2rem var(--padding) var(--sectiongap);
+    gap: 1.5em;
+
+    transition: none;
 }
 
-.hero__offer div {
-    position: relative;
+.offer__wrapper {
+    grid-column: -4 / -1;
+
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -252,7 +256,7 @@ ul {
 }
 
 .hero__offer .btn {
-    margin-bottom: 0;
+    grid-column: -4;
 }
 
 
@@ -303,13 +307,10 @@ ul {
 .value__heading {
     order: 3;
 
-    display: grid;
-    grid-template-columns: var(--grid);
-    column-gap: var(--columngap);
     row-gap: 0;
+    padding: 0;
 
-    grid-column: 1 / -1;
-    margin-top: 3rem;
+    margin-top: 0.5em;
 }
 .value__heading-span {
     grid-column: 1 / -1;
@@ -317,52 +318,55 @@ ul {
 }
 @media (min-width: 768px) {
     .value__heading {
-    font-size: 3.5vw;
+    font-size: 3vw;
     }
 }
 @media (min-width: 768px) {
+    .value__heading {
+        position: relative;
+    }
     .value__heading:before {
         content: "02";
+
+        position: absolute;
+        bottom: -0.025em;
 
         display: block;
         grid-column: 1 / 2;
         order: 1;
         justify-self: start;
-        height: 0;
-        transform: translateY(-0.58em);
 
         font-family: Unovis100;
         font-size: 15vw;
 
-        color: rgba(255, 255, 255, 0.08);
+        color: hsla(0, 0%, 10%, 0.75);
         background: url(../../img/page/home/glitch.gif);
         background-size: contain;
         background-position-y: 85%;
         -webkit-background-clip: text;
         background-clip: text;
     }
-    .value__heading-span:nth-child(2) {
-        grid-column: 2 / -1;
+    .value__heading-span-2 {
+        grid-column: -5 / -1;
         order: 2;
     }
 }
 
 
 /* рисую крестики */
-.value .crosses {
+.value__details {
     position: relative;
-    padding: 0 0 calc(var(--sectiongap) / 2);
-    background: none;
-    background-repeat: repeat;
+    padding: 0;
+    gap: calc(var(--columngap) / 2);
 }
-.value .crosses::before {
+.value__details::before {
     width: calc(100% + var(--padding));
     height: calc(100% + var(--sectiongap));
     top: calc(0px - var(--sectiongap));
 }
 
 .value__description {
-    grid-column: 2 / -1 !important;
+    grid-column: -5 / -1;
 }
 
 .value__description.strong,
@@ -375,7 +379,7 @@ ul {
 }
 
 .value__list {
-    padding: calc(var(--sectiongap) / 2) 0 0;
+    padding: var(--columngap) 0 0;
 
     grid-column: 2 / -1;
     border-top: solid 1.5px slategray;
@@ -610,3 +614,4 @@ ul {
         align-items: flex-end;
     }
 }
+
