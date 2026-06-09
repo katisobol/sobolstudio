@@ -128,8 +128,10 @@ abbr {
     background: transparent;
     border: none;
     z-index: 2;
-    white-space: nowrap;
     transition: 150ms ease;
+
+    white-space: wrap;
+    line-height: 1;
 }
 
 .btn:link,

@@ -1,9 +1,12 @@
 @import url(https://csstools.github.io/normalize.css/11.0.0/normalize.css);
 @import url(https://cdn.jsdelivr.net/npm/bigger-picture@1.1.12/dist/bigger-picture.min.css);
 @import url(layout.css);
+
 @import url(layouts/header.css);
 @import url(layouts/footer.css);
+@import url(layouts/lightbox.css);
 @import url(layouts/portfolio.css);
+
 @import url(themes.css);
 @import url(typo.css);
 @import url(components/lightbox.css);

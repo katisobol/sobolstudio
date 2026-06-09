@@ -150,7 +150,14 @@ ul {
 
 
 
-
+@media (max-width: 768px) {
+    .cv .skills {
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+        align-items: stretch;
+    }
+}
 .skills__heading {
     position: absolute;
     left: calc(0px - var(--padding));
@@ -197,6 +204,15 @@ ul {
     border-radius: 1.5rem;
     min-width: 10em; max-width: 100%;
     background-color: rgba(0, 0, 0, 0.35);
+}
+.skills {
+  container-type: inline-size;
+}
+
+@container (max-width: 250px) {
+  .skills .btn {
+    font-size: 0.75em;
+  }
 }
 .skills .btn::before {
     border: 1.5px solid var(--cardborder);
