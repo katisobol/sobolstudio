@@ -205,10 +205,10 @@ ul {
     margin-top: 0.25em;
 }
 
-.skills .btn {
+.skills__tag {
     height: 2.75rem;
     margin: 1em 0.5em 0 0;
-    padding: 0.5em 2em;
+    padding: 0 1.5em;
     border-radius: 1.5rem;
     min-width: 10em; max-width: 100%;
     background-color: rgba(0, 0, 0, 0.35);

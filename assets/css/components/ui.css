@@ -119,11 +119,15 @@ abbr {
     position: relative;
     width: max-content; height: 50px;
     padding: 0 calc(3rem + 1.5vw);
+
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
+
     font-family: Santello, Raleway;
     color: var(--CosmicLatte);
+
     cursor: pointer;
     background: transparent;
     border: none;

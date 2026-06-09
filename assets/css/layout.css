@@ -33,7 +33,7 @@
 }
 @media (max-width: 768px) {
     :root {
-        --sectiongap: 2rem;
+        --sectiongap: 3.5rem;
     }
 }
 
@@ -105,24 +105,39 @@ dl,
     grid-auto-flow: dense;
     justify-items: stretch;
 }
+/* Давайте бахнем селектор для помещения подсекции */
+/* Растягиваем на всю ширину и используем грид */
+.layout__full-bleed {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+
+    display: grid;
+    grid-template-columns: var(--grid);
+    gap: var(--columngap);
+    grid-auto-flow: dense;
+    justify-items: stretch;
+}
 
 /* Лейаут: растягиваем элементы по умолчанию на все колонки */
-
+/* да, этот селектор проклят. Можете не извиняться */
     hr,
     /* Заголовки и текст */
-    h1, h2, h3, h4, h5, h6, p, small, a, button, .btn,
+    h1, h2,
     /* Структурные блоки */
     div, nav, img, article, ul, ol, li, .block,
     /* Семантические добавки */
     header, aside, main, address, blockquote, pre, hr,
     figure, figcaption, details, summary, fieldset, legend,
     form, label, table, caption, thead, tbody, tfoot, tr, th, td,
-    dl, dt, dd,
+    dl, dt,
     /* Медиа и встраиваемое */
     video, audio, iframe, embed, object, picture, source,
     /* Технические */
     section, footer
 { grid-column: 1 / -1; }
+
+h3, h4, h5, h6, p, small, a, button, .btn, dd
+{ grid-column: -5 / -1; }
 
 
 
