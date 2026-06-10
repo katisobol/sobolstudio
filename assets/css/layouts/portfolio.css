@@ -11,6 +11,10 @@
 
 
 
+.portfolio .portfolio__btn:hover::before {
+    transform: translateY(-0.75px) translateX(0.75px);
+}
+
 .portfolio__card {
     position: relative;
     width: 100%; height: 100%;

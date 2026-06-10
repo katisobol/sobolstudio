@@ -402,16 +402,22 @@ ul {
     align-items: end;
 }
 
-.contact-message {
+.contact__header,
+.contact__text {
+    grid-column-end: -2;
+    text-align: right;
+}
+
+.contact__message {
     position: relative;
     width: 100%;
     background-color: var(--DeepBlue);
-    grid-column: 1 / 5;
+    grid-column: 1 / -2;
     padding: 1.25rem 1.5rem;
     border-radius: 0.5rem;
 }
 /* CSS-треугольник на десктоп */
-.contact-message::after {
+.contact__message::after {
     content: "";
     position: absolute;
     bottom: 0.5rem; right: -1.5rem;
@@ -422,18 +428,17 @@ ul {
     border-color: var(--DeepBlue) transparent transparent transparent;
 }
 
-.contact__buttons {
-    display: contents;
-}
 .contact__cta,
 .contact__tg {
-    grid-column: 5;
+    grid-column: -2;
 }
 .contact__cta {
     width: 100%;
+    grid-row: 3;
 }
 .contact__tg {
     text-align: center;
+    grid-row: 4;
 }
 
 /* На мобилки */
@@ -443,17 +448,17 @@ ul {
         flex-direction: column;
         justify-content: end;
     }
-    .contact-message {
+    .contact__message {
         margin-right: 0;
         margin-bottom: 1rem;
     }
-    .contact-message::after {
+    .contact__message::after {
         content: "";
         position: absolute;
-        bottom: -1.5rem; right: calc(var(--sectiongap) / 1.5);
+        bottom: calc(0px - var(--sectiongap) / 3); right: calc(var(--sectiongap) / 1.5);
         width: 0; height: 0;
         border-style: solid;
-        border-width: 1.5rem 1.5rem 0 0;
+        border-width: calc(var(--sectiongap) / 3) calc(var(--sectiongap) / 3) 0 0;
         border-color: var(--DeepBlue) transparent transparent transparent;
     }
     .contact__buttons {
