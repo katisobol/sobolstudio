@@ -43,7 +43,12 @@
 }
 
 .card__label {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+
     text-shadow: var(--textShadow);
+    filter: drop-shadow(var(--shadow-2xs), var(--shadow-m));
 }
 
 .portfolio__label {
@@ -54,14 +59,11 @@
 @supports (writing-mode: sideways-lr) {
     .portfolio__label {
         position: absolute;
-        right: 0; height: 100%;
-        padding: 0 0.5em;
+        right: 0; height: calc(100% - 1em - 1.5px); /* магия! волшебствооо */
+        padding: 0.5em;
 
         writing-mode: sideways-lr; text-align: right;
         border-left: var(--border);
-    }
-    .portfolio__label::after {
-        content: " ";
     }
 }
 
@@ -79,6 +81,18 @@
 
 .popup__label {
 
+}
+
+.portfolio__behance .card__label::before {
+    content: url(../../icons/behance-square.svg);
+
+    width: 2em; aspect-ratio: 1/1;
+
+    position: absolute;
+    bottom: 0.5em;
+
+    transform: rotate(-90deg);
+    mix-blend-mode: exclusion;
 }
 
 
@@ -105,12 +119,6 @@
 @media (max-width: 540px) {
     .portfolio {
         grid-template-columns: repeat(3, 33.3%);
-    }
-}
-
-@media (max-width: 360px) {
-    .portfolio {
-        grid-template-columns: repeat(2, 50%);
     }
 }
 

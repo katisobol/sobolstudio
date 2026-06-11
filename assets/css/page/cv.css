@@ -383,8 +383,18 @@ ul {
 .education__card-title {
     color: var(--Golden);
 }
+@media (max-width: 768px) {
+    .education__card-title {
+        grid-column: 1 / -2;
+    }
+    .education__card-description {
+        grid-column: -2 / -1;
+    }
+}
 
 .education__card-note {
+    display: inline-block;
+
     text-transform: none;
     color: var(--DeepBlue);
     text-shadow:

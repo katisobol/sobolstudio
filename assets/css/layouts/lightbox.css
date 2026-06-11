@@ -5,9 +5,8 @@
 
 /* Затемняющий фон (оверлей) */
 .lightbox-modal {
-    display: none;
+    visibility: hidden;
 
-    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -20,7 +19,9 @@
 
 /* Активное состояние — лайтбокс виден */
 .lightbox-modal.active {
-    display: unset;
+    visibility: visible;
+    position: fixed;
+
 
     opacity: 1;
 }

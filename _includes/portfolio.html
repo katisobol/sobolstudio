@@ -46,7 +46,8 @@
        {% endif %}
        role="button"
        tabindex="0"
-       aria-label="{{ lightbox.title | default: 'Открыть галерею' }}">
+       aria-label="{{ lightbox.title | default: 'Открыть галерею' }}"
+       title="{{ lightbox.title | default: 'Показать галерею' }}">
   </div>
 
   <!-- Скрытый контент для лайтбокса -->

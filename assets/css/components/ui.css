@@ -169,11 +169,11 @@ abbr {
 }
 
 
-/* на все элементы с target blank вешаем специальную иконку */
-:is(.btn, portfolio__card)[target="_blank"] {
+/* на некоторые элементы с target blank вешаем специальную иконку */
+:is(.btn, .portfolio__card)[target="_blank"] {
     position: relative;
 }
-:is(.btn, portfolio__card)[target="_blank"]::after {
+:is(.btn, .portfolio__card)[target="_blank"]::after {
     content: url(../../icons/icon_newTab.svg);
     position: absolute;
     right: -1px;
@@ -183,11 +183,15 @@ abbr {
     object-fit: contain;
     pointer-events: none;
 }
+:is(.btn, .portfolio__card)[target="_blank"]::after {
+    right: 0.5px;
+    top: 0.5px;
+}
 :not(.btn, .social, .portfolio__card)[target="_blank"]::after{
     right: -1em;
     top: 0;
 }
-:is(.btn, portfolio__card)[target="_blank"]::after {
+:is(.btn, .portfolio__card)[target="_blank"]::after {
     opacity: 0;
 }
  [target="_blank"]:hover::after {
