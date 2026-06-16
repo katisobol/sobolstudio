@@ -5,38 +5,27 @@ description: Брендинг для закрытия ваших бизнес-з
 ---
     <!-- ГЕРОЙ (hero) -->
     <section class="hero" aria-labelledby="hero-heading">
-        <h1 id="hero-heading">Бренд-конструктор для технологических компаний: создаем систему, а не просто логотип</h1>
-        <p class="subhead">
-            Перестаньте тратить время на поиск дизайнера и координацию разрозненных задач. Получите готовую,
-            масштабируемую визуальную систему, которая решает бизнес-задачи.
+        <h1 id="hero__heading">Создаю личный бренд для профи на основе вашей личности. Без скрытых переплат</h1>
+        <p class="hero__subhead">
+            Делаю искренний и продуманный брендинг для недооценённых профессионалов. Без шаблонных логотипов и абстрактного «корпоративного стиля», ваш цифровой образ
         </p>
-        <div class="cta-group">
-            <a href="#consultation" class="btn">Обсудить ваш проект</a>
-            <a href="#process" class="btn-secondary">Как мы поработаем</a>
+        <div class="hero__btns">
+            <a class="hero__btn-primary btn" href="#consultation">Обсудить ваш проект</a>
+            <a  class="hero__btn-secondary" href="#process">Как мы поработаем</a>
         </div>
     </section>
 
     <!-- БОЛИ ЦА (pain-points) -->
-    <section class="pain-points" aria-labelledby="pain-heading">
-        <h2 id="pain-heading">Знакомая ситуация?</h2>
-        <ul class="pain-list">
-            <li>
-                <strong>Дизайнер пропал?</strong> Фрилансеры сливаются, а в агентствах вы переплачиваете за менеджмент
-            </li>
-            <li>
-                <strong>Стиля нет?</strong> Есть логотип, но соцсети, сайт и презентация — всё как у разных компаний
-            </li>
-            <li>
-                <strong>Сложно объяснить?</strong> Визуал должен быть лучшим переводчиком вашего сложного продукта. Но
-                среднему дизайнеру не хочется разбираться
-            </li>
-            <li><strong>Страх переплаты?</strong> Бюджет ограничен, а цены на брендинг выросли на 20% за 2 года</li>
-        </ul>
-        <p class="pain-solution">
-            <strong>Выход есть:</strong> «Бренд-конструктор» — это готовая система, которая сразу начинает работать на
-            ваш бизнес. Вы получите не просто набор файлов, а продуманную архитектуру, которая масштабируется и экономит
-            ваши ресурсы.
+    <section class="pains" aria-labelledby="pain-heading">
+        <h2 class="pains__heading">Вы эксперт. Но этого не видят</h2>
+        <p class="pains__text">
+            Но вы теряетесь в серой толпе. Вас не отличить от вчерашннего дилетанта. И ваша прибыль, ваше признание уходят к самоуверенному
         </p>
+        <p class="pains__text">Ваша экспертиза остаётся к тени. Это несправедливо.</p>
+    </section>
+
+    <section class="hope">
+        <h2 class="hope__heading">Дизайн рождается из смысла</h2>
     </section>
 
     <!-- ЧТО ВХОДИТ В ПРОДУКТ (included) -->
@@ -87,8 +76,9 @@ description: Брендинг для закрытия ваших бизнес-з
 
     <!-- ПРИМЕР ИЗ ПРАКТИКИ (proof) -->
     <section class="portfolio" aria-labelledby="portfolio">
-        <h2 id="proof-heading">Пример из практики: как дизайн решает бизнес-задачи</h2>
+        <h2 id="proof-heading">Примеры работ</h2>
         {% include portfolio.html %}
+        <a class="portfolio__more btn" href="https://katisobol.github.io/sobolstudio/portfolio/#portfolio" target="_blank">Больше работ</a>
     </section>
 
     <!-- ПРОЦЕСС РАБОТЫ (process) -->
@@ -222,6 +212,14 @@ description: Брендинг для закрытия ваших бизнес-з
     </section>
 
     <!-- БЛОК ЗАПИСИ НА КОНСУЛЬТАЦИЮ (contact) -->
+    <section class="desire">
+        <h2>Заявите о своей экспертности ярко и искренне</h2>
+        <p class="desire__text">
+            В
+        </p>
+    </section>
+
+    <!-- БЛОК ЗАПИСИ НА КОНСУЛЬТАЦИЮ (contact) -->
     <section id="consultation" class="contact" aria-labelledby="contact-heading">
         <h2 id="contact-heading">Давайте обсудим ваш проект</h2>
         <p>Напишите в Telegram или оставьте email, и мы созвонимся на 15 минут. <strong>Это бесплатно.</strong></p>
@@ -229,5 +227,5 @@ description: Брендинг для закрытия ваших бизнес-з
             <a href="https://t.me/kati-sobol" class="btn-telegram" target="_blank">Написать в Telegram</a>
             <a href="mailto:katisobol@yandex.ru" class="btn-email">katisobol@yandex.ru</a>
         </div>
-        <p class="note">Никаких спама. Только обсуждение вашей задачи и понимание, как я могу быть полезен.</p>
+        <p class="note">Никакого спама. Только обсуждение вашей задачи и понимание, как я могу быть полезен.</p>
     </section>

@@ -193,10 +193,10 @@ abbr {
 }
 :is(.btn, .portfolio__card)[target="_blank"]::after {
     opacity: 0;
+    transition: all 200ms ease-out;
 }
  [target="_blank"]:hover::after {
     opacity: 1;
-    transition: all 250ms ease;
 }
 
 /* кнопка с емейлом */

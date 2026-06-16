@@ -311,6 +311,7 @@ Stratum Data — аналитическое бюро, они берут сыры
     <li class="credits__item">Data reporting dashboard on a laptop screen: <a href="https://unsplash.com/@sjd96">Stephen Dawson</a></li>
     <li class="credits__item">A 3D render of iridescent liquid glass file icons in a row: <a href="https://unsplash.com/@adam_gethin">Adam Gethin</a></li>
     <li class="credits__item">Performance Analytics: <a href="https://unsplash.com/@pathdigital">path digital</a></li>
+    <li class="credits__item">A light bulb: <a href="https://unsplash.com/@vlisidis">Terry Vlisidis</a></li>
     <li class="credits__item"><a href="https://unsplash.com/@kevinku">Kevin Ku</a></li>
     <li class="credits__item"><a href="https://unsplash.com/@mbaumi">Mika Baumeister</a></li>
     <li class="credits__item">Clear geometric crystal cube with sharp edges: <a href="https://www.magnific.com/author/wahyu-t">wahyu_t</a></li>

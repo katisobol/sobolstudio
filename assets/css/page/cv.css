@@ -158,6 +158,12 @@ ul {
 
 
 
+@media (min-width: 768px) {
+    .skills {
+        gap: 1.5rem;
+    }
+}
+
 @media (max-width: 768px) {
     .cv .skills {
         display: flex;
@@ -208,27 +214,27 @@ ul {
 .skills__tag {
     height: 2.75rem;
     margin: 1em 0.5em 0 0;
-    padding: 0 1.5em;
+    padding: 0 1em;
     border-radius: 1.5rem;
     min-width: 10em; max-width: 100%;
     background-color: rgba(0, 0, 0, 0.35);
 }
 .skills {
-  container-type: inline-size;
+    container-type: inline-size;
 }
 
 @container (max-width: 250px) {
-  .skills .btn {
+  .skills__tag {
     font-size: 0.75em;
   }
 }
-.skills .btn::before {
+.skills__tag::before {
     border: 1.5px solid var(--cardborder);
     border-right: none;
-    border-radius: 1.5em 0 0 1.5em;
+    border-radius: 1.5rem 0 0 1.5rem;
 }
 .skills .btn:hover::before{
-    border-radius: 0 1.5em 1.5em 0;
+    border-radius: 0 1.5rem 1.5rem 0;
     background-color: var(--cardborder);
 }
 
@@ -325,6 +331,7 @@ ul {
 
 .experience__list {
     display: flex;
+    justify-content: center;
     gap: var(--columngap);
 }
 @media (max-width: 768px) {
@@ -465,7 +472,7 @@ ul {
     .contact__message::after {
         content: "";
         position: absolute;
-        bottom: calc(0px - var(--sectiongap) / 3); right: calc(var(--sectiongap) / 1.5);
+        bottom: calc(1px - var(--sectiongap) / 3); right: calc(var(--sectiongap) / 1.5);
         width: 0; height: 0;
         border-style: solid;
         border-width: calc(var(--sectiongap) / 3) calc(var(--sectiongap) / 3) 0 0;
@@ -485,3 +492,4 @@ ul {
         padding-bottom: 10rem;
     }
 }
+

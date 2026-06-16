@@ -2,6 +2,12 @@
 @font-face {
     font-family: "AvantGarde";
     src: url("../fonts/URWGothic-Book.ttf");
+    font-weight: 400;
+}
+@font-face {
+    font-family: "AvantGarde";
+    src: url("../fonts/URWGothic-Demi.ttf");
+    font-weight: 600;
 }
 @font-face {
     font-family: "Santello";
@@ -27,6 +33,7 @@ h2, .h2,
 .avant {
     font-family: AvantGarde, Raleway;
     letter-spacing: 0.02em;
+    line-height: 100%;
 }
 /* Потом замени на курсивный без наклона */
 h5, .h5,
@@ -72,7 +79,6 @@ li, td {
 h1, .h1,
 h2, .h2 {
     font-weight: bold;
-    line-height: 1.1;
 }
 
 body > :is(
@@ -183,7 +189,7 @@ h6, .h6, small, .small
 p, .p {
     font-size: 1rem;
 }
-@media (max-width: 480px) {
+@media (max-width: 480px) and (max-resolution: 96dpi) {
     p, .p,
     li {
         font-size: 0.75rem;
@@ -226,4 +232,6 @@ p, .p
     text-transform: uppercase;
     line-height: 1.5rem;
     letter-spacing: 0.3em;
+
+    color: var(--Golden);
 }
