@@ -106,16 +106,9 @@ dl,
     justify-items: stretch;
 }
 /* Давайте бахнем селектор для помещения подсекции */
-/* Растягиваем на всю ширину и используем грид */
-.layout__full-bleed {
+.full-bleed {
     width: 100vw;
     margin-left: calc(50% - 50vw);
-
-    display: grid;
-    grid-template-columns: var(--grid);
-    gap: var(--columngap);
-    grid-auto-flow: dense;
-    justify-items: stretch;
 }
 
 /* Лейаут: растягиваем элементы по умолчанию на все колонки */

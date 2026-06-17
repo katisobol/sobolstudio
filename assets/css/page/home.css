@@ -11,29 +11,6 @@ ul {
     .hero :is(nav, h1, div p, div a, div) {
         z-index: 2;
     }
-    .hero__offer::after {
-        content: "01";
-
-        position: absolute;
-        top: -1.225em; right: 0;
-
-        display: block;
-        order: 1;
-        justify-self: start;
-
-        font-family: Unovis100;
-        font-size: 25vw;
-
-        color: hsla(0, 0%, 10%, 0.95);
-        background: url(../../img/page/home/glitch.gif),
-            url(../../img/patterns/paperTxtr.png) center/auto repeat;
-        background-size: contain;
-        background-position-y: 85%;
-        -webkit-background-clip: text;
-        background-clip: text;
-
-        z-index: 0;
-    }
     @media (max-width: 768px){
         .hero::after{
             bottom: 0; left: 0;
@@ -45,6 +22,7 @@ ul {
 .hero {
     padding-top: var(--columngap);
     padding-bottom: 0;
+    gap: 0;
 
     background-image: url(../../img/page/home/hero3.png);
     background-position-y: top;
@@ -99,7 +77,7 @@ hero__heading {
     text-shadow: none;
 }
 /* nav меню стилизовано для десктопной версии */
-@media (min-width: 801px) {
+@media (min-width: 768px) {
     .hero__navbar {
         position: relative;
         left: -3rem;
@@ -216,17 +194,70 @@ hero__heading {
 }
 
 .hero__header {
-    position: relative;
-    z-index: 3;
+    display: block;
+    padding: 0 1em;
+    overflow: visible;
 
-    font-size: calc(1.5vw + 2rem);
-    font-weight: normal;
+    font-size: calc(3.5vw + 1rem);
+    line-height: 1em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+.hero__header-1 {
+    position: relative;
+    bottom: -0.15em;
+    padding-top: var(--columngap);
     text-shadow:
         0 0 100px cornflowerblue,
         0 0 65px var(--CosmicLatte),
         0 0 10px tan,
         0 0 1.5px gold,
         0 0 0.5px white;
+
+    color: var(--SoftBlack);
+    z-index: 2;
+}
+.header__wrapper {
+    position: relative;
+    z-index: 3;
+}
+.hero__header-2 {
+    position: relative;
+    top: -0.2em;
+
+    color: var(--CosmicLatte);
+
+    font-size: inherit;
+    line-height: inherit;
+    text-transform: inherit;
+    letter-spacing: inherit;
+}
+
+.header__wrapper::before {
+    content: "01";
+
+    position: absolute;
+    top: -0.58em;
+    right: 0;
+
+    display: block;
+
+    font-family: Unovis100;
+    font-size: 25vw;
+
+    color: var(--SoftBlack);
+    background:
+        url(../../img/page/home/glitch.gif);
+    background-size: contain;
+    background-position-y: 85%;
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    z-index: 1;
+
+
+    font-weight: normal;
+    letter-spacing: 0;
 }
 
 .hero .layout *,
@@ -248,6 +279,9 @@ hero__heading {
 }
 @media (max-width: 768px) {
     .hero__offer {
+        display: flex;
+        flex-direction: column;
+
         padding-top: var(--columngap);
         row-gap: var(--columngap);
     }

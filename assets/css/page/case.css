@@ -184,7 +184,17 @@ dl dt {
     display: none;
 }
 
+.comments__tg-link-wrapper {
+    position: absolute;
+    top: var(--sectiongap); right: 0;
+    padding: 0.5em;
 
+    background-color: var(--CosmicLatte);
+}
+
+.tgme_widget_message_bubble_logo {
+    display: none !important;
+}
 
 
 
