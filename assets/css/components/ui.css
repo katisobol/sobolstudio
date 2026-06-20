@@ -114,60 +114,7 @@ abbr {
 }
 
 
-/* КНОПКИ */
 
-.btn {
-    position: relative;
-    width: max-content; height: 50px;
-    padding: 0 calc(3rem + 1.5vw);
-
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-
-    font-family: Santello, Raleway;
-    color: var(--CosmicLatte);
-
-    cursor: pointer;
-    background: transparent;
-    border: none;
-    z-index: 2;
-    transition: 150ms ease;
-
-    white-space: wrap;
-    line-height: 1;
-}
-
-.btn:link,
-.btn:visited,
-.btn:hover {
-    color: var(--CosmicLatte);
-    text-decoration: none;
-}
-
-.btn::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 50%;
-    background-color: transparent;
-    border: 1.5px solid transparent;
-    border-right: none;
-    border-color: var(--CosmicLatte);
-    color: var(--CosmicLatte);
-    transition: all 0.25s ease;
-    z-index: -1;
-}
-
-.btn:hover::before,
-.btn:active::before {
-    left: 50%;
-    background-color: var(--DeepBlue);
-    border-color: hsla(220, 75%, 40%, 0);
-}
 
 
 /* на некоторые элементы с target blank вешаем специальную иконку */

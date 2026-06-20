@@ -56,10 +56,6 @@
 
 .case time.side-text {
     color: var(--CosmicLatte);
-    right: calc(var(--padding) / 2);
-    top: calc(var(--sectiongap) + 30px);
-    width: 60px;
-    text-shadow: var(--textShadow);
 }
 
 .case__main {
@@ -82,7 +78,7 @@
     flex-direction: column;
     row-gap: var(--sectiongap);
 
-    font-family: Raleway;
+    font-family: Raleway, Santello, Calibri;
 }
 @media (max-width: 768px) {
     .case__content {

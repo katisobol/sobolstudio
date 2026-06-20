@@ -1,0 +1,79 @@
+/* КНОПКИ */
+
+.btn {
+    position: relative;
+    width: max-content; height: 50px;
+    padding: 0 calc(3rem + 1.5vw);
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    font-family: Santello, Raleway, Calibri;
+    font-size: 1rem;
+    color: var(--CosmicLatte);
+
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    z-index: 2;
+    transition: 150ms ease;
+
+    white-space: wrap;
+    line-height: 1;
+}
+
+.btn:link,
+.btn:visited,
+.btn:hover {
+    color: var(--CosmicLatte);
+    text-decoration: none;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    background-color: transparent;
+    border: 1.5px solid transparent;
+    border-right: none;
+    border-color: var(--CosmicLatte);
+    color: var(--CosmicLatte);
+    transition: all 0.25s ease;
+    z-index: -1;
+}
+
+.btn:hover::before,
+.btn:active::before {
+    left: 50%;
+    background-color: var(--DeepBlue);
+    border-color: hsla(220, 75%, 40%, 0);
+}
+
+
+.btn-secondary,
+.btn-secondary:link,
+.btn-secondary:visited
+{
+    font-size: 0.75em;
+    color: var(--BrightBlue);
+}
+.btn-secondary:hover {
+    color: var(--CosmicLatte);
+}
+
+.btn-secondary::before {
+    border-color: var(--DeepBlue);
+}
+
+
+.btn-logo::before {
+    background-image: url(../../icons/Kc_logo_full_logo_raster_dk.png) right / 0% no-repeat;
+}
+.btn-logo:hover::before {
+    background-image: url(../../icons/Kc_logo_full_logo_raster_dk.png) right / contain no-repeat;
+}

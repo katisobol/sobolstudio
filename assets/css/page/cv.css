@@ -240,29 +240,25 @@ ul {
 
 
 
-.cv details {
+.skills__details {
     position: relative;
     top: -0.25rem;
 }
 
-.skills ul li h4 {
+.skills__h4 {
     color: var(--cardborder);
-    font-size: 0.75rem;
+    font-weight: normal;
 }
 
-.skills ul li a + h4 {
-    margin-top: 2em;
-}
-
-.skills * + details {
+.skills__details {
     margin-top: 0;
 }
 
-.skills details > summary {
+.skills__summary {
     padding: 0;
 }
 
-.skills details > summary::before {
+.skills__summary::before {
     left: -0.35em;
     top: -0.5em;
     font-size: 2em;
@@ -271,7 +267,8 @@ ul {
     z-index: 0;
 }
 
-.skills details[open] > summary::before {
+.skills__details[open] > summary::before {
+    left: -0.5em; top: -0.4em;
     transform: rotate(90deg);
 }
 
@@ -279,6 +276,22 @@ ul {
     position: relative;
     z-index: 2;
 }
+
+.skills__note {
+    display: block;
+    padding-top: 1em;
+
+    font-family: Santello, Raleway;
+    line-height: 125%;
+
+    opacity: 0.65;
+    color: var(--cardborder);
+}
+
+.skills__tag + .skills__note {
+    padding-top: 1.5em;
+}
+
 
 
 
@@ -423,26 +436,6 @@ ul {
 .contact__text {
     grid-column-end: -2;
     text-align: right;
-}
-
-.contact__message {
-    position: relative;
-    width: 100%;
-    background-color: var(--DeepBlue);
-    grid-column: 1 / -2;
-    padding: 1.25rem 1.5rem;
-    border-radius: 0.5rem;
-}
-/* CSS-треугольник на десктоп */
-.contact__message::after {
-    content: "";
-    position: absolute;
-    bottom: 0.5rem; right: -1.5rem;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 1.5rem 1.5rem 0 0;
-    border-color: var(--DeepBlue) transparent transparent transparent;
 }
 
 .contact__cta,

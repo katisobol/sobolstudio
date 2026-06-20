@@ -1,0 +1,7 @@
+:root {
+    --SoftBlack: #1a1a1a; /* hsl(0, 0%, 10%) */
+    --DeepBlue: #0a335c; /* hsl(210, 80%, 20%) */
+    --CosmicLatte: #fff8e7; /* Цвет текста */
+    --BrightBlue: #194cb3; /* Цвет ссылки hsl(220, 75%, 40%) */
+    --Golden: #e2a52e; /* hsl(40, 65%, 55%) */
+}

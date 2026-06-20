@@ -1,0 +1,50 @@
+/* стандартное оформление для списка карточек */
+
+.cards {
+    list-style: none;
+    padding-left: 0;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+    gap: var(--columngap);
+}
+
+.cards__item {
+    padding: calc(var(--columngap) / 2);
+
+    text-align: center;
+
+    box-shadow: var(--shadowHuge);
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+    gap: 1em;
+}
+
+.cards__list {
+  position: relative;
+
+    list-style-type: none;
+    padding-left: 1em;
+}
+
+.cards__list-item {
+    text-align: left;
+}
+.cards__list-item::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+}
+
+.cards__btn {
+    align-self: center;
+}

@@ -1,0 +1,44 @@
+/* Side Text */
+
+@media (min-width: 769px) {
+    .side-text {
+        position: absolute;
+        right: calc(var(--padding) / -2 + 1rem);
+        bottom: var(--sectiongap);
+
+        width: 0; height: 0;
+        rotate: -90deg;
+
+        font-family: Santello, Raleway;
+        font-weight: normal;
+        font-size: 0.75rem;
+        white-space: nowrap;
+
+        color: slategray;
+        z-index: 2;
+        cursor: vertical-text;
+    }
+}
+@media (max-width: 768px) {
+    .side-text {
+        position: relative;
+
+        display: flex;
+        justify-content: end;
+        order: 2;
+
+        width: 100%;
+        max-width: unset;
+
+        font-family: Consolas, TaylorSans, Santello, Raleway;
+        font-size: 0.75rem;
+        z-index: -1;
+        text-align: right;
+    }
+}
+*:has(.side-text) {
+    position: relative;
+}
+.white .side-text {
+    color: var(--Golden);
+}

@@ -1,15 +1,18 @@
 @import url(https://csstools.github.io/normalize.css/11.0.0/normalize.css);
+@import url(colors.css);
 @import url(layout.css);
+@import url(themes.css);
+@import url(shadows.css);
+@import url(typo.css);
+
+@import url(components/tokens.css);
 
 @import url(layouts/header.css);
 @import url(layouts/footer.css);
 @import url(layouts/lightbox.css);
 @import url(layouts/portfolio.css);
 
-@import url(themes.css);
-@import url(typo.css);
-@import url(components/tokens.css);
-@import url(components/ui.css);
+
 
 
 
@@ -41,9 +44,4 @@ body {
 img, table {
     max-width: 100%;
     user-select: none;
-}
-
-*,
-*:hover {
-    transition: all 150ms ease;
 }

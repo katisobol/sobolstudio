@@ -1,64 +1,13 @@
+@import url(buttons.css);
+@import url(cards.css);
 @import url(input.css);
-
-/* Стандартная кнопка с логотипом */
-.logo {
-    display: inline-block;
-    aspect-ratio: 1/1;
-    height: auto;
-    width: 24px;
-    background-image: url(../../icons/Kc_logo_full_logo_raster_dk.png);
-    filter: drop-shadow(0 0 1.5px rgba(0, 0, 0, 0.65));
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    border: none;
-}
-
-@media screen and (max-width: 768px) {
-    .logo {
-        width: 64px;
-        background-size: 32px 32px;
-    }
-}
+@import url(logo.css);
+@import url(message.css);
+@import url(side-text.css);
+@import url(ui.css);
 
 
 
-/* Side Text */
-
-@media (min-width: 769px) {
-    .side-text {
-        position: absolute;
-        right: calc(var(--padding) / -2 + 1rem);
-        bottom: var(--sectiongap);
-        width: 0;
-        height: 0;
-        font-family: Santello, Raleway;
-        font-weight: normal;
-        font-size: 0.75rem;
-        white-space: nowrap;
-        rotate: -90deg;
-        color: slategray;
-        z-index: 2;
-        cursor: vertical-text;
-    }
-}
-@media (max-width: 768px) {
-    .side-text {
-        position: absolute;
-        right: 0; bottom: calc(var(--sectiongap) / 2);
-        color: rgba(0, 0, 0, 0.65);
-        font-family: Unovis100;
-        font-size: 3rem;
-        z-index: -1;
-        text-align: right;
-    }
-}
-*:has(.side-text) {
-    position: relative;
-}
-.white .side-text {
-    color: var(--Golden);
-}
 
 
 

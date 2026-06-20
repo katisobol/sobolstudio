@@ -1,0 +1,38 @@
+/* стилизация для отображения блока как сообщения в мессенджер */
+.contact {
+    align-items: end;
+}
+.message {
+    position: relative;
+    width: 100%;
+    background-color: var(--DeepBlue);
+    grid-column: 1 / -2;
+    padding: 1.25rem 1.5rem;
+    border-radius: 0.5rem;
+}
+/* CSS-треугольник на десктоп */
+.message::after {
+    content: "";
+    position: absolute;
+    bottom: 0.5rem; right: calc(1px - var(--columngap) * 0.75);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: calc(var(--columngap) * 0.75) calc(var(--columngap) * 0.75) 0 0;
+    border-color: var(--DeepBlue) transparent transparent transparent;
+}
+
+.message__textarea {
+    width: 100%; height: 100%;
+    margin: 0; padding: 0;
+
+    box-shadow: none;
+    border: none;
+    background: none;
+    resize: none;
+
+}
+
+.message__textarea:active {
+    background-color: var(--DeepBlue);
+}

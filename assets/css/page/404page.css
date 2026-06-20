@@ -1,0 +1,40 @@
+.header {
+    display: none;
+}
+
+.bg_404 {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translateX(-50%) translateY(calc(-50% - 0.35em));
+    width: 100vw;
+
+
+    font-family: Unovis100;
+    font-size: 85vw;
+    text-align: center;
+    color: black;
+    z-index: -1;
+}
+@supports (mix-blend-mode: hard-light) {
+    .bg_404 {
+        color: grey;
+        text-shadow: var(--shadowHuge);
+        mix-blend-mode: hard-light;
+    }
+}
+
+.contact__cta,
+.btn-secondary {
+    grid-column: -2;
+    width: 100%; padding: 0.5em;
+}
+
+.contact__note {
+    grid-column: 1 / -2;
+    align-self: flex-start;
+}
+
+.btn-secondary,
+.contact__note {
+    grid-row: 3;
+}

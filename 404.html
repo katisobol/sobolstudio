@@ -1,0 +1,119 @@
+---
+layout: default
+title: 404
+extra_css:
+ - assets/css/page/404page.css
+description: Страница не найдена — Ошибка 404
+---
+
+<!--
+  ============================================
+  404 СТРАНИЦА — ШАБЛОН ДЛЯ JEKYLL
+  ============================================
+  Использует ту же БЭМ-структуру, что и секция .contact
+  Добавлен новый класс .message для стилизации (вынесете в CSS)
+-->
+
+<main role="status" aria-live="polite" itemscope itemtype="https://schema.org/WebPage">
+
+  <!-- Скрытый H1 для SEO -->
+  <h1 itemprop="name" style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;">
+    Страница не найдена — Ошибка 404
+  </h1>
+  <span class="bg_404">404</span>
+  <!-- Секция 404 в стиле .contact -->
+  <section class="contact" id="error-404">
+
+    <h2 class="contact__header uppercase">Страница не найдена</h2>
+
+    <!--
+      ============================================
+      ФОРМА ОБРАТНОЙ СВЯЗИ (вместо .contact__message)
+      ============================================
+      Класс .message добавлен для отдельной стилизации
+      (цвет, отступы, треугольник снаружи)
+    -->
+    <form
+      class="contact__form contents"
+      action="mailto:kati-sobol@mail.ru"
+      method="post"
+      enctype="text/plain"
+      role="form"
+      aria-label="Форма отправки сообщения об ошибке"
+    >
+      <!-- Скрытые поля для структурирования письма -->
+      <input type="hidden" name="subject" value="Ошибка 404 — Сообщение от пользователя">
+
+      <label class="contact__note small" for="bug-report-text">
+        Напишите мне на e-mail о том, что произошло
+      </label>
+
+      <!--
+        Текстовое поле с авто-расширением по высоте
+        Используем атрибут rows + CSS для min-height и автоматического роста
+      -->
+        <div class="contact__message message">
+              <textarea class="message__textarea"
+        id="bug-report-text"
+        name="body"
+        rows="4"
+        placeholder="Например: «Я на странице блога, нажимаю на кнопку «Читать далее» и вместо статьи попадаю на эту страницу»"
+        required
+      >Я на странице [вставьте URL], нажимаю на [опишите действие], и вместо корректной работы попадаю на страницу 404.
+            </textarea>
+        </div>
+
+      <!-- Кнопки (аналогично .contact__buttons) -->
+      <div class="contact__buttons contents">
+
+        <!-- Отправить письмо (вместо .contact__cta) -->
+        <button class="contact__cta btn email" type="submit" >
+          Написать
+        </button>
+        <a class="btn-secondary btn btn-logo" href="{{ site.url }}{{ site.baseurl }}/">На главную</a>
+
+      </div>
+
+      <!--
+        ============================================
+        JS ДЛЯ АВТО-РАСШИРЕНИЯ TEXTAREA
+        ============================================
+        Код ниже адаптирует высоту поля под содержимое.
+        Работает без внешних библиотек.
+      -->
+      <script>
+        (function() {
+          const textarea = document.getElementById('bug-report-text');
+          if (!textarea) return;
+
+          // Функция авто-расширения
+          function autoResize() {
+            textarea.style.height = 'auto'; // сбрасываем высоту
+            textarea.style.height = textarea.scrollHeight + 'px'; // устанавливаем по контенту
+          }
+
+          // При вводе текста
+          textarea.addEventListener('input', autoResize);
+
+          // При загрузке страницы (если поле уже заполнено)
+          window.addEventListener('load', function() {
+            setTimeout(autoResize, 100); // небольшая задержка для корректного расчёта
+          });
+
+          // При изменении размеров окна (на всякий случай)
+          window.addEventListener('resize', autoResize);
+        })();
+      </script>
+
+    </form>
+
+    <!-- Микроразметка для SEO (скрыта) -->
+    <div itemscope itemprop="about" itemtype="https://schema.org/Thing" style="display: none;">
+      <meta itemprop="name" content="Ошибка HTTP 404">
+      <meta itemprop="description" content="Страница не найдена. Форма для отправки сообщения об ошибке.">
+    </div>
+    <meta itemprop="inLanguage" content="ru-RU">
+    <meta itemprop="dateModified" content="2026-06-19">
+
+  </section>
+</main>
