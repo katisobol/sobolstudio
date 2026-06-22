@@ -379,11 +379,11 @@ hero__heading {
     .value__heading {
         position: relative;
     }
-    .value__heading:before {
-        content: "02";
+    .value__heading:before { /* 02 */
+        content: counter(slide-count, decimal-leading-zero);
 
-        position: absolute;
-        bottom: -0.025em;
+        height: 0.62em;
+        transform: translateY(-0.185em);
 
         display: block;
         grid-column: 1 / 2;
@@ -391,12 +391,12 @@ hero__heading {
         justify-self: start;
 
         font-family: Unovis100;
-        font-size: 15vw;
+        font-size: 435%;
+        font-weight: normal;
+        text-align: right;
 
-        color: hsla(0, 0%, 10%, 0.75);
+        color: hsla(0, 0%, 13%, 0.75);
         background: url(../../img/page/home/glitch.gif);
-        background-size: contain;
-        background-position-y: 85%;
         -webkit-background-clip: text;
         background-clip: text;
     }
@@ -545,28 +545,27 @@ hero__heading {
             to bottom,
             transparent 0,
             transparent 4rem,
-            var(--SoftBlack) 4rem,
+          а  var(--SoftBlack) 4rem,
             var(--SoftBlack) calc(4rem + 1.5px)
         ),
         linear-gradient(to right bottom, hsla(203, 100%, 7%, 0.65), hsla(181, 78%, 21%, 0.25)),
-        url(../../img/page/home/aerial-view.jpg);
+        url(/sobolstudio/assets/img/page/home/aerial-view.jpg);
 }
 
 
-.skills::after {
-    content: "04";
+.skills::after { /*04*/
+    content: counter(slide-count, decimal-leading-zero);
+
     font-family: Unovis100;
     font-size: 15vw;
     transform: translateX(0.03em) translateY(0.25em);
 
-    /*position: absolute;
-    right: 0;*/
     grid-row: 2;
     grid-column: 1 / 2;
     justify-self: end;
 
-    color: rgba(255, 255, 255, 0.1);
-    background: url(../../img/page/home/glitch.gif);
+    color: hsla(0, 0%, 13%, 0.75);
+    background: url(/sobolstudio/assets/img/page/home/glitch.gif);
     background-size: contain;
     background-position-y: 85%;
     -webkit-background-clip: text;
@@ -582,7 +581,7 @@ hero__heading {
     background: linear-gradient(to bottom right,
         var(--SoftBlack),
         hsla(0, 0%, 15%, 0.85)),
-        url(../../img/page/home/glitch.gif);
+        url(/sobolstudio/assets/img/page/home/glitch.gif);
     background-size: cover;
 
     color: var(--Golden);
@@ -595,7 +594,7 @@ hero__heading {
         width: 100%;
         height: 100%;
 
-        background-image: url(../../img/page/home/white-noise.gif);
+        background-image: url(/sobolstudio/assets/img/page/home/white-noise.gif);
         background-size: cover;
         mix-blend-mode: screen;
         opacity: 0.035;

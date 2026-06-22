@@ -44,8 +44,9 @@ small, .small,
     letter-spacing: 0.01em;
 }
 
-body {
+body, .p {
     font-family: Santello, Raleway, Calibri;
+    font-weight: normal;
     line-height: 1.5;
 }
 p, .p,

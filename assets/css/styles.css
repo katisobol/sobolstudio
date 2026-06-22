@@ -36,6 +36,18 @@ body {
     overflow-x: hidden;
 }
 
+/* подсчитываю секции на страницах */
+body {
+  counter-reset: slide-count;
+}
+section {
+  counter-increment: slide-count;
+}
+
+/*
+    content: counter(slide-count, decimal-leading-zero);
+*/
+
 /* создаю технический класс для скипа элемента в стилизации */
 .contents {
     display: contents;

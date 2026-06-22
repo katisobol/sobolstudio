@@ -12,7 +12,9 @@
 
 /* тени-модули */
 :root {
-    --shadow-2xs: 0 0.5px 1.5px hsl(40, 100%, 10%), 0.5px 0 1.5px hsl(220, 100%, 10%);
-    --shadow-m:   35px 50px 50px hsla(40, 100%, 15%, 0.65), 50px 35px 50px hsla(220, 100%, 15%, 0.65);
+    --white-2xs: inset 0 0.65px 1.5px hsl(220, 10%, 55%), inset 0.65px 0 1.5px hsl(40, 15%, 55%);
+    --shadow-2xs: 0 0.5px 1.5px hsl(220, 100%, 10%), 0.5px 0 1.5px hsl(40, 100%, 10%);
+    --shadow-s:   5px 15px 15px hsla(220, 100%, 15%, 0.65), 15px 5px 15px hsla(40, 100%, 15%, 0.65);
+    --shadow-m:   35px 50px 50px hsla(220, 100%, 15%, 0.65), 50px 35px 50px hsla(40, 100%, 15%, 0.65);
     --shadow-xl:  150px 50px 150px hsla(220, 100%, 5%, 0.15), 50px 150px 150px hsla(40, 100%, 5%, 0.15);
 }

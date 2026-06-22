@@ -1,38 +1,51 @@
 ---
 layout: default
 title: Бренд-конструктор
+extra_css:
+ - assets/css/page/branding.css
 description: Брендинг для закрытия ваших бизнес-задач без скрытых платежей
 ---
     <!-- ГЕРОЙ (hero) -->
     <section class="hero">
-        <h1 id="hero__heading">Создаю личный бренд для профи на&nbsp;основе вашей личности. Без&nbsp;скрытых переплат</h1>
+        <h1 id="hero__heading">Создаю личный бренд для профи на&nbsp;основе вашей личности. <span class="small">Без&nbsp;скрытых переплат</span></h1>
         <p class="hero__subhead">
             Делаю искренний и продуманный брендинг для недооценённых профессионалов. Без шаблонных логотипов и абстрактного «корпоративного стиля»
         </p>
-        <p>Только ваш цифровой образ</p>
-        <div class="hero__btns">
-            <a class="hero__btn-primary btn" href="#consultation">Рассказать о себе</a>
-            <a class="hero__btn-secondary" href="#process">Обсудить свой лого</a>
+        <p class="side-text">Только ваш цифровой образ</p>
+        <div class="hero__btns btn-bar">
+            <a class="hero__btn-primary btn" href="#consultation">Узнать о себе</a>
+            <a class="hero__btn-secondary btn-secondary btn" href="#process">Прислать свой лого</a>
         </div>
     </section>
 
-    <!-- БОЛИ ЦА (pain-points) -->
-    <section class="pains">
-        <h2 class="pains__heading">Вы эксперт. Но этого не видят</h2>
-        <p class="pains__text">
-            Но вы теряетесь в серой толпе. Вас не отличить от вчерашннего дилетанта. И ваша прибыль, ваше признание уходят к самоуверенному
+    <!-- БОЛИ ЦА (pain) -->
+    <section class="pain">
+        <h2 class="pain__heading">Вы эксперт. Но этого не видят</h2>
+        <p class="pain__text">
+            Но вы теряетесь в серой толпе. Вас не отличить от вчерашннего дилетанта. И ваша прибыль, ваше признание уходят к кому-то самоуверенному
         </p>
-        <p class="pains__text">Ваша экспертиза остаётся к тени. Это несправедливо.</p>
+        <p class="pain__text">Ваша экспертиза остаётся к тени. Это несправедливо.</p>
     </section>
 
+    <!-- КОМУ ПОДОЙДЁТ, БОЛЬШЕ БОЛЕЙ (morePain) -->
+    <section class="morePain">
+        <h2 class="morePain__heading p message">Нужен ли мне личный бренд?</h2>
+        <p class="morePain__description side-text">Как понять, что вам нужен сильный бренд</p>
+    </section>
+
+    <!-- МОИ МЕТОДЫ, ГАРАНТИЯ ЧЕРЕЗ ОБЪЯСНЕНИЕ (hope) -->
     <section class="hope">
         <h2 class="hope__heading">Дизайн рождается из смысла</h2>
     </section>
 
+    <!-- ОФФЕР (solution) -->
+    <section class="solution">
+        <h2 class="hope__heading"></h2>
+    </section>
+
     <!-- ЧТО ВХОДИТ В ПРОДУКТ (included) -->
     <section class="foryou" aria-labelledby="included-heading">
-        <h2 class="foryou__heading">Нужен ли мне брендинг?</h2>
-        <p class="foryou__description">Как понять, что вам нужен сильный бренд</p>
+        <h2 class="foryou__heading"></h2>
         <div class="foryou__list">
             <article class="foryou__item">
                 <h3>Логотип и его версии</h3>
@@ -76,11 +89,11 @@ description: Брендинг для закрытия ваших бизнес-з
         </div>
     </section>
 
-    <!-- ПРИМЕР ИЗ ПРАКТИКИ (proof) -->
-    <section class="portfolio" aria-labelledby="portfolio">
-        <h2 id="proof-heading">Примеры работ</h2>
+    <!-- ПРИМЕРЫ ИЗ ПРАКТИКИ (proof) -->
+    <section class="proof portfolio" aria-labelledby="portfolio">
+        <h2 id="proof__heading">Примеры работ</h2>
         {% include portfolio.html %}
-        <a class="portfolio__more btn" href="https://katisobol.github.io/sobolstudio/portfolio/#portfolio" target="_blank">Больше работ</a>
+        <a class="proof__more btn" href="https://katisobol.github.io/sobolstudio/portfolio/#portfolio" target="_blank">Больше работ</a>
     </section>
 
     <!-- ПРОЦЕСС РАБОТЫ (process) -->
@@ -88,7 +101,7 @@ description: Брендинг для закрытия ваших бизнес-з
         <h2 id="process-heading">Какие этапы разработки бренда? Сколько времени займёт?</h2>
         <div class="process-steps">
             <div class="step">
-                <span class="step-number shadowhuge">01</span>
+                <span class="step-number">01</span>
                 <h3>Аналитика и бриф</h3>
                 <p>
                     Разбираем ваш бизнес, ценности, аудиторию и конкурентов. Это фундамент, на котором строится весь
@@ -96,7 +109,7 @@ description: Брендинг для закрытия ваших бизнес-з
                 </p>
             </div>
             <div class="step">
-                <span class="step-number shadowhuge">02</span>
+                <span class="step-number">02</span>
                 <h3>Концепция и направления</h3>
                 <p>
                     Показываю 2–3 визуальных подхода на основе брифа. Выбираем направление, которое лучше всего решает
@@ -104,7 +117,7 @@ description: Брендинг для закрытия ваших бизнес-з
                 </p>
             </div>
             <div class="step">
-                <span class="step-number shadowhuge">03</span>
+                <span class="step-number">03</span>
                 <h3>Разработка элементов системы</h3>
                 <p>
                     Создаем логотип, цвета, шрифты и бандл фирменных элементов, которые работают вместе как единый
@@ -112,7 +125,7 @@ description: Брендинг для закрытия ваших бизнес-з
                 </p>
             </div>
             <div class="step">
-                <span class="step-number shadowhuge">04</span>
+                <span class="step-number">04</span>
                 <h3>Создание гайдлайна и адаптация носителей</h3>
                 <p>
                     Упаковываем систему в гайдлайн и адаптируем под выбранные вами 3 носителя. Вы получаете готовое
@@ -120,15 +133,11 @@ description: Брендинг для закрытия ваших бизнес-з
                 </p>
             </div>
             <div class="step">
-                <span class="step-number shadowhuge">05</span>
+                <span class="step-number">05</span>
                 <h3>Передача и поддержка</h3>
                 <p>Передаю исходники и даю 14 дней поддержки после финала. Вы не остаетесь один на один с файлами.</p>
             </div>
         </div>
-        <p class="guarantee">
-            <strong>Гарантия:</strong> Если на этапе концепции мы понимаем, что я не тот специалист, который вам нужен —
-            вы ничего не платите.
-        </p>
     </section>
 
     <!-- 3 ПАКЕТА (pricing) -->
@@ -136,8 +145,8 @@ description: Брендинг для закрытия ваших бизнес-з
         <h2 class="pricing__heading side-text">Прайсинг</h2>
         <div class="pricing__cards cards">
             <div class="cards__item">
-                <h3>База</h3>
-                <p class="price">45 000 ₽</p>
+                <h3 class="cards__heading uppercase">База</h3>
+                <p class="cards__price">25 000 ₽</p>
                 <ul class="cards__list">
                     <li class="cards__list-item">Логотип и версии</li>
                     <li class="cards__list-item">Цветовая гамма</li>
@@ -148,10 +157,10 @@ description: Брендинг для закрытия ваших бизнес-з
                 <a class="cards__btn btn" href="#consultation">Выбрать</a>
             </div>
             <div class="card__featured cards__item">
-                <h3>Оптимальный</h3>
-                <p class="price">85 000 ₽</p>
+                <h3 class="cards__heading uppercase">Оптимальный</h3>
+                <p class="cards__price">50 000 ₽</p>
                 <ul class="cards__list">
-                    <li class="cards__list-item">Всё, что в «Базе»</li>
+                    <li class="cards__list-item small">Всё, что в «Базе»</li>
                     <li class="cards__list-item">Бандл фирменных элементов</li>
                     <li class="cards__list-item">Расширенный гайдлайн (20+ стр)</li>
                     <li class="cards__list-item">Доп. баннер для соцсетей</li>
@@ -160,10 +169,10 @@ description: Брендинг для закрытия ваших бизнес-з
                 <a class="cards__btn btn" href="#consultation">Выбрать</a>
             </div>
             <div class="cards__item">
-                <h3>Максимум</h3>
-                <p class="price">135 000 ₽</p>
+                <h3 class="cards__heading uppercase">Максимум</h3>
+                <p class="cards__price">85 000 ₽</p>
                 <ul class="cards__list">
-                    <li class="cards__list-item">Всё, что в «Оптимальном»</li>
+                    <li class="cards__list-item small">Всё, что в «Оптимальном»</li>
                     <li class="cards__list-item">Аналитика и бриф (расширенный)</li>
                     <li class="cards__list-item">2 раунда правок в рамках системы</li>
                     <li class="cards__list-item">Выбор 5 носителей</li>
@@ -233,20 +242,21 @@ description: Брендинг для закрытия ваших бизнес-з
     <section class="desire">
         <h2>Заявите о своей экспертности ярко и&nbsp;искренне</h2>
         <ul class="cards">
-            <li class="cards__item">Вы выделитесь даже в насыщенной нише</li>
-            <li class="cards__item">Ваш клиент доверяет вам до первой встречи</li>
-            <li class="cards__item">Ваши личные шаблоны для соцсетей и презентаций экономят усилия</li>
-            <li class="cards__item">Повышение статуса позволяет поднять ценник и не потерять востребованность</li>
+            <li class="cards__item">Вы выделитесь даже в&nbsp;насыщенной нише</li>
+            <li class="cards__item">Ваш клиент доверяет вам до&nbsp;первой встречи</li>
+            <li class="cards__item">Персональные шаблоны для соцсетей и&nbsp;презентаций экономят усилия</li>
+            <li class="cards__item">Повышение статуса позволяет поднять ценник и&nbsp;не&nbsp;потерять востребованность</li>
         </ul>
     </section>
 
-    <!-- БЛОК ЗАПИСИ НА КОНСУЛЬТАЦИЮ (contact) -->
-    <section id="consultation" class="contact" aria-labelledby="contact-heading">
-        <h2 id="contact-heading">Давайте обсудим ваш проект</h2>
-        <p>Напишите в Telegram или оставьте email, и мы созвонимся на 15 минут. <strong>Это бесплатно.</strong></p>
-        <div class="contacts">
-            <a href="https://t.me/kati-sobol" class="btn-telegram" target="_blank">Написать в Telegram</a>
-            <a href="mailto:katisobol@yandex.ru" class="btn-email">katisobol@yandex.ru</a>
+    <!-- БЛОК ЗАПИСИ НА КОНСУЛЬТАЦИЮ (cta) -->
+    <section class="cta" aria-labelledby="contact-heading">
+        <h2 id="cta" class="cta__heading">Начни сейчас</h2>
+        <p class="cta_text">Сделай свои первые шаги в познании себя</p>
+        <p class="cta_text">Ответь на простые 15 вопросов, через которые узнаешь себя лучше</p>
+        <div class="cta__btn-bar btn-bar">
+            <a class="cta__btn btn" href="https://t.me/kati-sobol" target="_blank">Пройти анкету</a>
+            <a class="cta__btn btn-secondary btn" href="mailto:katisobol@yandex.ru">Прислать лого</a>
         </div>
-        <p class="note">Никакого спама. Только обсуждение вашей задачи и понимание, как я могу быть полезен.</p>
+        <small class="note">Пришлите свой лого, чтобы получить дизайн-разбор</small>
     </section>
