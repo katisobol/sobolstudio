@@ -166,7 +166,7 @@
     }
 }
 
-@supports (mask-composite: exclude) {
+/*@supports (mask-composite: exclude) {
     .btn[href="https://t.me/kati_sobol"]::before {
         mask-image: linear-gradient(white, white), url(#tg-mask);
         mask-composite: exclude;
@@ -188,4 +188,4 @@
         height: 100%;
         background-image: url(/sobolstudio/assets/icons/Telegram_black_logo.svg);
     }
-}
+}*/
