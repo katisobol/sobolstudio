@@ -2,7 +2,7 @@
 
 .btn {
     position: relative;
-    width: max-content; height: 50px;
+    height: 50px;
     padding: 0 calc(3rem + 1.5vw);
 
     display: inline-flex;
@@ -13,12 +13,13 @@
     font-family: Santello, Raleway, Calibri;
     font-size: 1rem;
     color: var(--CosmicLatte);
+    white-space: nowrap;
 
     cursor: pointer;
     background: transparent;
     border: none;
     z-index: 2;
-    transition: 150ms ease;
+    transition: all 150ms ease;
 
     white-space: wrap;
     line-height: 1;
@@ -102,15 +103,19 @@
 
 /* кнопка с емейлом */
 .btn.email::after,
-.btn[href="mailto:katisobol@yandex.ru"]::after {
+.btn[href="mailto:katisobol@yandex.ru"]::after,
+.btn[href="mailto:katisobolstudio@yandex.ru"]::after {
+    content: "@";
+
     position: absolute;
     right: 0.75rem;
+    padding-bottom: 0.15em;
+
     color: var(--SoftBlack);
-    content: "@";
     font-family: "Santello";
     font-weight: bold;
     font-size: 28px;
-    padding-bottom: 0.15em;
+
     z-index: -1;
 }
 
@@ -132,12 +137,12 @@
 /* кнопка с логотипом для выхода на главную */
 
 .btn[href="/sobolstudio/"]::before {
-    background-image: url(../../icons/Kc_logo_full_logo_raster_dk.png);
+    background-image: url(../../icons/Kc_logo_full.svg);
     background-position: right;
     background-size: 0% 100%;
+    background-blend-mode: screen;
 }
 .btn[href="/sobolstudio/"]:hover::before {
-    background-image: url(../../icons/Kc_logo_full_logo_raster_dk.png);
     background-size: auto 100%;
 }
 
@@ -150,9 +155,37 @@
 }
 @media (max-width: 768px) {
     .btn-bar {
-        width: min-content;
+        width: 100%;
         position: relative;
         margin: auto;
+
+        display: flex;
+        flex-direction: column;
         justify-content: stretch;
+        align-items: stretch;
+    }
+}
+
+@supports (mask-composite: exclude) {
+    .btn[href="https://t.me/kati_sobol"]::before {
+        mask-image: linear-gradient(white, white), url(#tg-mask);
+        mask-composite: exclude;
+        mask-mode: luminance;
+        mask-size: contain;
+        mask-position: right;
+        mask-origin: content-box;
+    }
+}
+
+@supports not (mask-composite: exclude) {
+    .social.tg::after {
+        content: "";
+        position: relative;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-image: url(/sobolstudio/assets/icons/Telegram_black_logo.svg);
     }
 }

@@ -49,10 +49,10 @@
     max-height: 100%;
 
     background-color: var(--CosmicLatte);
-    box-shadow: var(--shadow-2xs),
+    /*box-shadow: var(--shadow-2xs),
                 var(--shadow-m),
-                var(--shadow-xl);
-    overflow: hidden;
+                var(--shadow-xl);*/
+    overflow: visible;
 
     display: flex;
     flex-direction: column;
@@ -87,6 +87,7 @@
 
 /* Область с основным контентом (скроллится, если много) */
 .lightbox-content {
+
     overflow-y: auto;
     max-width: 1400px; max-height: 90vh;
     font-family: 'Raleway', sans-serif;

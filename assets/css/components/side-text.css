@@ -1,6 +1,6 @@
 /* Side Text */
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
     .side-text {
         position: absolute;
         right: calc(var(--padding) / -2 + 1rem);
@@ -26,6 +26,7 @@
         display: flex;
         justify-content: end;
         order: 2;
+        grid-column-end: -1;
 
         width: 100%;
         max-width: unset;

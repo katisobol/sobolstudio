@@ -31,7 +31,7 @@ ul {
     color: var(--SoftBlack);
 }
 
-hero__heading {
+.hero__heading {
     position: relative;
 }
 
@@ -260,11 +260,6 @@ hero__heading {
     letter-spacing: 0;
 }
 
-.hero .layout *,
-.hero .layout p {
-    grid-column: 3 / -1;
-}
-
 .hero__offer {
     color: var(--CosmicLatte);
     background: url(../../img/patterns/paperTxtr.png) center/auto repeat,
@@ -309,8 +304,13 @@ hero__heading {
     }
 }
 
-.hero__offer .btn {
-    grid-column: -4;
+.offer__btn,
+.offer__p {
+    grid-column-start: 3;
+}
+
+.offer__btn {
+    width: max-content;
 }
 
 
@@ -545,7 +545,7 @@ hero__heading {
             to bottom,
             transparent 0,
             transparent 4rem,
-          а  var(--SoftBlack) 4rem,
+            var(--SoftBlack) 4rem,
             var(--SoftBlack) calc(4rem + 1.5px)
         ),
         linear-gradient(to right bottom, hsla(203, 100%, 7%, 0.65), hsla(181, 78%, 21%, 0.25)),
@@ -694,3 +694,4 @@ hero__heading {
         margin-right: 1em;
     }
 }
+

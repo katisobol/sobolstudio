@@ -126,6 +126,8 @@ ul {
     z-index: 3;
     padding: 1.5rem;
     opacity: 0.35;
+
+    transition: opacity 400ms ease-out;
 }
 @media (min-width: 1400px) {
     .actions {
@@ -157,7 +159,9 @@ ul {
 }
 
 
-
+.skills {
+    grid-template-columns: var(--gridVolatile);
+}
 @media (min-width: 768px) {
     .skills {
         gap: 1.5rem;
@@ -188,6 +192,11 @@ ul {
     padding-left: 0;
     padding-bottom: 0;
 }
+@media (min-width: 1400px) {
+    .experience__list-item {
+        min-width: 12em;
+    }
+}
 
 .skills__item {
     list-style: none;
@@ -213,11 +222,13 @@ ul {
 
 .skills__tag {
     height: 2.75rem;
+    min-width: 10em; max-width: 100%;
     margin: 1em 0.5em 0 0;
     padding: 0 1em;
+
     border-radius: 1.5rem;
-    min-width: 10em; max-width: 100%;
     background-color: rgba(0, 0, 0, 0.35);
+    white-space: break-spaces;
 }
 .skills {
     container-type: inline-size;
@@ -344,7 +355,8 @@ ul {
 
 .experience__list {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: end;
     gap: var(--columngap);
 }
 @media (max-width: 768px) {
@@ -380,10 +392,6 @@ ul {
 
 .experience__date {
     order: 2;
-}
-
-.experience__list-item {
-    min-width: 12.5em;
 }
 
 

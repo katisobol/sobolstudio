@@ -3,9 +3,15 @@ footer {
     padding: var(--sectiongap) var(--padding);
 }
 
-footer .btn {
+.footer__btn {
     grid-column: span 2;
     margin: 0;
+    white-space: nowrap;
+}
+@media (max-width: 768px) {
+    .footer__btn {
+        grid-column: 1 / -1;
+    }
 }
 
 footer .btn:link::before,

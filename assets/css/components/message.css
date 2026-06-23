@@ -4,7 +4,7 @@
 }
 .message {
     position: relative;
-    width: 100%;
+    max-width: 100%;
     background-color: var(--DeepBlue);
     grid-column: 1 / -2;
     padding: 1.25rem 1.5rem;

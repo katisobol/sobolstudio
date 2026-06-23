@@ -54,6 +54,24 @@
     }
 }
 
+/* Стандартная адаптивная CSS-сетка */
+:root {
+    --gridVolatile: repeat(5, 1fr);
+}
+
+@media (max-width: 1280px) {
+    :root {
+    --gridVolatile: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 1080px) {
+    :root {
+    --gridVolatile: repeat(3, 1fr);
+    }
+}
+
+
 /* Расстояние между колонками */
 :root {
     --columngap: calc(var(--sectiongap) / 2);
