@@ -3,3 +3,29 @@
 .message {
     grid-column: 2 / -1;
 }
+
+
+
+.pricing__item {
+    justify-content: space-between;
+}
+
+.cards__price {
+    font-family: AvantGarde, Raleway, Arial;
+}
+
+.pricing__list {
+    height: -webkit-fill-available;
+}
+
+.list-item__include {
+    color: var(--Golden);
+    font-size: 0.65rem;
+}
+
+
+
+.faq__summary::before {
+    z-index: 2;
+    top: 50%; transform: translateY(-50%);
+}

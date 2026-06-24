@@ -18,6 +18,10 @@ a:visited {
 
 /* РАСКЛАДУШКА */
 
+details {
+    transition: height 250ms ease-out;
+}
+
 details summary {
     list-style: none;
     position: relative;

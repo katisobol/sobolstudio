@@ -11,9 +11,19 @@
     align-items: stretch;
     gap: var(--columngap);
 }
-@media (max-width: 1280px) {
+@media (min-width: 768px) and (max-width: 1280px) {
     .cards {
-        flex-wrap: wrap;
+        position: relative;
+        width: 100vw;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 0 var(--columngap);
+
+        background: var(--SoftBlack);
+        box-shadow: 15px 15px 25px 25px var(--SoftBlack);
+    }
+    .cards__item {
+        background: url(../../img/patterns/paperTxtr.png);
     }
 }
 @media (max-width: 640px) {
@@ -23,14 +33,7 @@
 }
 
 .cards__item {
-    width: 1fr;
     padding: 1.5em calc(var(--columngap) / 2);
-
-    text-align: center;
-
-    box-shadow:
-        1vw 2vw 2vw hsla(0, 0%, 0%, 0.65),
-        0.65px 1.5px 1.5px black;
 
     display: flex;
     flex-direction: column;
@@ -39,6 +42,12 @@
     align-items: stretch;
     align-content: stretch;
     gap: 1em;
+
+    text-align: center;
+
+    box-shadow:
+        1vw 2vw 2vw hsla(0, 0%, 0%, 0.65),
+        0.65px 1.5px 1.5px black;
 }
 @supports (mix-blend-mode: hard-light) {
     .cards__item {

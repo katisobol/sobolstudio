@@ -73,7 +73,9 @@ mark {
     height: 100%;
     z-index: 1;
     background-color: grey;
-    box-shadow: var(--shadowHuge);
+    box-shadow:
+        var(--white-2xs),
+        var(--shadowHuge);
     mix-blend-mode: hard-light;
 }
 
@@ -86,7 +88,7 @@ mark {
     span, .span).shadowhuge,
     .case__content > h2 {
         color: grey;
-        text-shadow: var(--shadowHuge);
+        text-shadow: var(--textShadow);
         mix-blend-mode: hard-light;
         user-select: none;
         max-width: 100vw;

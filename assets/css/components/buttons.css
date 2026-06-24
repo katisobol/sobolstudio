@@ -2,7 +2,7 @@
 
 .btn {
     position: relative;
-    height: 50px;
+    min-height: 50px;
     padding: 0 calc(3rem + 1.5vw);
 
     display: inline-flex;
@@ -14,15 +14,13 @@
     font-size: 1rem;
     color: var(--CosmicLatte);
     white-space: nowrap;
+    line-height: 1;
 
     cursor: pointer;
     background: transparent;
     border: none;
     z-index: 2;
     transition: all 150ms ease;
-
-    white-space: wrap;
-    line-height: 1;
 }
 
 .btn:link,
