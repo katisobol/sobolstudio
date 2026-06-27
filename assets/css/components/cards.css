@@ -60,7 +60,7 @@
         top: 0; left: 0;
         width: 100%; height: 100%;
         box-shadow:
-            var(--white-2xs),
+            var(--insetWhite-2xs),
             var(--shadow-2xs),
             var(--shadow-s);
         mix-blend-mode: hard-light;

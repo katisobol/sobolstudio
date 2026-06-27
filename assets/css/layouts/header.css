@@ -41,11 +41,19 @@ header nav ul::after {
 .breadcrumbs__link:active {
     color: var(--CosmicLatte);
 }
-/*
-header nav ul li:nth-child(1) {
+
+/* Заполняем хлебные крошки:
+.breadcrumbs__level-1 {
     display: inline;
 }
-header nav ul li:nth-child(1) a::before {
+.breadcrumbs__link-1::before {
     content: "на уровень выше";
+}
+*/
+
+/* Указываем нынешнюю директорию:
+.breadcrumbs__list::after {
+    content: " / Портфолио";
+    color: slategray;
 }
 */

@@ -8,13 +8,29 @@
         1px 0 1.5px hsl(218, 100%, 20%), 0 1px 1.5px hsl(30, 100%, 20%),
         15px 10px 25px hsl(0, 0%, 35%), 10px 15px 25px hsl(0, 0%, 0%),
         65px 15px 65px hsl(218, 35%, 35%), 15px 65px 65px hsl(30, 35%, 35%);
+    --innerBlackBoxShadow:
+        inset 0 0.5px 1.5px hsla(220, 100%, 1%, 0.35), inset 0.5px 0 1.5px hsla(40, 100%, 1%, 0.35),
+        inset 1.5px 3.5px 3.5px hsla(220, 100%, 10%, 0.15), inset 3.5px 1.5px 3.5px hsla(40, 100%, 10%, 0.15),
+        inset 3.5px 5px 5px hsla(220, 100%, 15%, 0.15), inset 5px 3.5px 5px hsla(40, 100%, 15%, 0.15),
+        inset 5px 15px 15px hsla(220, 100%, 1%, 0.65), inset 15px 5px 15px hsla(40, 100%, 1%, 0.65);
+
 }
 
 /* тени-модули */
 :root {
-    --white-2xs: inset 0 0.65px 1.5px hsl(220, 10%, 55%), inset 0.65px 0 1.5px hsl(40, 15%, 55%);
+    --insetWhite-2xs: inset 0 0.65px 1.5px hsl(220, 10%, 55%), inset 0.65px 0 1.5px hsl(40, 15%, 55%);
     --shadow-2xs: 0 0.5px 1.5px hsl(220, 100%, 10%), 0.5px 0 1.5px hsl(40, 100%, 10%);
-    --shadow-s:   5px 15px 15px hsla(220, 100%, 15%, 0.65), 15px 5px 15px hsla(40, 100%, 15%, 0.65);
-    --shadow-m:   35px 50px 50px hsla(220, 100%, 15%, 0.65), 50px 35px 50px hsla(40, 100%, 15%, 0.65);
-    --shadow-xl:  150px 50px 150px hsla(220, 100%, 5%, 0.15), 50px 150px 150px hsla(40, 100%, 5%, 0.15);
+    --shadow-s:   1.5px 5px 5px hsla(220, 100%, 15%, 0.65), 5px 1.5px 5px hsla(40, 100%, 15%, 0.65);
+    --shadow-m:   5px 15px 15px hsla(220, 100%, 15%, 0.65), 15px 5px 15px hsla(40, 100%, 15%, 0.65);
+    --shadow-xl:   35px 50px 50px hsla(220, 100%, 15%, 0.65), 50px 35px 50px hsla(40, 100%, 15%, 0.65);
+    --shadow-2xl:  150px 50px 150px hsla(220, 100%, 5%, 0.15), 50px 150px 150px hsla(40, 100%, 5%, 0.15);
+}
+
+/* тени-модули без режимов наложения */
+:root {
+    --shadowBasic-2xs: 0 0.5px 1.5px hsl(220, 100%, 10%), 0.5px 0 1.5px hsl(40, 100%, 10%);
+    --shadowBasic-s:   1.5px 5px 5px hsla(220, 100%, 15%, 0.65), 5px 1.5px 5px hsla(40, 100%, 15%, 0.65);
+    --shadowBasic-m:   5px 15px 15px hsla(220, 100%, 15%, 0.65), 15px 5px 15px hsla(40, 100%, 15%, 0.65);
+    --shadowBasic-xl:   35px 50px 50px hsla(220, 100%, 15%, 0.65), 50px 35px 50px hsla(40, 100%, 15%, 0.65);
+    --shadowBasic-2xl:  150px 50px 150px hsla(220, 100%, 5%, 0.15), 50px 150px 150px hsla(40, 100%, 5%, 0.15);
 }

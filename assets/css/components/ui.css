@@ -11,7 +11,7 @@ a:active {
     color: var(--Golden);
 }
 a:visited {
-    color: #a88ab8;
+    color: var(--PaleViolet);
 }
 
 
@@ -55,12 +55,14 @@ details[open] > summary::before {
 
 
 
-abbr {
+abbr[title], .hint {
     cursor: help;
-    text-decoration-color: var(--Golden);
+    text-decoration: underline dotted var(--Golden) 2px;
 }
 
-
+input[type="checkbox"] {
+    border-radius: 0;
+}
 
 
 

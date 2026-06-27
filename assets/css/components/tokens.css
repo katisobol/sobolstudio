@@ -53,3 +53,17 @@ dl dd {
     grid-column-start: 2;
     margin: 0;
 }
+
+code {
+    display: block;
+    padding: 0.25em 0.75em;
+
+    background-color: rgba(0, 0, 0, 0.35);
+    background-blend-mode: multiply;
+    box-shadow: var(--innerBlackBoxShadow);
+    color: white;
+}
+
+pre.p {
+    white-space: pre-wrap;
+}

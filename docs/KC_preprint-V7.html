@@ -1,0 +1,162 @@
+---
+layout: default
+title: Практики подготовки спусков к печати
+extra_css:
+ - assets/css/page/preprint-kurtK.css
+description: Для «Курт». Страница не для индексации, крутого описания не будет ¯\_(ツ)_/¯
+---
+<main class="typo" style="display: block">
+ <h1>Подготовка спусков</h1>
+
+ <p><input type="checkbox">Отметить начало задания в Asystem Touch</p>
+ <p><input type="checkbox">Откопировать .pdf-макет и .jpg-превью в рабочую директорию:</p>
+ <code class="p add-copy-btn">
+  work/[год]-[номер]/
+ </code>
+ <small>сборная упаковка, несколько деталей:</small>
+ <code class="p add-copy-btn">
+   work/<strong class="highlight">s-</strong>[год]-[номер]/<strong class="highlight">[01]<small>[...]</small>[04]</strong>/
+ </code>
+  <p>Проверить техзадание на предмет комментариев. Они могут быть также в рабочей директории в .txt-формате</p>
+  <p class="warning">Комментарии в техзадании имеют приоритет над стандартом</p>
+
+ <h2>Проверка макета упаковки + треппинг</h2>
+
+  <p><input type="checkbox">Просмотреть печатный макет на предмет того, что он нормально напечатается</p>
+
+ <h3><input type="checkbox">Проверить цветовые каналы:</h3>
+ <ul>
+  <li><strong class="highlight hint" title="Контур штампа для вырубки">Cut</strong> в overprint</li>
+  <li><strong class="highlight hint" title="Лак">Varnish</strong> в overprint (инверсный)</li>
+  <li>Пустые слои сверх техзадания <abbr title="Либо потом с вами свяжутся и вы будете чесать в затылке вместе">удалить</abbr></li>
+  <li>Количество красок равно указанному в техзадании</li>
+ </ul>
+ <p>Во всём остальном можно довериться автопроверке в Preflight</p>
+ <p>О любых ошибках сообщать и возвращать дизайнерам на доработку</p>
+
+ <h2>Треппинг</h2>
+ <p><input type="checkbox">Создать автотреппинг</p>
+ <p><input type="checkbox">Переименовать файл с треппингом:</p>
+ <code class="p add-copy-btn">
+  [год]-[номер]<strong class="highlight">_TRAP</strong><small>[...]</small>.pdf
+ </code>
+ <p>Автотреппинг выдал создание 0 объектов / Треппинг не требуется:</p>
+ <code class="p add-copy-btn">
+  [год]-[номер]<strong class="highlight">_<abbr title="without">WO</abbr>TRAP</strong><small>[...]</small>.pdf
+ </code>
+  <p class="warning">Если треппинг не создаётся 15 минут, вернуть файл дизайнерам</p>
+
+
+ <h2>Приготовление макета упаковки по шаблону штампа</h2>
+
+ <p>Искать самый свежий шаблон штампа:</p>
+ <ul>
+  <li> Если в задании указан картон:
+   <code class="p add-copy-btn">
+    Templates/КАРТОН
+   </code>
+  </li>
+  <li> Если в задании указана бумага:
+   <code class="p add-copy-btn">
+    Templates/офсет
+   </code>
+  </li>
+ </ul>
+ <p>Актуальная версия штампа – v7</p>
+ <p>Предыдущие версии проверить на предмет соответствия последним требованиям подготовки к печати</p>
+ <p>При наличии нескольких версий одного штампа <abbr title="сделаешь доброе дело">удали старые</abbr></p>
+
+ <p>При отсутствии шаблона штампа</p>
+ <details>
+  <summary>создать его в Signa через New Job</summary>
+  <ol>
+   <li>—</li>
+   <li><input type="radio" checked /> Mode: Packaging</li>
+   <li>Plate Template XL106</li>
+   <li>
+    Найти штамп по номеру в .cf2
+    <code class="add-copy-btn">/штампы/№/аут/<small>[...]</small>.cf2</code>
+    <p class="warning">Если штампа в формате .cf2 нет, писать об этом технологу</p>
+   </li>
+   <li>Выделить весь штамп, проставить в Cutting</li>
+   <li>
+    Нажать Generate Bleed для генерации припусков 2.5mm
+    <p class="warning">
+     Выделиться должны все детали конструкции. Если какой-то из контуров разомкнут, писать об этом конструктору
+    </p>
+   </li>
+   <li>Разрешить конфликты созданных вылетов при помощи ClipPath Conflict Resolution</li>
+   <li>Клапан вырубки Y13 <small>x по центру</small></li>
+   <li>
+    Единый штамп на каждом виде изделия. Если изделий несколько, снять флажок «Same Content for All 1ups of a Shape»
+   </li>
+  </ol>
+ </details>
+
+ <p><input type="checkbox">Настроить порядок цветов и настройки внутри палитры Colors:</p>
+ <ul>
+  <li>Чёрный <small>/ самый тёмный Pantone</small></li>
+  <li>CMY</li>
+  <li>Прочие пантоны</li>
+  <li>Сетка <code class="inline">U</code>, дубликат канала печати, обычно в 30-70%</li>
+  <li>Цвет под сеткой <code class="inline">C</code> <small>обычно это пантон; но может быть и что-то из триады</small></li>
+  <li><abbr class="highlight" title="Лак">Varnish</abbr>. Проверить тип печати <strong class="highlight">Usage: Coating Unit</strong>. <abbr class="small" title="Не надо так">Иначе лак попадёт на цветовые шкалы</abbr> <small>Автоматически помечается как <code class="inline">L1</code></small></li>
+  <li><abbr class="highlight" title="Контур штампа вырубки">Cut</abbr>. Проверить тип печати <strong class="highlight">Usage: Tool</strong>, <strong class="highlight">Target: Ignore</strong>. <abbr class="small" title="ТАК ВООБЩЕ НЕ НАДО">Иначе контур штампа попадёт в печать по полной программе</abbr></li>
+ </ul>
+
+ <h3>Проверить все необходимые метки</h3>
+ <h4>С привязкой к листу:</h4>
+ <ul>
+  <li><input type="checkbox"> Японские кресты приводки <code class="inline">cross BG</code> <small>4 шт c каждого угла</small></li>
+  <li><input type="checkbox"> RegisterLine</li>
+  <li><input type="checkbox"> Метка верного угла <small>правый нижний угол</small></li>
+  <li><input type="checkbox"> Метка наброса </li>
+  <li>
+   <p class="h3"><input type="checkbox"> Цветовые шкалы</p>
+   <p>Для машины XL-106 <code class="inline">Dipco_actual</code></p>
+   <p>Для машины XL-105 <code class="inline">Dipco_XL-105</code></p>
+    <p class="small">XL-106, свыше 8 цветов печати <code class="inline">microscale/F105_Micro-10</code>
+    </p>
+    <p class="small">XL-105, свыше 2 пантонов <code class="inline">scales/old_Image control/6S+</code>
+    </p>
+   <p class="small">Шкалы должны отступать от правого и левого края 3-5mm</p>
+   <p class="small">Можно обрезать или перекрыть буквы, обязательны только квадраты</p>
+  </li>
+  <li><input type="checkbox"> Краскосъём <p class="small">Только если есть 5mm на каждую полоску, иначе не надо</p></li>
+  <li><input type="checkbox"> Краскосъём серый
+   <ol>
+    <li>Выделить всю область до ножей</li>
+    <li>Поставить флажок overlay, все цвета наложатся друг на друга</li>
+    <li>Проверить наличие всех красок печати, каждую выставить в 20%</li>
+   </ol>
+  </li>
+  <li><input type="checkbox"> Приводные метки для вырубки
+  <code>CutMark-3mm</code>
+  </li>
+  <li><input type="checkbox"> <code class="inline">mark-optical</code> <small>справа снизу; лучше и справа, и слева</small> <p>Y=136</p></li>
+  <li><input type="checkbox"> Формат бумаги <code class="inline">PaperFormat</code> <small>Если пересекается с mark-optical, сдвинуть ниже</small></li>
+  <li><input type="checkbox"> Ограничительные линии для выборочного вд-лака 4 шт
+  <code>Laque</code>
+  <p>создать рамку по припуску под обрез</p></li>
+  <li><input type="checkbox"> Надпись о клапане <small>в левый нижний угол</small>
+   <code>Ars/</code>
+  </li>
+ </ul>
+ <h4>С привязкой к изделию:</h4>
+ <ul>
+  <li><input type="checkbox"> Bobst Marks пронумеровать изделия в ряд слева направо <small>начиная с нижнего левого угла</small></li>
+  <li><input type="checkbox"> Марка зрительного контроля <p>разместить на контур штампа, на каждое изделие свой цвет печати</p></li>
+  <li><input type="checkbox"> Нумерация облоя <p>Если промежутки крупные и повторяющиеся, пронумеровать параллельно</p></li>
+ </ul>
+ <p><code class="inline">Ctrl+P</code> открытие окна Output на этапе Output в рабочей структуре программы</p>
+
+ <h2>Выходные файлы:</h2>
+ <p>Нажимаем в CockPit Open...</p>
+ <p>Выскакивает попап, предлагает перенастроить созданные вручную метки. Всегда нажимаем «No»</p>
+ <p>На закладку Proof перетащить файл с drag-n-drop
+ </p>
+
+</main>
+
+
+<script src="/sobolstudio/scripts/add-copy-btn.js"></script>

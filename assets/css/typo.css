@@ -15,7 +15,7 @@
 }
 @font-face {
     font-family: "TaylorSans";
-    src: url("../fonts/Consolas-Regular.ttf");
+    src: url("../fonts/TaylorSans-Regular.ttf");
 }
 @font-face {
     font-family: "Unovis100";
@@ -85,7 +85,7 @@ body > :is(
 h1, .h1,
 h2, .h2
 ) {
-    max-width: 1200px;
+    max-width: 1400px;
     box-sizing: content-box;
 }
 @media (max-width: 768px) {
@@ -123,31 +123,13 @@ h1, .h1 {
     }
 }
 
-.typo * + :is(h1, .h1) {
-    margin-top: calc(var(--sectiongap) / 2);
-}
-
 
 /*h2,  .h2 и его друзья */
-
-.typo + :is(h2, .h2),
-:is(h2, .h2).typo {
-    margin-top: 1em;
-}
-.typo :is(h1, .h1) + :is(h2, .h2) {
-    margin-top: 0.5em;
-}
 
 
 /* h3,  .h3, пока не решила, что я с этим делаю */
 h3, .h3 {
     font-size: 1.25rem;
-}
-.typo * + :is(h3, .h3) {
-    margin-top: 1.25rem;
-}
-.typo :is(h2, .h2) + :is(h3, .h3) {
-    margin-top: 0.75rem;
 }
 
 
@@ -158,30 +140,12 @@ h4, .h4 {
 * + :is(h4, .h4) {
     margin-top: 1rem;
 }
-.typo :is(h3, .h3) + :is(h4, .h4) {
-    margin-top: 0.5rem;
-}
 
 
 /* малые заголовки */
 h5, .h5,
 h6, .h6, small, .small {
     font-size: 0.75rem;
-}
-.typo * + :is(
-h5, .h5,
-h6, .h6, small, .small
-){
-    margin-top: 0.5rem;
-}
-.typo :is(
-h4, .h4,
-h5, .h5
-) + :is(
-h5, .h5,
-h6, .h6, small, .small
-){
-    margin-top: 0.25rem;
 }
 
 
@@ -194,35 +158,6 @@ p, .p {
     li {
         font-size: 0.75rem;
     }
-}
-
-.typo :is(h1, .h1) + :is(p, .p) {
-    margin-top: 1rem;
-}
-.typo :is(h2, .h2) + :is(p, .p) {
-    margin-top: 0.75rem;
-}
-.typo :is(h3, .h3) + :is(p, .p) {
-    margin-top: 0.5rem;
-}
-.typo :is(
-h4, .h4,
-h5, .h5,
-h6, .h6,
-small, .small,
-p, .p
-) + :is(p, .p) {
-    margin-top: 0.5rem;
-}
-
-
-
-.typo :is(h1, .h1, h2, .h2) + :is(fieldset, form, table, ul, ol, dl) {
-    margin-top: 1.5rem;
-}
-
-.typo :is(h3, .h3, h4, .h4, fieldset, form, table, ul, ol, dl) + :is(fieldset, form, table, ul, ol, dl) {
-    margin-top: 1rem;
 }
 
 

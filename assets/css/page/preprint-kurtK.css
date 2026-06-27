@@ -1,0 +1,136 @@
+ @import url(../text-margins.css);
+
+.header,
+.footer {
+    display: none;
+}
+.breadcrumbs__list::after {
+    content: " / V7";
+    color: slategray;
+}
+
+main:before {
+    content: "V7";
+
+    position: fixed;
+    right: 0; top: 0;
+    padding: 1em;
+
+    color: slategray;
+    background-color: rgba(0, 0, 0, 0.15);
+    box-shadow: var(--innerBlackBoxShadow);
+}
+
+
+
+:is(p, h3) input[type="checkbox"] {
+    margin-right: 0.5em;
+}
+
+
+
+p:has(.highlight),
+li:has(.highlight),
+code:has(.highlight) {
+    color: gray;
+}
+li:has(.highlight)::marker {
+  color: var(--CosmicLatte);
+}
+
+.highlight {
+    color: white;
+    text-shadow: var(--textShadow);
+}
+
+
+
+.add-copy-btn {
+    padding: 1rem; padding-right: 0;
+
+    display: block;
+}
+.copy-btn {
+    position: relative; top: -1rem;
+    float: right;
+
+    height: 100%; min-height: unset; padding: 1.25em 2em;
+
+    font-size: 0.75rem;
+    font-family: Consolas, Arial;
+}
+
+
+code.inline {
+    display: inline-block;
+    font-size: 0.75rem;
+}
+
+
+
+.warning {
+    position: relative;
+    padding: 0.5em;
+    margin: 0.5rem 0 1rem 7.5%;
+
+    font-size: 0.75rem;
+
+    background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.35) 25%);
+    background-blend-mode: multiply;
+
+    border: solid 1.5px var(--WarnRed);
+    border-left: none;
+
+    z-index: 2;
+}
+.warning::before {
+    content: "!";
+    height: 110%; aspect-ratio: 1/0.85;
+    padding-top: 0.1em;
+
+    position: absolute;
+    left: -7.5%; bottom: -0.75px;
+    transform: translateX(-20%);
+
+    font-family: AvantGarde, Raleway, Helvetica, Arial;
+    font-size: 150%;
+
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+    background: var(--WarnRed);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: -1;
+}
+
+
+
+li abbr.small {
+    display: inline-block;
+    margin: 0 !important;
+}
+
+abbr.small {
+    color: grey;
+    text-decoration-color: var(--DeepBlue);
+}
+
+.white {
+    background-color: white;
+}
+
+.white .highlight {
+    color: var(--BrightBlue);
+}
+
+.white .warning {
+    background: none;
+}
+
+.white main::before,
+.white::before {
+    background-color: white;
+    box-shadow: none;
+}

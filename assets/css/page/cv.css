@@ -2,7 +2,7 @@
     --cardborder: var(--BrightBlue);
 }
 
-header nav ul::after {
+.breadcrumbs__list::after {
     content: " / Портфолио";
     color: slategray;
 }

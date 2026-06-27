@@ -1,11 +1,4 @@
-/* Токены состояний (модификаторы) */
-
-input,
-textarea {
-    color: silver;
-    height: 50px;
-    caret-color: var(--CosmicLatte);
-}
+/* Нативные элементы */
 
 input:focus,
 textarea:focus {
@@ -27,16 +20,23 @@ input[type="month"],
 input[type="week"],
 input[type="time"],
 textarea {
+    height: 50px;
+    padding-left: 1.5em;
+
+
+    font-family: Santello, Raleway;
+    color: silver;
+    caret-color: var(--CosmicLatte);
+
     background-color: hsla(218, 100%, 1%, 0.1);
     border: none;
+
     box-shadow:
         -0.5rem -0.5rem 0.75rem hsla(30, 35%, 20%, 0.15),
         0.25rem 0.25rem 0.5rem hsla(218, 100%, 5%, 0.15),
         inset -0.5rem -0.5rem 2rem hsla(30, 35%, 20%, 0.05),
         inset 0.5rem 0.5rem 2rem hsla(218, 100%, 5%, 0.35),
         inset 0.5px 0.5px 0.75px hsla(218, 100%, 1%, 0.65);
-    padding-left: 1.5em;
-    font-family: Santello, Raleway;
 }
 textarea {
     padding: 1.5em 1em 1em 1.5em;
