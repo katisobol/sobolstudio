@@ -148,11 +148,7 @@ dl,
 { grid-column: 1 / -1; }
 
 h3, h4, h5, h6, p, small, a, button, .btn, dd, .btn-bar
-{ grid-column: 2 / -1 }
-@media (max-width: 768px) {
-    h3, h4, h5, h6, p, small, a, button, .btn, dd, .btn-bar
-    { grid-column: 1 / -1; }
-}
+{ grid-column: 1 / -1 }
 
 
 figure {

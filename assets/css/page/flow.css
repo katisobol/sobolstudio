@@ -1,0 +1,46 @@
+.hero__description {
+    grid-column: 1;
+    grid-row-start: 2;
+    grid-row: span 4;
+
+    writing-mode: sideways-lr;
+    margin-left: auto;
+    text-align: right;
+}
+
+.hero__card {
+    grid-column: 2 / -1;
+}
+
+.hero__btn {
+    grid-column: 2 / span 2;
+}
+
+
+
+.rebellion__heading {
+    position: absolute;
+    top: calc(50% - 0.5em);
+
+    max-width: unset;
+    width: 100vw;
+    text-align: center;
+    font-size: 35vw;
+
+    text-shadow: var(--shadow-xl),
+        var(--shadowBasic-s),
+        var(--shadowBasic-2xs) !important;
+}
+
+
+
+.cta__price {
+    grid-column: span 1;
+    justify-self: end;
+    align-self: center;
+}
+
+.cta__price,
+.cta__btn {
+    grid-row: 2;
+}

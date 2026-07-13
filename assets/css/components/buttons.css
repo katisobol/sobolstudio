@@ -5,6 +5,8 @@
     min-height: 50px;
     padding: 0 calc(3rem + 1.5vw);
 
+    grid-column: span 2;
+
     display: inline-flex;
     align-items: center;
     justify-content: center;

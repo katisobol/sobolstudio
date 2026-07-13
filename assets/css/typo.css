@@ -170,3 +170,11 @@ p, .p {
 
     color: var(--Golden);
 }
+
+.center {
+    max-width: unset;
+    width: 100%;
+    grid-column: 1 / -1;
+
+    text-align: center;
+}
