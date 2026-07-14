@@ -10,7 +10,6 @@
 }
 
 main:before {
-    content: "V7";
 
     position: fixed;
     right: 0; top: 0;
@@ -19,6 +18,12 @@ main:before {
     color: slategray;
     background-color: rgba(0, 0, 0, 0.15);
     box-shadow: var(--innerBlackBoxShadow);
+}
+
+
+
+.preprint-kurtK .typo * + :is(h2, .h2), :is(h2, .h2).typo {
+    margin-top: var(--sectiongap);
 }
 
 
