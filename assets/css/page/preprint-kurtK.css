@@ -1,5 +1,15 @@
  @import url(../text-margins.css);
 
+li {
+    margin-top: 0.5em;
+}
+.block {
+    display: block;
+}
+.inline {
+    display: inline-block;
+}
+
 .header,
 .footer {
     display: none;
@@ -8,6 +18,23 @@
     content: " / V7";
     color: slategray;
 }
+
+
+
+.sidebar-nav *:link,
+.sidebar-nav *:visited {
+    color: unset;
+}
+@media (min-width: 768px) {
+    .sidebar-nav {
+        position: fixed; z-index: 10;
+        right: 0;
+        width: var(--padding); height: 100vw;
+
+    }
+}
+
+
 
 main:before {
 
